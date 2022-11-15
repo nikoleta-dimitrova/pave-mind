@@ -19,13 +19,12 @@ html {
     --text-font: 'Maven Pro', sans-serif;
 
     /* Size variables */
-    --navigationtext-size: 1.3vw;
+    --navigationtext-size: 1.1vw;
     --bold-font: 600;
 }
 
 .navbar {
     display: flex;
-    position: relative;
     justify-content: space-between;
     align-items: center;
     background-color: var(--color-white);
@@ -33,18 +32,17 @@ html {
     font-family: var(--text-font);
     font-weight: var(--bold-font);
     overflow: hidden;
+    padding-block: .3vw;
 }
 
 .navigation-menu {
     font-size: var(--navigationtext-size);
-    margin-top: .5vw;
     margin-left: 2.5vw;
 }
 
 .navigation-menu ul {
     display: flex;
-    margin: 0;
-    padding: 0;
+    align-items: center;
 }
 
 .navigation-menu li {
@@ -85,9 +83,4 @@ html {
 nav ul li:hover {
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
-}
-
-section {
-    background-color: #000000;
-    height: 92vh;
 }
