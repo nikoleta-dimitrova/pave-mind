@@ -1,0 +1,59 @@
+[
+	{
+		"id": "article-big",
+		"date": "June 18, 2020",
+		"title": "What is Burnout?",
+		"preview": "Burnout is a form of exhaustion caused by constantly feeling swamped. It’s a result of excessive and prolonged emotional, physical, and mental stress. In many cases, burnout is related to one’s job.Burnout happens when you’re overwhelmed, emotionally drained, and unable to keep up with life’s incessant demands.",
+        "bold-information": "Burnout is a form of exhaustion caused by constantly feeling swamped. It’s a result of excessive and prolonged emotional, physical, and mental stress. In many cases, burnout is related to one’s job.Burnout happens when you’re overwhelmed, emotionally drained, and unable to keep up with life’s incessant demands.",
+		"information": "A stressful lifestyle can put people under extreme pressure, to the point that they feel exhausted, empty, burned out, and unable to cope. Stress at work can also cause physical and mental symptoms. Possible causes include feeling either permanently overworked or under-challenged, being under time pressure, or having conflicts with colleagues. Extreme commitment that results in people neglecting their own needs may also be at the root of it. Problems caused by stress at work are a common reason for taking sick leave. If someone has problems at their workplace, changes in their working environment can already make a positive difference. For people who can no longer cope with the stress of caring for ill relatives, more concrete support can help to improve their situation.Exhaustion is a normal reaction to stress, and not necessarily a sign of disease. So does burnout describe a set of symptoms that is more than a normal reaction to stress? And how is it different from other mental health problems?",
+		"image": "./Assets/Images/big-article-picture.svg"
+	},
+	{
+		"id": "article1",
+		"date": "",
+		"title": "",
+		"preview": "",
+		"information": "",
+		"image": "./Assets/Images/"
+	},
+	{
+		"id": "article2",
+		"date": "",
+		"title": "",
+		"preview": "",
+		"information": "",
+		"image": "./Assets/Images/"
+	},
+	{
+		"id": "article3",
+		"date": "",
+		"title": "",
+		"preview": "",
+		"information": "",
+		"image": "./Assets/Images/"
+	},
+	{
+		"id": "article4",
+		"date": "",
+		"title": "",
+		"preview": "",
+		"information": "",
+		"image": "./Assets/Images/"
+	},
+	{
+		"id": "article5",
+		"date": "",
+		"title": "",
+		"preview": "",
+		"information": "",
+		"image": "./Assets/Images/"
+	},
+	{
+        "id": "article6",
+		"date": "",
+		"title": "",
+		"preview": "",
+		"information": "",
+		"image": "./Assets/Images/"
+	}
+]
