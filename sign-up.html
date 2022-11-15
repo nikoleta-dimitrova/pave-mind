@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"
+          content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700;800;900&family=Patua+One&display=swap"
+          rel="stylesheet">
+
+</head>
+
+<body>
+    <button id="openModal">Sign Up</button>
+    <dialog id="signUp">
+        <div class="grid">
+            <form action=""
+                  method="dialog"
+                  class="grid-left">
+                <label for="username">Username</label>
+                <br>
+                <input type="text"
+                       name="username"
+                       required
+                       id="username">
+                <br>
+                <label for="email">Email</label>
+                <br>
+                <input type="email"
+                       name="email"
+                       required
+                       id="email">
+                <br>
+                <label for="password">Password</label>
+                <br>
+                <input type="password"
+                       name="password"
+                       required
+                       minlength="8"
+                       id="password">
+                <button id="confirmBtn"
+                        type="submit"
+                        value="default">Confirm</button>
+            </form>
+            <div class="grid-right">
+                <p>Asking for help is the first step... You are
+                    more precious to this world than you'll
+                    ever know</p>
+            </div>
+        </div>
+        <button id="confirmBtn"
+                value="default">Login</button>
+    </dialog>
+    <style>
+        @media (width >=600px) {
+            dialog {
+                border: none !important;
+                border-radius: 8px;
+                box-shadow: 0 0 #0000, 0 0 #0000, 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+                padding: 1.6rem;
+                max-width: 400px;
+
+            }
+
+            .grid {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                gap: 20px;
+                grid-auto-rows: minmax(100px, auto);
+            }
+
+            .grid-left {
+                grid-column: 1 / 2;
+
+            }
+
+            .grid-right {
+                grid-column: 2 / 2;
+
+            }
+        }
+
+        @media (width <=600px) {
+            dialog {
+                border: none !important;
+                border-radius: 8px;
+                box-shadow: 0 0 #0000, 0 0 #0000, 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+                padding: 1.6rem;
+                max-width: 400px;
+
+            }
+
+            .grid {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                row-gap: 25px;
+                grid-auto-rows: minmax(100px, auto);
+            }
+
+            .grid-left {
+                grid-column: 1 / 2;
+
+            }
+
+            .grid-right {
+                grid-column: 1 / 2;
+                grid-row: 2 / 2;
+
+            }
+        }
+    </style>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script scoped>
+    //Code taken by Mozilla MDN Web Docs
+    const openModal = document.getElementById('openModal');
+    const signUp = document.getElementById('signUp')
+
+    // If a browser doesn't support the dialog, then hide the
+    // dialog contents by default.
+    if (typeof signUp.showModal !== 'function') {
+        signUp.hidden = true;
+        /* a fallback script to allow this dialog/form to function
+           for legacy browsers that do not support <dialog>
+           could be provided here.
+        */
+    }
+    // "Update details" button opens the <dialog> modally
+    openModal.addEventListener('click', () => {
+        if (typeof signUp.showModal === "function") {
+            signUp.showModal();
+        }
+    });
+    // "Confirm" button of form triggers "close" on dialog because of [method="dialog"]
+    signUp.addEventListener('close', () => {
+        axios
+            .post('http://localhost:1337/api/auth/local/register', {
+                username: (document.getElementById('username').value).toString(),
+                email: (document.getElementById('email').value).toString(),
+                password: (document.getElementById('password').value).toString(),
+            })
+            .then(response => {
+                // Handle success.
+                console.log('Well done!');
+                console.log('User profile', response.data.user);
+                console.log('User token', response.data.jwt);
+            })
+            .catch(error => {
+                // Handle error.
+                console.log('An error occurred:', error.response);
+            });
+    });
+</script>
+
+</html>
