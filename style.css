@@ -1,29 +1,91 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
 }
 
 html {
-    scroll-behavior: smooth;
+scroll-behavior: smooth;
+overflow-x: hidden;
 }
 
 :root {
-    /* Color variables */
-    --black-color: #000000;
-    --white-color: #fbfbfb;
-    --darkblue-color: #687DAC;
+/* Color variables */
+--black-color: #000000;
+--white-color: #fbfbfb;
+--darkblue-color: #687DAC;
 
-    /* Font variables */
-    --headings-font: 'Patua One', cursive;
-    --text-font: 'Maven Pro', sans-serif;
+/* Font variables */
+--headings-font: 'Patua One', cursive;
+--text-font: 'Maven Pro', sans-serif;
 
-    /* Size variables */
-    --navigationtext-size: 1.1vw;
-    --bold-font: 600;
-    --title-size: 2.5vw;
+/* Size variables */
+--navigationtext-size: 1.1vw;
+--bold-font: 600;
+--title-size: 2.5vw;
 }
 
+.navbar {
+display: flex;
+justify-content: space-between;
+align-items: center;
+background-color: var(--color-white);
+font-size: var(--navigationtext-size);
+font-family: var(--text-font);
+font-weight: var(--bold-font);
+overflow: hidden;
+padding-block: .3vw;
+}
+
+.navigation-menu {
+font-size: var(--navigationtext-size);
+margin-left: 2.5vw;
+}
+
+.navigation-menu ul {
+display: flex;
+align-items: center;
+}
+
+.navigation-menu li {
+list-style: none;
+transition: transform .5s ease;
+}
+
+.navigation-menu li a {
+display: block;
+text-decoration: none;
+color: var(--darkblue-color);
+padding: 0 1vw;
+}
+
+.navigation-menu img {
+height: 3vw;
+}
+
+.navigation-login ul {
+display: flex;
+margin: 0;
+padding: 0;
+}
+
+.navigation-login li {
+list-style: none;
+transition: transform .5s ease;
+}
+
+.navigation-login li a {
+display: block;
+text-decoration: none;
+color: var(--darkblue-color);
+padding: 0 1vw;
+margin-right: 2.5vw;
+}
+
+nav ul li:hover {
+-webkit-transform: scale(1.1);
+transform: scale(1.1);
+}
 
 #articles {
     display: flex;
@@ -38,7 +100,7 @@ html {
     font-family: var(--headings-font);
     color: var(--darkblue-color);
     font-size: var(--title-size);
-    margin-top: 5vh;
+    margin-top: 10vh;
 }
 
 .searchfilter-container {
