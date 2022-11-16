@@ -38,12 +38,18 @@ html {
     font-family: var(--headings-font);
     color: var(--darkblue-color);
     font-size: var(--title-size);
-    margin-top: 5vw;
+    margin-top: 5vh;
 }
 
-.searchbar-container {
+.searchfilter-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
     font-family: Arial, Helvetica, sans-serif;
+    margin-top: 4vw;
 }
+
 
 .search-box {
     width: 90%;
@@ -80,8 +86,24 @@ html {
 
 .searchbar-container {
     width: 35%;
-    position: absolute;
-    left: 40%;
-    top: 40%;
-    transform: translate(-50%, -50%);
+}
+
+#articles-filter {
+    font-weight: 500;
+    width: 8vw;
+    height: 4vh;
+    border-radius: 17px;
+    border: 1px solid var(--darkblue-color);
+    font-size: 1vw;
+    padding-left: .5vw;
+}
+
+.articles-filter-item {
+    padding: 5rem;
+}
+
+#articles-save{
+    height: 3.5vh;
+    margin-left: 1vw;
+    
 }
