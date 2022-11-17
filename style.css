@@ -1,98 +1,106 @@
-*{
-margin: 0;
-padding: 0;
-box-sizing: border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--white-color);
 }
 
 html {
-scroll-behavior: smooth;
-overflow-x: hidden;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 :root {
-/* Color variables */
---black-color: #000000;
---white-color: #fbfbfb;
---darkblue-color: #687DAC;
+    /* Color variables */
+    --black-color: #000000;
+    --white-color: #fbfbfb;
+    --lightblue-color: #D2E0EE;
+    --midblue-color: #9EB0CE;
+    --darkblue-color: #687DAC;
+    --sand-color: #F0D7BA;
+    --grey-color: #757575;
 
-/* Font variables */
---headings-font: 'Patua One', cursive;
---text-font: 'Maven Pro', sans-serif;
+    /* Font variables */
+    --headings-font: 'Patua One', cursive;
+    --text-font: 'Maven Pro', sans-serif;
 
-/* Size variables */
---navigationtext-size: 1.1vw;
---bold-font: 600;
---title-size: 2.5vw;
+    /* Size variables */
+    --navigationtext-size: 1.1vw;
+    --bold-font: 600;
+    --regular-font: 100;
+    --title-size: 2.5vw;
 }
 
+/* NAVIGATION BAR */
 .navbar {
-display: flex;
-justify-content: space-between;
-align-items: center;
-background-color: var(--color-white);
-font-size: var(--navigationtext-size);
-font-family: var(--text-font);
-font-weight: var(--bold-font);
-overflow: hidden;
-padding-block: .3vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-white);
+    font-size: var(--navigationtext-size);
+    font-family: var(--text-font);
+    font-weight: var(--bold-font);
+    overflow: hidden;
+    padding-block: .3vw;
 }
 
 .navigation-menu {
-font-size: var(--navigationtext-size);
-margin-left: 2.5vw;
+    font-size: var(--navigationtext-size);
+    margin-left: 2.5vw;
 }
 
 .navigation-menu ul {
-display: flex;
-align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 .navigation-menu li {
-list-style: none;
-transition: transform .5s ease;
+    list-style: none;
+    transition: transform .5s ease;
 }
 
 .navigation-menu li a {
-display: block;
-text-decoration: none;
-color: var(--darkblue-color);
-padding: 0 1vw;
+    display: block;
+    text-decoration: none;
+    color: var(--darkblue-color);
+    padding: 0 1vw;
 }
 
 .navigation-menu img {
-height: 3vw;
+    height: 3vw;
 }
 
 .navigation-login ul {
-display: flex;
-margin: 0;
-padding: 0;
+    display: flex;
+    margin: 0;
+    padding: 0;
 }
 
 .navigation-login li {
-list-style: none;
-transition: transform .5s ease;
+    list-style: none;
+    transition: transform .5s ease;
 }
 
 .navigation-login li a {
-display: block;
-text-decoration: none;
-color: var(--darkblue-color);
-padding: 0 1vw;
-margin-right: 2.5vw;
+    display: block;
+    text-decoration: none;
+    color: var(--darkblue-color);
+    padding: 0 1vw;
+    margin-right: 2.5vw;
 }
 
 nav ul li:hover {
--webkit-transform: scale(1.1);
-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
 }
 
+/* TITLE + SEARCHBAR + FILTERS*/
 #articles {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: 95vh;
+    height: 35vh;
 }
 
 #articles-title {
@@ -164,8 +172,49 @@ transform: scale(1.1);
     padding: 5rem;
 }
 
-#articles-save{
+#articles-save {
     height: 3.5vh;
     margin-left: 1vw;
-    
+
+}
+
+/* BIG ARTICLE */
+.articles-big {
+    height: 56.5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 4vw;
+}
+
+.articles-big-photo img {
+    height: 45vh;
+    background-color: var(--midblue-color);
+    width: 35vw;
+    border-radius: 17px;
+}
+
+.articles-big-info {
+    display: flex;
+    flex-direction: column;
+    width: 42vw;
+    row-gap: 1vw;
+}
+
+.articles-big-info h4 {
+    font-family: var(--text-font);
+    font-weight: var(--regular-font);
+    color: var(--grey-color);
+    font-size: 1vw;
+}
+
+.articles-big-info h1 {
+    font-family: var(--headings-font);
+    font-size: 2.5vw;
+    font-weight: var(--regular-font);
+}
+
+.articles-big-info p {
+    font-family: var(--text-font);
+    font-size: 1vw;
 }
