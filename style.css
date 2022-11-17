@@ -207,8 +207,8 @@ nav ul li:hover {
 }
 
 .articles-information {
-    margin-top: 0.6rem;
-    margin-left: .8vw;
+    margin-top: .8rem;
+    margin-left: .6vw;
 }
 
 .articles-date {
@@ -220,13 +220,13 @@ nav ul li:hover {
 .articles-headline {
     font-size: 1.3vw;
     font-family: var(--headings-font);
-    margin-top: 0.8rem;
+    margin-top: .8rem;
 }
 
 .articles-preview {
     font-size: 1vw;
     font-family: var(--text-font);
-    margin-top: 0.8rem;
+    margin-top: .8rem;
 }
 
 /* BIG ARTICLE */
