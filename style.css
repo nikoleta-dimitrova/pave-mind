@@ -442,3 +442,129 @@ img.card__img {
   text-align: center;
 }
 
+
+
+
+/*@@@@@@@@@@@@@@@@@@@@@@@@@   footer     @@@@@@@@@@@@@@@@@@@@@@*/
+
+.footer__pavemind{
+  background-color: #fbfbfb;
+}
+
+
+.footer__title {
+  font-size: 3.5vw;
+  color: var(--second-color);
+  font-family: 'Patua One';
+  font-weight: 400;
+  width: 32vw;
+  height: auto;
+}
+
+.footer__description {
+  font-size: 1.5vw;
+  font-family: 'Maven Pro', sans-serif;
+  width: 41vw;
+  height: auto;
+  padding-bottom:1vw;
+}
+
+
+.footer__container {
+  padding: 5vw 0 0vw;
+  display: flex;
+  align-items: center;
+  gap: 2.2vw;
+  padding-bottom:7vw;
+  margin-left: 6.5vw;
+}
+
+.footerquoteimg{
+  width: 100vw;
+    height: auto;
+    margin-left: -2vw;
+}
+
+
+.home-btnfacebook {
+  padding: 1vw 1vw;
+  border: none;
+  background-image: url("./Assets/images/facebook-round-line-icon.svg");
+  background-color: #fbfbfb;
+  cursor: pointer;
+  background-size: contain;
+}
+.home-btninstagram {
+  padding: 1vw 1vw;
+  border: none;
+  background-image: url("./Assets/images/instagram-round-line-icon.svg");
+  background-size: contain;
+  background-color: #fbfbfb;
+  cursor: pointer;
+}
+
+.home-btnemail {
+  padding: 1vw 1vw;
+  border: none;
+  background-image: url("./Assets/images/Group\ 81.svg");
+  background-size: contain;
+  background-color: #fbfbfb;
+  cursor: pointer;
+}
+
+
+
+
+.footer__navigation {
+  justify-content: space-between;
+  background-color: var(--color-white);
+  font-size: var(--navigationtext-size);
+  font-family: var(--text-font);
+  font-weight: var(--bold-font);
+  overflow: hidden;
+  margin-top: -9vw;
+  margin-bottom: 5vw;
+  margin-left: 4.1vw;
+
+}
+
+.footer__navigation-menu {
+  font-size: var(--navigationtext-size);
+  margin-left: 2.5vw;
+}
+
+.footer__navigation-menu ul {
+  display: flex;
+  align-items: center;
+}
+
+.footer__navigation-menu li {
+  list-style: none;
+  transition: transform .5s ease;
+}
+
+.footer__navigation-menu li a {
+  text-decoration: none;
+  color: var(--darkblue-color);
+  padding: 0 1vw;
+}
+
+.footer__navigation ul li:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+#footer-picture.footer__img{
+  width:30vw;
+  height:auto;
+  margin-bottom: -5vw;
+}
+
+.footer__navigation__text{
+  color:#687DAC
+}
+
+#footer-logo{
+  width:8.5vw;
+  height:auto;
+}
