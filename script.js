@@ -70,6 +70,7 @@ class Article {
 }
 
 var articleList = [];
+var articlesSorted = false;
 var articlesGrid = document.getElementById("articles-grid");
 var filters = document.getElementById("articles-filter");
 var bigArticleSection = document.querySelector(".articles-big");
@@ -127,45 +128,50 @@ const createArticlesContainer = () => {
     })
 }
 
+const checkBigArticle = () => {
+    if (articlesSorted || articleSearchBar.value.length > 2) {
+        bigArticleSection.style.display = "none";
+        articlesGrid.style.marginTop = "2rem";
+        return;
+    }
+    bigArticleSection.style.display = "flex";
+    articlesGrid.style.marginTop = "0";
+}
+
 const filterArticles = () => {
-    articlesGrid.style.marginTop = "2rem"
     if (filters.value === "Most viewed") {
         articleList.sort((a, b) => {
             return b.views - a.views;
         });
-        bigArticleSection.style.display = "none"
+        articlesSorted = true;
     }
     else if (filters.value === "Oldest") {
         articleList.sort((a, b) => {
             return a.date - b.date;
         });
-        bigArticleSection.style.display = "none"
+        articlesSorted = true;
     }
     else if (filters.value === "Newest") {
         articleList.sort((a, b) => {
             return b.date - a.date;
         });
-        bigArticleSection.style.display = "none"
+        articlesSorted = true;
     }
     else {
-        articlesGrid.style.marginTop = "0"
-        bigArticleSection.style.display = "flex"
+        articlesSorted = false;
     }
     createArticlesContainer();
+    checkBigArticle();
 }
 
 const searchArticles = () => {
     let articles = articlesGrid.childNodes;
     if (articleSearchBar.value.length === 0) {
-        bigArticleSection.style.display = "flex";
-        articlesGrid.style.marginTop = "0";
         articles.forEach(article => {
             article.style.display = "block";
         })
     }
     if (articleSearchBar.value.length > 2) {
-        bigArticleSection.style.display = "none";
-        articlesGrid.style.marginTop = "2rem"
         articles.forEach(article => {
             if (!article.childNodes[1].childNodes[1].textContent.toLowerCase().includes(articleSearchBar.value.toLowerCase())) {
                 article.style.display = "none";
@@ -175,6 +181,7 @@ const searchArticles = () => {
             }
         })
     }
+    checkBigArticle();
 }
 
 window.onload = init();
