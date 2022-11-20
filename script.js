@@ -73,6 +73,7 @@ var articleList = [];
 var articlesGrid = document.getElementById("articles-grid");
 var filters = document.getElementById("articles-filter");
 var bigArticleSection = document.querySelector(".articles-big");
+var articleSearchBar = document.getElementById("search-input");
 
 // Loading the JSON article data and returning the response (mock GET request) 
 const loadArticles = (callback) => {
@@ -113,19 +114,18 @@ const createArticlesContainer = () => {
         articleInformation.className = "articles-information";
         var articleDate = document.createElement('span');
         articleDate.className = "articles-date";
-        articleDate.textContent = article.date.toLocaleDateString('en-us', { year:"numeric", month:"long", day:"numeric"}) ;
+        articleDate.textContent = article.date.toLocaleDateString('en-us', { year: "numeric", month: "long", day: "numeric" });
         var articleHeadline = document.createElement('div');
         articleHeadline.className = "articles-headline";
         articleHeadline.textContent = article.title;
         var articlePreview = document.createElement('div');
         articlePreview.className = "articles-preview";
         articlePreview.textContent = article.preview;
-        articleInformation.append(articleDate, articleHeadline,articlePreview)
+        articleInformation.append(articleDate, articleHeadline, articlePreview)
         articleContainer.appendChild(articleInformation);
-
         articlesGrid.appendChild(articleContainer);
     })
- }
+}
 
 const filterArticles = () => {
     articlesGrid.style.marginTop = "2rem"
@@ -152,6 +152,29 @@ const filterArticles = () => {
         bigArticleSection.style.display = "flex"
     }
     createArticlesContainer();
+}
+
+const searchArticles = () => {
+    let articles = articlesGrid.childNodes;
+    if (articleSearchBar.value.length === 0) {
+        bigArticleSection.style.display = "flex";
+        articlesGrid.style.marginTop = "0";
+        articles.forEach(article => {
+            article.style.display = "block";
+        })
+    }
+    if (articleSearchBar.value.length > 2) {
+        bigArticleSection.style.display = "none";
+        articlesGrid.style.marginTop = "2rem"
+        articles.forEach(article => {
+            if (!article.childNodes[1].childNodes[1].textContent.toLowerCase().includes(articleSearchBar.value.toLowerCase())) {
+                article.style.display = "none";
+            }
+            else {
+                article.style.display = "block";
+            }
+        })
+    }
 }
 
 window.onload = init();
