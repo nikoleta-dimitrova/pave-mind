@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: var(--white-color);
 }
 
 html {
@@ -30,6 +29,10 @@ html {
     --bold-font: 600;
     --title-size: 2.5vw;
     --regular-font: 100;
+}
+
+#articles-body {
+    background-color: var(--white-color);
 }
 
 /* NAVIGATION BAR */
@@ -93,6 +96,31 @@ html {
 nav ul li:hover {
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
+}
+
+/* BUTTON PROPERTIES */
+.general-btn {
+    background-color: var(--lightblue-color);
+    padding: 0.4vw 1vw;
+    border-radius: 2vw;
+    font-weight: 100;
+    color: var(--darkblue-color);
+    font-family: "Patua One";
+    border: none;
+}
+
+.general-btn:hover {
+    background-color: var(--darkblue-color);
+    color: var(--white-color);
+}
+
+.general-btn a {
+    text-decoration: none;
+    color: var(--darkblue-color);
+}
+
+.general-btn a:hover {
+    color: var(--white-color);
 }
 
 /* TITLE + SEARCHBAR + FILTERS*/
@@ -163,7 +191,7 @@ nav ul li:hover {
     width: 8vw;
     height: 4vh;
     border-radius: 17px;
-    border: 1px solid var(--darkblue-color);
+    border: 0.1vw solid var(--darkblue-color);
     font-size: 1vw;
     padding-left: .5vw;
 }
@@ -177,6 +205,26 @@ nav ul li:hover {
     margin-left: 1vw;
 
 }
+
+select {
+    appearance: none;
+    background-image: url(/Assets/Images/dropdown-arrow.svg);
+    background-position: right 0.8vw top 50%;
+    background-repeat: no-repeat;
+    background-size: 0.7vw;
+    outline: none;
+}
+
+
+
+#articles-filter input {
+    border: none;
+}
+
+#articles-filter input:focus {
+    outline: none;
+}
+
 
 /* BIG ARTICLE */
 .articles-big {
@@ -215,9 +263,31 @@ nav ul li:hover {
     font-weight: var(--regular-font);
 }
 
-.articles-big-info p {
+#articles-big-text {
     font-family: var(--text-font);
     font-size: 1vw;
+}
+
+#articles-big-button {
+    width: 9vw;
+    font-size: 1vw;
+}
+
+.articles-big-btn-arrow {
+    border: solid var(--darkblue-color);
+    border-width: 0 0.2vw 0.2vw 0;
+    display: inline-block;
+    padding: 0.2vw;
+}
+
+.articles-big-btn-right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+.general-btn:hover .articles-big-btn-right {
+    border: solid var(--white-color);
+    border-width: 0 0.2vw 0.2vw 0;
 }
 
 /* ARTICLES LIST */
