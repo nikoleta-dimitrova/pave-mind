@@ -6,6 +6,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 :root {
@@ -138,7 +139,8 @@ nav ul li:hover {
   font-family: "Maven Pro", sans-serif;
   width: 41vw;
   height: auto;
-  padding-bottom: 1vw;
+  padding-bottom: 2vw;
+  padding-top: 1.8vw;
 }
 /*@@@@@@@@ Test Button Properties @@@@@@@@@@@@*/
 
@@ -178,11 +180,11 @@ nav ul li:hover {
   height: auto;
 }
 .home-wave-img {
-  width: 99vw;
+  width: 100vw;
   height: auto;
 }
 .home-wave-mission-img {
-  width: 99vw;
+  width: 100vw;
   height: auto;
 }
 
@@ -190,7 +192,7 @@ nav ul li:hover {
 
 .home-articles {
   background-color: #9dafcd;
-  width: 99vw;
+  width: 100vw;
   height: auto;
 }
 
@@ -247,7 +249,6 @@ img.home-card-img {
   font-family: "Patua One";
   width: 11vw;
   height: auto;
-  font-weight: 10;
   margin-top: 3.4vw;
 }
 .home-card-description {
@@ -262,7 +263,7 @@ img.home-card-img {
 /* @@@@@@@ Our Mission @@@@@@@@@@ */
 
 .home-our-mission {
-  width: 99vw;
+  width: 100vw;
   height: auto;
 }
 
@@ -286,9 +287,11 @@ img.home-card-img {
 
 .home-mission-img {
   float: left;
-  margin: 0 15px 0 0;
+  margin: 0 1.5vw 0 0;
   float: left;
-  margin: 0 15px 0 0;
+  margin: 0 1.5vw 0 0;
+  width: 42.5vw;
+  height: auto;
 }
 
 .home-mission-description {
@@ -297,7 +300,11 @@ img.home-card-img {
   font-size: 1.3vw;
   padding-left: 9vw;
 }
-
+.home-second-wave-mission-img {
+  width: 100vw;
+  height: auto;
+  background-color: #fbfbfb;
+}
 /* @@@@@@@@@@ Features @@@@@@@@@@@@ */
 
 .home-features {
@@ -321,29 +328,30 @@ img.home-card-img {
   display: grid;
   grid-template-columns: repeat(3, 2fr);
   align-items: center;
-  gap: 13vw;
+  gap: 14vw;
   padding-left: 12vw;
   padding-bottom: 5vw;
 }
 .home-features-headers-community {
-  font-size: 1.8vw;
+  font-size: 1.5vw;
   line-height: 1.3;
   font-family: "Patua One";
   font-weight: 100;
   color: #fbfbfb;
   width: 3vw;
+  margin-left: 0.7vw;
 }
 .home-features-headers-tips {
-  font-size: 1.8vw;
+  font-size: 1.5vw;
   line-height: 1.3;
   font-family: "Patua One";
   font-weight: 100;
   color: #fbfbfb;
   width: 3vw;
-  margin-left: -0.5vw;
+  margin-left: 0.8vw;
 }
 .home-features-headers-diary {
-  font-size: 1.8vw;
+  font-size: 1.5vw;
   line-height: 1.3;
   font-family: "Patua One";
   font-weight: 100;
@@ -353,18 +361,18 @@ img.home-card-img {
 }
 
 .home-features-img {
-  margin-left: 0.8vw;
-  width: 8vw;
+  margin-left: 1.5vw;
+  width: 7vw;
   height: auto;
 }
 .home-features-img2 {
-  margin-left: 0.5vw;
-  width: 8vw;
+  margin-left: 1vw;
+  width: 7vw;
   height: auto;
 }
 .home-features-img3 {
   margin-left: 1.9vw;
-  width: 7vw;
+  width: 6vw;
   height: auto;
 }
 
@@ -376,7 +384,7 @@ img.home-card-img {
 }
 .home-features-text {
   padding-top: 2vh;
-  font-size: 1.5vw;
+  font-size: 1.3vw;
   width: 30vw;
   line-height: 1.9vw;
   font-family: "Maven Pro";
@@ -392,7 +400,6 @@ img.home-card-img {
 }
 
 .home-footer-container {
-  padding: 5vw 0 0vw;
   display: flex;
   align-items: center;
   gap: 2.2vw;
@@ -401,12 +408,13 @@ img.home-card-img {
 }
 
 #home-footer-logo {
-  width: 8.5vw;
+  width: 7vw;
   height: auto;
+  padding-bottom: 1.7vw;
 }
 
 .home-footer-title {
-  font-size: 3.5vw;
+  font-size: 2.7vw;
   color: var(--second-color);
   font-family: "Patua One";
   font-weight: 400;
@@ -415,17 +423,12 @@ img.home-card-img {
 }
 
 .home-footer-description {
-  font-size: 1.5vw;
-  font-family: "Maven Pro", sans-serif;
+  font-size: 1.2vw;
+  font-family: "Maven Pro";
   width: 41vw;
-  height: auto;
-  padding-bottom: 1vw;
-}
-
-.home-footer-quote-img {
-  width: 100vw;
-  height: auto;
-  margin-left: -2vw;
+  height: 6vw;
+  padding-bottom: 1.3vw;
+  padding-top: 1.2vw;
 }
 
 .home-btnfacebook {
@@ -465,9 +468,8 @@ img.home-card-img {
   margin-bottom: 5vw;
   margin-left: 4vw;
 }
-
 .home-footer-navigation-menu {
-  font-size: var(--navigationtext-size);
+  font-size: 1vw;
   margin-left: 2.5vw;
 }
 
@@ -493,11 +495,25 @@ img.home-card-img {
 }
 
 #home-footer-picture.home-footer-img {
-  width: 30vw;
+  width: 25vw;
   height: auto;
   margin-bottom: -5vw;
+  margin-left: 2vw;
 }
 
 .home-footer-navigation-text {
   color: #687dac;
+}
+.home-footer-quote {
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+  width: 100vw;
+  height: auto;
+  text-align: center;
+  color: #fbfbfb;
+  background-color: #687dac;
+}
+.home-footer-quote-text {
+  font-family: "Maven Pro";
+  font-size: 2.2vw;
 }
