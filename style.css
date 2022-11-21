@@ -272,8 +272,7 @@ img.home-card-img {
   line-height: 1.3;
   font-family: "Patua One";
   font-weight: 100;
-  position: relative;
-  padding-left: 43%;
+ text-align: center;
   color: #687dac;
   background-color: #fbfbfb;
 }
@@ -331,37 +330,22 @@ img.home-card-img {
   position: relative;
   text-align: center;
 }
-
-.home-features-container {
-  padding: 5vw 0 0vw;
-  display: grid;
-  grid-template-columns: repeat(3, 2fr);
-  align-items: center;
-  gap: 14vw;
-  padding-left: 12vw;
-  padding-bottom: 5vw;
-}
 .home-features-headers-community {
   font-size: 1.5vw;
-  line-height: 1.3;
   font-family: "Patua One";
   font-weight: 100;
   color: #fbfbfb;
   width: 3vw;
-  margin-left: 0.7vw;
 }
 .home-features-headers-tips {
   font-size: 1.5vw;
-  line-height: 1.3;
   font-family: "Patua One";
   font-weight: 100;
   color: #fbfbfb;
-  width: 3vw;
-  margin-left: 0.8vw;
+  width: 30vw;
 }
 .home-features-headers-diary {
   font-size: 1.5vw;
-  line-height: 1.3;
   font-family: "Patua One";
   font-weight: 100;
   color: #fbfbfb;
@@ -369,17 +353,14 @@ img.home-card-img {
 }
 
 .home-features-img {
-  margin-left: 1.5vw;
   width: 7vw;
   height: auto;
 }
 .home-features-img2 {
-  margin-left: 1vw;
   width: 7vw;
   height: auto;
 }
 .home-features-img3 {
-  margin-left: 1.9vw;
   width: 6vw;
   height: auto;
 }
@@ -399,7 +380,6 @@ img.home-card-img {
   color: #fbfbfb;
   text-align: center;
 }
-
 /*@@@@@@@@@@@@@@@@@@@@@@@@@   Footer     @@@@@@@@@@@@@@@@@@@@@@*/
 
 .home-footer-pavemind {
@@ -432,10 +412,9 @@ img.home-card-img {
 .home-footer-description {
   font-size: 1.2vw;
   font-family: "Maven Pro";
-  width: 41vw;
+  width: 37vw;
   height: 6vw;
-  padding-bottom: 1.3vw;
-  padding-top: 1.2vw;
+  padding-top: 0.5vw;
 }
 
 .home-btnfacebook {
@@ -505,7 +484,8 @@ img.home-card-img {
   width: 25vw;
   height: auto;
   margin-bottom: -5vw;
-  margin-left: 2vw;
+  margin-left: 9vw;
+  margin-bottom: -6.9vw;
 }
 
 .home-footer-navigation-text {
