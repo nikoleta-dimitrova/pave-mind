@@ -2,19 +2,20 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
 }
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
+
 
 :root {
   --header-height: 4vw;
   --first-color: #d2e0ee;
   --second-color: #687dac;
   --body-color: ;
-  --text-font: 'Maven Pro';
+  --text-font: "Maven Pro";
   --h1-font-size: 2.4vw;
   --h2-font-size: 1.8vw;
   --h3-font-size: 1.4vw;
@@ -32,11 +33,11 @@ html {
   /* Color variables */
   --black-color: #000000;
   --white-color: #fbfbfb;
-  --darkblue-color: #687DAC;
+  --darkblue-color: #687dac;
 
   /* Font variables */
-  --headings-font: 'Patua One', cursive;
-  --text-font: 'Maven Pro', sans-serif;
+  --headings-font: "Patua One", cursive;
+  --text-font: "Maven Pro", sans-serif;
 
   /* Size variables */
   --navigationtext-size: 1.1vw;
@@ -52,7 +53,7 @@ html {
   font-family: var(--text-font);
   font-weight: var(--bold-font);
   overflow: hidden;
-  padding-block: .3vw;
+  padding-block: 0.3vw;
 }
 
 .navigation-menu {
@@ -67,7 +68,7 @@ html {
 
 .navigation-menu li {
   list-style: none;
-  transition: transform .5s ease;
+  transition: transform 0.5s ease;
 }
 
 .navigation-menu li a {
@@ -86,7 +87,7 @@ html {
 
 .navigation-login li {
   list-style: none;
-  transition: transform .5s ease;
+  transition: transform 0.5s ease;
 }
 
 .navigation-login li a {
@@ -102,23 +103,15 @@ nav ul li:hover {
   transform: scale(1.1);
 }
 
+/* @@@@@@@@@ Home Page  @@@@@@@@@@ */
 
+/*@@@@@@@@@ Home Main @@@@@@@@@ */
 
-
-
-
-
-
-
-
-
-
-.home {
+.home-main {
   max-width: 100;
   max-height: auto;
 }
-
-.home__container {
+.home-container {
   padding: 5vw 0 0vw;
   padding-left: 5vw;
   display: grid;
@@ -126,48 +119,33 @@ nav ul li:hover {
   align-items: center;
   gap: 7vw;
   padding-left: 19vw;
-
+  margin: 0 auto;
+  width: calc(100% - 3vw);
 }
-.home__data{
-  margin-left:-8vw;
+.home-data {
+  margin-left: -8vw;
 }
 
-.home__title {
+.home-title {
   font-size: 3.5vw;
   color: var(--second-color);
-  font-family: 'Patua One';
+  font-family: "Patua One";
   font-weight: 400;
   width: 32vw;
   height: auto;
 }
 
-.home__description {
+.home-description {
   font-size: 1.5vw;
-  font-family: 'Maven Pro', sans-serif;
+  font-family: "Maven Pro", sans-serif;
   width: 41vw;
   height: auto;
-  padding-bottom:1vw;
+  padding-bottom: 2vw;
+  padding-top: 1.8vw;
 }
+/*@@@@@@@@ Test Button Properties @@@@@@@@@@@@*/
 
-.container {
-  margin: 0 auto;
-  width: calc(100% - 3vw);
-}
-
-.section {
-  padding: 5vw 0 2vw;
-}
-
-.section-title {
-  text-align: center;
-  font-size: var(--h2-font-size);
-  color: var(--title-color);
-  margin-bottom: var(--mb-3);
-}
-
-/*-----mqsto za buton              */
-
-.btn {
+.home-btn {
   background-color: var(--first-color);
   padding: 0.4vw 1vw;
   border-radius: 2vw;
@@ -176,71 +154,59 @@ nav ul li:hover {
   font-family: "Patua One";
   border: none;
 }
-.btntext {
+.home-btn-text {
   font-size: 1.4vw;
 }
 
-.arrow {
+.home-btn-arrow {
   border: solid #687dac;
   border-width: 0 0.3vw 0.3vw 0;
   display: inline-block;
   padding: 0.3vw;
 }
-.right {
+.home-btn-right {
   transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
 }
-.btn:hover .right {
+.home-btn:hover .home-btn-right {
   border: solid #fbfbfb;
   border-width: 0 0.3vw 0.3vw 0;
 }
-.btn:hover {
+.home-btn:hover {
   background-color: var(--second-color);
   color: white;
 }
-
-
-.wavehomeimg {
-  width: 99vw;
+#home-first-picture {
+  width: 30vw;
   height: auto;
 }
-.wavemissionimg{
-  width: 99vw;
+.home-wave-img {
+  width: 100vw;
+  height: auto;
+}
+.home-wave-mission-img {
+  width: 100vw;
   height: auto;
 }
 
-.Articles33 {
+/* @@@@@@@@@ Articles to begin with  @@@@@@@@@@ */
+
+.home-articles {
   background-color: #9dafcd;
-  width: 99vw;
+  width: 100vw;
   height: auto;
 }
 
-
-.Articles3__title {
+.home-articles-title {
   font-size: 2.7vw;
   margin-bottom: var(--mb-1);
   line-height: 1.3;
   color: #fbfbfb;
-  font-family: 'Patua One';
+  font-family: "Patua One";
   font-weight: 100;
-  position: relative;
-  padding-left: 38.5%;
+  text-align: center;
 }
-
-.card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-}
-
-img.card__img {
- width: 24vw;
- height: auto;
- padding-top:9.4vw;
- padding-right: 1vw;
- float:left;
-}
-
-
-.Cards {
+.home-articles-cards {
   padding: 5vw 0 0vw;
   padding-left: 5vw;
   display: grid;
@@ -248,13 +214,7 @@ img.card__img {
   align-items: center;
   gap: 3vw;
 }
-
-#first-picture {
-  width: 30vw;
-  height: auto;
-}
-
-.card {
+.home-card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 1vw;
   background-color: #fbfbfb;
@@ -265,226 +225,210 @@ img.card__img {
   height: 28vw;
   background-image: url("./Assets/images/card.svg");
   background-repeat: no-repeat;
-  background-size:30vw;
-  
-  
+  background-size: 30vw;
 }
 
+.home-card-container {
+  margin: 1vw;
+}
 
-.card__title {
+.home-card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+img.home-card-img {
+  width: 24vw;
+  height: auto;
+  padding-top: 9.4vw;
+  padding-right: 1vw;
+  float: left;
+}
+
+.home-card-title {
   font-size: 1.3vw;
-  font-family: 'Patua One';
+  font-family: "Patua One";
   width: 11vw;
   height: auto;
-  font-weight: 10;
-  margin-top:3.4vw;
-  
-  
-
+  margin-top: 3.4vw;
+  text-align: center;
 }
-.card__description {
-    font-size: 1vw;
-    font-family: 'Maven Pro', sans-serif;
-    width: 25vw;
-    height: auto;
-    padding-top:1vw;
-    padding-bottom:4vw;
-
+.home-card-description {
+  font-size: 1vw;
+  font-family: "Maven Pro", sans-serif;
+  width: 25vw;
+  height: auto;
+  padding-top: 1vw;
+  padding-bottom: 11vw;
 }
-
-
-.h13{
-  padding-top: 5vw;
-}
-
-.card__container{
-  
-  margin:1vw;
+ 
+.read-more{
+  color:#687dac;
+  font-family: "Maven Pro", sans-serif;
+  text-decoration:none;
+  font-weight: 800;
+  font-size: 1.2vw;
 }
 
 
-.mission__title{
-  
+
+
+/* @@@@@@@ Our Mission @@@@@@@@@@ */
+
+.home-our-mission {
+  width: 100vw;
+  height: auto;
+}
+
+.home-mission-title {
   font-size: 2.7vw;
   line-height: 1.3;
-  font-family: 'Patua One';
+  font-family: "Patua One";
   font-weight: 100;
-  position: relative;
-  padding-left: 43%;
-  color:#687dac;
-  background-color:#fbfbfb;
+text-align: center;
+  color: #687dac;
+  background-color: #fbfbfb;
 }
 
-
-
-.mission__container{
-
-  display:flex;
+.home-mission-container {
+  display: flex;
   align-items: center;
   gap: 11vw;
   background-color: #fbfbfb;
-  margin:-1.5vw;
-
-  
 }
 
-#missionimg{
-  
-    float: left;    
-     margin: 0 15px 0 0;
-    
-}
-
-
-#mission-picture{
-  width:40vw;
-  height:auto;
-}
-
-.our__mission{
-  width: 99vw;
+.home-mission-img {
+  float: left;
+  margin: 0 1.5vw 0 0;
+  float: left;
+  margin: 0 1.5vw 0 0;
+  width: 42.5vw;
   height: auto;
 }
 
-.mission__description{
-  font-family: 'Maven Pro', sans-serif;
-  color:#687dac;
-  font-size:1.3vw;
-  padding-left:9vw;
+.home-mission-description {
+  font-family: "Maven Pro", sans-serif;
+  color: #687dac;
+  font-size: 1.3vw;
+  padding-left: 9vw;
 }
+.home-second-wave-mission-img {
+  width: 100vw;
+  height: auto;
+  background-color: #fbfbfb;
+}
+/* @@@@@@@@@@ Features @@@@@@@@@@@@ */
 
-
-
-
-
-
-.features {
+.home-features {
   background-color: #687dac;
 }
-.features__container {
-  padding: 5vw 0 0vw;
-  display: grid;
-  grid-template-columns: repeat(3, 2fr);
-  align-items: center;
-  gap: 13vw;
-  padding-left: 12vw;
-  background-color: #687dac;
-  padding-bottom: 5vw;
-}
-.features__title {
+
+.home-features-title {
   font-size: 2.7vw;
   line-height: 1.3;
   font-family: "Patua One";
   font-weight: 100;
-  position: relative;
-  padding-left: 46%;
   color: #fbfbfb;
   background-color: #687dac;
   padding-top: 5vh;
-}
-.features__headers__community {
-  font-size: 1.8vw;
-  line-height: 1.3;
-  font-family: "Patua One";
-  font-weight: 100;
-  color: #fbfbfb;
-  width: 3vw;
-}
-.features__headers__tips {
-  font-size: 1.8vw;
-  line-height: 1.3;
-  font-family: "Patua One";
-  font-weight: 100;
-  color: #fbfbfb;
-  width: 3vw;
-  margin-left: -0.5vw;
-}
-.features__headers__diary {
-  font-size: 1.8vw;
-  line-height: 1.3;
-  font-family: "Patua One";
-  font-weight: 100;
-  color: #fbfbfb;
-  width: 3vw;
-  padding-left: 3vw;
+  text-align: center;
 }
 
-.features__img {
-  margin-left: 0.8vw;
-  width: 8vw;
-  height: auto;
+.home-features-container {
+  padding: 5vw 0 0vw;
+  display: flex;
+  align-items: center;
+  padding-bottom: 5vw;
+  justify-content: space-evenly;
+  position: relative;
+  text-align: center;
 }
-.features__img2 {
-  margin-left: 0.5vw;
-  width: 8vw;
-  height: auto;
+.home-features-headers-community {
+  font-size: 1.5vw;
+  font-family: "Patua One";
+  font-weight: 100;
+  color: #fbfbfb;
+  width: 3vw;
 }
-.features__img3 {
-  margin-left: 1.9vw;
+.home-features-headers-tips {
+  font-size: 1.5vw;
+  font-family: "Patua One";
+  font-weight: 100;
+  color: #fbfbfb;
+  width: 30vw;
+}
+.home-features-headers-diary {
+  font-size: 1.5vw;
+  font-family: "Patua One";
+  font-weight: 100;
+  color: #fbfbfb;
+  width: 3vw;
+}
+
+.home-features-img {
   width: 7vw;
   height: auto;
 }
+.home-features-img2 {
+  width: 7vw;
+  height: auto;
+}
+.home-features-img3 {
+  width: 6vw;
+  height: auto;
+}
 
-.features__description {
+.home-features-description {
   padding-top: 2.5vh;
 }
-.features__description3 {
+.home-features-description3 {
   padding-top: 2.5vh;
 }
-.features__text {
+.home-features-text {
   padding-top: 2vh;
-  font-size: 1.5vw;
+  font-size: 1.3vw;
   width: 30vw;
   line-height: 1.9vw;
   font-family: "Maven Pro";
   color: #fbfbfb;
-  margin-left: -10vw;
   text-align: center;
 }
 
+/*@@@@@@@@@@@@@@@@@@@@@@@@@   Footer     @@@@@@@@@@@@@@@@@@@@@@*/
 
-
-
-/*@@@@@@@@@@@@@@@@@@@@@@@@@   footer     @@@@@@@@@@@@@@@@@@@@@@*/
-
-.footer__pavemind{
+.home-footer-pavemind {
   background-color: #fbfbfb;
 }
 
+.home-footer-container {
+  display: flex;
+  align-items: center;
+  gap: 2.2vw;
+  padding-bottom: 7vw;
+  margin-left: 6.5vw;
+}
 
-.footer__title {
-  font-size: 3.5vw;
+#home-footer-logo {
+  width: 7vw;
+  height: auto;
+  padding-bottom: 1.7vw;
+}
+
+.home-footer-title {
+  font-size: 2.7vw;
   color: var(--second-color);
-  font-family: 'Patua One';
+  font-family: "Patua One";
   font-weight: 400;
   width: 32vw;
   height: auto;
 }
 
-.footer__description {
-  font-size: 1.5vw;
-  font-family: 'Maven Pro', sans-serif;
-  width: 41vw;
-  height: auto;
-  padding-bottom:1vw;
+.home-footer-description {
+  font-size: 1.2vw;
+  font-family: "Maven Pro";
+  width: 35vw;
+  height: 6vw;
+  padding-top: 0.5vw;
 }
-
-
-.footer__container {
-  padding: 5vw 0 0vw;
-  display: flex;
-  align-items: center;
-  gap: 2.2vw;
-  padding-bottom:7vw;
-  margin-left: 6.5vw;
-}
-
-.footerquoteimg{
-  width: 100vw;
-    height: auto;
-    margin-left: -2vw;
-}
-
 
 .home-btnfacebook {
   padding: 1vw 1vw;
@@ -512,59 +456,64 @@ img.card__img {
   cursor: pointer;
 }
 
-
-
-
-.footer__navigation {
+.home-footer-navigation {
   justify-content: space-between;
   background-color: var(--color-white);
   font-size: var(--navigationtext-size);
   font-family: var(--text-font);
   font-weight: var(--bold-font);
   overflow: hidden;
-  margin-top: -9vw;
+  margin-top: -7vw;
   margin-bottom: 5vw;
-  margin-left: 4.1vw;
-
+  margin-left: 4vw;
 }
-
-.footer__navigation-menu {
-  font-size: var(--navigationtext-size);
+.home-footer-navigation-menu {
+  font-size: 1vw;
   margin-left: 2.5vw;
 }
 
-.footer__navigation-menu ul {
+.home-footer-navigation-menu ul {
   display: flex;
   align-items: center;
 }
 
-.footer__navigation-menu li {
+.home-footer-navigation-menu li {
   list-style: none;
-  transition: transform .5s ease;
+  transition: transform 0.5s ease;
 }
 
-.footer__navigation-menu li a {
+.home-footer-navigation-menu li a {
   text-decoration: none;
   color: var(--darkblue-color);
   padding: 0 1vw;
 }
 
-.footer__navigation ul li:hover {
+.home-footer-navigation ul li:hover {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
 }
 
-#footer-picture.footer__img{
-  width:30vw;
-  height:auto;
-  margin-bottom: -5vw;
+#home-footer-picture.home-footer-img {
+  width: 25vw;
+  height: auto;
+  margin-bottom: -6.8vw;
+  margin-left: 12vw;
 }
 
-.footer__navigation__text{
-  color:#687DAC
+.home-footer-navigation-text {
+  color: #687dac;
+}
+.home-footer-quote {
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+  width: 100vw;
+  height: auto;
+  text-align: center;
+  color: #fbfbfb;
+  background-color: #687dac;
+}
+.home-footer-quote-text {
+  font-family: "Maven Pro";
+  font-size: 2.2vw;
 }
 
-#footer-logo{
-  width:8.5vw;
-  height:auto;
-}
