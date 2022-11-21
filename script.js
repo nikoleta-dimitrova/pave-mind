@@ -1,7 +1,7 @@
 class Article {
 
     // class constructor
-    constructor(id, date, title, preview, boldInfo, info, image, views) {
+    constructor(id, date, title, preview, boldInfo, info, image, views, saved) {
         this.id = id;
         this.date = date;
         this.title = title;
@@ -10,67 +10,77 @@ class Article {
         this.info = info;
         this.image = image;
         this.views = views;
+        this.saved = saved;
     }
 
     setId(id) {
-        this.id = id
+        this.id = id;
     }
     getId() {
         return this.id;
     }
 
     setDate(date) {
-        this.date = date
+        this.date = date;
     }
     getDate() {
         return this.date;
     }
 
     setTitle(title) {
-        this.title = title
+        this.title = title;
     }
     getTitle() {
         return this.title
     }
 
     setPreview(preview) {
-        this.preview = preview
+        this.preview = preview;
     }
     getPreview() {
         return this.preview;
     }
 
     setBoldinfo(boldInfo) {
-        this.boldInfo = boldInfo
+        this.boldInfo = boldInfo;
     }
     getBoldinfo() {
         return this.boldInfo;
     }
 
     setInfo(info) {
-        this.info = info
+        this.info = info;
     }
     getBoldinfo() {
         return this.info;
     }
 
     setImage(image) {
-        this.image = image
+        this.image = image;
     }
     getImage() {
         return this.image;
     }
 
     setViews(views) {
-        this.views = views
+        this.views = views;
     }
     getViews() {
         return this.views;
     }
+
+    setSaved(saved) {
+        this.saved = saved;
+    }
+    getSaved() {
+        return this.saved;
+    }
 }
 
 var articleList = [];
+var savedArticles = [];
 var articlesSorted = false;
+var viewingSavedArticles = false;
 var articlesGrid = document.getElementById("articles-grid");
 var filters = document.getElementById("articles-filter");
 var bigArticleSection = document.querySelector(".articles-big");
@@ -97,19 +107,54 @@ const init = () => {
             var newArticle = new Article(article.id, new Date(article.date), article.title, article.preview, article.boldInfo, article.info, article.image, article.views)
             articleList.push(newArticle);
         })
-        createArticlesContainer();
+        createArticlesContainer(articleList);
     })
 }
 
-const createArticlesContainer = () => {
+const renderSvg = (articleImageContainer, article) => {
+    const iconSvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    const iconPath = document.createElementNS(
+        'http://www.w3.org/2000/svg',
+        'path'
+    );
+
+    iconSvg.setAttribute('viewBox', "0 0 24 24")
+    iconSvg.classList.add("article-save-button")
+
+    iconPath.setAttribute('d', "M6 21a1 1 0 0 1-.49-.13A1 1 0 0 1 5 20V5.33A2.28 2.28 0 0 1 7.2 3h9.6A2.28 2.28 0 0 1 19 5.33V20a1 1 0 0 1-.5.86 1 1 0 0 1-1 0l-5.67-3.21-5.33 3.2A1 1 0 0 1 6 21z");
+    iconPath.setAttribute('fill', !article.saved ? 'transparent' : '#687dac');
+    iconPath.setAttribute('stroke', "#687dac");
+
+    iconSvg.appendChild(iconPath);
+    iconSvg.addEventListener('click', function() {
+        article.saved = !article.saved;
+        if(article.saved) {
+            savedArticles.push(article);
+        }
+        else {
+            var articleIndex = savedArticles.indexOf(article)
+            savedArticles.splice(articleIndex, 1);
+        }
+        iconPath.setAttribute('fill', !article.saved ? 'transparent' : '#687dac');
+    })
+
+    articleImageContainer.appendChild(iconSvg);
+}
+
+const createArticlesContainer = (articleArray) => {
     articlesGrid.innerHTML = "";
-    articleList.forEach(article => {
+    articleArray.forEach(article => {
         var articleContainer = document.createElement('div');
         articleContainer.className = "articles-card";
 
+        var articleImageContainer = document.createElement('div');
+        articleImageContainer.className = "articles-image-container";
         var articleImage = document.createElement('img');
+        articleImage.className = "article-image";
         articleImage.src = article.image;
         articleContainer.appendChild(articleImage);
+        articleImageContainer.appendChild(articleImage);
+        renderSvg(articleImageContainer, article);
 
         var articleInformation = document.createElement('div')
         articleInformation.className = "articles-information";
@@ -123,13 +168,14 @@ const createArticlesContainer = () => {
         articlePreview.className = "articles-preview";
         articlePreview.textContent = article.preview;
         articleInformation.append(articleDate, articleHeadline, articlePreview)
+        articleContainer.appendChild(articleImageContainer)
         articleContainer.appendChild(articleInformation);
         articlesGrid.appendChild(articleContainer);
     })
 }
 
 const checkBigArticle = () => {
-    if (articlesSorted || articleSearchBar.value.length > 2) {
+    if (articlesSorted || articleSearchBar.value.length > 2 || viewingSavedArticles) {
         bigArticleSection.style.display = "none";
         articlesGrid.style.marginTop = "2rem";
         return;
@@ -160,8 +206,22 @@ const filterArticles = () => {
     else {
         articlesSorted = false;
     }
-    createArticlesContainer();
+    createArticlesContainer(articleList);
     checkBigArticle();
+}
+
+const showSavedArticles = () => {
+    viewingSavedArticles = !viewingSavedArticles;
+    articleSearchBar.value = "";
+    filters.value = "All articles";
+    if(viewingSavedArticles) {
+        createArticlesContainer(savedArticles);
+        checkBigArticle();
+    }
+    else {
+        createArticlesContainer(articleList);
+        checkBigArticle();
+    }
 }
 
 const searchArticles = () => {

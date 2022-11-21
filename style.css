@@ -175,7 +175,7 @@ nav ul li:hover {
 #articles-save {
     height: 3.5vh;
     margin-left: 1vw;
-
+    cursor: pointer;
 }
 
 /* BIG ARTICLE */
@@ -238,12 +238,34 @@ nav ul li:hover {
     border-radius: 17px;
 }
 
-.articles-card img {
+.articles-image-container {
     margin-inline: auto;
     width: 22vw;
     height: 30vh;
+    position: relative;
+}
+
+.article-image {
+    width: 100%;
+    height: 100%;
     background-color: #E4EAF2;
     border-radius: 17px;
+}
+
+.article-save-button {
+    position: absolute;
+    width: 1.7rem;
+    height: 1.7rem;
+    top: 1rem;
+    right: 1rem;
+    background-color: transparent;
+    z-index: 100;
+    stroke-width: 0.11rem;
+    fill: transparent;
+}
+
+.article-save-button:hover > path  {
+    fill: #687dac;
 }
 
 .articles-information {
