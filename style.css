@@ -9,6 +9,10 @@ html {
     overflow-x: hidden;
 }
 
+body {
+    background-color: var(--white-color);
+}
+
 :root {
     /* Color variables */
     --black-color: #000000;
@@ -29,10 +33,6 @@ html {
     --bold-font: 600;
     --title-size: 2.5vw;
     --regular-font: 100;
-}
-
-#articles-body {
-    background-color: var(--white-color);
 }
 
 /* NAVIGATION BAR */
@@ -113,6 +113,13 @@ nav ul li:hover {
 .primary-button:hover {
     background-color: var(--darkblue-color);
     color: var(--white-color);
+}
+
+.secondary-button {
+    color: var(--grey-color);
+    border-radius: 2vw;
+    text-decoration: none;
+    font-family: "Patua One";
 }
 
 /* TITLE + SEARCHBAR + FILTERS*/
@@ -297,6 +304,7 @@ select {
     width: 22vw;
     height: 55vh;
     border-radius: 17px;
+    position: relative;
 }
 
 .articles-image-container {
@@ -354,8 +362,10 @@ select {
 }
 
 #articles-small-button {
-    width: 9vw;
+    width: 8vw;
     font-size: 0.9vw;
+    position: absolute;
+    bottom: 0;
 }
 
 #articles-small-button:hover .articles-small-btn-arrow {
@@ -380,6 +390,7 @@ select {
     justify-content: center;
     align-items: center;
     row-gap: 1.5vw;
+    margin-top: 5rem;
 }
 
 #article-date {
@@ -414,4 +425,19 @@ select {
     font-size: 1.2vw;
     width: 46vw;
     line-height: 1.5vw;
+}
+
+#article-button-back {
+    position: absolute;
+    top: 10rem;
+    left: 9.5rem;
+}
+
+.articles-arrow-back {
+    border: solid var(--grey-color);
+    border-width: 0 0.2vw 0.2vw 0;
+    display: inline-block;
+    padding: 0.2vw;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(135deg);
 }
