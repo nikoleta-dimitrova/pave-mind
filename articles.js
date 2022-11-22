@@ -51,7 +51,7 @@ class Article {
     setInfo(info) {
         this.info = info;
     }
-    getBoldinfo() {
+    getinfo() {
         return this.info;
     }
 
@@ -126,9 +126,9 @@ const renderSvg = (articleImageContainer, article) => {
     iconPath.setAttribute('stroke', "#687dac");
 
     iconSvg.appendChild(iconPath);
-    iconSvg.addEventListener('click', function() {
+    iconSvg.addEventListener('click', function () {
         article.saved = !article.saved;
-        if(article.saved) {
+        if (article.saved) {
             savedArticles.push(article);
         }
         else {
@@ -167,7 +167,22 @@ const createArticlesContainer = (articleArray) => {
         var articlePreview = document.createElement('div');
         articlePreview.className = "articles-preview";
         articlePreview.textContent = article.preview;
-        articleInformation.append(articleDate, articleHeadline, articlePreview)
+        var articleButton = document.createElement('a');
+        articleButton.className = "primary-button";
+        articleButton.id = "articles-small-button";
+        articleButton.textContent = "Read more";
+        var articleArrow = document.createElement('span');
+        articleArrow.className = "articles-small-btn-arrow";
+        articleButton.appendChild(articleArrow);
+
+        articleButton.addEventListener('click', function () {
+            localStorage.setItem('articleinfo', article.info);
+            localStorage.setItem('articletitle', article.title);
+            localStorage.setItem('articleimage', article.image);
+            window.location.replace("article.html")
+        })
+
+        articleInformation.append(articleDate, articleHeadline, articlePreview, articleButton)
         articleContainer.appendChild(articleImageContainer)
         articleContainer.appendChild(articleInformation);
         articlesGrid.appendChild(articleContainer);
@@ -208,13 +223,14 @@ const filterArticles = () => {
     }
     createArticlesContainer(articleList);
     checkBigArticle();
+    viewingSavedArticles = false;
 }
 
 const showSavedArticles = () => {
     viewingSavedArticles = !viewingSavedArticles;
     articleSearchBar.value = "";
     filters.value = "All articles";
-    if(viewingSavedArticles) {
+    if (viewingSavedArticles) {
         createArticlesContainer(savedArticles);
         checkBigArticle();
     }
@@ -242,6 +258,11 @@ const searchArticles = () => {
         })
     }
     checkBigArticle();
+    viewingSavedArticles = false;
 }
 
-window.onload = init();
+const loadArticle = () => {
+    document.getElementById("article-image").src = localStorage.getItem('articleimage')
+    document.getElementById("article-title").innerHTML = localStorage.getItem('articletitle');
+    document.getElementById("article-information").innerHTML = localStorage.getItem('articleinfo');
+}

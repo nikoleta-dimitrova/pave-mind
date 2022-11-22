@@ -99,7 +99,7 @@ nav ul li:hover {
 }
 
 /* BUTTON PROPERTIES */
-.general-btn {
+.primary-button {
     background-color: var(--lightblue-color);
     padding: 0.4vw 1vw;
     border-radius: 2vw;
@@ -107,19 +107,11 @@ nav ul li:hover {
     color: var(--darkblue-color);
     font-family: "Patua One";
     border: none;
-}
-
-.general-btn:hover {
-    background-color: var(--darkblue-color);
-    color: var(--white-color);
-}
-
-.general-btn a {
     text-decoration: none;
-    color: var(--darkblue-color);
 }
 
-.general-btn a:hover {
+.primary-button:hover {
+    background-color: var(--darkblue-color);
     color: var(--white-color);
 }
 
@@ -270,7 +262,12 @@ select {
 
 #articles-big-button {
     width: 9vw;
-    font-size: 1vw;
+    font-size: 1.1vw;
+}
+
+#articles-big-button:hover .articles-big-btn-arrow {
+    border: solid var(--white-color);
+    border-width: 0 0.2vw 0.2vw 0;
 }
 
 .articles-big-btn-arrow {
@@ -278,17 +275,11 @@ select {
     border-width: 0 0.2vw 0.2vw 0;
     display: inline-block;
     padding: 0.2vw;
-}
-
-.articles-big-btn-right {
     transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
 }
 
-.general-btn:hover .articles-big-btn-right {
-    border: solid var(--white-color);
-    border-width: 0 0.2vw 0.2vw 0;
-}
+
 
 /* ARTICLES LIST */
 #articles-grid {
@@ -334,7 +325,7 @@ select {
     fill: transparent;
 }
 
-.article-save-button:hover > path  {
+.article-save-button:hover>path {
     fill: #687dac;
 }
 
@@ -359,4 +350,23 @@ select {
     font-size: 1vw;
     font-family: var(--text-font);
     margin-top: .8rem;
+}
+
+#articles-small-button {
+    width: 9vw;
+    font-size: 0.9vw;
+}
+
+#articles-small-button:hover .articles-small-btn-arrow {
+    border-color: var(--white-color);
+}
+
+.articles-small-btn-arrow {
+    border: solid var(--darkblue-color);
+    border-width: 0 0.16vw 0.16vw 0;
+    display: inline-block;
+    padding: 0.15vw;
+    margin-left: .2rem;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
 }

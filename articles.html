@@ -11,7 +11,7 @@
         rel="stylesheet">
 </head>
 
-<body id="articles-body">
+<body onload="init()" id="articles-body">
     <nav class="navbar">
         <div class="navigation-menu">
             <ul>
@@ -62,16 +62,16 @@
                 <p id="articles-big-text">Burnout is a state of physical and emotional exhaustion. It can occur
                     when you experience long-term stress in your job, or when you have worked
                     in a physically or emotionally draining role for a long time.</p>
-                    <button class="general-btn" id="articles-big-button">
-                        <a href="https://codepen.io/chriiss/pen/YzaaRez"><p class="general-btn-text">Read more <i class="articles-big-btn-arrow articles-big-btn-right"></i></p></a>
-                    </button>
+                <a href="https://codepen.io/chriiss/pen/YzaaRez" class="primary-button" id="articles-big-button">Read more
+                    <span class="articles-big-btn-arrow"></span>
+                </a>
             </div>
         </section>
 
         <section id="articles-grid"></section>
 
     </section>
-    <script src="script.js"></script>
+    <script src="articles.js"></script>
     <script src="https://kit.fontawesome.com/43dcc20e7a.js" crossorigin="anonymous"></script>
 </body>
 
