@@ -176,6 +176,8 @@ const createArticlesContainer = (articleArray) => {
         articleButton.appendChild(articleArrow);
 
         articleButton.addEventListener('click', function () {
+            localStorage.setItem('articledate', article.date.toLocaleDateString('en-us', { year: "numeric", month: "long", day: "numeric" }));
+            localStorage.setItem('articleboldinfo', article.boldInfo);
             localStorage.setItem('articleinfo', article.info);
             localStorage.setItem('articletitle', article.title);
             localStorage.setItem('articleimage', article.image);
@@ -262,7 +264,9 @@ const searchArticles = () => {
 }
 
 const loadArticle = () => {
-    document.getElementById("article-image").src = localStorage.getItem('articleimage')
+    document.getElementById("article-date").innerHTML = localStorage.getItem('articledate');
+    document.getElementById("article-boldInfo").innerHTML = localStorage.getItem('articleboldinfo');
+    document.getElementById("article-image").src = localStorage.getItem('articleimage');
     document.getElementById("article-title").innerHTML = localStorage.getItem('articletitle');
     document.getElementById("article-information").innerHTML = localStorage.getItem('articleinfo');
 }
