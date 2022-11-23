@@ -9,7 +9,6 @@ html {
   overflow-x: hidden;
 }
 
-
 :root {
   --header-height: 4vw;
   --first-color: #d2e0ee;
@@ -103,13 +102,12 @@ nav ul li:hover {
   transform: scale(1.1);
 }
 
-/* @@@@@@@@@ Home Page  @@@@@@@@@@ */
+/* Home Page */
 
-/*@@@@@@@@@ Home Main @@@@@@@@@ */
-
+/* Home Main */
 
 .home-container {
-  padding: 5vw 0 0vw; 
+  padding: 5vw 0 0vw;
   display: flex;
   align-items: center;
   gap: 7vw;
@@ -133,54 +131,59 @@ nav ul li:hover {
   padding-bottom: 2vw;
   padding-top: 1.8vw;
 }
-/*@@@@@@@@ Test Button Properties @@@@@@@@@@@@*/
 
-.home-btn {
-  background-color: var(--first-color);
-  padding: 0.4vw 1vw;
-  border-radius: 2vw;
-  font-weight: 100;
-  color: var(--second-color);
-  font-family: "Patua One";
-  border: none;
-}
-.home-btn-text {
-  font-size: 1.4vw;
-}
-
-.home-btn-arrow {
-  border: solid #687dac;
-  border-width: 0 0.3vw 0.3vw 0;
-  display: inline-block;
-  padding: 0.3vw;
-}
-.home-btn-right {
-  transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
-}
-.home-btn:hover .home-btn-right {
-  border: solid #fbfbfb;
-  border-width: 0 0.3vw 0.3vw 0;
-}
-.home-btn:hover {
-  background-color: var(--second-color);
-  color: white;
-}
 #home-first-picture {
   width: 30vw;
   height: auto;
 }
+
 .home-wave-img {
   width: 100vw;
   height: auto;
 }
+
 .home-wave-mission-img {
   width: 100vw;
   height: auto;
-
 }
 
-/* @@@@@@@@@ Articles @@@@@@@@@@ */
+/* Test Button Properties */
+.primary-button {
+  background-color: #d2e0ee;
+  padding: 0.5vw 1.3vw;
+  border-radius: 2vw;
+  font-weight: 100;
+  font-size: 1.5vw;
+  color: var(--darkblue-color);
+  font-family: "Patua One";
+  border: none;
+  text-decoration: none;
+}
+
+.primary-button:hover {
+  background-color: var(--darkblue-color);
+  color: var(--white-color);
+}
+#home-big-button {
+  width: 9vw;
+  font-size: 1.5vw;
+}
+
+#home-big-button:hover .home-big-btn-arrow {
+  border: solid var(--white-color);
+  border-width: 0 0.3vw 0.3vw 0;
+}
+
+.home-big-btn-arrow {
+  border: solid var(--darkblue-color);
+  border-width: 0 0.3vw 0.3vw 0;
+  display: inline-block;
+  padding: 0.3vw;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+/* Articles */
 
 .home-articles {
   background-color: #9dafcd;
@@ -199,10 +202,10 @@ nav ul li:hover {
 }
 .home-articles-cards {
   padding: 5vw 0 0vw;
-    display: flex;
-    align-items: center;
-    gap: 7vw;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  gap: 7vw;
+  justify-content: center;
 }
 .home-card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -250,7 +253,7 @@ img.home-card-img {
   padding-bottom: 11vw;
 }
 
-.card-read-more{
+.card-read-more {
   text-decoration: none;
   font-family: "Maven Pro", sans-serif;
   font-weight: 800;
@@ -258,7 +261,7 @@ img.home-card-img {
   font-size: 1.3vw;
 }
 
-/* @@@@@@@ Our Mission @@@@@@@@@@ */
+/* Our Mission */
 
 .home-our-mission {
   width: 100vw;
@@ -270,7 +273,7 @@ img.home-card-img {
   line-height: 1.3;
   font-family: "Patua One";
   font-weight: 100;
- text-align: center;
+  text-align: center;
   color: #687dac;
   background-color: #fbfbfb;
 }
@@ -301,10 +304,11 @@ img.home-card-img {
   height: auto;
   background-color: #fbfbfb;
 }
-/* @@@@@@@@@@ Features @@@@@@@@@@@@ */
+/* Features */
 
 .home-features {
   background-color: #687dac;
+  width: 100vw;
 }
 
 .home-features-title {
@@ -377,7 +381,7 @@ img.home-card-img {
   color: #fbfbfb;
   text-align: center;
 }
-/*@@@@@@@@@@@@@@@@@@@@@@@@@   Footer     @@@@@@@@@@@@@@@@@@@@@@*/
+/* Footer */
 
 .home-footer-pavemind {
   background-color: #fbfbfb;
@@ -388,13 +392,11 @@ img.home-card-img {
   align-items: center;
   gap: 2.2vw;
   justify-content: center;
-
 }
 
 #home-footer-logo {
   width: 7vw;
   height: auto;
-
 }
 
 .home-footer-title {
@@ -410,34 +412,26 @@ img.home-card-img {
   font-size: 1.2vw;
   font-family: "Maven Pro";
   width: 37vw;
- 
-  margin: 3 0vw;
+  margin: 1vw 0vw 1.5vw;
 }
 
-.home-btnfacebook {
-  padding: 1vw 1vw;
-  border: none;
+.home-btnfooter-contact {
+  padding: 1vw;
+  margin-right: 1vw;
+  background-repeat: no-repeat;
+  background-size: 2vw;
+}
+
+#home-btnfacebook {
   background-image: url("./Assets/images/facebook-round-line-icon.svg");
-  background-color: #fbfbfb;
-  cursor: pointer;
-  background-size: contain;
-}
-.home-btninstagram {
-  padding: 1vw 1vw;
-  border: none;
-  background-image: url("./Assets/images/instagram-round-line-icon.svg");
-  background-size: contain;
-  background-color: #fbfbfb;
-  cursor: pointer;
 }
 
-.home-btnemail {
-  padding: 1vw 1vw;
-  border: none;
+#home-btninstagram {
+  background-image: url("./Assets/images/instagram-round-line-icon.svg");
+}
+
+#home-btnemail {
   background-image: url("./Assets/images/Group\ 81.svg");
-  background-size: contain;
-  background-color: #fbfbfb;
-  cursor: pointer;
 }
 
 .home-footer-navigation {
@@ -496,7 +490,7 @@ img.home-card-img {
   font-size: 2.2vw;
 }
 
-.home-footer-data{
+.home-footer-data {
   justify-content: center;
   align-items: center;
 }
