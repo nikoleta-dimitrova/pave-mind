@@ -325,13 +325,13 @@ select {
 
 .article-save-button {
     position: absolute;
-    width: 1.7rem;
-    height: 1.7rem;
-    top: 1rem;
-    right: 1rem;
+    width: 1.7vw;
+    height: 3.5vh;
+    top: 1vw;
+    right: 1vw;
     background-color: transparent;
     z-index: 100;
-    stroke-width: 0.11rem;
+    stroke-width: 0.11vw;
     fill: transparent;
 }
 
@@ -340,7 +340,7 @@ select {
 }
 
 .articles-information {
-    margin-top: .8rem;
+    margin-top: .5vw;
     margin-left: .6vw;
 }
 
@@ -353,13 +353,13 @@ select {
 .articles-headline {
     font-size: 1.3vw;
     font-family: var(--headings-font);
-    margin-top: .8rem;
+    margin-top: .5vw;
 }
 
 .articles-preview {
     font-size: 1vw;
     font-family: var(--text-font);
-    margin-top: .8rem;
+    margin-top: .8vw;
     margin-bottom: 1.2vw;
 }
 
@@ -367,7 +367,6 @@ select {
     width: 7.3vw;
     font-size: 0.9vw;
     position: absolute;
-    bottom: -.5vw;
 }
 
 #articles-small-button:hover .articles-small-btn-arrow {
@@ -379,7 +378,7 @@ select {
     border-width: 0 0.14vw 0.14vw 0;
     display: inline-block;
     padding: 0.15vw;
-    margin-left: .2rem;
+    margin-left: .2vw;
     transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
 }
@@ -392,7 +391,7 @@ select {
     justify-content: center;
     align-items: center;
     row-gap: 1.5vw;
-    margin-top: 5rem;
+    margin-top: 5vw;
 }
 
 #article-date {
