@@ -105,7 +105,8 @@ nav ul li:hover {
     border-radius: 2vw;
     font-weight: 100;
     color: var(--darkblue-color);
-    font-family: "Patua One";
+    font-family: var(--text-font);
+    font-weight: var(--bold-font);
     border: none;
     text-decoration: none;
 }
@@ -119,7 +120,8 @@ nav ul li:hover {
     color: var(--grey-color);
     border-radius: 2vw;
     text-decoration: none;
-    font-family: "Patua One";
+    font-family: var(--text-font);
+    font-size: 1vw;
 }
 
 /* TITLE + SEARCHBAR + FILTERS*/
@@ -268,7 +270,7 @@ select {
 }
 
 #articles-big-button {
-    width: 9vw;
+    width: 8.7vw;
     font-size: 1.1vw;
 }
 
@@ -362,10 +364,10 @@ select {
 }
 
 #articles-small-button {
-    width: 8vw;
+    width: 7.3vw;
     font-size: 0.9vw;
     position: absolute;
-    bottom: 0;
+    bottom: -.5vw;
 }
 
 #articles-small-button:hover .articles-small-btn-arrow {
@@ -374,7 +376,7 @@ select {
 
 .articles-small-btn-arrow {
     border: solid var(--darkblue-color);
-    border-width: 0 0.16vw 0.16vw 0;
+    border-width: 0 0.14vw 0.14vw 0;
     display: inline-block;
     padding: 0.15vw;
     margin-left: .2rem;
@@ -429,15 +431,16 @@ select {
 
 #article-button-back {
     position: absolute;
-    top: 10rem;
-    left: 9.5rem;
+    top: 9vw;
+    left: 9.5vw;
 }
 
 .articles-arrow-back {
     border: solid var(--grey-color);
-    border-width: 0 0.2vw 0.2vw 0;
+    border-width: 0 0.1vw 0.1vw 0;
     display: inline-block;
-    padding: 0.2vw;
+    padding: 0.3vw;
     transform: rotate(45deg);
     -webkit-transform: rotate(135deg);
 }
+
