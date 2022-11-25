@@ -279,7 +279,7 @@ const loadArticle = () => {
 }
 
 const loadTip = (tipArr) => {
-    localStorage.setItem('tipId', "tip5");
+    localStorage.setItem('tipId', "tip6");
     tipArr.forEach(tip => {
         if (tip.id === localStorage.getItem('tipId')) {
             document.title = tip.title;
