@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <button data-popup-target="#popup">Log In</button>
+    <section class="container">
+        <div class="popup" id="popup">
+            
+            <div class="right">
+                <h1>Hello!</h1>
+                <p>Log in to your account</p>
+                <input type="text" id="email" placeholder="Email" required>
+                <input type="password" id="password" placeholder="Passoword" required>
+                <button>LOG IN</button>
+                <div class="text">
+                    <P>Don't have an account?</P><a href="#">Sign up</a>
+                </div>
+            </div>
+            <div class="left">
+                <button data-popup-close class="close-button" >&times;</button>
+                <h1>Welcome back!</h1>
+                <p>"Asking for help is the first step...You are<br>
+                    more precious to this world than you'll<br>
+                    ever know"</p>
+            </div>
+        </div>
+        
+    </section>
+    <div id="overlay"></div>
+    <script src="./script.js"></script>
+</body>
+
+</html>

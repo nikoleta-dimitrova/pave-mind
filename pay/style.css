@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700;800;900&family=Patua+One&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body{
+    background-color: bisque;
+  }
+
+  .container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .popup{
+    background-color: white;
+    width: 50vw;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    border-radius: 15px;
+    padding-top: 10vh;
+    padding-bottom: 8vh;
+  }
+
+  .general{
+    border: 1px solid gray; 
+    border-radius: 5px;
+    margin-right: 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 15vw;
+  }
+
+  .student{
+    border-radius: 5px;
+    border: 1px solid gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 15vw;
+  }
+
+  .general h1{
+    font-family: Patua One;
+    font-size: 1.5rem;
+    color: #687DAC;
+    padding-bottom: 2vh;
+    margin-top: -3.5vh;
+  }
+
+  .general h2{
+    font-family: Patua One;
+    font-size: 1.5rem;
+    padding-bottom: 3vh;
+  }
+
+  .general p{
+    font-family: Maven Pro;
+    padding-bottom: 2.52vh;
+  }
+
+  .general button{
+    background-color: #D2E0EE;
+    display: block;
+    color: #687DAC;
+    font-family: Maven Pro;
+    font-weight: 600;
+    padding: 5px 15px;
+    border-radius: 15px;
+    transition: 0.4s;
+    cursor: pointer;
+    border: none;
+    margin-left: 2.5vw;
+    margin-right: 2.5vw;
+  }
+
+  .general button:hover{
+    background-color: #697DAC;
+    color: white;
+  }
+
+  .student h1{
+    font-family: Patua One;
+    font-size: 1.5rem;
+    color: #687DAC;
+    padding-bottom: 2vh;
+    margin-top: -3.5vh;
+  }
+
+  .student h2{
+    font-family: Patua One;
+    font-size: 1.5rem;
+    padding-bottom: 4vh;
+  }
+
+.student button{
+  background-color: #D2E0EE;
+  display: block;
+  color: #687DAC;
+  font-family: Maven Pro;
+  font-weight: 600;
+  padding: 5px 15px;
+  border-radius: 15px;
+  transition: 0.4s;
+  cursor: pointer;
+  border: none;
+  margin-top: 7vh;
+  margin-left: 2.5vw;
+    margin-right: 2.5vw;
+}
+
+.student button:hover{
+  background-color: #697DAC;
+  color: white;
+}
+
+.student p{
+  font-family: Maven Pro;
+  padding-bottom: 2.5vh;
+}
+
+.student input{
+  border-radius: 10px;
+  border: 1px solid gray;
+  margin-left: 1vw;
+  margin-right: 1vw;
+}
+
