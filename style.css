@@ -142,10 +142,10 @@ nav ul li:hover {
   background-color: var(--lightblue-color);
   padding: 0.5vw 1.3vw;
   border-radius: 2vw;
-  font-weight: var(--regular-font);
+  font-weight: var(--bold-font);
   font-size: 1.5vw;
   color: var(--darkblue-color);
-  font-family: var(--headings-font);
+  font-family: var(--text-font);
   border: none;
   text-decoration: none;
 }
@@ -274,7 +274,6 @@ img.home-card-img {
 .home-mission-container {
   display: flex;
   align-items: center;
-  gap: 11vw;
   background-color: var(--white-color);
   justify-content: center;
 }
@@ -284,7 +283,7 @@ img.home-card-img {
   float: left;
   width: 42.5vw;
   height: auto;
-  transform: translate(-9.5vw);
+  transform: translate(-11vw);
 }
 
 .home-mission-description {
