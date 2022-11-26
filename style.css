@@ -443,3 +443,36 @@ select {
     -webkit-transform: rotate(135deg);
 }
 
+/* TIPS & TRICKS */
+
+.tips-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    transform: translate(0,5vw);
+    gap:1.5vw;
+  }
+  
+  .tips-title {
+    font-size: 3.2vw;
+    color: var(--darkblue-color);
+    font-family: var(--headings-font);
+    font-weight: var(--semibold-font);
+    width: 32vw;
+    height: auto;
+  }
+  
+  .tips-description {
+    font-size: 1.5vw;
+    font-family: var(--text-font);
+    font-weight: 400;
+    width: 41vw;
+    height: auto;
+
+  }
+  
+  #tips-first-picture {
+    width: 22vw;
+    height: auto;
+  }
