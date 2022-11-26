@@ -212,7 +212,10 @@ nav ul li:hover {
   background-repeat: no-repeat;
   background-size: 30vw;
 }
-
+#home-articles-arrow {
+  border-width: 0 0.2vw 0.2vw 0;
+  padding: 0.3vw;
+}
 .home-card-container {
   margin: 1vw;
 }
