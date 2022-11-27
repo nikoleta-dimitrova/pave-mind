@@ -77,6 +77,15 @@ class Article {
     }
 }
 
+/* 
+    How to get data from back-end
+    fetch("http://localhost:3000/accounts/").then((response) => {
+        response.json().then(data => {
+            console.log(data);
+        })
+    });
+*/
+
 var articleList = [];
 var savedArticles = [];
 var articlesSorted = false;

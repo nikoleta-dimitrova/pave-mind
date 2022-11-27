@@ -5,6 +5,7 @@ const password = "FutureMilfsAndDilfs";
 const port = 3000;
 
 const accountRoutes = require('./routes/accountRoutes');
+const postRoutes = require('./routes/postRoutes');
 
 const app = express();
 const db = mongoose.connection;
@@ -20,5 +21,4 @@ db.once('open', () => { console.log('Connected to MongoDB Cloud') });
 app.listen(port, () => console.log("Server started on port: " + port));
 
 app.use('/accounts', accountRoutes)
-// app.use('/posts', accountRoutes)
-// app.use('/diary', accountRoutes)
+app.use('/posts', postRoutes)

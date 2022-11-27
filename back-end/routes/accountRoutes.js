@@ -25,6 +25,15 @@ router.get('/', async (req, res) => {
     }
 })
 
+router.get('/login', async (req, res) => {
+    try {
+        const account = await Account.findOne({email: req.body.email, password: req.body.password});
+        res.send(account)
+    } catch(err) {
+        res.status(500).json({ message: "Error" });
+    }
+})
+
 router.post('/', async (req, res) => {
     const account = new Account({
         email: req.body.email,
