@@ -550,6 +550,132 @@ select {
     font-family: var(--text-font);
     font-size: 2.2vw;
   }
+
+  /* Footer */
+
+.home-footer-pavemind {
+    background-color: var(--white-color);
+  }
+  
+  .home-footer-container {
+    display: flex;
+    align-items: center;
+    gap: 2.2vw;
+    justify-content: center;
+  }
+  
+  #home-footer-logo {
+    width: 7vw;
+    height: auto;
+  }
+  
+  .home-footer-title {
+    font-size: 2.7vw;
+    color: var(--darkblue-color);
+    font-family: var(--headings-font);
+    font-weight: var(--semibold-font);
+    width: 32vw;
+    height: auto;
+  }
+  
+  .home-footer-description {
+    font-size: 1.2vw;
+    font-family: var(--text-font);
+    width: 37vw;
+    margin: 1vw 0vw 1.5vw;
+  }
+  
+  .home-footer-btn-media {
+    display: flex;
+    gap: 0.5vw;
+  }
+  
+  .home-btnfooter-contact {
+    background-size: 2vw;
+    background-repeat: no-repeat;
+    width: 2vw;
+    height: 2vw;
+  }
+  
+  #home-btnfacebook {
+    background-image: url("./Assets/images/facebook-round-line-icon.svg");
+  }
+  
+  #home-btninstagram {
+    background-image: url("./Assets/images/instagram-round-line-icon.svg");
+  }
+  
+  #home-btnemail {
+    background-image: url("./Assets/images/Group\ 81.svg");
+  }
+  
+  #home-footer-picture.home-footer-img {
+    width: 25vw;
+    height: auto;
+  }
+  
+  .home-footer-navigation-text {
+    color: var(--darkblue-color);
+  }
+  
+  .home-footer-quote {
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+    width: 100vw;
+    height: auto;
+    text-align: center;
+    color: var(--white-color);
+    background-color: var(--darkblue-color);
+  }
+  
+  .home-footer-quote-text {
+    font-family: var(--text-font);
+    font-size: 2.2vw;
+  }
+  
+  .home-footer-data {
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+  .home-footer-navigation-main {
+    margin-top: 1vw;
+    display: flex;
+    font-family: var(--text-font);
+    color: var(--darkblue-color);
+    transition: transform 0.5s ease;
+  }
+  
+  .home-footer-list {
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+    font-size: 0.9vw;
+  }
+  .home-footer-navbar-text a {
+    color: var(--darkblue-color);
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .home-footer-container ul {
+    transition: transform 0.5s ease;
+  }
+  .home-footer-list ul:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  .home-wave-footer-img {
+    width: 100vw;
+    height: auto;
+  }
+
+  .whole-footer{
+    transform: translate(0vw, 10vw);
+    
+  }
+  
+  
   
   
   
