@@ -487,7 +487,7 @@ select {
     gap:3vw;
   }
   .tips-tricks-title {
-    font-size: 2.5vw;
+    font-size: var(--title-size);
     color: #000000;
     font-family: var(--headings-font);
     font-weight: var(--semibold-font);
@@ -535,5 +535,21 @@ select {
     display: flex;
     flex-direction: column;
   }
+
+  .tips-footer-quote {
+    padding:1vw;
+    width: 100vw;
+    height: auto;
+    text-align: center;
+    color: var(--white-color);
+    background-color: var(--darkblue-color);
+    transform: translate(0vw, 12vw);
+  }
+  
+  .tips-footer-quote-text {
+    font-family: var(--text-font);
+    font-size: 2.2vw;
+  }
+  
   
   
