@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Article</title>
+    <title>Tip</title>
     <link rel="stylesheet" href="style.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700;800;900&family=Patua+One&display=swap"
         rel="stylesheet">
 </head>
 
-<body onload="loadArticle()">
+<body onload="init('tips.json')">
     <nav class="navbar">
         <div class="navigation-menu">
             <ul>
@@ -31,10 +31,9 @@
     </nav>
 
     <section id="article-body">
-        <a href="articles.html" class="secondary-button" id="article-button-back"><span
-                class="articles-arrow-back"></span>Back to articles
+        <a href="./tips-and-tricks.html" class="secondary-button" id="article-button-back"><span
+                class="articles-arrow-back"></span>Back to Tips
         </a>
-        <p id="article-date"></p>
         <h1 id="article-title"></h1>
         <img id="article-image" src="" alt="">
         <p id="article-boldInfo"></p>
