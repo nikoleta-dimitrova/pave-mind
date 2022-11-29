@@ -77,7 +77,7 @@ class Article {
     }
 }
 
-let articleList = [];
+let dataList = [];
 let savedArticles = [];
 let articlesSorted = false;
 let viewingSavedArticles = false;
@@ -87,10 +87,10 @@ let bigArticleSection = document.querySelector(".articles-big");
 let articleSearchBar = document.getElementById("search-input");
 
 // Loading the JSON article data and returning the response (mock GET request) 
-const loadArticles = (callback) => {
+const loadJSONData = (callback, filePath) => {
     let xobj = new XMLHttpRequest();
     xobj.overrideMimeType("application/json");
-    xobj.open('GET', './json/articles.json', true);
+    xobj.open('GET', './json/' + filePath, true);
     xobj.onreadystatechange = function () {
         if (xobj.readyState == 4 && xobj.status == "200") {
             callback(xobj.responseText);
@@ -100,15 +100,20 @@ const loadArticles = (callback) => {
 }
 
 
-const init = () => {
-    loadArticles(function (response) {
-        let articles = JSON.parse(response);
-        articles.forEach(article => {
-            let newArticle = new Article(article.id, new Date(article.date), article.title, article.preview, article.boldInfo, article.info, article.image, article.views)
-            articleList.push(newArticle);
+const init = (filePath) => {
+    loadJSONData(function (response) {
+        let responseData = JSON.parse(response);
+        responseData.forEach(responseItem => {
+            let newArticle = new Article(responseItem.id, new Date(responseItem.date), responseItem.title, responseItem.preview, responseItem.boldInfo, responseItem.info, responseItem.image, responseItem.views)
+            dataList.push(newArticle);
         })
-        createArticlesContainer(articleList);
-    })
+        if (filePath === "articles.json") {
+            createArticlesContainer(dataList);
+        }
+        else if(filePath === "tips.json") {
+            loadTip(dataList);
+        }
+    }, filePath)
 }
 
 const renderSvg = (articleImageContainer, article) => {
@@ -176,6 +181,7 @@ const createArticlesContainer = (articleArray) => {
         articleButton.appendChild(articleArrow);
 
         articleButton.addEventListener('click', function () {
+            localStorage.setItem('articleId', article.id);
             localStorage.setItem('articledate', article.date.toLocaleDateString('en-us', { year: "numeric", month: "long", day: "numeric" }));
             localStorage.setItem('articleboldinfo', article.boldInfo);
             localStorage.setItem('articleinfo', article.info);
@@ -203,19 +209,19 @@ const checkBigArticle = () => {
 
 const filterArticles = () => {
     if (filters.value === "Most viewed") {
-        articleList.sort((a, b) => {
+        dataList.sort((a, b) => {
             return b.views - a.views;
         });
         articlesSorted = true;
     }
     else if (filters.value === "Oldest") {
-        articleList.sort((a, b) => {
+        dataList.sort((a, b) => {
             return a.date - b.date;
         });
         articlesSorted = true;
     }
     else if (filters.value === "Newest") {
-        articleList.sort((a, b) => {
+        dataList.sort((a, b) => {
             return b.date - a.date;
         });
         articlesSorted = true;
@@ -223,7 +229,7 @@ const filterArticles = () => {
     else {
         articlesSorted = false;
     }
-    createArticlesContainer(articleList);
+    createArticlesContainer(dataList);
     checkBigArticle();
     viewingSavedArticles = false;
 }
@@ -237,7 +243,7 @@ const showSavedArticles = () => {
         checkBigArticle();
     }
     else {
-        createArticlesContainer(articleList);
+        createArticlesContainer(dataList);
         checkBigArticle();
     }
 }
@@ -264,9 +270,27 @@ const searchArticles = () => {
 }
 
 const loadArticle = () => {
+    document.title = localStorage.getItem('articletitle');
     document.getElementById("article-date").innerHTML = localStorage.getItem('articledate');
     document.getElementById("article-boldInfo").innerHTML = localStorage.getItem('articleboldinfo');
     document.getElementById("article-image").src = localStorage.getItem('articleimage');
     document.getElementById("article-title").innerHTML = localStorage.getItem('articletitle');
     document.getElementById("article-information").innerHTML = localStorage.getItem('articleinfo');
 }
+
+const loadTip = (tipArr) => {
+    tipArr.forEach(tip => {
+        if (tip.id === localStorage.getItem('tipId')) {
+            document.title = tip.title;
+            document.getElementById("article-boldInfo").innerHTML = tip.boldInfo;
+            document.getElementById("article-image").src = tip.image;
+            document.getElementById("article-title").innerHTML = tip.title;
+            document.getElementById("article-information").innerHTML = tip.info;
+        }
+    })
+}
+
+const openTip = (tipId) => {
+    localStorage.setItem('tipId', tipId);
+    window.location.replace("tip.html")
+} 
