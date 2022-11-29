@@ -501,7 +501,10 @@ select {
   color: var(--darkblue-color);
   font-size: 1.3vw;
   text-align: left;
-  width: 49vw;
+  width: fit-content;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
 
 .tips-big-btn-arrow {

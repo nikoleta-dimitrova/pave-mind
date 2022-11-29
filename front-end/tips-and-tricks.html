@@ -12,7 +12,7 @@
     rel="stylesheet" />
 </head>
 
-<body>
+<body onload="init('tips.json')">
   <nav class="navbar">
     <div class="navigation-menu">
       <ul>
@@ -54,10 +54,10 @@
         of jumbled thoughts that may be crowding your mind and causing stress.
         This process may result in enhanced physical and emotional well-being.
       </p>
-      <a class="tips-read-more" href="">
+      <button class="tips-read-more" onclick="openTip('tip1')">
         More resources here
         <span class="tips-big-btn-arrow" id="tips-articles-arrow"></span>
-      </a>
+      </button>
     </div>
 
     <div class="tips-all-trick">
@@ -69,10 +69,10 @@
         feel-good hormones like endorphins. Virtual workouts like online yoga
         help relieve stress without you even leaving the house.
       </p>
-      <a class="tips-read-more" href="">
+      <button class="tips-read-more" onclick="openTip('tip2')">
         More resources here
         <span class="tips-big-btn-arrow" id="tips-articles-arrow"></span>
-      </a>
+      </button>
     </div>
 
     <div class="tips-all-trick">
@@ -84,10 +84,10 @@
         less vulnerable to stress and fatigue. Try to embrace a nutritious
         diet for more energy.
       </p>
-      <a class="tips-read-more" href="">
+      <button class="tips-read-more" onclick="openTip('tip3')">
         More resources here
         <span class="tips-big-btn-arrow" id="tips-articles-arrow"></span>
-      </a>
+      </button>
     </div>
 
     <div class="tips-all-trick">
@@ -100,10 +100,10 @@
         seven to nine hours a night. This could be done with the right sleep
         hygiene or even with a sleep tracker.
       </p>
-      <a class="tips-read-more" href="">
+      <button class="tips-read-more" onclick="openTip('tip4')">
         More resources here
         <span class="tips-big-btn-arrow" id="tips-articles-arrow"></span>
-      </a>
+      </button>
     </div>
 
     <div class="tips-all-trick">
@@ -115,10 +115,10 @@
         improve your relationships with loved ones, which is a key aspect of
         your health and wellbeing.
       </p>
-      <a class="tips-read-more" href="">
+      <button class="tips-read-more" onclick="openTip('tip5')">
         More resources here
         <span class="tips-big-btn-arrow" id="tips-articles-arrow"></span>
-      </a>
+      </button>
     </div>
     <div class="tips-all-trick">
       <h1 class="tips-tricks-title">
@@ -129,10 +129,10 @@
         help you to understand more about your personal stress patterns and
         behaviors.
       </p>
-      <a class="tips-read-more" href="">
+      <button class="tips-read-more" onclick="openTip('tip6')">
         More resources here
         <span class="tips-big-btn-arrow" id="tips-articles-arrow"></span>
-      </a>
+      </button>
     </div>
   </section>
 
@@ -195,6 +195,7 @@
           </div>
       </section>
   </footer>
+  <script src="./tips-and-articles.js"></script>
 </body>
 
 </html>

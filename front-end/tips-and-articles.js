@@ -77,18 +77,18 @@ class Article {
     }
 }
 
-var dataList = [];
-var savedArticles = [];
-var articlesSorted = false;
-var viewingSavedArticles = false;
-var articlesGrid = document.getElementById("articles-grid");
-var filters = document.getElementById("articles-filter");
-var bigArticleSection = document.querySelector(".articles-big");
-var articleSearchBar = document.getElementById("search-input");
+let dataList = [];
+let savedArticles = [];
+let articlesSorted = false;
+let viewingSavedArticles = false;
+let articlesGrid = document.getElementById("articles-grid");
+let filters = document.getElementById("articles-filter");
+let bigArticleSection = document.querySelector(".articles-big");
+let articleSearchBar = document.getElementById("search-input");
 
 // Loading the JSON article data and returning the response (mock GET request) 
 const loadJSONData = (callback, filePath) => {
-    var xobj = new XMLHttpRequest();
+    let xobj = new XMLHttpRequest();
     xobj.overrideMimeType("application/json");
     xobj.open('GET', './json/' + filePath, true);
     xobj.onreadystatechange = function () {
@@ -102,16 +102,16 @@ const loadJSONData = (callback, filePath) => {
 
 const init = (filePath) => {
     loadJSONData(function (response) {
-        var responseData = JSON.parse(response);
+        let responseData = JSON.parse(response);
         responseData.forEach(responseItem => {
-            var newArticle = new Article(responseItem.id, new Date(responseItem.date), responseItem.title, responseItem.preview, responseItem.boldInfo, responseItem.info, responseItem.image, responseItem.views)
+            let newArticle = new Article(responseItem.id, new Date(responseItem.date), responseItem.title, responseItem.preview, responseItem.boldInfo, responseItem.info, responseItem.image, responseItem.views)
             dataList.push(newArticle);
         })
         if (filePath === "articles.json") {
             createArticlesContainer(dataList);
         }
         else if(filePath === "tips.json") {
-            loadTip(dataList)
+            loadTip(dataList);
         }
     }, filePath)
 }
@@ -137,7 +137,7 @@ const renderSvg = (articleImageContainer, article) => {
             savedArticles.push(article);
         }
         else {
-            var articleIndex = savedArticles.indexOf(article)
+            let articleIndex = savedArticles.indexOf(article)
             savedArticles.splice(articleIndex, 1);
         }
         iconPath.setAttribute('fill', !article.saved ? 'transparent' : '#687dac');
@@ -149,34 +149,34 @@ const renderSvg = (articleImageContainer, article) => {
 const createArticlesContainer = (articleArray) => {
     articlesGrid.innerHTML = "";
     articleArray.forEach(article => {
-        var articleContainer = document.createElement('div');
+        let articleContainer = document.createElement('div');
         articleContainer.className = "articles-card";
 
-        var articleImageContainer = document.createElement('div');
+        let articleImageContainer = document.createElement('div');
         articleImageContainer.className = "articles-image-container";
-        var articleImage = document.createElement('img');
+        let articleImage = document.createElement('img');
         articleImage.className = "article-image";
         articleImage.src = article.image;
         articleContainer.appendChild(articleImage);
         articleImageContainer.appendChild(articleImage);
         renderSvg(articleImageContainer, article);
 
-        var articleInformation = document.createElement('div')
+        let articleInformation = document.createElement('div')
         articleInformation.className = "articles-information";
-        var articleDate = document.createElement('span');
+        let articleDate = document.createElement('span');
         articleDate.className = "articles-date";
         articleDate.textContent = article.date.toLocaleDateString('en-us', { year: "numeric", month: "long", day: "numeric" });
-        var articleHeadline = document.createElement('div');
+        let articleHeadline = document.createElement('div');
         articleHeadline.className = "articles-headline";
         articleHeadline.textContent = article.title;
-        var articlePreview = document.createElement('div');
+        let articlePreview = document.createElement('div');
         articlePreview.className = "articles-preview";
         articlePreview.textContent = article.preview;
-        var articleButton = document.createElement('a');
+        let articleButton = document.createElement('a');
         articleButton.className = "primary-button";
         articleButton.id = "articles-small-button";
         articleButton.textContent = "Read more";
-        var articleArrow = document.createElement('span');
+        let articleArrow = document.createElement('span');
         articleArrow.className = "articles-small-btn-arrow";
         articleButton.appendChild(articleArrow);
 
@@ -279,7 +279,6 @@ const loadArticle = () => {
 }
 
 const loadTip = (tipArr) => {
-    localStorage.setItem('tipId', "tip6");
     tipArr.forEach(tip => {
         if (tip.id === localStorage.getItem('tipId')) {
             document.title = tip.title;
@@ -290,3 +289,8 @@ const loadTip = (tipArr) => {
         }
     })
 }
+
+const openTip = (tipId) => {
+    localStorage.setItem('tipId', tipId);
+    window.location.replace("tip.html")
+} 
