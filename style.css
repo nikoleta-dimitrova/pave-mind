@@ -200,7 +200,7 @@ nav ul li:hover {
 }
 
 .home-card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px 0 #00000033;
   border-radius: 1vw;
   background-color: var(--white-color);
   padding-top: 1.5vw;
@@ -208,10 +208,32 @@ nav ul li:hover {
   padding-right: 0.5vw;
   width: 25vw;
   height: 28vw;
-  background-image: url("./Assets/images/card.svg");
+  background-image: url("./Assets/images/home-articles-background.svg");
   background-repeat: no-repeat;
-  background-size: 30vw;
+  background-size: 26vw;
 }
+
+#home-articles-card1-image {
+  width: 15vw;
+  height: auto;
+  position: relative;
+  transform: translate(11vw, -12.3vw);
+}
+
+#home-articles-card2-image {
+  width: 15vw;
+  height: auto;
+  position: relative;
+  transform: translate(11.3vw, -12.2vw);
+}
+
+#home-articles-card3-image {
+  width: 15vw;
+  height: auto;
+  position: relative;
+  transform: translate(13vw, -10.4vw);
+}
+
 #home-articles-arrow {
   border-width: 0 0.2vw 0.2vw 0;
   padding: 0.3vw;
