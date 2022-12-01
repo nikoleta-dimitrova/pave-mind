@@ -20,6 +20,7 @@ body {
     --darkblue-color: #687DAC;
     --lightblue-color: #D2E0EE;
     --midblue-color: #9EB0CE;
+    --midblueopacity-color: #E4EAF2;
     --darkblue-color: #687DAC;
     --sand-color: #F0D7BA;
     --grey-color: #757575;
@@ -209,7 +210,7 @@ nav ul li:hover {
 
 select {
     appearance: none;
-    background-image: url(/Assets/Images/dropdown-arrow.svg);
+    background-image: url(./Assets/Images/dropdown-arrow.svg);
     background-position: right 0.8vw top 50%;
     background-repeat: no-repeat;
     background-size: 0.7vw;
@@ -488,6 +489,11 @@ select {
     overflow: hidden;   
 }
 
+/* .community-waves-interactive img {
+    position: absolute;
+    z-index: 3;
+} */
+
 .waveBox {
     width: 260vw;
     height: 550vh;
@@ -523,6 +529,160 @@ select {
     left: 20vw;
     animation: waver 5s 1.5s infinite linear;
 }
+
+#community {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.community-create-post {
+    margin-top: 5vw;
+    display: flex;
+    align-items: center;
+    background-color: var(--midblueopacity-color);
+    width: 49vw;
+    height: 8vh;
+    border-radius: 17px;
+}
+
+.community-create-post img {
+    width: 2.9vw;
+    margin-left: 1.5vw;
+
+}
+
+.community-create-post input {
+    width: 42.1vw;
+    height: 4.5vh;
+    margin-left: 1vw;
+    border-radius: 17px;
+    border: none;
+    padding: 1vw;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1vw;
+    pointer-events: none;
+}
+
+.community-create-post ::placeholder {
+    color: var(--grey-color);
+}
+
+.community-post {
+    margin-top: 3vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 49vw;
+    padding: 1.5vw;
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 17px;
+    border: 0.1vw solid var(--darkblue-color);
+}
+
+.community-post-image {
+    width: 2.9vw;
+    height: 6.17vh;
+}
+
+.community-post-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1vw;
+}
+
+.community-post-name {
+    font-weight: var(--bold-font);
+    color: var(--darkblue-color);
+    font-size: 1.2vw;
+}
+
+.community-post-time {
+    color: var(--grey-color);
+    font-size: 1vw;
+}
+
+.community-post-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    padding: 1.5vw;
+    margin-left: 2.5vw;
+}
+
+.community-post-title {
+    font-weight: var(--bold-font);
+    text-transform: uppercase;
+    font-size: 1vw;
+}
+
+.community-post-body {
+    font-size: 1vw;
+}
+
+.community-comments-button {
+    background-color: transparent;
+    border: none;
+    color: var(--grey-color);
+    float: right;
+    font-size: 1vw;
+}
+
+.community-comments-button img{
+    width: 1.2vw;
+}
+
+.community-post-input {
+    margin-top: 0.5vw;
+    display: flex;
+    align-items: center;
+    width: 49vw;
+    padding: 1.5vw;
+    height: 8vh;
+    border-top: 0.1vw solid var(--darkblue-color);
+}
+
+.community-post-input input {
+    margin-left: 1.5vw;
+    width: 42.1vw;
+    height: 4.5vh;
+    border-radius: 17px;
+    border: 0.1vw solid var(--darkblue-color);
+    padding: 1vw;
+    font-size: 1vw;
+}
+
+.community-post-input input:focus {
+    outline: none;
+}
+
+.community-post-comment {
+    display: flex;
+    flex-direction: row;
+    padding: 1.5vw;
+}
+
+.community-comment-content {
+    margin-left: 1.5vw;
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    background-color: var(--midblueopacity-color);
+    padding: 1.5vw;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1vw;
+    border-radius: 17px;
+}
+
+.community-comment-name {
+    color: var(--darkblue-color);
+    font-weight: var(--bold-font);
+}
+
 /* TIPS & TRICKS */
 
 .tips-main {
