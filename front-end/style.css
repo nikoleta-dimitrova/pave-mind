@@ -209,14 +209,12 @@ nav ul li:hover {
 
 select {
     appearance: none;
-    background-image: url(/Assets/Images/dropdown-arrow.svg);
+    background-image: url(./Assets/Images/dropdown-arrow.svg);
     background-position: right 0.8vw top 50%;
     background-repeat: no-repeat;
     background-size: 0.7vw;
     outline: none;
 }
-
-
 
 #articles-filter input {
     border: none;
