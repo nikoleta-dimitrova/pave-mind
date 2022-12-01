@@ -256,7 +256,7 @@ nav ul li:hover {
   display: flex;
   width: 19vw;
   height: 13.3vw;
-  transform: translateY(1.45vw);
+  transform: translateY(1.28vw);
   align-self: flex-end;
 }
 
@@ -267,10 +267,10 @@ nav ul li:hover {
 .home-articles-vector-images {
   width: 6vw;
   height: 12vw;
-  transform: translate(-1.2vw, 2.7vw);
+  transform: translate(-1.2vw, 2.5vw);
 }
 #home-articles-card3-image {
-  transform: translate(-0.5vw, 2.7vw);
+  transform: translate(-0.5vw, 2.5vw);
 }
 /* Our Mission */
 
