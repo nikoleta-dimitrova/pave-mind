@@ -668,3 +668,62 @@ select {
 .whole-footer {
     transform: translate(0vw, 10vw);
 }
+
+
+
+
+/*  ACCOUNT  */
+
+.account-container{
+    display: flex;
+    justify-content: center;
+    margin-top:10vw;
+    gap: 2vw;
+  }
+  .account-options{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2vw;
+  }
+
+  .account-settings-title{
+    color:var(--darkblue-color);
+    font-family: var(--headings-font);
+    font-weight: var(--regular-font);
+    font-size: 3vw;
+    transform: translate(0.7vw, -3vw);
+  }
+  .account-hrefs{
+    color: var(--darkblue-color);
+    font-family: var(--text-font);
+    font-weight: var(--bold-font);
+    font-size: 1.3vw;
+    text-decoration: none;
+    width: 11vw;
+    height: auto;
+    padding: 0.4vw 1vw;
+  }
+
+  #account-href{
+    background-color: var(--lightblue-color);
+    padding: 0.4vw 1vw;
+    border-radius: 2vw;
+    font-weight: 100;
+    color: var(--darkblue-color);
+    font-family: var(--text-font);
+    font-weight: var(--bold-font);
+    border: none;
+    text-decoration: none;
+  }
+
+  .card{
+    width: 50vw;
+    height: 120vh;
+    background-color: var(--white-color);
+    border-radius: 1.2vw;
+    border: 1px solid var(--black-color);
+   
+  }
+
+
+  
