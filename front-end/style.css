@@ -780,3 +780,83 @@ input[type="radio"] {
   transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
 }
+
+/* Diary second page */
+
+.diary-second-container{
+  height: 67vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.diary-second-header{
+  font-family: var(--headings-font);
+  color: var( --darkblue-color);
+  font-size: 3vw;
+  margin-top:2vw;
+  margin-bottom:1.5vw;
+}
+
+::placeholder{
+font-size:1.3vw;
+}
+
+.diary-second-description{
+  font-family: var(--text-font);
+  font-weight: var(--semibold-font);
+  margin-bottom:1.5vw;
+  font-size: 1.5vw;
+}
+.diary-second-textarea{
+  font-family: var(--text-font);
+  resize: none;
+  border: 0.1vw solid var( --darkblue-color);
+  padding: 1.2vw 1.2vw;
+  width:35vw;
+  height:35vh;
+  border-radius:0.5vw;
+  background-color: white;
+  font-size: 1.3vw;
+}
+
+.diary-quiz-button{
+  text-decoration: none;
+  font-family: var(--text-font);
+  color: var(--darkblue-color);
+  font-weight: 600;
+  font-size:1.2vw;
+}
+
+.diary-second-container .diary-second-buttons{
+  display: flex;
+  gap: 16vw;
+  margin-top:1.5vw;
+}
+.diary-second-textarea:focus{
+  outline: 0;
+}
+
+.diary-wave-img {
+  width: 100vw;
+  height: 25vh;
+}
+
+/* Button Properties */
+
+.diary-second-btn-arrow {
+  border: solid var(--darkblue-color);
+  display: inline-block;
+  padding: 0.3vw;
+  border-width: 0 0.2vw 0.2vw 0;
+}
+
+#diary-second-arrow-previous {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+#diary-second-arrow-finish{
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
