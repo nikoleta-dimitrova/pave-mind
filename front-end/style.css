@@ -716,14 +716,112 @@ select {
     text-decoration: none;
   }
 
-  .card{
-    width: 50vw;
+  .account-whole-card{
+    width: 56.8vw;
     height: 120vh;
     background-color: var(--white-color);
     border-radius: 1.2vw;
-    border: 1px solid var(--black-color);
+    border: 0px solid var(--darkblue-color);
+    box-shadow: 1px 1px 5px 1px var(--lightblue-color) inset;
+    
+    
    
   }
 
 
+  .account-account-title{
+    color:var(--darkblue-color);
+    font-family: var(--headings-font);
+    font-weight: var(--regular-font);
+    font-size: 2vw;
+  }
+
+  .account-avatar{
+    font-weight: var(--bold-font);
+    font-size: 1.3vw;
+    font-family: var(--text-font);
+  }
+
+  #account-profile-img{
+    width:5vw;
+  }
+
+  .account-card-second-part{
+    display: flex;
+    gap: 1vw;
+    align-items: center;
+    
+  }
+
+
+  .account-read-more{
+    width: 9.3vw;
+    height: 5vh;
+    font-size: 1.3vw;
+  }
+
+  #account-upload-btn{
+    background-color: var(--lightblue-color);
+    border-radius: 2vw;
+    font-weight: 100;
+    color: var(--darkblue-color);
+    font-family: var(--text-font);
+    font-weight: var(--bold-font);
+    border: none;
+    text-decoration: none;
+    padding: 0.4vw 2.7vw;
+    font-size: 1.2vw;
+  }
+
+
+  #account-remove-btn{
+    background-color: var(--white-color);
+    border-radius: 2vw;
+    font-weight: 100;
+    color: var(--darkblue-color);
+    font-family: var(--text-font);
+    font-weight: var(--bold-font);
+    border: 1px solid var(--darkblue-color);
+    text-decoration: none;
+    padding: 0.4vw 2.7vw;
+    font-size: 1.2vw;
+  }
+
+  .account-all-inputs{
+    
+  }
+  
+  .account-inputs{
+    display: flex;
+    width: 23.5vw;
+    padding: 0.8vw;
+    outline: none;
+    box-shadow: 1px 1px 5px 1px var(--lightblue-color);
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 25px;
+    font-size: 1.2vw;
+    font-family: var(--text-font);
+    font-weight: var(--bold-font);
+    
+  }
+
+  .account-card-third-part{
+    display: flex;
+    gap:3vw;
+  }
+
+  .account-data{
+    font-family: var(--text-font);
+    font-weight: var(--regular-font);
+    font-size: 1.2vw;
+    margin:1vw;
+  }
+
+  .account-card-content{
+    transform: translate(3.45vw,3.5vw);
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+  }
+  
   
