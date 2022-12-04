@@ -718,7 +718,7 @@ select {
 
   .account-whole-card{
     width: 56.8vw;
-    height: 120vh;
+    height: 80vw;
     background-color: var(--white-color);
     border-radius: 1.2vw;
     border: 0px solid var(--darkblue-color);
@@ -760,7 +760,7 @@ select {
     font-size: 1.3vw;
   }
 
-  #account-upload-btn{
+  #account-first-btn{
     background-color: var(--lightblue-color);
     border-radius: 2vw;
     font-weight: 100;
@@ -771,13 +771,13 @@ select {
     text-decoration: none;
     padding: 0.4vw 2.7vw;
     font-size: 1.2vw;
+    width: 9.4vw;
   }
 
 
-  #account-remove-btn{
+  #account-second-btn{
     background-color: var(--white-color);
     border-radius: 2vw;
-    font-weight: 100;
     color: var(--darkblue-color);
     font-family: var(--text-font);
     font-weight: var(--bold-font);
@@ -787,19 +787,17 @@ select {
     font-size: 1.2vw;
   }
 
-  .account-all-inputs{
-    
-  }
+ 
   
   .account-inputs{
     display: flex;
     width: 23.5vw;
-    padding: 0.8vw;
+    padding: 0.7vw;
     outline: none;
     box-shadow: 1px 1px 5px 1px var(--lightblue-color);
     border: 1px solid rgb(255, 255, 255);
     border-radius: 25px;
-    font-size: 1.2vw;
+    font-size: 1vw;
     font-family: var(--text-font);
     font-weight: var(--bold-font);
     
@@ -808,6 +806,9 @@ select {
   .account-card-third-part{
     display: flex;
     gap:3vw;
+  }
+  #account-delete-h1{
+    margin-bottom:1vw;
   }
 
   .account-data{
@@ -822,6 +823,26 @@ select {
     display: flex;
     flex-direction: column;
     gap: 2vw;
+  }
+
+  #account-change-password{
+font-family: var(--text-font);
+font-weight: var(--bold-font);
+color:#B5B5B5;
+  }
+  
+  .account-card-fourth-part{
+    display: flex;
+    align-items: center;
+    gap: 7.2vw;
+    margin-top: 2vw;
+  }
+
+  .account-delete-text{
+    font-family: var(--text-font);
+    font-weight: var(--regular-font);
+    font-size:1.2vw;
+    color:#B5B5B5;
   }
   
   
