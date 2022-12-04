@@ -560,7 +560,8 @@ select {
     padding: 1vw;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1vw;
-    pointer-events: none;
+    cursor: pointer;
+    /* pointer-events: none; */
 }
 
 .community-create-post ::placeholder {
@@ -781,11 +782,23 @@ select {
 }
 
 /* Popup community */
+
+#popup-blur {
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: #00000061;
+    transform: translateY(-50%);
+    top: 50%;
+    overflow: hidden;
+}
+
 #community-popup {
     display: flex;
     align-items: center;
     justify-content: center;
-    position: absolute;
+    position: fixed;
     width: 49vw;
     height: 60vh;
     left: 0;
@@ -794,7 +807,7 @@ select {
     transform: translateY(-50%);
     border-radius: 17px;
     margin-inline: auto;
-    background-color: rgb(226, 181, 181);
+    background-color: var(--white-color);
 }
 
 .community-popup-container {
@@ -861,6 +874,7 @@ select {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1vw;
     outline: none;
+    box-shadow: 1px 1px 5px 1px var(--lightblue-color) inset;
 }
 
 .community-popup-content textarea{
@@ -873,6 +887,7 @@ select {
     font-size: 1vw;
     outline: none;
     resize: none;
+    box-shadow: 1px 1px 5px 1px var(--lightblue-color) inset;
 }
 
 .community-popup-content button{
