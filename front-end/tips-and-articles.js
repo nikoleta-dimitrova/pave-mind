@@ -100,7 +100,7 @@ const loadJSONData = (callback, filePath) => {
 }
 
 
-const init = (filePath) => {
+const init = (filePath, singleFile) => {
     loadJSONData(function (response) {
         let responseData = JSON.parse(response);
         responseData.forEach(responseItem => {
@@ -108,9 +108,10 @@ const init = (filePath) => {
             dataList.push(newArticle);
         })
         if (filePath === "articles.json") {
-            createArticlesContainer(dataList);
+            if (singleFile) { loadArticle(dataList); }
+            else { createArticlesContainer(dataList); }
         }
-        else if (filePath === "tips.json") {
+        else if (filePath === "tips.json" && singleFile) {
             loadTip(dataList);
         }
     }, filePath)
@@ -180,20 +181,14 @@ const createArticlesContainer = (articleArray) => {
         articleArrow.className = "articles-small-btn-arrow";
         articleButton.appendChild(articleArrow);
 
-        articleButton.addEventListener('click', function () {
-            localStorage.setItem('articleId', article.id);
-            localStorage.setItem('articledate', article.date.toLocaleDateString('en-us', { year: "numeric", month: "long", day: "numeric" }));
-            localStorage.setItem('articleboldinfo', article.boldInfo);
-            localStorage.setItem('articleinfo', article.info);
-            localStorage.setItem('articletitle', article.title);
-            localStorage.setItem('articleimage', article.image);
-            window.location.replace("article.html")
-        })
-
         articleInformation.append(articleDate, articleHeadline, articlePreview, articleButton)
         articleContainer.appendChild(articleImageContainer)
         articleContainer.appendChild(articleInformation);
         articlesGrid.appendChild(articleContainer);
+
+        articleButton.addEventListener('click', function () {
+            openArticle(article.id);
+        })
     })
 }
 
@@ -269,13 +264,20 @@ const searchArticles = () => {
     viewingSavedArticles = false;
 }
 
-const loadArticle = () => {
-    document.title = localStorage.getItem('articletitle');
-    document.getElementById("article-date").innerHTML = localStorage.getItem('articledate');
-    document.getElementById("article-boldInfo").innerHTML = localStorage.getItem('articleboldinfo');
-    document.getElementById("article-image").src = localStorage.getItem('articleimage');
-    document.getElementById("article-title").innerHTML = localStorage.getItem('articletitle');
-    document.getElementById("article-information").innerHTML = localStorage.getItem('articleinfo');
+const loadArticle = (articleArray) => {
+    articleArray.forEach(article => {
+        if (article.id === localStorage.getItem('articleId')) {
+            document.title = article.title;
+            document.getElementById("article-date").innerHTML = article.date.toLocaleDateString('en-us', { year: "numeric", month: "long", day: "numeric" });
+            document.getElementById("article-boldInfo").innerHTML = article.boldInfo;
+            document.getElementById("article-image").src = article.image;
+            document.getElementById("article-title").innerHTML = article.title;
+            document.getElementById("article-information").innerHTML = article.info;
+        }
+    })
+    window.onscroll = function () {
+        scrollFunction();
+    };
 }
 
 const loadTip = (tipArr) => {
@@ -288,6 +290,20 @@ const loadTip = (tipArr) => {
             document.getElementById("article-information").innerHTML = tip.info;
         }
     })
+    window.onscroll = function () {
+        scrollFunction();
+    };
+}
+
+const openBigArticle = () => {
+    window.onscroll = function () {
+        scrollFunction();
+    };
+}
+
+const openArticle = (articleId) => {
+    localStorage.setItem('articleId', articleId);
+    window.location.replace("article.html")
 }
 
 const openTip = (tipId) => {
@@ -295,3 +311,31 @@ const openTip = (tipId) => {
     window.location.replace("tip.html")
 }
 
+const changeSlide = (next) => {
+    let carousel = document.getElementById("continue-reading-carousel-content");
+    if(next) carousel.scrollLeft += calculateVW(36);
+    else carousel.scrollLeft -= calculateVW(36);
+}
+
+function calculateVW(percent) {
+    var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+    return (percent * w) / 100;
+  }
+
+// Scroll to top button
+let scrollToTopButton = document.querySelector(".button-scroll");
+const scrollFunction = () => {
+    if (
+        document.body.scrollTop > 300 ||
+        document.documentElement.scrollTop > 300
+    ) {
+        scrollToTopButton.style.display = "block";
+        scrollToTopButton.style.bottom = "1.5rem";
+    } else {
+        scrollToTopButton.style.display = "none";
+    }
+}
+const topFunction = () => {
+    document.body.scrollTop = 0; // this is for safari
+    document.documentElement.scrollTop = 0; // this is for everything with chrome and firefox
+}
