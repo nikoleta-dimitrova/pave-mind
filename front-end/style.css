@@ -1060,7 +1060,7 @@ input[type="radio"] {
   color: var(--darkblue-color);
   font-size: 3vw;
   margin-top: 2vw;
-  margin-bottom: 1.5vw;
+  margin-bottom: 3vw;
 }
 .diary-fifth-container {
   display: flex;
@@ -1072,7 +1072,7 @@ input[type="radio"] {
   align-items: center;
   display: flex;
   flex-direction: column;
-  padding: 0.8vw;
+  padding: 0vw 0vw 0.8vw 0vw;
   border-radius: 5px;
   width: 20vw;
 }
@@ -1081,10 +1081,10 @@ input[type="radio"] {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 0.8vw;
+  font-size: 1vw;
   margin-bottom: 0.5vw;
-  width: 13.8vw;
-  height: 1.5vw;
+  width: 16.5vw;
+  height: 2vw;
   font-weight: 500;
   background-color: var(--lightblue-color);
   border-radius: 10px 10px 0 0;
@@ -1095,6 +1095,7 @@ input[type="radio"] {
   display: grid;
   justify-content: center;
   align-items: center;
+  gap: 0.4vw;
   grid-template-columns: repeat(7, 1fr);
   color: #999;
   font-weight: 500;
@@ -1102,13 +1103,14 @@ input[type="radio"] {
 }
 .diary-fifth-days span {
   width: 2vw;
-  font-size: 0.6vw;
+  font-size: 0.7vw;
   text-align: center;
 }
 
 .diary-fifth-dates {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
+  gap: 0.4vw;
 }
 .diary-fifth-dates button {
   cursor: pointer;
@@ -1116,7 +1118,7 @@ input[type="radio"] {
   border: 0;
   background: transparent;
   font-family: var(--text-font);
-  font-size: 0.7vw;
+  font-size: 0.85vw;
   justify-self: center;
   align-self: center;
   width: 2vw;
@@ -1140,8 +1142,8 @@ input[type="radio"] {
 }
 
 #diary-fifth-graph-img {
-  width: 35vw;
-  height: 35vh;
+  width: 39vw;
+  height: 39vh;
 }
 
 .diary-fifth-wave {
@@ -1184,4 +1186,21 @@ input[type="radio"] {
 
 #diary-fifth-filter input:focus {
   outline: none;
+}
+
+.diary-fifth-calendar-faces {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  gap: 0.8vw;
+  font-size: 0.65vw;
+  font-family: var(--text-font);
+}
+.diary-fifth-image {
+  width: 1.7vw;
+  height: 1.7vw;
+}
+.diary-fifth-calendar-container {
+  transform: translateY(0.05vw);
 }
