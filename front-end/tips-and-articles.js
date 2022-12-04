@@ -110,7 +110,7 @@ const init = (filePath) => {
         if (filePath === "articles.json") {
             createArticlesContainer(dataList);
         }
-        else if(filePath === "tips.json") {
+        else if (filePath === "tips.json") {
             loadTip(dataList);
         }
     }, filePath)
@@ -293,4 +293,5 @@ const loadTip = (tipArr) => {
 const openTip = (tipId) => {
     localStorage.setItem('tipId', tipId);
     window.location.replace("tip.html")
-} 
+}
+

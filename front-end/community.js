@@ -16,3 +16,5 @@ const getUser = async (id) => {
         return `${data.firstName} ${data.lastName}`;
     })
 }
+
+
