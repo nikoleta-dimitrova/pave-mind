@@ -104,22 +104,23 @@ nav ul li:hover {
   height: 30vw;
 }
 
+.home-data {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2vw;
+}
+
 .home-title {
   font-size: 3.5vw;
   color: var(--darkblue-color);
   font-family: var(--headings-font);
   font-weight: var(--semibold-font);
-  width: 32vw;
-  height: auto;
 }
 
 .home-description {
-  font-size: 1.4vw;
+  font-size: 1.3vw;
   font-family: var(--text-font);
-  width: 41vw;
-  height: auto;
-  padding-bottom: 2vw;
-  padding-top: 1.5vw;
+  width: 40vw;
 }
 
 #home-first-picture {
@@ -154,19 +155,20 @@ nav ul li:hover {
   background-color: var(--darkblue-color);
   color: var(--white-color);
 }
+
 #home-big-button {
-  width: 9vw;
-  font-size: 1.5vw;
+  width: 12vw;
+  font-size: 1.3vw;
 }
 
 #home-big-button:hover .home-big-btn-arrow {
   border: solid var(--white-color);
-  border-width: 0 0.3vw 0.3vw 0;
+  border-width: 0 0.2vw 0.2vw 0;
 }
 
 .home-big-btn-arrow {
   border: solid var(--darkblue-color);
-  border-width: 0 0.3vw 0.3vw 0;
+  border-width: 0 0.2vw 0.2vw 0;
   display: inline-block;
   padding: 0.3vw;
   transform: rotate(-45deg);
@@ -209,12 +211,14 @@ nav ul li:hover {
 .home-card:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
+
 .home-articles-lightbulb {
   width: 3vw;
   height: auto;
   margin-left: 1vw;
   margin-top: 1vw;
 }
+
 .home-card-title {
   font-size: 1.3vw;
   font-family: var(--headings-font);
@@ -269,9 +273,11 @@ nav ul li:hover {
   height: 12vw;
   transform: translate(-1.2vw, 2.5vw);
 }
+
 #home-articles-card3-image {
   transform: translate(-0.5vw, 2.5vw);
 }
+
 /* Our Mission */
 
 .home-our-mission {
@@ -297,17 +303,15 @@ nav ul li:hover {
 }
 
 .home-mission-img {
-  float: left;
-  float: left;
   width: 42.5vw;
-  height: auto;
-  transform: translate(-11vw);
+  transform: translate(-8vw, -2vw);
 }
 
 .home-mission-description {
   font-family: var(--text-font);
   color: var(--darkblue-color);
   font-size: 1.3vw;
+  width: 43vw;
 }
 
 .home-second-wave-mission-img {
@@ -315,6 +319,7 @@ nav ul li:hover {
   height: 25vh;
   background-color: var(--white-color);
 }
+
 /* Features */
 
 .home-features {
@@ -399,6 +404,7 @@ nav ul li:hover {
   color: var(--white-color);
   text-align: center;
 }
+
 /* Footer */
 
 .home-footer-pavemind {
@@ -408,8 +414,7 @@ nav ul li:hover {
 .home-footer-container {
   display: flex;
   align-items: center;
-  gap: 2.2vw;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
 #home-footer-logo {
@@ -502,18 +507,22 @@ nav ul li:hover {
   gap: 2vw;
   font-size: 0.9vw;
 }
+
 .home-footer-navbar-text a {
   color: var(--darkblue-color);
   text-decoration: none;
   font-weight: 500;
 }
+
 .home-footer-container ul {
   transition: transform 0.5s ease;
 }
+
 .home-footer-list ul:hover {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
 }
+
 .home-wave-footer-img {
   width: 100vw;
   height: auto;
