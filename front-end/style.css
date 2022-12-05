@@ -674,6 +674,11 @@ select {
 
 /*  ACCOUNT  */
 
+::placeholder {    /*All placeholders*/
+    color: #B5B5B5;
+    opacity: 1; 
+  }
+
 .account-container{
     display: flex;
     justify-content: center;
@@ -690,7 +695,7 @@ select {
     color:var(--darkblue-color);
     font-family: var(--headings-font);
     font-weight: var(--regular-font);
-    font-size: 3vw;
+    font-size: var(--title-size);
     transform: translate(0.7vw, -3vw);
   }
   .account-hrefs{
@@ -722,7 +727,7 @@ select {
     background-color: var(--white-color);
     border-radius: 1.2vw;
     border: 0px solid var(--darkblue-color);
-    box-shadow: 1px 1px 5px 1px var(--lightblue-color) inset;
+    box-shadow: 1px 1px 6px var(--midblue-color);
     
     
    
@@ -733,7 +738,7 @@ select {
     color:var(--darkblue-color);
     font-family: var(--headings-font);
     font-weight: var(--regular-font);
-    font-size: 2vw;
+    font-size: 1.8vw;
   }
 
   .account-avatar{
@@ -745,6 +750,12 @@ select {
   #account-profile-img{
     width:5vw;
   }
+
+.account-card-first-part{
+    display: flex;
+    flex-direction: column;
+    gap:2vw;
+}
 
   .account-card-second-part{
     display: flex;
@@ -843,6 +854,20 @@ color:#B5B5B5;
     font-weight: var(--regular-font);
     font-size:1.2vw;
     color:#B5B5B5;
+  }
+
+  #account-fourth-btn{
+    background-color: var(--lightblue-color);
+    border-radius: 2vw;
+    font-weight: 100;
+    color: var(--darkblue-color);
+    font-family: var(--text-font);
+    font-weight: var(--bold-font);
+    border: none;
+    text-decoration: none;
+    padding: 0.4vw 2.7vw;
+    font-size: 1.2vw;
+    width: 9.4vw;
   }
   
   
