@@ -419,15 +419,15 @@ nav ul li:hover {
 }
 
 #home-btnfacebook {
-  background-image: url("./Assets/images/facebook-round-line-icon.svg");
+  background-image: url("./Assets/images/home-facebook-footer-icon.svg");
 }
 
 #home-btninstagram {
-  background-image: url("./Assets/images/instagram-round-line-icon.svg");
+  background-image: url("./Assets/images/home-instagram-footer-icon.svg");
 }
 
 #home-btnemail {
-  background-image: url("./Assets/images/Group\ 81.svg");
+  background-image: url("./Assets/images/home-email-footer-icon.svg");
 }
 
 #home-footer-picture.home-footer-img {
