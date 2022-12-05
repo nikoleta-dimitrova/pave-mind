@@ -962,7 +962,7 @@ input[type="radio"] {
 /* Diary fourth page */
 
 .diary-fourth-container {
-  height: 61vh;
+  height: 60vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1010,7 +1010,7 @@ input[type="radio"] {
 
 .diary-fourth-buttons {
   width: 35vw;
-  margin-top: 1.5vw;
+  margin-top: 2vw;
   display: flex;
   justify-content: center;
   gap: 15.5vw;
