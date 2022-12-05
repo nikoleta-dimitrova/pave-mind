@@ -114,12 +114,12 @@ nav ul li:hover {
 }
 
 .home-description {
-  font-size: 1.5vw;
+  font-size: 1.4vw;
   font-family: var(--text-font);
   width: 41vw;
   height: auto;
   padding-bottom: 2vw;
-  padding-top: 1.8vw;
+  padding-top: 1.5vw;
 }
 
 #home-first-picture {
@@ -182,7 +182,7 @@ nav ul li:hover {
 }
 
 .home-articles-title {
-  font-size: 2.7vw;
+  font-size: var(--title-size);
   margin-bottom: var(--mb-1);
   line-height: 1.3;
   color: var(--white-color);
@@ -218,7 +218,7 @@ nav ul li:hover {
 .home-card-title {
   font-size: 1.3vw;
   font-family: var(--headings-font);
-  width: 11vw;
+  width: 20vw;
   height: auto;
   margin-top: 1.2vw;
   margin-left: 2vw;
@@ -236,7 +236,7 @@ nav ul li:hover {
 .home-card-read-more-button {
   text-decoration: none;
   font-family: var(--text-font);
-  font-weight: 800;
+  font-weight: 700;
   color: var(--darkblue-color);
   font-size: 1.3vw;
   white-space: nowrap;
@@ -256,7 +256,7 @@ nav ul li:hover {
   display: flex;
   width: 19vw;
   height: 13.3vw;
-  transform: translateY(1.28vw);
+  transform: translateY(1.35vw);
   align-self: flex-end;
 }
 
@@ -280,7 +280,7 @@ nav ul li:hover {
 }
 
 .home-mission-title {
-  font-size: 2.7vw;
+  font-size: var(--title-size);
   line-height: 1.3;
   font-family: var(--headings-font);
   font-weight: var(--regular-font);
@@ -323,7 +323,7 @@ nav ul li:hover {
 }
 
 .home-features-title {
-  font-size: 2.7vw;
+  font-size: var(--title-size);
   line-height: 1.3;
   font-family: var(--headings-font);
   font-weight: var(--regular-font);
@@ -418,7 +418,7 @@ nav ul li:hover {
 }
 
 .home-footer-title {
-  font-size: 2.7vw;
+  font-size: var(--title-size);
   color: var(--darkblue-color);
   font-family: var(--headings-font);
   font-weight: var(--semibold-font);
