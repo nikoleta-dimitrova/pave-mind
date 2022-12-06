@@ -39,6 +39,41 @@
         <p id="article-boldInfo"></p>
         <p id="article-information"></p>
     </section>
+    <section id="continue-reading-carousel">
+        <h1>Continue Reading</h1>
+        <div class="carousel-button-container" id="carousel-back" onclick="changeSlide(false)">
+            <span class="articles-big-btn-arrow" id="articles-big-btn-arrow-reversed"></span>
+        </div>
+        <div id="continue-reading-carousel-content">
+            <div onclick="openTip('tip1')">
+                <img src="./Assets/Images/tip1.svg">
+                <p>Meditation</p>
+            </div>
+            <div onclick="openTip('tip2')">
+                <img src="./Assets/Images/tip2.svg">
+                <p>Stay active</p>
+            </div>
+            <div onclick="openTip('tip3')">
+                <img src="./Assets/Images/tip3.svg">
+                <p>Maintain a healthy lifestyle</p>
+            </div>
+            <div onclick="openTip('tip4')">
+                <img src="./Assets/Images/tip4.svg">
+                <p>Restful sleep</p>
+            </div>
+            <div onclick="openTip('tip5')">
+                <img src="./Assets/Images/tip5.svg">
+                <p>Spend time with loved ones</p>
+            </div>
+            <div onclick="openTip('tip6')">
+                <img src="./Assets/Images/tip6.svg">
+                <p>Track your stress levels</p>
+            </div>
+        </div>
+        <div class="carousel-button-container" id="carousel-next" onclick="changeSlide(true)">
+            <span class="articles-big-btn-arrow"></span>
+        </div>
+    </section>
     <button onclick="topFunction()" class="button-scroll"><img src="./Assets/Images/scroll-to-top.png" alt=""></button>
     <script src="./tips-and-articles.js"></script>
 </body>
