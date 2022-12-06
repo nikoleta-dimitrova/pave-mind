@@ -15,6 +15,7 @@ html {
   --white-color: #fbfbfb;
   --darkblue-color: #687dac;
   --lightblue-color: #d2e0ee;
+  --midblueopacity-color: #e4eaf2;
   --midblue-color: #9eb0ce;
   --sand-color: #f0d7ba;
   --grey-color: #757575;
@@ -35,7 +36,7 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--color-white);
+  background-color: var(--white-color);
   font-size: var(--navigationtext-size);
   font-family: var(--text-font);
   font-weight: var(--bold-font);
@@ -239,14 +240,14 @@ nav ul li:hover {
 .home-card-read-more-button {
   text-decoration: none;
   font-family: var(--text-font);
-  font-weight: 700;
+  font-weight: var(--bold-font);
   color: var(--darkblue-color);
   font-size: 1.3vw;
   white-space: nowrap;
   margin-left: 2vw;
-  margin-bottom: 1vw;
   align-self: flex-end;
   position: absolute;
+  transform: translateY(1.5vw);
 }
 
 #home-articles-arrow {
@@ -258,8 +259,7 @@ nav ul li:hover {
   position: relative;
   display: flex;
   width: 19vw;
-  height: 13.3vw;
-  transform: translateY(1.35vw);
+  transform: translateY(3.7vw);
   align-self: flex-end;
 }
 
@@ -270,11 +270,11 @@ nav ul li:hover {
 .home-articles-vector-images {
   width: 6vw;
   height: 12vw;
-  transform: translate(-1.2vw, 2.5vw);
+  transform: translate(-1.2vw, 5vw);
 }
 
 #home-articles-card3-image {
-  transform: translate(-0.5vw, 2.5vw);
+  transform: translate(-0.5vw, 5vw);
 }
 
 /* Our Mission */
@@ -367,7 +367,7 @@ nav ul li:hover {
 .home-features-text {
   padding-top: 2vh;
   font-size: 1.3vw;
-  width: 30vw;
+  width: 20vw;
   font-family: var(--text-font);
   color: var(--white-color);
   text-align: center;
@@ -459,6 +459,78 @@ nav ul li:hover {
   align-items: center;
 }
 
+/* Article home */
+#article-image {
+  width: 55vw;
+  height: 45vh;
+  background-color: var(--midblueopacity-color);
+  border-radius: 17px;
+}
+
+#article-body {
+  background-color: var(--white-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 1.5vw;
+  padding-top: 5vw;
+}
+
+#article-date {
+  font-family: var(--text-font);
+  color: var(--grey-color);
+  font-size: 1vw;
+}
+
+#article-title {
+  font-family: var(--headings-font);
+  font-weight: var(--regular-font);
+  font-size: 2.5vw;
+}
+
+#article-image {
+  width: 55vw;
+  height: 45vh;
+  background-color: var(--midblueopacity-color);
+  border-radius: 17px;
+}
+
+#article-boldInfo {
+  font-family: var(--text-font);
+  font-weight: var(--bold-font);
+  font-size: 1.2vw;
+  width: 46vw;
+  line-height: 1.5vw;
+}
+
+#article-information {
+  font-family: var(--text-font);
+  font-size: 1.2vw;
+  width: 46vw;
+  line-height: 1.5vw;
+}
+.secondary-button {
+  color: var(--grey-color);
+  border-radius: 2vw;
+  text-decoration: none;
+  font-family: var(--text-font);
+  font-size: 1vw;
+}
+#article-button-back {
+  position: absolute;
+  top: 9vw;
+  left: 9.5vw;
+}
+
+.articles-arrow-back {
+  border: solid var(--grey-color);
+  border-width: 0 0.1vw 0.1vw 0;
+  display: inline-block;
+  padding: 0.3vw;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(135deg);
+}
 /* Navigation */
 
 .home-footer-navigation-main {
