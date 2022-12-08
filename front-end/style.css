@@ -147,6 +147,12 @@ nav ul li:hover {
   background-color: var(--color-white);
 }
 
+input[type=radio] {
+  border: 0;
+  width: 100%;
+  height: 1.1vw;
+}
+
 /* HOME PAGE */
 /* ----- Pop up test ---- */
 .home-popup-content {
@@ -1126,7 +1132,8 @@ select {
   overflow: hidden;
 }
 
-#community-popup {
+#community-popup,
+#result-popup {
   display: flex;
   align-items: center;
   justify-content: center;

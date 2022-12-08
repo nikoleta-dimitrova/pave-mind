@@ -1,6 +1,10 @@
 import * as questionService from "./questions.service.js";
 
 const questionsFormContainer = document.querySelector("#questionContainer");
+let popUpVisible = false;
+const popup = document.getElementById("popup-blur");
+const closePopup = document.getElementById("community-popup-close");
+const popUpContent = document.querySelector(".home-popup-content");
 
 export function createQuestionsForm() {
     const questionsContainer = createQuestion();
@@ -69,7 +73,8 @@ export function createSubmitButton() {
             resultContainer.innerText = `Result for category no burnout`
             resultsArrayContainer.appendChild(resultContainer);
         }
-        questionsFormContainer.appendChild(resultsArrayContainer);
+        togglePopup()
+        popUpContent.innerHTML = resultsArrayContainer.innerHTML;
     }
 
     submitButton.innerText = "Submit";
@@ -77,4 +82,15 @@ export function createSubmitButton() {
     return submitButton;
 }
 
+export const togglePopup = () => {
+    popUpVisible = !popUpVisible;
+    if(popUpVisible) {
+        popup.style.display = "block";
+    }
+    else {
+        popup.style.display = "none";
+    }
+}
+
 createQuestionsForm();
+closePopup.addEventListener('click', togglePopup)
