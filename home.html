@@ -37,6 +37,29 @@
 
   <section class="home-main" id="home-main">
 
+    <div id="popup-blur">
+      <div id="community-popup">
+        <div class="community-popup-container">
+          <img id="community-popup-close" src="./Assets/Images/close.svg" onclick="togglePopup()">
+          <div class="community-popup-heading">
+            <p id="community-popup-create">Disclaimer and data policy</p>
+          </div>
+          <div class="home-popup-content">
+            <p id="home-popup-text">This test is not diagnostic and cannot replace a professional assessment. Only a
+              psychologist or therapist can make a reliable diagnosis. If you feel that stress is affecting your life or
+              you suspect you may be undergoing a burnout do not delay speaking to a health-care professional. The
+              following questionnaire is meant for entertainment and educational purposes only. Your data will be
+              recorded
+              in anonymous form, and there will not be any way of tracing them back to you.</p>
+            <form class="community-popup-content" action="app.html"><label><input id="home-popup-content-checkbutton "
+                  type="checkbox" name="agree" required />I agree to the terms and conditions</label>
+              <button class="popup-post-button">Continue</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="home-container">
       <div class="home-data">
         <h1 class="home-title">
@@ -48,7 +71,7 @@
           you have worked in a physically or emotionally draining role for a
           long time.
         </p>
-        <a href="https://codepen.io/chriiss/pen/YzaaRez" class="primary-button" id="home-big-button">Take the test
+        <a onclick="togglePopup()" class="primary-button" id="home-big-button">Take the test
           <span class="home-big-btn-arrow"></span>
         </a>
       </div>
@@ -201,78 +224,84 @@
     <img src="./Assets/Images/home-features-bottom-wave.png" class="home-wave-footer-img" />
 
   </section>
-</body>
 
-<footer>
+  <footer>
 
-  <section class="home-footer-pavemind">
-    <div class="container">
-      <div class="home-footer-container">
+    <section class="home-footer-pavemind">
+      <div class="container">
+        <div class="home-footer-container">
 
-        <div class="home-footer-logo">
-          <img id="home-footer-logo" src="./Assets/Images/logo.svg" class="home-footer-img" />
-        </div>
-
-        <div class="home-footer-data">
-          <h1 class="home-footer-title">
-            Contact us.
-          </h1>
-          <p class="home-footer-description">
-            If you have any question regarding Burnout
-            and are looking for ways to cope with it feel free to
-            contact us via email or on one of our social medias.
-          </p>
-          <div class="home-footer-btn-media">
-            <a href="https://www.facebook.com" class="home-btnfooter-contact" id="home-btnfacebook"></a>
-            <a href="https://www.instagram.com" class="home-btnfooter-contact" id="home-btninstagram"></a>
-            <a href="https://mail.google.com" class="home-btnfooter-contact" id="home-btnemail"></a>
+          <div class="home-footer-logo">
+            <img id="home-footer-logo" src="./Assets/Images/logo.svg" class="home-footer-img" />
           </div>
-          <div class="home-footer-navigation-main">
-            <div class="home-footer-container">
-              <ul class="home-footer-list">
-                <h1>
-                  Navigation
-                </h1>
-                <ul class="home-footer-navbar-text"><a href="#">
-                    Articles
-                  </a>
+
+          <div class="home-footer-data">
+            <h1 class="home-footer-title">
+              Contact us.
+            </h1>
+            <p class="home-footer-description">
+              If you have any question regarding Burnout
+              and are looking for ways to cope with it feel free to
+              contact us via email or on one of our social medias.
+            </p>
+            <div class="home-footer-btn-media">
+              <a href="https://www.facebook.com" class="home-btnfooter-contact" id="home-btnfacebook"></a>
+              <a href="https://www.instagram.com" class="home-btnfooter-contact" id="home-btninstagram"></a>
+              <a href="https://mail.google.com" class="home-btnfooter-contact" id="home-btnemail"></a>
+            </div>
+            <div class="home-footer-navigation-main">
+              <div class="home-footer-container">
+                <ul class="home-footer-list">
+                  <h1>
+                    Navigation
+                  </h1>
+                  <ul class="home-footer-navbar-text"><a href="#">
+                      Articles
+                    </a>
+                  </ul>
+                  <ul class="home-footer-navbar-text"><a href="#">
+                      Tips&Tricks
+                    </a>
+                  </ul>
+                  <ul class="home-footer-navbar-text"><a href="#">
+                      Community
+                    </a>
+                  </ul>
+                  <ul class="home-footer-navbar-text"><a href="#">
+                      Diary
+                    </a>
+                  </ul>
                 </ul>
-                <ul class="home-footer-navbar-text"><a href="#">
-                    Tips&Tricks
-                  </a>
-                </ul>
-                <ul class="home-footer-navbar-text"><a href="#">
-                    Community
-                  </a>
-                </ul>
-                <ul class="home-footer-navbar-text"><a href="#">
-                    Diary
-                  </a>
-                </ul>
-              </ul>
+              </div>
             </div>
           </div>
+          <img id="home-footer-picture" src="./Assets/Images/home-footer-woman-img.svg" class="home-footer-img" />
         </div>
-        <img id="home-footer-picture" src="./Assets/Images/home-footer-woman-img.svg" class="home-footer-img" />
+        <div class="home-footer-quote">
+          <h1 class="home-footer-quote-text"> A NEW BEGINNING AWAITS YOU. </h1>
+        </div>
+
+  </footer>
+
+</body>
 
 
 
+<script>
+  let popup = document.getElementById("popup-blur");
+  let popUpVisible = false;
 
-      </div>
-
-
-
-
-
-
-
-      <div class="home-footer-quote">
-        <h1 class="home-footer-quote-text"> A NEW BEGINNING AWAITS YOU. </h1>
-      </div>
-
-</footer>
-
-
+  const togglePopup = () => {
+    popUpVisible = !popUpVisible;
+    if (popUpVisible) {
+      popup.style.display = "block";
+      popupTitle.focus();
+    }
+    else {
+      popup.style.display = "none";
+    }
+  }
+</script>
 
 
 </html>
