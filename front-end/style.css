@@ -668,6 +668,7 @@ select {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1vw;
     cursor: pointer;
+    border: 1px solid var(--darkblue-color);
     /* pointer-events: none; */
 }
 
@@ -683,10 +684,10 @@ select {
     align-items: center;
     width: 49vw;
     padding: 1.5vw;
-    background-color: white;
+    background-color: var(--midblueopacity-color);
     font-family: Arial, Helvetica, sans-serif;
     border-radius: 17px;
-    border: 0.1vw solid var(--darkblue-color);
+    /* border: 0.1vw solid var(--darkblue-color); */
 }
 
 .community-post-image {
@@ -749,7 +750,7 @@ select {
     width: 49vw;
     padding: 1.5vw;
     height: 8vh;
-    border-top: 0.1vw solid var(--darkblue-color);
+    /* border-top: 0.1vw solid var(--darkblue-color); */
 }
 
 .community-post-input input {
@@ -777,7 +778,7 @@ select {
     display: flex;
     flex-direction: column;
     gap: 1vw;
-    background-color: var(--midblueopacity-color);
+    background-color: white;
     padding: 1.5vw;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1vw;
@@ -981,7 +982,8 @@ select {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1vw;
     outline: none;
-    box-shadow: 1px 1px 5px 1px var(--lightblue-color) inset;
+    /* box-shadow: 1px 1px 5px 1px var(--lightblue-color) inset; */
+    border: 1px solid var(--darkblue-color);
 }
 
 .community-popup-content textarea {
@@ -994,7 +996,8 @@ select {
     font-size: 1vw;
     outline: none;
     resize: none;
-    box-shadow: 1px 1px 5px 1px var(--lightblue-color) inset;
+    /* box-shadow: 1px 1px 5px 1px var(--lightblue-color) inset; */
+    border: 1px solid var(--darkblue-color);
 }
 
 .community-popup-content button {
