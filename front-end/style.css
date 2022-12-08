@@ -403,6 +403,7 @@ label {
 .home-features {
   background-color: var(--darkblue-color);
   width: 100vw;
+  padding-bottom: 8vw;
 }
 
 .home-features-title {
@@ -1312,43 +1313,41 @@ select {
 
 
 /* FOOTER */
-.home-footer-pavemind {
-  background-color: var(--white-color);
+.footer-pavemind {
+  margin-top: -4vw;
 }
 
-.home-footer-container {
+.footer-container {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
 }
 
-#home-footer-logo {
+#footer-logo {
   width: 7vw;
   height: auto;
 }
 
-.home-footer-title {
+.footer-title {
   font-size: var(--title-size);
   color: var(--darkblue-color);
   font-family: var(--headings-font);
   font-weight: var(--semibold-font);
-  width: 32vw;
-  height: auto;
 }
 
-.home-footer-description {
+.footer-description {
   font-size: 1.2vw;
   font-family: var(--text-font);
   width: 37vw;
   margin: 1vw 0vw 1.5vw;
 }
 
-.home-footer-btn-media {
+.footer-btn-media {
   display: flex;
   gap: 0.5vw;
 }
 
-.home-btnfooter-contact {
+.btnfooter-contact {
   background-size: 2vw;
   background-repeat: no-repeat;
   width: 2vw;
@@ -1356,27 +1355,27 @@ select {
 }
 
 #home-btnfacebook {
-  background-image: url("./Assets/images/home-facebook-footer-icon.svg");
+  background-image: url("./Assets/Images/home-facebook-footer-icon.svg");
 }
 
 #home-btninstagram {
-  background-image: url("./Assets/images/home-instagram-footer-icon.svg");
+  background-image: url("./Assets/Images/home-instagram-footer-icon.svg");
 }
 
 #home-btnemail {
-  background-image: url("./Assets/images/home-email-footer-icon.svg");
+  background-image: url("./Assets/Images/home-email-footer-icon.svg");
 }
 
-#home-footer-picture.home-footer-img {
+#footer-picture {
   width: 25vw;
   height: auto;
 }
 
-.home-footer-navigation-text {
+.footer-navigation-text {
   color: var(--darkblue-color);
 }
 
-.home-footer-quote {
+.footer-quote {
   padding-top: 1vw;
   padding-bottom: 1vw;
   width: 100vw;
@@ -1386,47 +1385,45 @@ select {
   background-color: var(--darkblue-color);
 }
 
-.home-footer-quote-text {
+.footer-quote-text {
   font-family: var(--text-font);
   font-size: 2.2vw;
 }
 
-.home-footer-data {
+.footer-data {
   justify-content: center;
   align-items: center;
 }
 
-.home-footer-navigation-main {
-  margin-top: 1vw;
+.footer-list {
   display: flex;
+  align-items: center;
+  gap: 2vw;
+  font-size: 0.9vw;
+  margin-top: 1vw;
   font-family: var(--text-font);
   color: var(--darkblue-color);
   transition: transform 0.5s ease;
 }
 
-.home-footer-list {
-  display: flex;
-  align-items: center;
-  gap: 2vw;
-  font-size: 0.9vw;
-}
-
-.home-footer-navbar-text a {
+.footer-navbar-text a {
   color: var(--darkblue-color);
   text-decoration: none;
   font-weight: 500;
 }
 
-.home-footer-container ul {
+.footer-navbar-text {
   transition: transform 0.5s ease;
+  list-style: none;
 }
 
-.home-footer-list ul:hover {
+.footer-navbar-text:hover {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
 }
 
-.home-wave-footer-img {
+.wave-footer-img {
+  transform: translateY(-4.2vw);
   width: 100vw;
   height: auto;
 }
