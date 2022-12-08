@@ -189,6 +189,9 @@ const createArticlesContainer = (articleArray) => {
         articleButton.addEventListener('click', function () {
             openArticle(article.id);
         })
+        articleContainer.addEventListener('click', function () {
+            openArticle(article.id);
+        })
     })
 }
 

@@ -637,6 +637,23 @@ select {
   position: relative;
 }
 
+.articles-card:hover .articles-information {
+  border-top: none;
+  webkit-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+.articles-card:hover .article-image {
+  border-bottom: none;
+  webkit-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+.articles-card:hover .article-save-button {
+  webkit-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
 .articles-image-container {
   margin-inline: auto;
   width: 22vw;
@@ -649,6 +666,7 @@ select {
   height: 100%;
   background-color: var(--midblueopacity-color);
   border-radius: 17px;
+  transition: transform .5s ease;
 }
 
 .article-save-button {
@@ -661,6 +679,7 @@ select {
   z-index: 100;
   stroke-width: 0.11vw;
   fill: transparent;
+  transition: transform .5s ease;
 }
 
 .article-save-button:hover>path {
@@ -668,8 +687,12 @@ select {
 }
 
 .articles-information {
-  margin-top: .5vw;
-  margin-left: .6vw;
+  padding-top: 1.2vw;
+  padding-left: .6vw;
+  padding-bottom: 1vw;
+  border-bottom-left-radius: 17px;
+  border-bottom-right-radius: 17px;
+  transition: transform .5s ease;
 }
 
 .articles-date {
@@ -694,7 +717,6 @@ select {
 #articles-small-button {
   width: 7.3vw;
   font-size: 0.9vw;
-  position: absolute;
 }
 
 #articles-small-button:hover .articles-small-btn-arrow {
