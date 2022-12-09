@@ -148,7 +148,7 @@ nav ul li:hover {
 }
 
 input[type=radio] {
-  border: 0;
+  border: none;
   width: 100%;
   height: 1.1vw;
 }
@@ -1468,7 +1468,7 @@ select {
 
 .test-button-rating-text {
   margin-top: 5vh;
-  width: 81.7vw;
+  width: 83vw;
   font-family: var(--text-font);
   font-size: 0.9vw;
 }
@@ -1477,12 +1477,12 @@ select {
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  gap: 1.3vw;
 }
 
 .test-button-rating-text li {
   list-style: none;
-  width: 5.8vw;
-  padding-left: 1.2vw;
+  width: 5vw;
   text-align: center;
 }
 
@@ -1532,4 +1532,29 @@ select {
   margin-top: 5vh;
   width: 12vw;
   font-size: 1.3vw;
+}
+
+.submit-popup-text {
+  color: var(--black-color);
+  width: 20vw;
+  font-size: 1.2vw;
+}
+
+#test-popup-result-container {
+  display: flex;
+  justify-content: center;
+}
+
+/* Animations */
+.fade-in-animation {
+  animation: 2s ease-out 0s 1 fadeIn;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

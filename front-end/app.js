@@ -64,14 +64,25 @@ export function createSubmitButton() {
         if (resultContainer) {
             resultContainer.remove()
         }
+        let buttonResult = document.querySelector("#resultContainer");
+        if (buttonResult) {
+            buttonResult.remove()
+        }
         const resultsArrayContainer = document.createElement("div");
-            resultContainer = document.createElement("p");
-            if (questionService.resultArray[0].result > 17 || questionService.resultArray[2].result > 17 || questionService.resultArray[1].result < 22) {
-            resultContainer.innerText = `Result for category burnout`
+        resultContainer = document.createElement("p");
+        resultContainer.classList.add("submit-popup-text");
+        buttonResult = document.createElement("button");
+        buttonResult.classList.add("tips-read-more");
+        if (questionService.resultArray[0].result > 17 || questionService.resultArray[2].result > 17 || questionService.resultArray[1].result < 22) {
+            resultContainer.innerText = "You may have burnout. We still advice you to contact a professional. Need help?";
             resultsArrayContainer.appendChild(resultContainer);
-        } else  {
-            resultContainer.innerText = `Result for category no burnout`
+            buttonResult.innerHTML = "Go to Tips&Tricks";
+            resultsArrayContainer.appendChild(buttonResult);
+        } else {
+            resultContainer.innerText = "You may not have burnout. We still advice you to contact a professional. Still want to keep yourself informed?";
             resultsArrayContainer.appendChild(resultContainer);
+            buttonResult.innerHTML = "Go to Articles";
+            resultsArrayContainer.appendChild(buttonResult);
         }
         togglePopup()
         popUpContent.innerHTML = resultsArrayContainer.innerHTML;
@@ -84,7 +95,7 @@ export function createSubmitButton() {
 
 export const togglePopup = () => {
     popUpVisible = !popUpVisible;
-    if(popUpVisible) {
+    if (popUpVisible) {
         popup.style.display = "block";
     }
     else {
