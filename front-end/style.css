@@ -929,13 +929,13 @@ input[type="radio"] {
 /* Diary fourth page */
 
 .diary-fourth-container {
-  height: 77.5vh;
+  height: 70.5vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin-top: 1.11vw;
+  margin-top: 0.5vw;
 }
 
 .diary-fourth-container h1 {
@@ -944,6 +944,7 @@ input[type="radio"] {
   font-size: 3vw;
   margin-bottom: 4.5vw;
 }
+
 .diary-fourth-box {
   margin-top: 6.2vh;
   border: 0.1vw solid var(--darkblue-color);
@@ -962,17 +963,17 @@ input[type="radio"] {
   font-family: var(--text-font);
   font-size: 1.3vw;
 }
+
 #diary-fourth-conclusion {
   width: 22vw;
 }
+
 /*Diary fourth button properties*/
 
 .diary-fourth-button {
   background-color: var(--lightblue-color);
-  padding: 0.2vw 0.5vw;
-  border-radius: 1.1vw;
+  border-radius: 2vw;
   font-weight: var(--bold-font);
-  font-size: 0.3vw;
   color: var(--darkblue-color);
   font-family: var(--text-font);
   border: none;
@@ -985,9 +986,9 @@ input[type="radio"] {
 }
 
 #diary-big-button {
-  width: 7vw;
+  width: 7.3vw;
   height: 2vw;
-  font-size: 1vw;
+  font-size: 0.9vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -996,24 +997,22 @@ input[type="radio"] {
 
 #diary-big-button:hover .diary-fourth-button-arrow {
   border: solid var(--white-color);
-  border-width: 0 0.3vw 0.3vw 0;
+  border-width: 0 0.14vw 0.14vw 0;
   background-color: var(--darkblue-color);
 }
 
 .diary-fourth-button-arrow {
   border: solid var(--darkblue-color);
-  border-width: 0 0.3vw 0.3vw 0;
+  border-width: 0 0.14vw 0.14vw 0;
   display: inline-block;
-  padding: 0.2vw;
+  padding: 0.15vw;
   transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
-  background-color: var(--lightblue-color);
 }
 .diary-fourth-buttons {
   width: 35vw;
   display: flex;
   justify-content: right;
-  height: 8vw;
   padding-top: 1.2vw;
 }
 
