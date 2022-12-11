@@ -30,7 +30,8 @@ router.post('/', async (req, res) => {
         title: req.body.title,
         content: req.body.content,
         comments: [],
-        accountId: req.body.accountId
+        accountId: req.body.accountId,
+        postTime: new Date()
     })
     try {
         const newPost = await post.save();

@@ -686,10 +686,7 @@ select {
   stroke-width: 0.11vw;
   fill: transparent;
   transition: transform .5s ease;
-}
-
-.article-save-button:hover>path {
-  fill: #687dac;
+  z-index: 5;
 }
 
 .articles-information {
@@ -1020,6 +1017,10 @@ select {
   border-radius: 17px;
 }
 
+.community-post-main{
+  width: 100%;
+}
+
 .community-post-image {
   width: 2.9vw;
   height: 6.17vh;
@@ -1103,6 +1104,7 @@ select {
 }
 
 .community-comment-content {
+  width: 100%;
   margin-left: 1.5vw;
   display: flex;
   flex-direction: column;

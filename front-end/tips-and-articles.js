@@ -186,10 +186,10 @@ const createArticlesContainer = (articleArray) => {
         articleContainer.appendChild(articleInformation);
         articlesGrid.appendChild(articleContainer);
 
-        articleButton.addEventListener('click', function () {
+        articleInformation.addEventListener('click', function () {
             openArticle(article.id);
         })
-        articleContainer.addEventListener('click', function () {
+        articleImage.addEventListener('click', function () {
             openArticle(article.id);
         })
     })
