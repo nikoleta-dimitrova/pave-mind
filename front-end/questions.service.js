@@ -121,7 +121,6 @@ export function answerQuestion(question) {
 export function submitForm() {
     try {
         validateForm();
-        resetResult()
         const questionArrayCat1 = questionsArray.filter(question => question.category === 1);
         const questionArrayCat2 = questionsArray.filter(question => question.category === 2);
         const questionArrayCat3 = questionsArray.filter(question => question.category === 3);

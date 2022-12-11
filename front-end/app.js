@@ -73,7 +73,7 @@ export function createSubmitButton() {
         resultContainer.classList.add("submit-popup-text");
         buttonResult = document.createElement("button");
         buttonResult.classList.add("tips-read-more");
-        if (questionService.resultArray[0].result > 17 || questionService.resultArray[2].result > 17 || questionService.resultArray[1].result < 22) {
+        if (questionService.resultArray[0].result > 17 && questionService.resultArray[2].result > 17 && questionService.resultArray[1].result < 22) {
             resultContainer.innerText = "You may have burnout. We still advice you to contact a professional. Need help?";
             resultsArrayContainer.appendChild(resultContainer);
             buttonResult.innerHTML = "Go to Tips&Tricks";

@@ -1492,6 +1492,8 @@ select {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 70vw;
+  margin-inline: auto;
 }
 
 #test-questions-container {
@@ -1532,6 +1534,7 @@ select {
   margin-top: 5vh;
   width: 12vw;
   font-size: 1.3vw;
+  align-self: flex-start;
 }
 
 .submit-popup-text {
