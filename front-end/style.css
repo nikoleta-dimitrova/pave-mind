@@ -131,7 +131,7 @@ nav ul li:hover {
   position: fixed;
   bottom: 1.5rem;
   right: 1.5rem;
-  z-index: 99;
+  z-index: 1;
   border-radius: 50%;
   background-color: transparent;
   border: none;

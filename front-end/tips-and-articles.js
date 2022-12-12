@@ -101,6 +101,9 @@ const loadJSONData = (callback, filePath) => {
 
 
 const init = (filePath, singleFile) => {
+    window.onscroll = function () {
+        scrollFunction();
+    };
     loadJSONData(function (response) {
         let responseData = JSON.parse(response);
         responseData.forEach(responseItem => {
@@ -206,6 +209,8 @@ const checkBigArticle = () => {
 }
 
 const filterArticles = () => {
+    articlesGrid.innerHTML = ""
+    articlesGrid.removeAttribute('data-aos')
     if (filters.value === "Most viewed") {
         dataList.sort((a, b) => {
             return b.views - a.views;
@@ -226,6 +231,7 @@ const filterArticles = () => {
     }
     else {
         articlesSorted = false;
+        articlesGrid.setAttribute('data-aos', 'fade-up')
     }
     createArticlesContainer(dataList);
     checkBigArticle();
@@ -316,14 +322,14 @@ const openTip = (tipId) => {
 
 const changeSlide = (next) => {
     let carousel = document.getElementById("continue-reading-carousel-content");
-    if(next) carousel.scrollLeft += calculateVW(36);
+    if (next) carousel.scrollLeft += calculateVW(36);
     else carousel.scrollLeft -= calculateVW(36);
 }
 
 function calculateVW(percent) {
     var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
     return (percent * w) / 100;
-  }
+}
 
 // Scroll to top button
 let scrollToTopButton = document.querySelector(".button-scroll");

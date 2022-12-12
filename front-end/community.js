@@ -138,3 +138,21 @@ function timeSince(date) {
 window.onload = async () => {
     await loadPosts();
 }
+
+// Scroll to top button
+let scrollToTopButton = document.querySelector(".button-scroll");
+const scrollFunction = () => {
+    if (
+        document.body.scrollTop > 300 ||
+        document.documentElement.scrollTop > 300
+    ) {
+        scrollToTopButton.style.display = "block";
+        scrollToTopButton.style.bottom = "1.5rem";
+    } else {
+        scrollToTopButton.style.display = "none";
+    }
+}
+const topFunction = () => {
+    document.body.scrollTop = 0; // this is for safari
+    document.documentElement.scrollTop = 0; // this is for everything with chrome and firefox
+}
