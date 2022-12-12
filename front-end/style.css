@@ -170,7 +170,7 @@ nav ul li:hover {
   color: var(--black-color);
 }
 
-#home-popup-content-checkbutton input{
+#home-popup-content-checkbutton input {
   padding: 1vw;
 }
 
@@ -232,7 +232,6 @@ label {
 
 #home-first-picture {
   width: 29vw;
-  height: auto;
 }
 
 .home-wave-img {
@@ -266,6 +265,7 @@ label {
 #home-big-button {
   width: 12vw;
   font-size: 1.3vw;
+  cursor: pointer;
 }
 
 #home-big-button:hover .home-big-btn-arrow {
@@ -287,7 +287,6 @@ label {
 .home-articles {
   background-color: var(--midblue-color);
   width: 100vw;
-  height: auto;
 }
 
 .home-articles-title {
@@ -310,17 +309,11 @@ label {
   width: 25vw;
   height: 28vw;
   border-radius: 1vw;
-  box-shadow: 0 4px 8px 0 #00000033;
   background-color: var(--white-color);
-}
-
-.home-card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
 .home-articles-lightbulb {
   width: 3vw;
-  height: auto;
   margin-left: 1vw;
   margin-top: 1vw;
 }
@@ -329,14 +322,12 @@ label {
   font-size: 1.3vw;
   font-family: var(--headings-font);
   width: 20vw;
-  height: auto;
   margin-top: 1.2vw;
   margin-left: 2vw;
 }
 
 .home-card-description {
   width: 21vw;
-  height: auto;
   font-size: 1vw;
   font-family: var(--text-font);
   margin-top: 1vw;
@@ -353,7 +344,7 @@ label {
   margin-left: 2vw;
   align-self: flex-end;
   position: absolute;
-  transform: translateY(1.5vw);
+  transform: translateY(-1.5vw);
 }
 
 #home-articles-arrow {
@@ -365,12 +356,12 @@ label {
   position: relative;
   display: flex;
   width: 19vw;
-  transform: translateY(3.7vw);
   align-self: flex-end;
 }
 
 .home-articles-button-vector {
   display: flex;
+  height: 17vw;
 }
 
 .home-articles-vector-images {
@@ -387,7 +378,6 @@ label {
 
 .home-our-mission {
   width: 100vw;
-  height: auto;
 }
 
 .home-mission-title {
@@ -493,7 +483,6 @@ label {
 
 #home-footer-logo {
   width: 7vw;
-  height: auto;
 }
 
 .home-footer-title {
@@ -502,7 +491,6 @@ label {
   font-family: var(--headings-font);
   font-weight: var(--semibold-font);
   width: 32vw;
-  height: auto;
 }
 
 .home-footer-description {
@@ -538,7 +526,6 @@ label {
 
 #home-footer-picture.home-footer-img {
   width: 25vw;
-  height: auto;
 }
 
 .home-footer-navigation-text {
@@ -549,7 +536,6 @@ label {
   padding-top: 1vw;
   padding-bottom: 1vw;
   width: 100vw;
-  height: auto;
   text-align: center;
   color: var(--white-color);
   background-color: var(--darkblue-color);
@@ -674,7 +660,6 @@ label {
 
 .home-wave-footer-img {
   width: 100vw;
-  height: auto;
 }
 
 /* TEST */
