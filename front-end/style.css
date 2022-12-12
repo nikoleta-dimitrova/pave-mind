@@ -690,6 +690,8 @@ select {
 .diary-first-text-field {
   display: flex;
   align-items: center;
+  width:24vw;
+  white-space: nowrap;
 }
 
 .diary-title {
@@ -723,7 +725,8 @@ input[type="radio"] {
 
 .diary-first-label ul {
   display: flex;
-  gap: 3.5vw;
+  gap: 3vw;
+  transform:translateX(4vw);
 }
 
 .diary-first-label ul li {
@@ -967,7 +970,11 @@ input[type="radio"] {
 #diary-fourth-conclusion {
   width: 22vw;
 }
-
+#diary-fourth-hyperlink{
+  text-decoration:none;
+  color: var(--darkblue-color);
+  font-weight:600;
+}
 /*Diary fourth button properties*/
 
 .diary-fourth-button {
