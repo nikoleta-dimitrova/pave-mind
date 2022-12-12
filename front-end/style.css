@@ -466,7 +466,7 @@ label {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  height: 35vh;
+  height: 240vh;
 }
 
 #articles-title {
@@ -1017,7 +1017,7 @@ select {
   border-radius: 17px;
 }
 
-.community-post-main{
+.community-post-main {
   width: 100%;
 }
 
@@ -1277,6 +1277,7 @@ select {
   text-align: center;
   margin-top: 4vw;
   gap: 3vw;
+  height: 185vh;
 }
 
 .tips-tricks-title {
@@ -1326,22 +1327,6 @@ select {
   display: flex;
   flex-direction: column;
 }
-
-.tips-footer-quote {
-  padding: 1vw;
-  width: 100vw;
-  height: auto;
-  text-align: center;
-  color: var(--white-color);
-  background-color: var(--darkblue-color);
-  transform: translate(0vw, 12vw);
-}
-
-.tips-footer-quote-text {
-  font-family: var(--text-font);
-  font-size: 2.2vw;
-}
-
 
 /* FOOTER */
 .footer-pavemind {
@@ -1559,6 +1544,7 @@ select {
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }

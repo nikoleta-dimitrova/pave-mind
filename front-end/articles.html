@@ -10,6 +10,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700;800;900&family=Patua+One&display=swap"
         rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body onload="init('articles.json', false)" id="articles-body">
@@ -31,8 +32,8 @@
     </nav>
 
     <section id="articles">
-        <p id="articles-title" class="fade-in-animation">Articles</p>
-        <div class="searchfilter-container fade-in-animation">
+        <p id="articles-title">Articles</p>
+        <div class="searchfilter-container">
             <div class="searchbar-container">
                 <div class="search-box">
                     <input type="text" id="search-input" oninput="searchArticles()" placeholder="Search..">
@@ -42,7 +43,7 @@
                     </button>
                 </div>
             </div>
-            <div class="articles-table-filters fade-in-animation">
+            <div class="articles-table-filters">
                 <select onchange="filterArticles()" id="articles-filter">
                     <option>All articles</option>
                     <option>Most viewed</option>
@@ -55,7 +56,9 @@
         </div>
 
 
-        <section class="articles-big fade-in-animation">
+        <section class="articles-big" data-aos="fade-up" data-aos-offset="20" data-aos-delay="0"
+        data-aos-duration="800" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false"
+        data-aos-anchor-placement="top-center">
             <div class="articles-big-photo"><img src="./Assets/Images/big-article-picture.svg"></div>
             <div class="articles-big-info">
                 <h4>October 16, 2022</h4>
@@ -69,11 +72,51 @@
             </div>
         </section>
 
-        <section id="articles-grid"></section>
+        <section id="articles-grid" data-aos="fade-up" data-aos-offset="-100" data-aos-delay="0"
+            data-aos-duration="800" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false"
+            data-aos-anchor-placement="top-center"></section>
 
     </section>
+
+    <footer>
+        <img src="./Assets/Images/home-features-bottom-wave.png" class="wave-footer-img" />
+        <section class="footer-pavemind">
+          <div class="footer-container">
+            <img id="footer-logo" src="./Assets/Images/logo.svg" />
+            <div class="footer-data">
+              <h1 class="footer-title">Contact us.</h1>
+              <p class="footer-description">
+                If you have any question regarding Burnout
+                and are looking for ways to cope with it feel free to
+                contact us via email or on one of our social medias.
+              </p>
+              <div class="footer-btn-media">
+                <a href="https://www.facebook.com" class="btnfooter-contact" id="home-btnfacebook"></a>
+                <a href="https://www.instagram.com" class="btnfooter-contact" id="home-btninstagram"></a>
+                <a href="https://mail.google.com" class="btnfooter-contact" id="home-btnemail"></a>
+              </div>
+              <ul class="footer-list">
+                <h1>
+                  Navigation
+                </h1>
+                <li class="footer-navbar-text"><a href="./articles.html">Articles</a></li>
+                <li class="footer-navbar-text"><a href="./tips-and-tricks.html">Tips&Tricks</a></li>
+                <li class="footer-navbar-text"><a href="./community.html">Community</a></li>
+                <li class="footer-navbar-text"><a href="./diary.html">Diary</a> </li>
+              </ul>
+            </div>
+            <img id="footer-picture" src="./Assets/Images/home-footer-woman-img.svg" />
+          </div>
+          <div class="footer-quote">
+            <h1 class="footer-quote-text"> A NEW BEGINNING AWAITS YOU. </h1>
+          </div>
+        </section>
+      </footer>
+
     <script src="./tips-and-articles.js"></script>
     <script src="https://kit.fontawesome.com/43dcc20e7a.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script> AOS.init(); </script>
 </body>
 
 </html>
