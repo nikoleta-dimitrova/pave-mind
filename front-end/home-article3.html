@@ -10,6 +10,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700;800;900&family=Patua+One&display=swap"
         rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -31,17 +32,23 @@
     </nav>
 
     <section id="article-body">
-        <a href="./home.html" class="secondary-button" id="article-button-back"> <span
+        <a href="./index.html" class="secondary-button" id="article-button-back"> <span
                 class="articles-arrow-back"></span>Back to home
         </a>
         <p id="article-date">February 1, 2022</p>
         <h1 id="article-title">Do you feel burnt out?</h1>
         <img id="article-image" src="./Assets/Images/article6.svg" alt="">
-        <p id="article-boldInfo">A few years ago, I found myself really burnt out. Well, at the time, I wasn’t actually
+        <p id="article-boldInfo" data-aos="fade-up" data-aos-offset="-200" data-aos-delay="0" data-aos-duration="800"
+            data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false"
+            data-aos-anchor-placement="top-center">A few years ago, I found myself really burnt out. Well, at the time,
+            I wasn’t actually
             sure that’s what it was. At first “burnout” seemed like a dramatic way to describe what I was experiencing.
             But I was really, really tired. I was struggling to motivate myself and looking at my calendar started
             filling me with a sort of low-grade dread.</p>
-        <p id="article-information">What I learned pretty quickly is that our culture doesn’t understand burnout, what
+        <p id="article-information" data-aos="fade-up" data-aos-offset="-100" data-aos-delay="0" data-aos-duration="800"
+            data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false"
+            data-aos-anchor-placement="top-center">What I learned pretty quickly is that our culture doesn’t understand
+            burnout, what
             it stems from or how common it is. We do not understand that a lot of us can get burnt out on a perfectly
             “normal” 40-hour work week. That’s partly because that 40-hour work week is a completely arbitrary creation,
             and ignores data that shows that most people can only give three to four hours of focused attention to their
@@ -74,7 +81,77 @@
             on a beach for a few years – what does healing from burnout look like? The first cure is rest. And I mean
             true rest, not rest where you feel stressed and guilty for resting. That’s not rest.</p>
     </section>
+    <section id="continue-reading-carousel">
+        <h1>Continue Reading</h1>
+        <div class="carousel-button-container" id="carousel-back" onclick="changeSlide(false)">
+            <span class="articles-big-btn-arrow" id="articles-big-btn-arrow-reversed"></span>
+        </div>
+        <div id="continue-reading-carousel-content">
+            <div onclick="openArticle('article1')">
+                <img src="./Assets/Images/article1.svg">
+                <p>What Is Academic Burnout?</p>
+            </div>
+            <div onclick="openArticle('article2')">
+                <img src="./Assets/Images/article2.svg">
+                <p>Burnout During the Pandemic</p>
+            </div>
+            <div onclick="openArticle('article3')">
+                <img src="./Assets/Images/article3.svg">
+                <p>Burnout in medical students</p>
+            </div>
+            <div onclick="openArticle('article4')">
+                <img src="./Assets/Images/article4.svg">
+                <p>Is seeking therapy a weakness?</p>
+            </div>
+            <div onclick="openArticle('article5')">
+                <img src="./Assets/Images/article5.svg">
+                <p>Your Body Knows You’re Burned Out</p>
+            </div>
+        </div>
+        <div class="carousel-button-container" id="carousel-next" onclick="changeSlide(true)">
+            <span class="articles-big-btn-arrow"></span>
+        </div>
+    </section>
+
+    <footer>
+        <img src="./Assets/Images/home-features-bottom-wave.png" class="wave-footer-img" />
+        <section class="footer-pavemind">
+            <div class="footer-container">
+                <img id="footer-logo" src="./Assets/Images/logo.svg" />
+                <div class="footer-data">
+                    <h1 class="footer-title">Contact us.</h1>
+                    <p class="footer-description">
+                        If you have any question regarding Burnout
+                        and are looking for ways to cope with it feel free to
+                        contact us via email or on one of our social medias.
+                    </p>
+                    <div class="footer-btn-media">
+                        <a href="https://www.facebook.com" class="btnfooter-contact" id="home-btnfacebook"></a>
+                        <a href="https://www.instagram.com" class="btnfooter-contact" id="home-btninstagram"></a>
+                        <a href="https://mail.google.com" class="btnfooter-contact" id="home-btnemail"></a>
+                    </div>
+                    <ul class="footer-list">
+                        <h1>
+                            Navigation
+                        </h1>
+                        <li class="footer-navbar-text"><a href="./articles.html">Articles</a></li>
+                        <li class="footer-navbar-text"><a href="./tips-and-tricks.html">Tips&Tricks</a></li>
+                        <li class="footer-navbar-text"><a href="./community.html">Community</a></li>
+                        <li class="footer-navbar-text"><a href="./diary.html">Diary</a> </li>
+                    </ul>
+                </div>
+                <img id="footer-picture" src="./Assets/Images/home-footer-woman-img.svg" />
+            </div>
+            <div class="footer-quote">
+                <h1 class="footer-quote-text"> A NEW BEGINNING AWAITS YOU. </h1>
+            </div>
+        </section>
+    </footer>
+
     <button onclick="topFunction()" class="button-scroll"><img src="./Assets/Images/scroll-to-top.png" alt=""></button>
+    <script src="./tips-and-articles.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script> AOS.init(); </script>
 </body>
 
 </html>

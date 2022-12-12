@@ -10,6 +10,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700;800;900&family=Patua+One&display=swap"
         rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -31,16 +32,22 @@
     </nav>
 
     <section id="article-body">
-        <a href="./home.html" class="secondary-button" id="article-button-back"> <span
+        <a href="./index.html" class="secondary-button" id="article-button-back"> <span
                 class="articles-arrow-back"></span>Back to home
         </a>
         <p id="article-date">June 19, 2022</p>
         <h1 id="article-title">What Is Academic Burnout?</h1>
         <img id="article-image" src="./Assets/Images/article1.svg" alt="">
-        <p id="article-boldInfo">Feeling less motivated than usual? More exhausted and irritable? Less inspired and
+        <p id="article-boldInfo" data-aos="fade-up" data-aos-offset="-200" data-aos-delay="0" data-aos-duration="800"
+            data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false"
+            data-aos-anchor-placement="top-center">Feeling less motivated than usual? More exhausted and irritable? Less
+            inspired and
             creative in your school work? You may have academic burnout, which is a very real condition that is both
             diagnosable and treatable with the right steps.</p>
-        <p id="article-information">The first part of treating academic burnout is recognition and acknowledgement of
+        <p id="article-information" data-aos="fade-up" data-aos-offset="-100" data-aos-delay="0" data-aos-duration="800"
+            data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false"
+            data-aos-anchor-placement="top-center">The first part of treating academic burnout is recognition and
+            acknowledgement of
             the condition, followed by some serious commitment to change your current habits. You can overcome academic
             burnout, and prevent it from happening again! We’ll explain exactly how you can do so plus the best tips for
             avoiding burnout altogether. Academic burnout can be defined as a negative emotional, physical and mental
@@ -62,7 +69,77 @@
             weekends if possible. Try to rearrange your schedule to give yourself at least a day off every week. During
             school breaks, try to take vacations or staycations, where you truly give your mind time to rest.</p>
     </section>
+    <section id="continue-reading-carousel">
+        <h1>Continue Reading</h1>
+        <div class="carousel-button-container" id="carousel-back" onclick="changeSlide(false)">
+            <span class="articles-big-btn-arrow" id="articles-big-btn-arrow-reversed"></span>
+        </div>
+        <div id="continue-reading-carousel-content">
+            <div onclick="openArticle('article1')">
+                <img src="./Assets/Images/article1.svg">
+                <p>What Is Academic Burnout?</p>
+            </div>
+            <div onclick="openArticle('article2')">
+                <img src="./Assets/Images/article2.svg">
+                <p>Burnout During the Pandemic</p>
+            </div>
+            <div onclick="openArticle('article3')">
+                <img src="./Assets/Images/article3.svg">
+                <p>Burnout in medical students</p>
+            </div>
+            <div onclick="openArticle('article4')">
+                <img src="./Assets/Images/article4.svg">
+                <p>Is seeking therapy a weakness?</p>
+            </div>
+            <div onclick="openArticle('article5')">
+                <img src="./Assets/Images/article5.svg">
+                <p>Your Body Knows You’re Burned Out</p>
+            </div>
+        </div>
+        <div class="carousel-button-container" id="carousel-next" onclick="changeSlide(true)">
+            <span class="articles-big-btn-arrow"></span>
+        </div>
+    </section>
+
+    <footer>
+        <img src="./Assets/Images/home-features-bottom-wave.png" class="wave-footer-img" />
+        <section class="footer-pavemind">
+            <div class="footer-container">
+                <img id="footer-logo" src="./Assets/Images/logo.svg" />
+                <div class="footer-data">
+                    <h1 class="footer-title">Contact us.</h1>
+                    <p class="footer-description">
+                        If you have any question regarding Burnout
+                        and are looking for ways to cope with it feel free to
+                        contact us via email or on one of our social medias.
+                    </p>
+                    <div class="footer-btn-media">
+                        <a href="https://www.facebook.com" class="btnfooter-contact" id="home-btnfacebook"></a>
+                        <a href="https://www.instagram.com" class="btnfooter-contact" id="home-btninstagram"></a>
+                        <a href="https://mail.google.com" class="btnfooter-contact" id="home-btnemail"></a>
+                    </div>
+                    <ul class="footer-list">
+                        <h1>
+                            Navigation
+                        </h1>
+                        <li class="footer-navbar-text"><a href="./articles.html">Articles</a></li>
+                        <li class="footer-navbar-text"><a href="./tips-and-tricks.html">Tips&Tricks</a></li>
+                        <li class="footer-navbar-text"><a href="./community.html">Community</a></li>
+                        <li class="footer-navbar-text"><a href="./diary.html">Diary</a> </li>
+                    </ul>
+                </div>
+                <img id="footer-picture" src="./Assets/Images/home-footer-woman-img.svg" />
+            </div>
+            <div class="footer-quote">
+                <h1 class="footer-quote-text"> A NEW BEGINNING AWAITS YOU. </h1>
+            </div>
+        </section>
+    </footer>
+
     <button onclick="topFunction()" class="button-scroll"><img src="./Assets/Images/scroll-to-top.png" alt=""></button>
+    <script src="./tips-and-articles.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script> AOS.init(); </script>
 </body>
 
 </html>
