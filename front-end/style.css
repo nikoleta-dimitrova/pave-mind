@@ -690,7 +690,7 @@ select {
 .diary-first-text-field {
   display: flex;
   align-items: center;
-  width:24vw;
+  width: 24vw;
   white-space: nowrap;
 }
 
@@ -726,7 +726,7 @@ input[type="radio"] {
 .diary-first-label ul {
   display: flex;
   gap: 3vw;
-  transform:translateX(4vw);
+  transform: translateX(4vw);
 }
 
 .diary-first-label ul li {
@@ -807,6 +807,8 @@ input[type="radio"] {
   color: var(--darkblue-color);
   font-weight: 600;
   font-size: 1.2vw;
+  position: relative;
+  z-index: 2;
 }
 
 .diary-second-container .diary-second-buttons {
@@ -831,6 +833,7 @@ input[type="radio"] {
   display: inline-block;
   padding: 0.3vw;
   border-width: 0 0.2vw 0.2vw 0;
+  position: relative;
 }
 
 #diary-second-arrow-previous {
@@ -911,6 +914,8 @@ input[type="radio"] {
   color: var(--darkblue-color);
   font-weight: 600;
   font-size: 1.2vw;
+  position: relative;
+  z-index: 2;
 }
 
 .diary-third-btn-arrow {
@@ -970,10 +975,10 @@ input[type="radio"] {
 #diary-fourth-conclusion {
   width: 22vw;
 }
-#diary-fourth-hyperlink{
-  text-decoration:none;
+#diary-fourth-hyperlink {
+  text-decoration: none;
   color: var(--darkblue-color);
-  font-weight:600;
+  font-weight: 600;
 }
 /*Diary fourth button properties*/
 
@@ -985,6 +990,8 @@ input[type="radio"] {
   font-family: var(--text-font);
   border: none;
   text-decoration: none;
+  position: relative;
+  z-index: 2;
 }
 
 .diary-fourth-button:hover {
@@ -1032,13 +1039,8 @@ input[type="radio"] {
   align-items: center;
   height: 68vh;
 }
-
-.diary-fifth-header {
-  font-family: var(--headings-font);
-  color: var(--darkblue-color);
-  font-size: 3vw;
-  margin-top: 2vw;
-  margin-bottom: 3vw;
+#diary-fifth-title {
+  padding-bottom: 3.95vw;
 }
 .diary-fifth-container {
   display: flex;
@@ -1046,82 +1048,82 @@ input[type="radio"] {
   gap: 3vw;
 }
 
-.diary-calendar-wrapper{
+.diary-calendar-wrapper {
   width: 20vw;
-  display:flex;
+  display: flex;
   flex-direction: column;
   border-radius: 0.65vw;
   font-family: var(--text-font);
   align-items: center;
 }
 
-.diary-calendar-wrapper header{
+.diary-calendar-wrapper header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width:20vw;
-  height:4vh;
+  width: 20vw;
+  height: 4vh;
 }
 
-header .diary-fifth-calendar-header{
+header .diary-fifth-calendar-header {
   display: flex;
   background-color: var(--lightblue-color);
   align-items: center;
   width: 22vw;
   justify-content: space-between;
 }
-header{
+header {
   background-color: var(--lightblue-color);
   border-radius: 0.4vw 0.4vw 0 0;
   width: 22vw;
   height: 4vh;
 }
 
-header .diary-fifth-current-date{
+header .diary-fifth-current-date {
   font-size: 1.1vw;
   font-weight: 500;
   white-space: nowrap;
 }
-.diary-fifth-calendar{
+.diary-fifth-calendar {
   background-color: var(--white-color);
-  width:21vw;
+  width: 21vw;
 }
-.diary-fifth-calendar ul{
+.diary-fifth-calendar ul {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
   text-align: center;
-  margin-top:0.7vw;
+  margin-top: 0.7vw;
 }
-.diary-fifth-calendar .days{
+.diary-fifth-calendar .days {
   margin-bottom: 1.3vw;
 }
-.diary-fifth-calendar li{
+.diary-fifth-calendar li {
   color: #333;
   width: calc(100% / 7);
   font-size: 0.8vw;
 }
-.diary-fifth-calendar .diary-weeks li{
+.diary-fifth-calendar .diary-weeks li {
   font-weight: 500;
   cursor: default;
 }
-.diary-weeks{
-  padding-top:1vw;
+.diary-weeks {
+  padding-top: 1vw;
 }
-.diary-fifth-calendar .diary-fifth-days li{
+.diary-fifth-calendar .diary-fifth-days li {
   z-index: 1;
   cursor: pointer;
   position: relative;
   margin-top: 1.4vw;
-  width:3vw;
+  width: 3vw;
 }
-.diary-fifth-days li.inactive{
+.diary-fifth-days li.inactive {
   color: #aaa;
 }
-.diary-fifth-days li.active{
+.diary-fifth-days li.active {
   color: black;
 }
-.diary-fifth-days li::before{
+.diary-fifth-days li::before {
   position: absolute;
   content: "";
   left: 50%;
@@ -1132,10 +1134,10 @@ header .diary-fifth-current-date{
   border-radius: 0.5vw;
   transform: translate(-50%, -50%);
 }
-.diary-fifth-days li.active::before{
-  background-color:  #fe1f20;
+.diary-fifth-days li.active::before {
+  background-color: #fe1f20;
 }
-.diary-fifth-days li:not(.active):hover::before{
+.diary-fifth-days li:not(.active):hover::before {
   background: #f2f2f2;
 }
 
@@ -1167,8 +1169,8 @@ header .diary-fifth-current-date{
 
 .diary-fifth-wave {
   width: 100vw;
-  position:fixed;
-  bottom:0;
+  position: fixed;
+  bottom: 0;
 }
 
 #diary-fifth-filter {
@@ -1178,9 +1180,9 @@ header .diary-fifth-current-date{
   border-radius: 17px;
   border: 0.1vw solid var(--darkblue-color);
   font-size: 0.9vw;
-  padding-left:0.5vw;
-  align-items:center;
-  background-color:var(--white-color);
+  padding-left: 0.5vw;
+  align-items: center;
+  background-color: var(--white-color);
 }
 
 #diary-fifth-filter input {
@@ -1199,16 +1201,16 @@ header .diary-fifth-current-date{
   gap: 0.8vw;
   font-size: 0.65vw;
   font-family: var(--text-font);
-  padding-top:1vw;
+  padding-top: 1vw;
 }
+
 .diary-fifth-image {
   width: 1.7vw;
   height: 1.7vw;
 }
+
 .diary-fifth-calendar-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-
-
