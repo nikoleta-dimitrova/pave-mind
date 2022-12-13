@@ -1433,6 +1433,8 @@ select {
 
 .wave-footer-bottom-img {
   width: 100vw;
+  margin-top: -1vw;
+  margin-bottom: -0.7vw;
 }
 
 #footer-blue {
