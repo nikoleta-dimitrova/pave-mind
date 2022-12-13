@@ -11,7 +11,7 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
-<body>
+<body onload="init('articles.json', true)">
 
 
   <nav class="navbar">
@@ -86,12 +86,13 @@
   <!-- Articles -->
 
   <section class="home-articles">
-    <h1 class="home-articles-title">
+    <h1 class="home-articles-title" data-aos="fade-up" data-aos-offset="-300" data-aos-delay="0" data-aos-duration="800"
+      data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-center">
       Articles to start with
     </h1>
 
     <section class="home-articles-cards" id="home-articles-cards" data-aos="fade-up" data-aos-offset="-300"
-      data-aos-delay="0" data-aos-duration="800" data-aos-easing="ease-in-out" data-aos-mirror="true"
+      data-aos-delay="400" data-aos-duration="800" data-aos-easing="ease-in-out" data-aos-mirror="true"
       data-aos-once="false" data-aos-anchor-placement="top-center">
       <div class="home-card">
         <img class="home-articles-lightbulb" src="./Assets/Images/home-lightbulb.svg">
@@ -146,19 +147,19 @@
     <img class="home-wave-mission-img" src="./Assets/Images/home-articles-bottom-wave.png" />
 
   </section>
-
+  <button onclick="topFunction()" class="button-scroll"><img src="./Assets/Images/scroll-to-top.png" alt=""></button>
 
   <!-- Our Mission -->
 
   <section class="home-our-mission" id="home-our-mission">
 
-    <h1 class="home-mission-title" data-aos="fade-up" data-aos-offset="-200" data-aos-delay="0" data-aos-duration="800"
+    <h1 class="home-mission-title" data-aos="fade-up" data-aos-offset="-230" data-aos-delay="0" data-aos-duration="800"
       data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-center">
       Our Mission
     </h1>
 
 
-    <div class="container" data-aos="fade-up" data-aos-offset="-200" data-aos-delay="0" data-aos-duration="800"
+    <div class="container" data-aos="fade-up" data-aos-offset="-300" data-aos-delay="400" data-aos-duration="800"
       data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-center">
       <div class="home-mission-container">
 
@@ -194,7 +195,7 @@
     </h1>
 
 
-    <div class="home-features-container" data-aos="fade-up" data-aos-offset="-200" data-aos-delay="0"
+    <div class="home-features-container" data-aos="fade-up" data-aos-offset="-200" data-aos-delay="400"
       data-aos-duration="800" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false"
       data-aos-anchor-placement="top-center">
       <div class="home-feature">
@@ -288,29 +289,28 @@
         <div class="home-footer-quote">
           <h1 class="home-footer-quote-text"> A NEW BEGINNING AWAITS YOU. </h1>
         </div>
-
   </footer>
+  <button onclick="topFunction()" class="button-scroll"><img src="./Assets/Images/scroll-to-top.png" alt=""></button>
+  <script src="./tips-and-articles.js"></script>
+  <script>
+    let popup = document.getElementById("popup-blur");
+    let popUpVisible = false;
 
+    const togglePopup = () => {
+      popUpVisible = !popUpVisible;
+      if (popUpVisible) {
+        popup.style.display = "block";
+        popupTitle.focus();
+      }
+      else {
+        popup.style.display = "none";
+      }
+    }
+  </script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script> AOS.init(); </script>
 </body>
 
 
-
-<script>
-  let popup = document.getElementById("popup-blur");
-  let popUpVisible = false;
-
-  const togglePopup = () => {
-    popUpVisible = !popUpVisible;
-    if (popUpVisible) {
-      popup.style.display = "block";
-      popupTitle.focus();
-    }
-    else {
-      popup.style.display = "none";
-    }
-  }
-</script>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script> AOS.init(); </script>
 
 </html>
