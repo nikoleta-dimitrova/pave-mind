@@ -273,8 +273,8 @@ label {
 }
 
 .home-articles-title {
+  padding-top: 1vw;
   font-size: var(--title-size);
-  margin-bottom: var(--mb-1);
   color: var(--white-color);
   font-family: var(--headings-font);
   font-weight: var(--regular-font);
@@ -369,10 +369,11 @@ label {
 /* Third section home (mission) */
 .home-our-mission {
   width: 100vw;
-  height: 75vh;
+  height: 80vh;
 }
 
 .home-mission-title {
+  padding-top: 3vw;
   font-size: var(--title-size);
   font-family: var(--headings-font);
   font-weight: var(--regular-font);
@@ -897,6 +898,11 @@ select {
   color: var(--darkblue-color);
   font-size: var(--title-size);
   margin-top: 10vh;
+}
+
+.community-wave-heading-img {
+  width: 100vw;
+  height: 15vh;
 }
 
 #community-description {
@@ -1439,7 +1445,7 @@ select {
 }
 
 .wave-footer-img {
-  transform: translateY(-4.2vw);
+  transform: translateY(-3.9vw);
   width: 100vw;
   height: auto;
 }
@@ -1447,8 +1453,12 @@ select {
 .wave-footer-bottom-img {
   width: 100vw;
   height: 5vh;
-  margin-top: -0.8vw;
-  margin-bottom: -1vw;
+  margin-top: -1vw;
+  margin-bottom: -0.7vw;
+}
+
+#footer-blue {
+  background-color: var(--midblueopacity-color);
 }
 
 /* TEST */
@@ -1529,6 +1539,7 @@ select {
   width: 12vw;
   font-size: 1.3vw;
   align-self: flex-start;
+  margin-bottom: 7vw;
 }
 
 .submit-popup-text {
