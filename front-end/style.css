@@ -267,7 +267,7 @@ label {
 .home-articles {
   background-color: var(--midblue-color);
   width: 100vw;
-  height: 43vw;
+  height: 52vw;
 }
 
 .home-articles-title {
@@ -284,19 +284,15 @@ label {
   gap: 7vw;
   justify-content: center;
   margin-top: 3vw;
-  height: 33vw;
+  height: 42vw;
+  align-items: center;
 }
 
 .home-card {
   width: 25vw;
   height: 28vw;
   border-radius: 1vw;
-  box-shadow: 0 4px 8px 0 #00000033;
   background-color: var(--white-color);
-}
-
-.home-card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
 .home-articles-lightbulb {
@@ -1327,7 +1323,6 @@ select {
 /* FOOTER */
 .footer-pavemind {
   margin-top: -4vw;
-  background-color: var(--midblueopacity-color);
 }
 
 .footer-container {
