@@ -901,6 +901,7 @@ select {
 }
 
 .community-wave-heading-img {
+  margin-top: 3vw;
   width: 100vw;
   height: 15vh;
 }
