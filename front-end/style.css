@@ -793,7 +793,7 @@ select {
     color: var(--darkblue-color);
     font-family: var(--text-font);
     font-weight: var(--bold-font);
-    border: 1px solid var(--darkblue-color);
+    border: 0.1vw solid var(--darkblue-color);
     text-decoration: none;
     padding: 0.4vw 2.7vw;
     font-size: 1.2vw;
@@ -805,7 +805,7 @@ select {
     color: var(--darkblue-color);
     font-family: var(--text-font);
     font-weight: var(--bold-font);
-    border: 1px solid var(--darkblue-color);
+    border: 0.1vw solid var(--darkblue-color);
     text-decoration: none;
     padding: 0.4vw 1.2vw;
     font-size: 1.2vw;
@@ -819,8 +819,8 @@ select {
     padding: 0.7vw;
     padding-left: 1vw;
     outline: none;
-    border: 1px solid var(--darkblue-color);
-    border-radius: 25px;
+    border: 0.1vw solid var(--darkblue-color);
+    border-radius: 2vw;
     font-size: 1vw;
     font-family: var(--text-font);
     font-weight: var(--bold-font);
@@ -860,6 +860,8 @@ select {
 font-family: var(--text-font);
 font-weight: var(--bold-font);
 color:#B5B5B5;
+cursor: pointer;
+font-size: 1vw;
   }
   
   .account-card-fourth-part{
@@ -890,5 +892,126 @@ color:#B5B5B5;
     font-size: 1.2vw;
     width: 9.4vw;
   }
+
+
+  /*  ACCOUNT POPUP   */
+  
+  #popup-blur {
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: #00000061;
+    transform: translateY(-50%);
+    top: 50%;
+    z-index: 5;
+    overflow: hidden;
+  }
+  
+  #account-popup,
+  #result-popup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    width: 54vw;
+    height: 34vw;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 2vw;
+    margin-inline: auto;
+    background-color: var(--white-color);
+  }
   
   
+  .account-popup-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    color: var(--darkblue-color);
+  }
+  
+  .account-popup-heading {
+    padding-top: 2vw;
+    padding-bottom: 1vw;
+    text-align: center;
+    font-size: 1.5vw;
+    font-family: var(--headings-font);
+    width: 100%;
+    border-bottom: 0.1vw solid var(--darkblue-color);
+  }
+  
+  #account-popup-close {
+    position: absolute;
+    top: 2vw;
+    right: 3vw;
+    width: 2vw;
+    cursor: pointer;
+  }
+  
+
+  .account-popup-inputs{
+    display: flex;
+    width: 42vw;
+    padding: 0.7vw;
+    padding-left: 1vw;
+    outline: none;
+    border: 0.1vw solid var(--darkblue-color);
+    border-radius: 2vw;
+    font-size: 1vw;
+    font-family: var(--text-font);
+    font-weight: var(--bold-font);
+  }
+  
+  
+  
+  
+  .account-popup-data{
+    margin: 0vw 1vw 1vw;
+    font-family: var(--text-font);
+    color: var(--black-color);
+    font-size: 1.3vw;
+  }
+  
+  .account-popup-wave{
+    width: 23vw;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  
+  .account-popup-button{
+    background-color: var(--lightblue-color);
+    padding: 0.4vw 1vw;
+    border-radius: 2vw;
+    font-weight: 100;
+    color: var(--darkblue-color);
+    font-family: var(--text-font);
+    font-weight: var(--bold-font);
+    border: none;
+    text-decoration: none;
+   
+      font-size: 1.1vw;
+      width: 9.1vw;
+      height: auto;
+  }
+
+  .account-popup-content {
+    margin-top: 2.5vw;
+    display: flex;
+    flex-direction: column;
+    margin-left: 8vw;
+    width: 40vw;
+    gap: 3.2vw;
+    font-family: var(--text-font);
+    align-items: self-end;
+  }
+  .account-popup-every-inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5vw;
+  }

@@ -33,6 +33,43 @@
   </nav>
 
 
+
+  <div id="popup-blur">
+    <div id="account-popup">
+      <div class="account-popup-container">
+        <img id="account-popup-close" src="./Assets/Images/close.svg" onclick="togglePopup()">
+        <div class="account-popup-heading">
+          <p id="account-popup-change-password">Change password</p>
+        </div>
+        <div class="account-popup-content">
+
+
+          <div class="account-popup-every-inputs">
+
+            <div class="account-all-popup-inputs">
+                <h1 class="account-popup-data">Old password</h1>
+            <input type="password" class="account-popup-inputs" id="account-first-name" placeholder="••••••••••••••" required>
+            </div>
+            <div class="account-all-popup-inputs">
+                <h1 class="account-popup-data">New password</h1>
+            <input type="password" class="account-popup-inputs" id="account-first-name" placeholder="••••••••••••••" required>
+            </div>
+            <div class="account-all-popup-inputs">
+              <h1 class="account-popup-data">Repeat new password</h1>
+          <input type="password" class="account-popup-inputs" id="account-first-name" placeholder="••••••••••••••" required>
+          </div> 
+            </div>
+
+            <img src="./Assets/Images/account-popup-wave.svg" class="account-popup-wave" />
+            <a href="account.html" class="account-popup-button" id="">Save changes</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  
+
 <section class="account-container">
 
   <div class="account-options">
@@ -106,7 +143,7 @@
   <div class="account-all-inputs">
       <h1 class="account-data">Password</h1>
   <input type="password" class="account-inputs" id="account-first-name" placeholder="⁎⁎⁎⁎⁎⁎⁎⁎⁎⁎⁎⁎⁎⁎⁎⁎" required>
-  <h1 class="account-data" id="account-change-password"><p>Change password</p></h1>
+  <a onclick="togglePopup()" class="account-data" id="account-change-password"><p>Change password</p></a>
   </div>
   
   </div>
@@ -136,5 +173,23 @@
 
 
 </section>
+<script>
+
+let popup = document.getElementById("popup-blur");
+let popupTitle = document.getElementById("community-popup-title");
+let popUpVisible = false;
+
+const togglePopup = () => {
+    popUpVisible = !popUpVisible;
+    if (popUpVisible) {
+        popup.style.display = "block";
+        popupTitle.focus();
+    }
+    else {
+        popup.style.display = "none";
+    }
+}
+
+</script>
 </body>
 </html>
