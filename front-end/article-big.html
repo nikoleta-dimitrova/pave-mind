@@ -10,6 +10,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700;800;900&family=Patua+One&display=swap"
         rel="stylesheet">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 </head>
 
 <body onload="openBigArticle()">
@@ -30,7 +32,7 @@
         </div>
     </nav>
 
-    <section id="article-body" class="fade-in-animation">
+    <section id="article-body">
         <a href="./articles.html" class="secondary-button" id="article-button-back"> <span
                 class="articles-arrow-back"></span>Back to articles
         </a>
@@ -38,10 +40,14 @@
         <h1 id="article-title">What is burnout and how can it affect your everyday life?
         </h1>
         <img id="article-image" src="./Assets/Images/big-article-picture.svg" alt="">
-        <p id="article-boldInfo">Burnout is a reaction to prolonged or chronic job stress. It is characterized by three
+        <p id="article-boldInfo" data-aos="fade-up" data-aos-offset="-300" data-aos-delay="0" data-aos-duration="800"
+        data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false"
+        data-aos-anchor-placement="top-center">Burnout is a reaction to prolonged or chronic job stress. It is characterized by three
             main dimensions: exhaustion, cynicism (less identification with the job), and feelings of reduced
             professional ability.</p>
-        <p id="article-information">Most people spend the majority of their waking hours working. So, if you hate your
+        <p id="article-information" data-aos="fade-up" data-aos-offset="-100" data-aos-delay="0" data-aos-duration="800"
+        data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false"
+        data-aos-anchor-placement="top-center">Most people spend the majority of their waking hours working. So, if you hate your
             job, dread going to work, and don't gain any satisfaction from what you're doing, it can take a serious toll
             on your life. This toll shows up via burnout symptoms.
             <br><br>The term “burnout” is a relatively new term, first coined in 1974 by Herbert Freudenberger in his
@@ -136,6 +142,8 @@
 
     <button onclick="topFunction()" class="button-scroll"><img src="./Assets/Images/scroll-to-top.png" alt=""></button>
     <script src="./tips-and-articles.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script> AOS.init(); </script>
 </body>
 
 </html>
