@@ -209,7 +209,7 @@ label {
   gap: 7vw;
   justify-content: center;
   width: auto;
-  height: 30vw;
+  height: 37vw;
 }
 
 .home-data {
@@ -238,12 +238,12 @@ label {
 
 .home-wave-img {
   width: 100vw;
-  height: 25vh;
+  height: 10vh;
 }
 
 .home-wave-mission-img {
   width: 100vw;
-  height: 25vh;
+  height: 10vh;
 }
 
 #home-big-button {
@@ -269,7 +269,7 @@ label {
 .home-articles {
   background-color: var(--midblue-color);
   width: 100vw;
-  height: auto;
+  height: 43vw;
 }
 
 .home-articles-title {
@@ -286,6 +286,7 @@ label {
   gap: 7vw;
   justify-content: center;
   margin-top: 3vw;
+  height: 33vw;
 }
 
 .home-card {
@@ -368,7 +369,7 @@ label {
 /* Third section home (mission) */
 .home-our-mission {
   width: 100vw;
-  height: auto;
+  height: 75vh;
 }
 
 .home-mission-title {
@@ -401,8 +402,7 @@ label {
 
 .home-second-wave-mission-img {
   width: 100vw;
-  height: 25vh;
-  background-color: var(--white-color);
+  height: auto;
 }
 
 /* Fourth section home (features) */
@@ -410,6 +410,7 @@ label {
   background-color: var(--darkblue-color);
   width: 100vw;
   padding-bottom: 8vw;
+  height: 85vh;
 }
 
 .home-features-title {
@@ -1392,7 +1393,6 @@ select {
 }
 
 .footer-quote {
-  padding-top: 1vw;
   padding-bottom: 1vw;
   width: 100vw;
   height: auto;
@@ -1442,6 +1442,13 @@ select {
   transform: translateY(-4.2vw);
   width: 100vw;
   height: auto;
+}
+
+.wave-footer-bottom-img {
+  width: 100vw;
+  height: 5vh;
+  margin-top: -0.8vw;
+  margin-bottom: -1vw;
 }
 
 /* TEST */
