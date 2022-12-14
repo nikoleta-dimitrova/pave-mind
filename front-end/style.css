@@ -542,6 +542,125 @@ select {
   font-size: 2.2vw;
 }
 
+/* TIPS & TRICKS RESPONSIVE  - 768px*/
+@media only screen and (max-width: 768px){
+
+  #tips-title {
+    font-size: 5.7vw;
+}
+
+#tips-description {
+    font-size: 2.5vw;
+    width: 70vw;
+}
+
+#tips-first-picture {
+  width: 45vw;
+}
+
+.tips-tricks-description {
+  font-size: 2vw;
+  font-family: var(--text-font);
+  width: 65vw;
+  text-align: left;
+
+}
+.tips-tricks-title {
+  font-family: var(--headings-font);
+  font-weight: var(--semibold-font);
+  text-align: left;
+  font-size: 3.2vw;
+}
+
+.tips-read-more {
+  font-size: 2vw;
+}
+#tips-articles-arrow {
+  border-width: 0 0.22vw 0.22vw 0;
+  padding: 0.4vw;
+}
+
+}
+
+/* TIPS & TRICKS RESPONSIVE  - 600px*/
+@media only screen and (max-width: 600px){
+
+  #tips-title {
+    font-size: 5.3vw;
+}
+
+#tips-description {
+  font-size: 2.3vw;
+  width: 62vw;
+}
+
+#tips-first-picture {
+  width: 45vw;
+}
+
+.tips-tricks-description {
+  font-size: 2vw;
+  font-family: var(--text-font);
+  width: 66vw;
+  text-align: left;
+
+}
+.tips-tricks-title {
+  font-family: var(--headings-font);
+  font-weight: var(--semibold-font);
+  text-align: left;
+  font-size: 3vw;
+}
+
+.tips-read-more {
+  font-size: 2vw;
+}
+#tips-articles-arrow {
+  border-width: 0 0.22vw 0.22vw 0;
+  padding: 0.4vw;
+}
+
+}
+/* TIPS & TRICKS RESPONSIVE  - 460px*/
+@media only screen and (max-width: 460px){
+
+  #tips-title {
+    font-size: 7vw;
+}
+
+#tips-description {
+  font-size: 2.6vw;
+  width: 69vw;
+}
+
+#tips-first-picture {
+  width: 50vw;
+}
+
+.tips-tricks-description {
+  font-size: 2vw;
+  font-family: var(--text-font);
+  width: 66vw;
+  text-align: left;
+
+}
+.tips-tricks-title {
+  font-family: var(--headings-font);
+  font-weight: var(--semibold-font);
+  text-align: left;
+  font-size: 3vw;
+}
+
+.tips-read-more {
+  font-size: 2.3vw;
+}
+#tips-articles-arrow {
+  border-width: 0 0.3vw 0.3vw 0;
+  padding: 0.5vw;
+}
+
+}
+
 /* Footer */
 
 .home-footer-pavemind {
@@ -669,3 +788,4 @@ select {
   transform: translate(0vw, 10vw);
 
 }
+
