@@ -798,6 +798,10 @@ select {
   -webkit-transform: rotate(135deg);
 }
 
+.big-article-title {
+  text-align: center;
+}
+
 /*---- Articles continue reading carousel ----*/
 #continue-reading-carousel {
   width: 46vw;
@@ -1581,47 +1585,66 @@ select {
     font-size: 4vw;
   }
 
-  #article-button-back{
+  #article-button-back {
     font-size: 1.8vw;
   }
 
-  #article-body{
+  #article-body {
     row-gap: 3vw;
   }
 
-  .articles-arrow-back{
-  padding: 0.4vw;
+  .articles-arrow-back {
+    padding: 0.4vw;
   }
 
-  #article-image{
+  #article-image {
     width: 60vw;
     height: 30vh;
   }
 
-  #continue-reading-carousel h1{
+  #continue-reading-carousel h1 {
     font-size: 3.5vw;
   }
 
-  #continue-reading-carousel{
+  #continue-reading-carousel {
     width: 60vw;
   }
 
-  #continue-reading-carousel-content div{
+  #continue-reading-carousel-content div {
     height: 25vh;
     min-width: 45%;
   }
 
-  #continue-reading-carousel-content div p{
+  #continue-reading-carousel-content div p {
     font-size: 1.7vw;
   }
 
-  .carousel-button-container span{
+  .carousel-button-container span {
     padding: 0.7vw;
     border-width: 0 0.3vw 0.3vw 0;
   }
 
-  #continue-reading-carousel-content div{
+  #continue-reading-carousel-content div {
     height: 25vh;
+  }
+
+  #articles-filter {
+    width: 12vw;
+    font-size: clamp(.4rem, 1.2vw, 3rem);
+  }
+
+  select {
+    background-position: right 1vw top 50%;
+    background-repeat: no-repeat;
+    background-size: 1vw;
+  }
+
+  .search-box {
+    width: 32vw;
+  }
+
+  #search-input {
+    font-size: clamp(.4rem, 1.2vw, 3rem);
   }
 }
 
@@ -1643,11 +1666,11 @@ select {
 
   .articles-date,
   .articles-preview {
-    font-size: clamp(.7rem, 1.2vw, 3rem); 
+    font-size: clamp(.7rem, 1.2vw, 3rem);
   }
 
   #articles-small-button {
-    font-size: clamp(.6rem, 1.2vw, 3rem); 
+    font-size: clamp(.6rem, 1.2vw, 3rem);
   }
 
   .articles-small-btn-arrow {
@@ -1657,10 +1680,10 @@ select {
   }
 
   .articles-headline {
-    font-size: clamp(.9rem, 1.2vw, 3rem); 
+    font-size: clamp(.9rem, 1.2vw, 3rem);
   }
 
-  #continue-reading-carousel-content div{
+  #continue-reading-carousel-content div {
     height: 25vh;
     min-width: 45%;
   }
@@ -1671,6 +1694,49 @@ select {
 
   .footer-container {
     padding-bottom: 6vw;
+  }
+
+  .article-save-button {
+    height: 4vh;
+    width: 3vw;
+    stroke-width: .3vw;
+    right: 2vw;
+  }
+
+  #articles-title {
+    font-size: clamp(1.6rem, 1.2vw, 3rem);
+  }
+
+  #articles-filter {
+    width: 15vw;
+    font-size: clamp(.6rem, 1.2vw, 3rem);
+    height: 2.5vh;
+  }
+
+  select {
+    background-position: right 1.5vw top 50%;
+    background-repeat: no-repeat;
+    background-size: 1vw;
+  }
+
+  .search-box {
+    width: 35vw;
+    transform: translateX(-3vw);
+  }
+
+  #search-input {
+    font-size: clamp(.6rem, 1.2vw, 3rem);
+  }
+
+  .search-button {
+    width: 4vw;
+    height: 2.5vh;
+    font-size: 1.5vw;
+  }
+
+  #articles-save{
+    width: 5vw;
+    padding-left: 1vw;
   }
 
 }
@@ -1689,13 +1755,7 @@ select {
     margin-bottom: 8vw;
   }
 
-  #article-boldInfo {
-    font-size: 3.5vw;
-    width: 75vw;
-    line-height: 4.5vw;
-  }
-
-  #article-information {
+  #article-boldInfo, #article-information  {
     font-size: 3.5vw;
     width: 75vw;
     line-height: 4.5vw;
@@ -1709,21 +1769,21 @@ select {
     font-size: 5.5vw;
   }
 
-  #article-button-back{
+  #article-button-back {
     font-size: 2.8vw;
     left: 5vw;
   }
 
-  #article-image{
+  #article-image {
     width: 80vw;
     height: 30vh;
   }
 
-  .articles-arrow-back{
-  padding: 0.7vw;
+  .articles-arrow-back {
+    padding: 0.7vw;
   }
 
-  #continue-reading-carousel{
+  #continue-reading-carousel {
     width: 75vw;
   }
 
@@ -1731,11 +1791,34 @@ select {
     min-width: 80%;
   }
 
-  #continue-reading-carousel-content div p{
+  #continue-reading-carousel-content div p {
     font-size: 2.5vw;
   }
 
   #footer-logo {
     display: none;
   }
+
+  .article-save-button {
+    width: 4.7vw;
+    stroke-width: .3vw;
+    right: 3vw;
+  }
+
+  #articles-filter {
+    width: 20vw;
+    font-size: clamp(.6rem, 1.2vw, 3rem);
+  }
+
+  select {
+    background-position: right 1.5vw top 50%;
+    background-repeat: no-repeat;
+    background-size: 1.5vw;
+  }
+
+  .search-button {
+    width: 4.5vw;
+    font-size: 2vw;
+  }
+
 }
