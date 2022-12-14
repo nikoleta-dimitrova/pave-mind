@@ -267,7 +267,7 @@ label {
 .home-articles {
   background-color: var(--midblue-color);
   width: 100vw;
-  height: 52vw;
+  height: 48vw;
 }
 
 .home-articles-title {
@@ -283,8 +283,7 @@ label {
   display: flex;
   gap: 7vw;
   justify-content: center;
-  margin-top: 3vw;
-  height: 42vw;
+  height: 41vw;
   align-items: center;
 }
 
@@ -360,7 +359,7 @@ label {
 /* Third section home (mission) */
 .home-our-mission {
   width: 100vw;
-  height: 42vw;
+  height: 40vw;
 }
 
 .home-mission-title {
@@ -965,6 +964,7 @@ select {
 }
 
 /*---- Community post designs ----*/
+
 .community-create-post {
   margin-top: 5vw;
   display: flex;
