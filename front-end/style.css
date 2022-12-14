@@ -697,7 +697,7 @@ select {
   margin-inline: auto;
   justify-content: space-evenly;
   padding-top: 2vw;
-  padding-bottom: 5vw;
+  padding-bottom: 8vw;
 }
 
 .articles-card {
@@ -861,12 +861,16 @@ select {
   -webkit-transform: rotate(135deg);
 }
 
+.big-article-title {
+  text-align: center;
+}
+
 /*---- Articles continue reading carousel ----*/
 #continue-reading-carousel {
   width: 46vw;
   margin-inline: auto;
   margin-top: 5vw;
-  padding-bottom: 12vw;
+  padding-bottom: 8vw;
   position: relative;
 }
 
@@ -1675,10 +1679,30 @@ select {
   .carousel-button-container span {
     padding: 0.7vw;
     border-width: 0 0.3vw 0.3vw 0;
+    margin-top: 10vw;
   }
 
   #continue-reading-carousel-content div {
     height: 25vh;
+  }
+
+  #articles-filter {
+    width: 12vw;
+    font-size: clamp(.4rem, 1.2vw, 3rem);
+  }
+
+  select {
+    background-position: right 1vw top 50%;
+    background-repeat: no-repeat;
+    background-size: 1vw;
+  }
+
+  .search-box {
+    width: 32vw;
+  }
+
+  #search-input {
+    font-size: clamp(.4rem, 1.2vw, 3rem);
   }
 }
 
@@ -1722,12 +1746,59 @@ select {
     min-width: 45%;
   }
 
+  .carousel-button-container span {
+    margin-top: 15vw;
+  }
+
   #footer-picture {
     display: none;
   }
 
   .footer-container {
     padding-bottom: 6vw;
+  }
+
+  .article-save-button {
+    height: 4vh;
+    width: 3vw;
+    stroke-width: .3vw;
+    right: 2vw;
+  }
+
+  #articles-title {
+    font-size: clamp(1.6rem, 1.2vw, 3rem);
+  }
+
+  #articles-filter {
+    width: 15vw;
+    font-size: clamp(.6rem, 1.2vw, 3rem);
+    height: 2.5vh;
+  }
+
+  select {
+    background-position: right 1.5vw top 50%;
+    background-repeat: no-repeat;
+    background-size: 1vw;
+  }
+
+  .search-box {
+    width: 35vw;
+    transform: translateX(-3vw);
+  }
+
+  #search-input {
+    font-size: clamp(.6rem, 1.2vw, 3rem);
+  }
+
+  .search-button {
+    width: 4vw;
+    height: 2.5vh;
+    font-size: 1.5vw;
+  }
+
+  #articles-save {
+    width: 5vw;
+    padding-left: 1vw;
   }
 
 }
@@ -1746,12 +1817,7 @@ select {
     margin-bottom: 8vw;
   }
 
-  #article-boldInfo {
-    font-size: 3.5vw;
-    width: 75vw;
-    line-height: 4.5vw;
-  }
-
+  #article-boldInfo,
   #article-information {
     font-size: 3.5vw;
     width: 75vw;
@@ -1790,6 +1856,11 @@ select {
 
   #continue-reading-carousel-content div p {
     font-size: 2.5vw;
+  }
+
+  .carousel-button-container span {
+    margin-top: 18vw;
+    border-width: 0 0.5vw 0.5vw 0;
   }
 
   #footer-logo {
