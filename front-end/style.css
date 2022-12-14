@@ -872,7 +872,6 @@ select {
   border: solid var(--darkblue-color);
   border-width: 0 0.2vw 0.2vw 0;
   padding: 0.4vw;
-  margin-bottom: 2vw;
 }
 
 #articles-big-btn-arrow-reversed {
