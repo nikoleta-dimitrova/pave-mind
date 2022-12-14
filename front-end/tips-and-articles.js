@@ -204,8 +204,10 @@ const checkBigArticle = () => {
         articlesGrid.style.marginTop = "2rem";
         return;
     }
-    bigArticleSection.style.display = "flex";
-    articlesGrid.style.marginTop = "0";
+    if (window.innerWidth > 1200) {
+        bigArticleSection.style.display = "flex";
+        articlesGrid.style.marginTop = "0";
+    }
 }
 
 const filterArticles = () => {
