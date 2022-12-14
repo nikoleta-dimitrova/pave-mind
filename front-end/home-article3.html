@@ -16,20 +16,25 @@
 <body>
     <nav class="navbar">
         <div class="navigation-menu">
-            <ul>
-                <li><a href="./index.html"><img src="./Assets/Images/logo.svg"></a></li>
-                <li><a href="./articles.html">Articles</a></li>
-                <li><a href="./tips-and-tricks.html">Tips&Tricks</a></li>
-                <li><a href="./community.html">Community</a></li>
-                <li><a href="#">Diary</a></li>
-            </ul>
+          <a href="index.html" class="nav-logo"><img src="./Assets/Images/logo.svg" alt=""></a>
+          <ul class="nav-menu">
+            <li class="nav-item"><a href="./articles.html" class="nav-link">Articles</a></li>
+            <li class="nav-item"><a href="./tips-and-tricks.html" class="nav-link">Tips&Tricks</a></li>
+            <li class="nav-item"><a href="./community.html" class="nav-link">Community</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Diary</a></li>
+          </ul>
         </div>
         <div class="navigation-login">
-            <ul>
-                <li><a href="#">Log In</a></li>
-            </ul>
+          <ul class="nav-menu">
+            <li class="nav-item"><a href="#" class="nav-link">Log In</a></li>
+          </ul>
         </div>
-    </nav>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
 
     <section id="article-body">
         <a href="./index.html" class="secondary-button" id="article-button-back"> <span
@@ -153,6 +158,7 @@
     <script src="./tips-and-articles.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script> AOS.init(); </script>
+    <script src="./responsive.js"></script>
 </body>
 
 </html>
