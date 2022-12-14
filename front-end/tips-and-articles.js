@@ -81,6 +81,7 @@ let dataList = [];
 let savedArticles = [];
 let articlesSorted = false;
 let viewingSavedArticles = false;
+let loader = document.querySelector(".lds-roller");
 let articlesGrid = document.getElementById("articles-grid");
 let filters = document.getElementById("articles-filter");
 let bigArticleSection = document.querySelector(".articles-big");
@@ -198,21 +199,32 @@ const createArticlesContainer = (articleArray) => {
     })
 }
 
+const displayLoadingAnimation = () => {
+    articlesGrid.style.display = "none";
+    loader.style.display = "inline-block";
+    setTimeout(() => {
+        loader.style.display = "none";
+        articlesGrid.style.display = "grid";
+    }, 800);
+}
+
 const checkBigArticle = () => {
-    if (articlesSorted || articleSearchBar.value.length > 2 || viewingSavedArticles) {
+    if (articlesSorted || viewingSavedArticles || articleSearchBar.value.length > 2) {
+        articlesGrid.removeAttribute('data-aos')
         bigArticleSection.style.display = "none";
         articlesGrid.style.marginTop = "2rem";
         return;
     }
     if (window.innerWidth > 1200) {
+        loader.style.display = "none"
+        articlesGrid.setAttribute('data-aos', 'fade-up')
         bigArticleSection.style.display = "flex";
         articlesGrid.style.marginTop = "0";
     }
 }
 
 const filterArticles = () => {
-    articlesGrid.innerHTML = ""
-    articlesGrid.removeAttribute('data-aos')
+    articlesGrid.innerHTML = "";
     if (filters.value === "Most viewed") {
         dataList.sort((a, b) => {
             return b.views - a.views;
@@ -233,35 +245,36 @@ const filterArticles = () => {
     }
     else {
         articlesSorted = false;
-        articlesGrid.setAttribute('data-aos', 'fade-up')
     }
+    displayLoadingAnimation();
     createArticlesContainer(dataList);
     checkBigArticle();
-    viewingSavedArticles = false;
+    searchArticles();
 }
 
 const showSavedArticles = () => {
     viewingSavedArticles = !viewingSavedArticles;
     articleSearchBar.value = "";
     filters.value = "All articles";
+    displayLoadingAnimation();
     if (viewingSavedArticles) {
         createArticlesContainer(savedArticles);
-        checkBigArticle();
     }
     else {
         createArticlesContainer(dataList);
-        checkBigArticle();
     }
+    checkBigArticle();
 }
 
 const searchArticles = () => {
     let articles = articlesGrid.childNodes;
-    if (articleSearchBar.value.length === 0) {
+    if (articleSearchBar.value.length <= 2) {
         articles.forEach(article => {
             article.style.display = "block";
         })
     }
     if (articleSearchBar.value.length > 2) {
+        displayLoadingAnimation();
         articles.forEach(article => {
             if (!article.childNodes[1].childNodes[1].textContent.toLowerCase().includes(articleSearchBar.value.toLowerCase())) {
                 article.style.display = "none";
@@ -272,7 +285,6 @@ const searchArticles = () => {
         })
     }
     checkBigArticle();
-    viewingSavedArticles = false;
 }
 
 const loadArticle = (articleArray) => {
