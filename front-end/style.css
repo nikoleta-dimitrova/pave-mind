@@ -1621,8 +1621,8 @@ select {
 
   .carousel-button-container span {
     padding: 0.7vw;
-    border-width: 0 0.3vw 0.3vw 0;  
-    margin-top: 5vw;
+    border-width: 0 0.3vw 0.3vw 0;
+    margin-top: 10vw;
   }
 
   #continue-reading-carousel-content div {
@@ -1690,7 +1690,7 @@ select {
   }
 
   .carousel-button-container span {
-    margin-top: 8vw;
+    margin-top: 15vw;
   }
 
   #footer-picture {
@@ -1739,7 +1739,7 @@ select {
     font-size: 1.5vw;
   }
 
-  #articles-save{
+  #articles-save {
     width: 5vw;
     padding-left: 1vw;
   }
@@ -1760,7 +1760,8 @@ select {
     margin-bottom: 8vw;
   }
 
-  #article-boldInfo, #article-information  {
+  #article-boldInfo,
+  #article-information {
     font-size: 3.5vw;
     width: 75vw;
     line-height: 4.5vw;
@@ -1801,7 +1802,7 @@ select {
   }
 
   .carousel-button-container span {
-    margin-top: 10vw;
+    margin-top: 18vw;
     border-width: 0 0.5vw 0.5vw 0;
   }
 
