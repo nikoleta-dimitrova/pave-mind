@@ -723,7 +723,7 @@ select {
 
   .account-whole-card{
     width: 54vw;
-    height: 80vw;
+    height: 72vw;
     background-color: var(--white-color);
     border-radius: 1.2vw;
     border: 1px solid rgb(104, 125, 172, .30);
@@ -882,15 +882,13 @@ font-size: 1vw;
   #account-fourth-btn{
     background-color: var(--lightblue-color);
     border-radius: 2vw;
-    font-weight: 100;
     color: var(--darkblue-color);
     font-family: var(--text-font);
     font-weight: var(--bold-font);
-    border: none;
+    border: 0.1vw solid var(--white-color);
     text-decoration: none;
     padding: 0.4vw 1.2vw;
     font-size: 1.2vw;
-    width: 9.4vw;
   }
 
 
@@ -1014,4 +1012,9 @@ font-size: 1vw;
     display: flex;
     flex-direction: column;
     gap: 1.5vw;
+  }
+  .account-save-changes-button{
+    display:flex;
+    flex-direction: row-reverse;
+    width: 46.7vw;
   }
