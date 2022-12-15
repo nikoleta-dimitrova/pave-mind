@@ -16,21 +16,21 @@
 <body onload="init('articles.json', false)" id="articles-body">
     <nav class="navbar">
         <div class="navigation-menu">
-          <a href="index.html" class="nav-logo"><img src="./Assets/Images/logo.svg" alt=""></a>
-          <ul class="nav-menu">
-            <li class="nav-item"><a href="./articles.html" class="nav-link">Articles</a></li>
-            <li class="nav-item"><a href="./tips-and-tricks.html" class="nav-link">Tips&Tricks</a></li>
-            <li class="nav-item"><a href="./community.html" class="nav-link">Community</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Diary</a></li>
-            <li id="nav-login" class="nav-item"><a href="#" class="nav-link">Log In</a></li>
-          </ul>
+            <a href="index.html" class="nav-logo"><img src="./Assets/Images/logo.svg" alt=""></a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="./articles.html" class="nav-link">Articles</a></li>
+                <li class="nav-item"><a href="./tips-and-tricks.html" class="nav-link">Tips&Tricks</a></li>
+                <li class="nav-item"><a href="./community.html" class="nav-link">Community</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Diary</a></li>
+                <li id="nav-login" class="nav-item"><a href="#" class="nav-link">Log In</a></li>
+            </ul>
         </div>
         <div class="hamburger">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
         </div>
-      </nav>
+    </nav>
 
     <section id="articles">
         <p id="articles-title">Articles</p>
@@ -53,29 +53,57 @@
                 </select>
             </div>
 
-            <img onclick="showSavedArticles()" id="articles-save" src="./Assets/Images/bookmark-filled.svg" alt="">
+            <img onclick="showSavedArticles()" id="articles-save" src="./Assets/Images/bookmark.svg" alt="">
         </div>
 
-            <section class="articles-big" data-aos="fade-up" data-aos-offset="20" data-aos-delay="0"
-                data-aos-duration="800" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false"
-                data-aos-anchor-placement="top-center">
-                <div class="articles-big-photo"><img src="./Assets/Images/big-article-picture.svg"></div>
-                <div class="articles-big-info">
-                    <h4>October 16, 2022</h4>
-                    <h1>What is burnout and how can it affect your everyday life?</h1>
-                    <p id="articles-big-text">Burnout is a state of physical and emotional exhaustion. It can occur
-                        when you experience long-term stress in your job, or when you have worked
-                        in a physically or emotionally draining role for a long time.</p>
-                    <a href="article-big.html" class="primary-button" id="articles-big-button">Read more
-                        <span class="articles-big-btn-arrow"></span>
-                    </a>
+        <section class="articles-big" data-aos="fade-up" data-aos-offset="20" data-aos-delay="0" data-aos-duration="800"
+            data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false"
+            data-aos-anchor-placement="top-center">
+            <div class="articles-big-photo"><img src="./Assets/Images/big-article-picture.svg"></div>
+            <div class="articles-big-info">
+                <h4>October 16, 2022</h4>
+                <h1>What is burnout and how can it affect your everyday life?</h1>
+                <p id="articles-big-text">Burnout is a state of physical and emotional exhaustion. It can occur
+                    when you experience long-term stress in your job, or when you have worked
+                    in a physically or emotionally draining role for a long time.</p>
+                <a href="article-big.html" class="primary-button" id="articles-big-button">Read more
+                    <span class="articles-big-btn-arrow"></span>
+                </a>
+            </div>
+        </section>
+        <section id="articles-grid" data-aos="fade-up" data-aos-offset="-100" data-aos-delay="0" data-aos-duration="800"
+            data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false"
+            data-aos-anchor-placement="top-center">
+            <div class="articles-card">
+                <div class="articles-image-container">
+                    <img class="article-image" src="./Assets/Images/article1.svg">
+                    <svg viewBox="0 0 24 24" class="article-save-button">
+                        <path
+                            d="M6 21a1 1 0 0 1-.49-.13A1 1 0 0 1 5 20V5.33A2.28 2.28 0 0 1 7.2 3h9.6A2.28 2.28 0 0 1 19 5.33V20a1 1 0 0 1-.5.86 1 1 0 0 1-1 0l-5.67-3.21-5.33 3.2A1 1 0 0 1 6 21z"
+                            fill="#687dac" stroke="#687dac"></path>
+                    </svg>
+                    <div class="articles-saved-text">
+                        <p>Saved!</p>
+                    </div>
                 </div>
-            </section>
-            <section id="articles-grid" data-aos="fade-up" data-aos-offset="-100" data-aos-delay="0"
-                data-aos-duration="800" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false"
-                data-aos-anchor-placement="top-center">
-            </section>
-            <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+                <div class="articles-information"><span class="articles-date">June 19, 2022</span>
+                    <div class="articles-headline">What Is Academic Burnout?</div>
+                    <div class="articles-preview">Academic burnout symptoms are manifested in much more than just
+                        tiredness and feeling like you can’t attend another class.</div><a class="primary-button"
+                        id="articles-small-button">Read more<span class="articles-small-btn-arrow"></span></a>
+                </div>
+            </div>
+        </section>
+        <div class="lds-roller">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
     </section>
 
     <footer id="footer-blue">

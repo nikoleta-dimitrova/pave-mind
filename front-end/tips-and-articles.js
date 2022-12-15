@@ -121,7 +121,7 @@ const init = (filePath, singleFile) => {
     }, filePath)
 }
 
-const renderSvg = (articleImageContainer, article) => {
+const renderSvg = (articleImageContainer, article, articlesSavedText) => {
     const iconSvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
     const iconPath = document.createElementNS(
         'http://www.w3.org/2000/svg',
@@ -140,6 +140,10 @@ const renderSvg = (articleImageContainer, article) => {
         article.saved = !article.saved;
         if (article.saved) {
             savedArticles.push(article);
+            articlesSavedText.style.display = "flex";
+            setTimeout(() => {
+                articlesSavedText.style.display = "none";    
+            }, 2000);
         }
         else {
             let articleIndex = savedArticles.indexOf(article)
@@ -162,9 +166,13 @@ const createArticlesContainer = (articleArray) => {
         let articleImage = document.createElement('img');
         articleImage.className = "article-image";
         articleImage.src = article.image;
-        articleContainer.appendChild(articleImage);
-        articleImageContainer.appendChild(articleImage);
-        renderSvg(articleImageContainer, article);
+        let articlesSavedText = document.createElement('div');
+        articlesSavedText.classList.add('articles-saved-text');
+        let articlesSavedTextParagraph = document.createElement('p');
+        articlesSavedTextParagraph.innerText = "Saved!";
+        articlesSavedText.appendChild(articlesSavedTextParagraph);
+        articleImageContainer.append(articleImage, articlesSavedText);
+        renderSvg(articleImageContainer, article, articlesSavedText);
 
         let articleInformation = document.createElement('div')
         articleInformation.className = "articles-information";
@@ -253,14 +261,17 @@ const filterArticles = () => {
 }
 
 const showSavedArticles = () => {
+    let viewSavedArticlesButton = document.getElementById('articles-save');
     viewingSavedArticles = !viewingSavedArticles;
     articleSearchBar.value = "";
     filters.value = "All articles";
     displayLoadingAnimation();
     if (viewingSavedArticles) {
+        viewSavedArticlesButton.src = "./Assets/Images/bookmark-filled.svg";
         createArticlesContainer(savedArticles);
     }
     else {
+        viewSavedArticlesButton.src = "./Assets/Images/bookmark.svg";
         createArticlesContainer(dataList);
     }
     checkBigArticle();
@@ -362,3 +373,5 @@ const topFunction = () => {
     document.body.scrollTop = 0; // this is for safari
     document.documentElement.scrollTop = 0; // this is for everything with chrome and firefox
 }
+
+
