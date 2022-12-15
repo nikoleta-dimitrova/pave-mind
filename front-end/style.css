@@ -823,17 +823,19 @@ select {
   right: 1vw;
   display: none;
   justify-content: start;
+  z-index: 101;
   padding-left: 1vw;
   align-items: center;
   background-color: var(--darkblue-color);
   border-radius: 20px;
-  -webkit-animation: scale-up-hor-right 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  -webkit-animation: scale-up-hor-right 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both; 
   animation: scale-up-hor-right 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 
 .articles-saved-text p {
   color: var(--white-color);
   font-family: var(--text-font);
+  font-size: 1.3vw
 }
 
 @-webkit-keyframes scale-up-hor-right {
@@ -1791,6 +1793,14 @@ select {
     margin-inline: auto;
   }
 
+  .articles-saved-text {
+    width: 30%;
+  }
+
+  .articles-saved-text p {
+    font-size: clamp(.9rem, 1.2vw, 3rem);
+  }
+
   /* ---- Articles ----*/
   #articles-grid {
     grid-template-columns: auto auto;
@@ -1914,6 +1924,10 @@ select {
 
   .articles-big-photo img {
     height: auto;
+  }
+
+  .article-save-button{
+    width: 3vw;
   }
 
   /* ---- Test ---- */

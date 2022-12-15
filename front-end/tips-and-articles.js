@@ -142,7 +142,7 @@ const renderSvg = (articleImageContainer, article, articlesSavedText) => {
             savedArticles.push(article);
             articlesSavedText.style.display = "flex";
             setTimeout(() => {
-                articlesSavedText.style.display = "none";    
+                articlesSavedText.style.display = "none";
             }, 2000);
         }
         else {
@@ -217,13 +217,13 @@ const displayLoadingAnimation = () => {
 }
 
 const checkBigArticle = () => {
-    if (articlesSorted || viewingSavedArticles || articleSearchBar.value.length > 2) {
+    if (articlesSorted || viewingSavedArticles || articleSearchBar.value.length > 2 || window.innerWidth <= 600) {
         articlesGrid.removeAttribute('data-aos')
         bigArticleSection.style.display = "none";
         articlesGrid.style.marginTop = "2rem";
         return;
     }
-    if (window.innerWidth > 1200) {
+    else {
         loader.style.display = "none"
         articlesGrid.setAttribute('data-aos', 'fade-up')
         bigArticleSection.style.display = "flex";
@@ -233,20 +233,22 @@ const checkBigArticle = () => {
 
 const filterArticles = () => {
     articlesGrid.innerHTML = "";
+    let listToFilter = dataList;
+    if(viewingSavedArticles) { listToFilter = savedArticles }
     if (filters.value === "Most viewed") {
-        dataList.sort((a, b) => {
+        listToFilter.sort((a, b) => {
             return b.views - a.views;
         });
         articlesSorted = true;
     }
     else if (filters.value === "Oldest") {
-        dataList.sort((a, b) => {
+        listToFilter.sort((a, b) => {
             return a.date - b.date;
         });
         articlesSorted = true;
     }
     else if (filters.value === "Newest") {
-        dataList.sort((a, b) => {
+        listToFilter.sort((a, b) => {
             return b.date - a.date;
         });
         articlesSorted = true;
@@ -255,7 +257,7 @@ const filterArticles = () => {
         articlesSorted = false;
     }
     displayLoadingAnimation();
-    createArticlesContainer(dataList);
+    createArticlesContainer(listToFilter);
     checkBigArticle();
     searchArticles();
 }
@@ -267,10 +269,12 @@ const showSavedArticles = () => {
     filters.value = "All articles";
     displayLoadingAnimation();
     if (viewingSavedArticles) {
+        articlesSorted = false;
         viewSavedArticlesButton.src = "./Assets/Images/bookmark-filled.svg";
         createArticlesContainer(savedArticles);
     }
     else {
+        articlesSorted = false;
         viewSavedArticlesButton.src = "./Assets/Images/bookmark.svg";
         createArticlesContainer(dataList);
     }
