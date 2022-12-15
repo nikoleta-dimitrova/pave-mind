@@ -1533,3 +1533,252 @@ header .diary-fifth-current-date {
   flex-direction: column;
   justify-content: center;
 }
+
+.diary-fifth-big-box{
+  display: flex;
+  flex-direction: row;
+}
+@media only screen and (max-width: 768px){
+  #diary-fifth-title{
+    padding-bottom: 2vw;
+  }
+  .diary-fifth-container{
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .diary-fifth-calendar-container{
+    align-items: center;
+  }
+  .diary-fifth-big-box{
+    display: flex;
+    flex-direction: column;
+  }
+  #diary-fifth-graph-img{
+    width: 40vw;
+    height: 30vw; 
+    margin-top: 1vw;
+  }
+  .diary-fifth-image{
+    width: 4vw;
+    height: 4vw;
+  }
+    .diary-fifth-category-text{ 
+  font-size: 1.5vw;
+  }
+  .diary-fifth-calendar-wrapper header{
+   width: 200vw;
+  }
+#diary-fifth-filter{
+  width: 12vw;
+  font-size: 2vw;
+}
+.diary-fifth-main{
+  height: 75vw;
+}
+.diary-fifth-calendar-faces{
+  gap: 2vw;
+  margin-top: 1vw;
+}
+header .diary-fifth-current-date{
+  font-size: 2vw;
+}
+.diary-calendar-wrapper header {
+  width: 35vw;
+}
+.diary-calendar-wrapper header .diary-fifth-calendar-header{
+  width: 35vw;
+}
+.diary-fifth-weeks{
+  width: 35vw;
+}
+.diary-fifth-weeks li{
+  font-size: 2vw;
+}
+.diary-fifth-days{
+  width: 35vw;
+  margin-left: 1.5vw;
+}
+.diary-fifth-days li{
+  font-size: 2vw;
+  margin-left: 1vw;
+}
+.diary-fifth-calendar{
+  width: 35vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.diary-calendar-wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+}
+
+@media only screen and (max-width: 600px){
+  #diary-fifth-title{
+    padding-top: 4vw;
+    padding-bottom: 4vw;
+  }
+  .diary-fifth-container{
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .diary-fifth-calendar-container{
+    align-items: center;
+  }
+  .diary-fifth-big-box{
+    display: flex;
+    flex-direction: column;
+  }
+  #diary-fifth-graph-img{
+    width: 50vw;
+    height: 30vw; 
+    margin-top: 3vw;
+  }
+  .diary-fifth-image{
+    width: 5vw;
+    height: 5vw;
+  }
+    .diary-fifth-category-text{ 
+  font-size: 1.5vw;
+  }
+  .diary-fifth-calendar-wrapper header{
+   width: 200vw;
+  }
+#diary-fifth-filter{
+  width: 12vw;
+  font-size: 2vw;
+}
+.diary-fifth-main{
+  height: 90vw;
+}
+.diary-fifth-calendar-faces{
+  gap: 2vw;
+  margin-top: 2vw;
+}
+header .diary-fifth-current-date{
+  font-size: 2vw;
+}
+.diary-calendar-wrapper header {
+  width: 35vw;
+}
+.diary-calendar-wrapper header .diary-fifth-calendar-header{
+  width: 35vw;
+}
+.diary-fifth-weeks{
+  width: 35vw;
+}
+.diary-fifth-weeks li{
+  font-size: 2vw;
+}
+.diary-fifth-days{
+  width: 35vw;
+  margin-left: 1.5vw;
+}
+.diary-fifth-days li{
+  font-size: 2vw;
+  margin-left: 1vw;
+}
+.diary-fifth-calendar{
+  width: 35vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.diary-calendar-wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+}
+
+@media only screen and (max-width: 460px){
+  #diary-fifth-title{
+    padding-top: 4vw;
+    font-size: 4vw;
+    padding-bottom: 4vw;
+  }
+  .diary-fifth-container{
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .diary-fifth-calendar-container{
+    align-items: center;
+  }
+  .diary-fifth-big-box{
+    display: flex;
+    flex-direction: column;
+  }
+  #diary-fifth-graph-img{
+    width: 70vw;
+    height: 40vw; 
+    margin-top: 3vw;
+  }
+  .diary-fifth-image{
+    width: 7vw;
+    height: 7vw;
+  }
+    .diary-fifth-category-text{ 
+  font-size: 2vw;
+  }
+  .diary-fifth-calendar-wrapper header{
+   width: 200vw;
+  }
+#diary-fifth-filter{
+  width: 15vw;
+  font-size: 2vw;
+}
+.diary-fifth-main{
+  height: 90vw;
+}
+.diary-fifth-calendar-faces{
+  gap: 2vw;
+  margin-top: 3vw;
+}
+header .diary-fifth-current-date{
+  font-size: 2vw;
+}
+.diary-calendar-wrapper header {
+  width: 40vw;
+}
+.diary-calendar-wrapper header .diary-fifth-calendar-header{
+  width: 40vw;
+}
+.diary-fifth-weeks{
+  width: 40vw;
+  justify-content: center;
+}
+.diary-fifth-weeks li{
+  font-size: 2vw;
+  justify-content: center;
+}
+.diary-fifth-days{
+  width: 40vw;
+  margin-left: 1.5vw;
+}
+.diary-fifth-days li{
+  font-size: 2vw;
+  margin-left: 1vw;
+}
+.diary-fifth-calendar{
+  width: 40vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.diary-calendar-wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+}
