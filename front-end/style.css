@@ -673,7 +673,6 @@ select {
 }
 .diary-first-question-field {
   display: flex;
-  gap: 2.2vw;
   padding: 1vh;
   font-size: 1.2vw;
   font-family: var(--text-font);
@@ -701,7 +700,93 @@ select {
   margin-top: 10vh;
   padding-bottom: 4vh;
 }
+@media only screen and (max-width: 768px) {
+  .diary-title {
+    font-size: 4vw;
+  }
+  .diary-first-question-field {
+    height: 6vh;
+    width: 85vw;
+  }
+  .diary-first-text-field {
+    font-size: 1.8vw;
+    width: 40vw;
+    white-space: normal;
+  }
+  .diary-first-question-field input[type="radio"] {
+    width: 2.6vw;
+  }
+  .diary-first-container .diary-first-buttons {
+    width: 83vw;
+  }
+  .diary-first-buttons .diary-next-question-button {
+    font-size: 2vw;
+  }
+  .diary-first-content .diary-first-label {
+    width: 85vw;
+    justify-content: right;
+    padding-right: 4.9vw;
+  }
+  .diary-first-container .diary-first-label ul {
+    gap: 3.8vw;
+    align-items: center;
+    display: flex;
+    text-align: center;
+  }
+  .diary-first-container #diary-first-category {
+    width: 6vw;
+  }
+  .diary-first-container #diary-fift-category {
+    width: 5vw;
+  }
+}
 
+@media only screen and (max-width: 600px) {
+  .diary-first-question-field {
+    height: 6vh;
+    width: 85vw;
+  }
+  .diary-first-text-field {
+    font-size: 2.4vw;
+    width: 40vw;
+    white-space: normal;
+  }
+  .diary-first-question-field input[type="radio"] {
+    width: 3vw;
+  }
+  .diary-first-container .diary-first-buttons {
+    width: 83vw;
+  }
+  .diary-first-buttons .diary-next-question-button {
+    font-size: 3vw;
+  }
+  .diary-first-content .diary-first-label {
+    width: 85vw;
+    justify-content: right;
+    padding-right: 5.4vw;
+  }
+  .diary-first-container .diary-first-label ul {
+    gap: 2.4vw;
+    align-items: center;
+    display: flex;
+    text-align: center;
+  }
+  .diary-first-container .diary-first-label ul li {
+    font-size: 1.4vw;
+  }
+  .diary-first-container #diary-first-category {
+    width: 6vw;
+  }
+  .diary-first-container #diary-fift-category {
+    width: 5vw;
+  }
+}
+@media only screen and (max-width: 460px) {
+  .diary-first-question-field {
+    height: 4.5vh;
+    width: 85vw;
+  }
+}
 .diary-first-container a {
   text-decoration: none;
   font-family: var(--text-font);
@@ -709,10 +794,18 @@ select {
   font-weight: 600;
   padding-top: 1vh;
 }
-
+.diary-first-radiobuttons-only {
+  align-items: center;
+  display: flex;
+  gap: 6vw;
+}
 input[type="radio"] {
   border: none;
   width: 1.7vw;
+}
+.diary-first-radiobuttons {
+  display: flex;
+  gap: 9vw;
 }
 .diary-first-label {
   width: 70vw;
@@ -770,7 +863,69 @@ input[type="radio"] {
 }
 
 /* Diary second page */
-
+@media only screen and (max-width: 768px) {
+  .diary-second-container .diary-second-description {
+    font-size: 2.5vw;
+  }
+  .diary-second-container .diary-second-textarea {
+    width: 80vw;
+    height: 50vw;
+    border-radius: 1.3vw;
+    font-size: 2vw;
+  }
+  .diary-second-container ::placeholder {
+    font-size: 2.7vw;
+  }
+  .diary-second-buttons {
+    width: 79vw;
+    justify-content: space-between;
+  }
+  .diary-second-buttons .diary-quiz-button {
+    font-size: 2.5vw;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .diary-second-container .diary-second-description {
+    font-size: 3vw;
+  }
+  .diary-second-container .diary-second-textarea {
+    width: 77vw;
+    height: 50vw;
+    border-radius: 1.3vw;
+    font-size: 2vw;
+  }
+  .diary-second-container ::placeholder {
+    font-size: 3.1vw;
+  }
+  .diary-second-buttons {
+    width: 76vw;
+    justify-content: space-between;
+  }
+  .diary-second-buttons .diary-quiz-button {
+    font-size: 3.2vw;
+  }
+}
+@media only screen and (max-width: 460px) {
+  .diary-second-container .diary-second-description {
+    font-size: 4.4vw;
+  }
+  .diary-second-container .diary-second-textarea {
+    width: 80vw;
+    height: 53vw;
+    border-radius: 1.5vw;
+    font-size: 4vw;
+  }
+  .diary-second-container ::placeholder {
+    font-size: 3.5vw;
+  }
+  .diary-second-buttons {
+    width: 79vw;
+    justify-content: space-between;
+  }
+  .diary-second-buttons .diary-quiz-button {
+    font-size: 3.8vw;
+  }
+}
 .diary-second-container {
   height: 72vh;
   display: flex;
@@ -846,7 +1001,87 @@ input[type="radio"] {
 }
 
 /* Diary third page */
-
+@media only screen and (max-width: 768px) {
+  .diary-third-container .diary-third-text {
+    font-size: 2.5vw;
+  }
+  .diary-third-container .diary-third-box {
+    width: 85vw;
+    height: 55vw;
+    border-radius: 1.5vw;
+  }
+  .diary-third-container .diary-third-buttons {
+    width: 84vw;
+    justify-content: space-between;
+  }
+  .diary-third-buttons .diary-third-quiz-button {
+    font-size: 2.5vw;
+    white-space: nowrap;
+  }
+  .diary-third-box .diary-third-smile-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 15vw;
+  }
+  .diary-third-box .diary-third-smile-container img {
+    width: 8vw;
+    height: 8vw;
+  }
+  .diary-third-box .diary-third-smile-container p {
+    font-size: 2.5vw;
+    width: 12vw;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .diary-title {
+    font-size: clamp(1.6rem, 1.2rem, 3rem);
+  }
+  .diary-third-container .diary-third-box {
+    width: 85vw;
+    height: 55vw;
+  }
+  .diary-third-box .diary-third-smile-container {
+    width: 15vw;
+  }
+  .diary-third-container .diary-third-buttons {
+    width: 83vw;
+  }
+  .diary-third-buttons .diary-third-quiz-button {
+    font-size: 3.5vw;
+  }
+  .diary-third-box .diary-third-smile-container img {
+    width: 10vw;
+    height: 10vw;
+  }
+  .diary-third-box .diary-third-smile-container p {
+    font-size: 2.5vw;
+    width: 15vw;
+  }
+}
+@media only screen and (max-width: 460px) {
+  .diary-third-box .diary-third-smile-container {
+    width: 25vw;
+  }
+  .diary-third-container .diary-third-text {
+    font-size: 3.8vw;
+  }
+  .diary-third-container .diary-third-buttons {
+    width: 84vw;
+  }
+  .diary-third-buttons .diary-third-quiz-button {
+    font-size: 4.8vw;
+  }
+  .diary-third-box .diary-third-smile-container img {
+    width: 12vw;
+    height: 12vw;
+  }
+  .diary-third-box .diary-third-smile-container p {
+    font-size: 3vw;
+    width: 15vw;
+  }
+}
 .diary-third-container {
   height: 68vh;
   display: flex;
@@ -935,7 +1170,82 @@ input[type="radio"] {
 }
 
 /* Diary fourth page */
-
+@media only screen and (max-width: 768px) {
+  .diary-fourth-container .diary-fourth-box {
+    width: 83vw;
+    height: 42vw;
+    border-radius: 1.5vw;
+  }
+  .diary-fourth-container .diary-fourth-buttons {
+    width: 84vw;
+    justify-content: right;
+  }
+  .diary-fourth-box #diary-fourth-conclusion {
+    font-size: 3vw;
+    width: 55vw;
+  }
+  .diary-fourth-container .diary-fourth-box p {
+    font-size: 3vw;
+    width: 60vw;
+  }
+  .diary-fourth-container #diary-big-button {
+    width: 14vw;
+    height: 5vw;
+    font-size: 2.2vw;
+    border-radius: 5vw;
+    margin-top: 2vw;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .diary-fourth-container .diary-fourth-box {
+    width: 80vw;
+    height: 48vw;
+  }
+  .diary-fourth-container .diary-fourth-buttons {
+    width: 79vw;
+  }
+  .diary-fourth-box #diary-fourth-conclusion {
+    font-size: 3vw;
+    width: 70vw;
+  }
+  .diary-fourth-container .diary-fourth-box p {
+    font-size: 3vw;
+    width: 65vw;
+  }
+  .diary-fourth-container #diary-big-button {
+    margin-top: 2vw;
+    width: 15vw;
+    height: 5vw;
+    font-size: 2.6vw;
+    border-radius: 5.5vw;
+  }
+}
+@media only screen and (max-width: 460px) {
+  .diary-title {
+    font-size: 5.5vw;
+  }
+  .diary-fourth-container .diary-fourth-box {
+    width: 80vw;
+    height: 40vw;
+  }
+  .diary-fourth-container .diary-fourth-buttons {
+    width: 80vw;
+  }
+  .diary-fourth-box #diary-fourth-conclusion {
+    font-size: 3.3vw;
+    width: 70vw;
+  }
+  .diary-fourth-container .diary-fourth-box p {
+    font-size: 3.3vw;
+    width: 70vw;
+  }
+  .diary-fourth-container #diary-big-button {
+    margin-top: 2.5vw;
+    width: 18vw;
+    height: 8vw;
+    font-size: 3.3vw;
+  }
+}
 .diary-fourth-container {
   height: 70.5vh;
   display: flex;
@@ -1031,7 +1341,16 @@ input[type="radio"] {
 }
 
 /* Diary fifth page */
-
+@media only screen and (max-width: 768px) {
+  .diary-fifth-main .diary-fifth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .diary-fifth-container #diary-fifth-graph-img {
+    height: 20vw;
+  }
+}
 .diary-fifth-main {
   display: flex;
   flex-direction: column;
