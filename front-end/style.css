@@ -754,7 +754,7 @@ select {
 #articles-grid {
   display: grid;
   grid-template-columns: auto auto auto;
-  row-gap: 2rem;
+  row-gap: 5rem;
   width: 90%;
   margin-inline: auto;
   justify-content: space-evenly;
