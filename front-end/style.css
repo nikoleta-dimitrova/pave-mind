@@ -209,7 +209,7 @@ label {
   gap: 7vw;
   justify-content: center;
   width: auto;
-  height: 37vw;
+  height: 32vw;
 }
 
 .home-data {
@@ -267,7 +267,7 @@ label {
 .home-articles {
   background-color: var(--midblue-color);
   width: 100vw;
-  height: 48vw;
+  height: 45vw;
 }
 
 .home-articles-title {
@@ -283,7 +283,7 @@ label {
   display: flex;
   gap: 7vw;
   justify-content: center;
-  height: 41vw;
+  height: 38vw;
   align-items: center;
 }
 
@@ -359,7 +359,7 @@ label {
 /* Third section home (mission) */
 .home-our-mission {
   width: 100vw;
-  height: 40vw;
+  height: 45vw;
 }
 
 .home-mission-title {
