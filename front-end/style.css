@@ -546,12 +546,12 @@ select {
 @media only screen and (max-width: 768px){
 
   #tips-title {
-    font-size: 5.7vw;
+    font-size: 4vw;
 }
 
 #tips-description {
-    font-size: 2.5vw;
-    width: 70vw;
+  font-size: 2vw;
+  width: 58vw;
 }
 
 #tips-first-picture {
@@ -569,7 +569,8 @@ select {
   font-family: var(--headings-font);
   font-weight: var(--semibold-font);
   text-align: left;
-  font-size: 3.2vw;
+  font-size: 3vw;
+  
 }
 
 .tips-read-more {
@@ -586,12 +587,12 @@ select {
 @media only screen and (max-width: 600px){
 
   #tips-title {
-    font-size: 5.3vw;
+    font-size: clamp(1.6rem,1.2rem,3rem);
 }
 
 #tips-description {
-  font-size: 2.3vw;
-  width: 62vw;
+  font-size: 2vw;
+    width: 58vw;    
 }
 
 #tips-first-picture {
@@ -625,30 +626,30 @@ select {
 @media only screen and (max-width: 460px){
 
   #tips-title {
-    font-size: 7vw;
+    font-size: 5.5vw;
 }
 
 #tips-description {
-  font-size: 2.6vw;
-  width: 69vw;
+  font-size: 2.8vw;
+    width: 75vw;
 }
 
 #tips-first-picture {
-  width: 50vw;
+  width: 53vw;
 }
 
 .tips-tricks-description {
-  font-size: 2vw;
-  font-family: var(--text-font);
-  width: 66vw;
-  text-align: left;
+  font-size: 2.4vw;
+    font-family: var(--text-font);
+    width: 76vw;
+    text-align: left;
 
 }
 .tips-tricks-title {
   font-family: var(--headings-font);
   font-weight: var(--semibold-font);
   text-align: left;
-  font-size: 3vw;
+  font-size: 3.8vw;
 }
 
 .tips-read-more {
