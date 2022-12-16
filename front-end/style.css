@@ -1648,7 +1648,7 @@ select {
 
 .test-button-rating-text {
   margin-top: 5vh;
-  width: 83vw;
+  width: 83.5vw;
   font-family: var(--text-font);
   font-size: 0.9vw;
 }
