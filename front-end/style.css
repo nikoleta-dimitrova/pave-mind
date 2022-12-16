@@ -438,6 +438,142 @@ label {
   }
 }
 
+@media only screen and (max-width: 460px) {
+  h1.home-title {
+    font-size: 5.5vw;
+  }
+  p.home-description {
+    font-size: 3.5vw;
+    width: 80vw;
+  }
+  a#home-big-button.primary-button {
+    font-size: 2.8vw;
+    width: 21.5vw;
+  }
+  span.home-big-btn-arrow {
+    padding: 0.5vw;
+  }
+  h1.home-articles-title {
+    font-size: 5.5vw;
+  }
+  p.home-card-title {
+    font-size: 3vw;
+  }
+  p.home-card-description {
+    font-size: 2.5vw;
+    width: 40vw;
+  }
+  img.home-articles-blob {
+    width: 25vw;
+  }
+  div.home-articles-button-vector {
+    height: 16.3vw;
+  }
+  a.home-card-read-more-button {
+    font-size: 3vw;
+  }
+  span#home-articles-arrow {
+    padding: 0.6vw;
+  }
+  div.home-card {
+    width: 45vw;
+    height: 42vw;
+  }
+  section.home-articles {
+    height: 60vw;
+  }
+  section#home-articles-cards {
+    gap: 2.4vw;
+    height: 48vw;
+  }
+  img.home-articles-lightbulb {
+    width: 5vw;
+  }
+  h1.home-mission-title {
+    font-size: 5.5vw;
+  }
+  img#home-articles-card1-image {
+    width: 9vw;
+    height: 18vw;
+    transform: translate(2vw, 1.5vw);
+  }
+  img#home-articles-card2-image {
+    width: 9vw;
+    height: 18vw;
+    transform: translate(2vw, 1.5vw);
+  }
+  p.home-mission-description {
+    font-size: 3.5vw;
+    width: 90vw;
+  }
+  section#home-our-mission {
+    height: 72vw;
+  }
+  section.home-features {
+    height: 250vw;
+  }
+  div.home-features-container {
+    gap: 15vw;
+  }
+  h1.home-features-title {
+    font-size: 5.5vw;
+  }
+  p.home-features-text {
+    font-size: 3.5vw;
+    width: 40vw;
+  }
+  h10.home-features-headers {
+    font-size: 5.5vw;
+  }
+  img.home-features-images {
+    width: 25vw;
+  }
+  img#footer-logo {
+    display: none;
+  }
+  h1.footer-title {
+    font-size: 5.5vw;
+    text-align: center;
+  }
+  p.footer-description {
+    font-size: 3.5vw;
+    width: 80vw;
+    text-align: center;
+  }
+  div.footer-btn-media {
+    display: flex;
+    justify-content: center;
+  }
+  ul.footer-list {
+    display: flex;
+    justify-content: center;
+  }
+  a#home-btnfacebook {
+    background-size: 5vw;
+    width: 5vw;
+    height: 5vw;
+  }
+  a#home-btninstagram {
+    background-size: 5vw;
+    width: 5vw;
+    height: 5vw;
+  }
+  a#home-btnemail {
+    background-size: 5vw;
+    width: 5vw;
+    height: 5vw;
+  }
+  .footer-list h1 {
+    font-size: 3vw;
+  }
+  .footer-list a {
+    font-size: 2vw;
+  }
+  h1.footer-quote-text {
+    font-size: 4vw;
+  }
+}
+
 .home-container {
   padding: 5vw 0 0vw;
   display: flex;
