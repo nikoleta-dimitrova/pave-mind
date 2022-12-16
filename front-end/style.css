@@ -1731,6 +1731,7 @@ select {
 
 /* RESPONSIVE */
 @media only screen and (max-width: 768px) {
+
   /* ---- Navigation menu ----*/
   .nav-menu {
     display: none !important;
@@ -1794,7 +1795,7 @@ select {
 
 
   /* ---- Articles ----*/
-  #articles{
+  #articles {
     padding-top: 4vw;
   }
 
@@ -1833,14 +1834,14 @@ select {
     background-size: 1vw;
   }
 
-  #article-body{
+  #article-body {
     padding-top: 12vw;
   }
 
-  #article-button-back{
+  #article-button-back {
     padding-top: 9vw;
-  } 
-  
+  }
+
   .articles-big {
     height: 45vh;
   }
@@ -1984,6 +1985,43 @@ select {
     width: 100%;
     height: 1.5vw;
   }
+
+  /* ---- Popup home ---- */
+  .home-popup-content {
+    gap: 2vw;
+    margin-top: 2vw;
+  }
+
+  #community-popup,
+  #result-popup {
+    width: 60vw;
+    height: 50vh;
+  }
+
+  #home-popup-text {
+    font-size: 2vw;
+    width: 50vw;
+  }
+
+  label {
+    font-size: 2vw;
+    width: 79vw;
+  }
+
+  #community-popup-create {
+    font-size: 3vw;
+  }
+
+  #community-popup-close {
+    width: 3vw;
+  }
+
+  .home-popup-button-checkbox button {
+    margin-top: 1vw;
+    font-size: 2vw;
+    width: 15vw;
+    padding: 1vw 1vw;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -2094,6 +2132,43 @@ select {
     border: none;
     width: 100%;
     height: 2vw;
+  }
+
+  /* ---- Popup home ---- */
+  .home-popup-content {
+    gap: 2.5vw;
+    margin-top: 2.5vw;
+  }
+
+  #community-popup,
+  #result-popup {
+    width: 65vw;
+    height: 50vh;
+  }
+
+  #home-popup-text {
+    font-size: 2.5vw;
+    width: 55vw;
+  }
+
+  label {
+    font-size: 2.5vw;
+    width: 79vw;
+  }
+
+  #community-popup-create {
+    font-size: 3.5vw;
+  }
+
+  #community-popup-close {
+    width: 3.5vw;
+  }
+
+  .home-popup-button-checkbox button {
+    margin-top: 1.5vw;
+    font-size: 2.5vw;
+    width: 15vw;
+    padding: 1vw 1vw;
   }
 
 }
@@ -2211,5 +2286,49 @@ select {
     border: none;
     width: 100%;
     height: 2.5vw;
+  }
+
+  /* ---- Popup home ---- */
+  .home-popup-content {
+    gap: 3vw;
+    margin-top: 3vw;
+  }
+
+  #community-popup,
+  #result-popup {
+    width: 70vw;
+    min-height: 42vh;
+  }
+
+  #home-popup-text {
+    font-size: 3vw;
+    width: 60vw;
+  }
+
+  label {
+    font-size: 3vw;
+    width: 79vw;
+  }
+
+  #community-popup-create {
+    font-size: 4vw;
+  }
+
+  #community-popup-close {
+    width: 4vw;
+  }
+
+  .home-popup-button-checkbox button {
+    margin-top: 2vw;
+    font-size: 3vw;
+    width: 20vw;
+    padding: 1vw 1vw;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  #community-popup,
+  #result-popup {
+    height: 18vh;
   }
 }
