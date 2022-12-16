@@ -1,0 +1,592 @@
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700;800;900&family=Patua+One&display=swap');
+
+:root {
+  /* Color variables */
+  --black-color: #000000;
+  --white-color: #fbfbfb;
+  --darkblue-color: #687dac;
+  --lightblue-color: #d2e0ee;
+  --midblue-color: #9eb0ce;
+  --darkblue-color: #687dac;
+  --sand-color: #f0d7ba;
+  --grey-color: #757575;
+
+  /* Font variables */
+  --headings-font: "Patua One", cursive;
+  --text-font: "Maven Pro", sans-serif;
+
+  /* Size variables */
+  --navigationtext-size: 1.1vw;
+  --bold-font: 600;
+  --title-size: 2.5vw;
+  --regular-font: 100;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body{
+    background-color: bisque;
+  }
+
+  .login-popup-container{
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .login-popup{
+    background-color: var(--white-color);
+    width: 50vw;
+    position: absolute;
+    height: 28.4vw;
+    display: flex;
+    justify-content: center;
+    border-radius: 2vw;
+    padding-top: 10vh;
+    padding-bottom: 8vh;
+    gap: 3vw;
+    z-index: 1;
+    scale: 0;
+    transition: 200ms ease-in-out;
+    background-image: url(./Assets/Images/Mask\ Group\ 3.svg);
+    background-repeat: no-repeat;
+    background-size: 53vw;
+    background-position-y: -0.05vw;
+  }
+
+  .login-popup.active{
+    scale: 1;
+  }
+
+  .login-popup-form{
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .login-popup-form h1{
+    font-family: var(--headings-font);
+    color: var(--darkblue-color);
+    padding-bottom: 1vh;
+    font-size: 2vw;
+  }
+
+  .login-popup-form p{
+    font-family: var(--text-font);
+    padding-bottom: 2vh;
+    font-size: 1vw;
+  }
+
+  .login-popup-form input{
+    margin-top: 0.32vw;
+    display: block;
+    width: 20vw;
+    padding: 0.5vw 0.5vw 0.5vw 2.3vw;
+    font-size: 1vw;
+    outline: none;
+    box-shadow:  0.065vw  0.065vw 0.32vw  0.065vw var(--lightblue-color);
+    border: 0.1vw solid rgb(255, 255, 255);
+    border-radius: 1.62vw;
+    margin-bottom: 1.95vw;
+  }
+
+  .login-popup-input-container{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .login-popup-icon{
+    position: absolute;
+    left: 1vw;
+    top: 0.8vw;
+    font-size: 1vw;
+    font-size: 1.2vw;
+  }
+
+  .login-popup-form a{
+    text-decoration: none;
+    font-family: var(--text-font);
+    color: var(--darkblue-color);
+    font-weight: 600;
+    font-size: 1vw;
+  }
+
+  .login-popup-form button{
+    background-color: var(--lightblue-color);
+    display: block;
+    color: var(--darkblue-color);
+    font-family: var(--text-font);
+    font-weight: 600;
+    padding-top: 0.3vw;
+    padding-bottom: 0.3vw;
+    border-radius: 0.97vw;
+    transition: 0.4s;
+    cursor: pointer;
+    border: none;
+    margin-left: 2.5vw;
+    margin-right: 2.5vw;
+    margin-bottom: 1vh;
+    width: 8vw;
+    white-space: nowrap;
+    font-size: 1vw;
+  }
+
+  .login-popup-form button:hover{
+    background-color: var(--darkblue-color);
+    color: white;
+  }
+
+  .login-popup-form .login-popup-message{
+    padding-top: 2vh;
+    display: flex;
+  }
+
+  .login-popup-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .login-popup-text h1{
+    font-family: Patua One;
+    color: var(--darkblue-color);
+    padding-bottom: 3vh;
+    font-size: 2vw;
+  }
+
+  .login-popup-text p{
+    font-family: var(--text-font);
+    font-size: 1vw;
+  }
+
+ #popup-overlay{
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .5);
+  pointer-events: none;
+  transition: 200ms ease-in-out;
+ }
+
+ #popup-overlay.active {
+  pointer-events: all;
+  opacity: 1;
+ }
+
+ .login-popup .login-popup-close-button{
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  top: 1.5vw;
+  right: 2vw;
+  position: absolute;
+ }
+
+ .login-popup-close-button-img{
+  width: 1.5vw;
+  height: 1.5vw;
+ }
+
+ .payment-popup-container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .payment-popup{
+    background-color: var(--white-color);
+    width: 50vw;
+    height: 28.4vw;
+    display: flex;
+    justify-content: center;
+    border-radius: 2vw;
+    padding-top: 11vh;
+    padding-bottom: 8vh;
+    position: relative;
+  }
+
+  .payment-popup-general{
+    border: 0.1vw solid rgb(165, 162, 162); 
+    border-radius: 0.32vw;
+    margin-right: 3vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    text-align: center;
+    width: 14.2vw;
+    height: 19vw;
+    align-items: center;
+  }
+
+  .payment-popup-student{
+    border-radius: 0.32vw;
+    border: 0.1vw solid rgb(165, 162, 162);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 14.2vw;
+    height: 19vw;
+    align-items: center;
+  }
+
+  .payment-popup-general h1{
+    font-family: Patua One;
+    font-size: 1.5vw;
+    color: var(--darkblue-color);
+    padding-bottom: 2vh;
+    margin-top: -3.5vh;
+  }
+
+  .payment-popup-general h2{
+    font-family: var(--headings-font);
+    font-size: 1.5vw;
+    padding-bottom: 3.2vh;
+  }
+
+  .payment-popup-general p{
+    font-family: var(--text-font);
+    padding-bottom: 2.5vh;
+    font-size: 1vw;
+  }
+
+  .payment-popup-general button{
+    background-color: var(--lightblue-color);
+    display: block;
+    color: var(--darkblue-color);
+    font-family: var(--text-font);
+    font-weight: 600;
+    padding: 0.32vw 0.97vw;
+    border-radius: 0.97vw;
+    transition: 0.4s;
+    cursor: pointer;
+    font-size: 1vw;
+    width: 10vw;
+    border: none;
+    margin-left: 2.5vw;
+    margin-right: 2.5vw;
+  }
+
+  .payment-popup-general button:hover{
+    background-color: var(--darkblue-color);
+    color: white;
+  }
+
+  .payment-popup-student h1{
+    font-family: var(--headings-font);
+    font-size: 1.5vw;
+    color: var(--darkblue-color);
+    padding-bottom: 1.7vh;
+    margin-top: -3.5vh;
+  }
+
+  .payment-popup-student h2{
+    font-family: var(--headings-font);
+    font-size: 1.5vw;
+    padding-bottom: 4vh;
+  }
+
+.payment-popup-student button{
+  background-color: var(--lightblue-color);
+  display: block;
+  color: var(--darkblue-color);
+  font-family: var(--text-font);
+  font-weight: 600;
+  padding: 0.32vw 0.97vw;
+  border-radius: 0.97vw;
+  transition: 0.4s;
+  cursor: pointer;
+  font-size: 1vw;
+  width: 10vw;
+  border: none;
+  margin-top: 7vh;
+  margin-left: 2.5vw;
+    margin-right: 2.5vw;
+}
+
+.payment-popup-student button:hover{
+  background-color: var(--darkblue-color);
+  color: white;
+}
+
+.payment-popup-student p{
+  font-family: var(--text-font);
+  padding-bottom: 2.5vh;
+  font-size: 1vw;
+}
+
+.payment-popup-student input{
+  font-size: 1vw;
+  border-radius: 0.65vw;
+  border: 0.065vw solid gray;
+  margin-left: 1vw;
+  margin-right: 1vw;
+}
+
+.payment-popup-first-wave-img{
+  position: absolute;
+  width: 22vw;
+  top: 0;
+  right: 0;
+}
+
+.payment-popup-second-wave-img{
+  position: absolute;
+  width: 22vw;
+  bottom: 0;
+  left: 0;
+}
+
+.payment-popup-close-btn{
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  top: 1.5vw;
+  right: 2vw;
+  position: absolute;
+}
+.payment-popup-first-close-img{
+  width: 1.5vw;
+  height: 1.5vw;
+}
+
+.signin-popup-container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+
+  .signin-popup{
+    background-color: white;
+    width: 50vw;
+    height: 28.4vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 2vw;
+    padding-top: 10vh;
+    padding-bottom: 8vh;
+    position: relative; 
+    z-index: 1;
+  }
+
+  .title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .title h1{
+    font-family: var(--headings-font);
+    color: var(--darkblue-color);
+    font-weight: 300;
+    font-size: 2vw;
+  }
+
+  .title p{
+    font-family: var(--text-font);
+    margin-bottom: 2vw;
+    font-size: 1vw;
+  }
+
+  .signin-popup-personal{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .signin-popup-account{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .signin-popup-btn-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .signin-popup-btn-section button{
+    background-color: var(--lightblue-color);
+    display: block;
+    color: var(--darkblue-color);
+    font-family: var(--text-font);
+    font-weight: 600;
+    padding: 0.32vw 1.62vw;
+    border-radius:  0.97vw;
+    transition: 0.4s;
+    cursor: pointer;
+    border: none;
+    margin-left: 2.5vw;
+    margin-right: 2.5vw;
+    width: 8vw;
+    font-size: 1vw;
+  }
+
+  .signin-popup-btn-section button:hover{
+    background-color: var(--darkblue-color);
+    color: white;
+  }
+  
+  .signin-popup-content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 3vw;
+  }
+
+  .signin-popup-account input{
+    margin-top: 0.32vw;
+    display: block;
+    width: 100%;
+    padding: 0.5vw 0.5vw 0.5vw 2.3vw;
+    outline: none;
+    box-shadow: 0.065vw 0.065vw 0.32vw 0.065vw var(--lightblue-color);
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 1.62vw;
+    margin-bottom: 1.9vw;
+    width: 17vw;
+    font-size: 1vw;
+  }
+
+  .signin-popup-input-container{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .signin-popup-icon{
+    position: absolute;
+    left: 1vw;
+    top: 0.8vw;
+    font-size: 1vw;
+    font-size: 1.2vw;
+  }
+
+  .signin-popup-account h1{
+    font-family: var(--headings-font);
+    color: var(--darkblue-color);
+    font-size: medium;
+    margin-bottom: 0.7vw;
+    font-size: 1.2vw;
+    font-weight: 400;
+  }
+
+  .signin-popup-personal input{
+    margin-top: 0.32vw;
+    display: block;
+    width: 100%;
+    padding: 0.5vw 0.5vw 0.5vw 2.3vw;
+    outline: none;
+    box-shadow: 0.065vw 0.065vw 0.32vw 0.065vw var(--lightblue-color);
+    border: 0.065vw solid rgb(255, 255, 255);
+    border-radius: 1.62vw;
+    margin-bottom: 1.9vw;
+    width: 17vw;
+    font-size: 1vw;
+  }
+
+  .signin-popup-personal h1{
+    font-family: var(--headings-font);
+    color: var(--darkblue-color);
+    font-size: medium;
+    margin-bottom: 0.7vw;
+    font-size: 1.2vw;
+    font-weight: 400;
+  }
+
+  .signin-popup-btn-section p{
+    font-family: var(--text-font);
+    font-size: 1vw;
+  }
+
+  .signin-popup-btn-section a{
+    font-family: var(--text-font);
+    text-decoration: none;
+    color: var(--darkblue-color);
+    font-weight: 600;
+    font-size: 1vw;
+  }
+
+  .signin-popup-btn-section-text{
+    display: flex;
+    padding-top: 2vh;
+  }
+
+  .signin-popup .closebtn{
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.5vw;
+    font-weight: bold;
+    top: 0.5vw;
+    right: 1vw;
+    position: absolute;
+    z-index: 1;
+  }
+
+  .signin-popup-wave1{
+    position:absolute;
+    top: 0;
+    right: 0;
+    width: 22vw;
+    z-index: 0;
+  }
+
+  .signin-popup-wave2{
+    position:absolute;
+    bottom: 0;
+    left: 0;
+    width: 22vw;
+    z-index: 0;
+  }
+
+  .signin-popup-btn{
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    top: 1.5vw;
+    right: 2vw;
+    position: absolute;
+    z-index: 1;
+    width: 1.5vw;
+    height: 1.5vw;
+  }
+
+  .signin-popup-btn-img{
+    width: 1.5vw;
+    height: 1.5vw;
+    z-index: 1;
+  }
+

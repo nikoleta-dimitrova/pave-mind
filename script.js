@@ -1,6 +1,6 @@
 const openPopupButton = document.querySelectorAll('[data-popup-target]')
 const closePopupButton = document.querySelectorAll('[data-popup-close]')
-const overlay = document.getElementById('overlay')
+const overlay = document.getElementById('popup-overlay')
 
 openPopupButton.forEach(button => {
     button.addEventListener('click', () => {
@@ -11,7 +11,7 @@ openPopupButton.forEach(button => {
 
 closePopupButton.forEach(button => {
     button.addEventListener('click', () => {
-        const popup = button.closest('.popup')
+        const popup = button.closest('.login-popup')
         closePopup(popup)
     })
 })
@@ -30,7 +30,7 @@ function closePopup(popup) {
 
 
 overlay.addEventListener('click', () => {
-    const popups = document.querySelectorAll('.popup.active')
+    const popups = document.querySelectorAll('.login-popup.active')
     popups.forEach(popup =>{
         closePopup(popup)
     })

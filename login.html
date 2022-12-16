@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <section class="login-popup-container">
+        <button data-popup-target="#popup">Log In</button>
+        <div class="login-popup" id="popup">
+
+            <div class="login-popup-form">
+                <h1>Hello!</h1>
+                <p>Log in to your account</p>
+                <div class="login-popup-input-container">
+                    <span class="login-popup-icon"><i class="fa fa-envelope"></i></span>
+                    <input type="text" id="email" placeholder="Email" required>
+                </div>
+                <div class="login-popup-input-container">
+                    <span class="login-popup-icon"><i class="fa fa-lock"></i></span>
+                    <input type="password" id="password" placeholder="Passoword" required>
+                </div>
+                <button>LOG IN</button>
+                <div class="login-popup-message">
+                    <P>Don't have an account?</P><a href="#">Sign up</a>
+                </div>
+            </div>
+            <div class="login-popup-text">
+                <button data-popup-close class="login-popup-close-button"><img class="login-popup-close-button-img"
+                        src="./Assets/Images/Group 10.svg"></button>
+                <h1>Welcome back!</h1>
+                <p>"Asking for help is the first step...You are<br>
+                    more precious to this world than you'll<br>
+                    ever know"</p>
+            </div>
+        </div>
+
+    </section>
+    <div id="popup-overlay"></div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
