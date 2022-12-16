@@ -202,6 +202,242 @@ label {
 }
 
 /* ----- First section home (test) ---- */
+@media only screen and (max-width: 768px) {
+  section.home-articles {
+    height: 49vw;
+  }
+  h1.home-title {
+    font-size: 4vw;
+  }
+  .home-data p {
+    font-size: 2vw;
+    width: 42vw;
+  }
+  .home-data #home-big-button {
+    font-size: 1.8vw;
+    width: 15vw;
+  }
+  #home-first-picture.home-img {
+    width: 32vw;
+  }
+  .home-articles h1 {
+    font-size: 4vw;
+  }
+  span.home-big-btn-arrow {
+    padding: 0.35vw;
+    margin-bottom: 0.1vw;
+  }
+  section#home-articles-cards {
+    gap: 2.5vw;
+  }
+  div.home-card {
+    width: 29vw;
+    height: 32vw;
+  }
+
+  p.home-card-title {
+    font-size: clamp(0.9rem, 1.2vw, 3rem);
+    white-space: nowrap;
+  }
+  p.home-card-description {
+    font-size: 1.5vw;
+    width: 25vw;
+  }
+  div.home-articles-button-vector {
+    height: 13.3vw;
+  }
+  img.home-articles-blob {
+    width: 20vw;
+  }
+  img#home-articles-card1-image {
+    margin-left: 1vw;
+  }
+  img#home-articles-card2-image {
+    margin-left: 2vw;
+  }
+  img#home-articles-card3-image {
+    margin-left: 1.5vw;
+  }
+  a.home-card-read-more-button {
+    font-size: clamp(0.6rem, 1.2vw, 3rem);
+  }
+  span#home-articles-arrow {
+    padding: 0.2vw;
+  }
+  h1.home-mission-title {
+    font-size: 4vw;
+  }
+  div.home-mission-container {
+    margin-top: 1vw;
+  }
+
+  h1.home-features-title {
+    font-size: 4vw;
+  }
+  img.home-features-images {
+    width: 9vw;
+  }
+  h10.home-features-headers {
+    font-size: clamp(0.9rem, 1.2vw, 3rem);
+  }
+  p.home-features-text {
+    font-size: 1.5vw;
+  }
+  div.home-features-container {
+    padding-top: 2vw;
+  }
+  h1.footer-title {
+    font-size: 4vw;
+  }
+
+  p.footer-description {
+    font-size: 2vw;
+    width: 50vw;
+  }
+  img#footer-logo {
+    width: 9vw;
+  }
+  a#home-btnfacebook {
+    background-size: 3vw;
+    width: 3vw;
+    height: 3vw;
+  }
+  a#home-btninstagram {
+    background-size: 3vw;
+    width: 3vw;
+    height: 3vw;
+  }
+  a#home-btnemail {
+    background-size: 3vw;
+    width: 3vw;
+    height: 3vw;
+  }
+  .footer-list h1 {
+    font-size: 2vw;
+  }
+  .footer-list a {
+    font-size: 1.5vw;
+  }
+  h1.footer-quote-text {
+    font-size: 3.5vw;
+  }
+}
+@media only screen and (max-width: 600px) {
+  h1.home-title {
+    font-size: clamp(1.6rem, 1.2vw, 3rem);
+    text-align: center;
+  }
+  img#home-first-picture {
+    display: none;
+  }
+  p.home-description {
+    font-size: 2vw;
+    width: 70vw;
+    text-align: center;
+  }
+  div.home-data {
+    align-items: center;
+  }
+  h1.home-articles-title {
+    font-size: clamp(1.6rem, 1.2vw, 3rem);
+  }
+  p.home-card-title {
+    font-size: 1.9vw;
+  }
+  img.home-articles-blob {
+    margin-bottom: 0.5vw;
+  }
+  img#home-articles-card1-image {
+    transform: translateY(4.7vw);
+  }
+  img#home-articles-card2-image {
+    transform: translateY(4.5vw);
+  }
+  img#home-articles-card3-image {
+    transform: translateY(4.5vw);
+  }
+  section#home-articles-cards {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 14vw;
+    margin-top: 1vw;
+  }
+  div#home-articles-third-card {
+    display: none;
+  }
+  h1.home-mission-title {
+    font-size: clamp(1.6rem, 1.2vw, 3rem);
+  }
+  p.home-mission-description {
+    font-size: 2vw;
+    width: 75vw;
+    margin-top: 5vw;
+    text-align: center;
+  }
+  img.home-mission-img {
+    display: none;
+  }
+  section.home-features {
+    height: 160vw;
+  }
+  h1.home-features-title {
+    font-size: clamp(1.6rem, 1.2vw, 3rem);
+  }
+  div.home-features-container {
+    display: grid;
+    grid-template-columns: auto;
+    gap: 7vw;
+    margin-top: 3vw;
+  }
+  img.home-features-images {
+    width: 15vw;
+  }
+  h10.home-features-headers {
+    font-size: 3.5vw;
+  }
+  p.home-features-text {
+    font-size: 2vw;
+    text-align: center;
+    width: 25vw;
+  }
+  img#footer-picture {
+    display: none;
+  }
+  h1.footer-title {
+    font-size: clamp(1.6rem, 1.2vw, 3rem);
+  }
+  p.footer-description {
+    font-size: 2vw;
+  }
+  a#home-btnfacebook {
+    background-size: 4vw;
+    width: 4vw;
+    height: 4vw;
+  }
+  a#home-btninstagram {
+    background-size: 4vw;
+    width: 4vw;
+    height: 4vw;
+  }
+  a#home-btnemail {
+    background-size: 4vw;
+    width: 4vw;
+    height: 4vw;
+  }
+  .footer-list h1 {
+    font-size: 2vw;
+  }
+  .footer-list a {
+    font-size: 1.5vw;
+  }
+  ul.footer-list {
+    margin-bottom: 2vw;
+  }
+  h1.footer-quote-text {
+    font-size: 4vw;
+  }
+}
+
 .home-container {
   padding: 5vw 0 0vw;
   display: flex;
@@ -247,6 +483,8 @@ label {
   width: 12vw;
   font-size: 1.3vw;
   cursor: pointer;
+  position: relative;
+  z-index: 2;
 }
 
 #home-big-button:hover .home-big-btn-arrow {
