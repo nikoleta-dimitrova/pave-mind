@@ -709,9 +709,10 @@ select {
     width: 85vw;
   }
   .diary-first-text-field {
-    font-size: 1.8vw;
+    font-size: 2vw;
     width: 40vw;
     white-space: normal;
+    margin-left: 1vw;
   }
   .diary-first-question-field input[type="radio"] {
     width: 2.6vw;
@@ -727,8 +728,24 @@ select {
     justify-content: right;
     padding-right: 4.9vw;
   }
+  li#diary-first-category {
+    font-size: 1.3vw;
+  }
+  li#diary-second-category {
+    font-size: 1.3vw;
+  }
+  li#diary-third-category {
+    font-size: 1.3vw;
+  }
+  li#diary-fourth-category {
+    font-size: 1.3vw;
+  }
+  li#diary-fifth-category {
+    font-size: 1.3vw;
+  }
+
   .diary-first-container .diary-first-label ul {
-    gap: 3.8vw;
+    gap: 3.3vw;
     align-items: center;
     display: flex;
     text-align: center;
@@ -738,6 +755,9 @@ select {
   }
   .diary-first-container #diary-fift-category {
     width: 5vw;
+  }
+  span#diary-button-arrow {
+    padding: 0.4vw;
   }
 }
 
@@ -758,7 +778,7 @@ select {
     width: 83vw;
   }
   .diary-first-buttons .diary-next-question-button {
-    font-size: 3vw;
+    font-size: 3.5vw;
   }
   .diary-first-content .diary-first-label {
     width: 85vw;
@@ -780,11 +800,47 @@ select {
   .diary-first-container #diary-fift-category {
     width: 5vw;
   }
+  span#diary-button-arrow {
+    padding: 0.7vw;
+  }
 }
 @media only screen and (max-width: 460px) {
   .diary-first-question-field {
     height: 4.5vh;
     width: 85vw;
+  }
+  p.diary-first-text-field {
+    font-size: 3.5vw;
+  }
+  div#diary-first-blue-field {
+    height: 13vw;
+  }
+  span#diary-button-arrow {
+    padding: 0.7vw;
+  }
+  div.diary-first-question-field {
+    height: 13vw;
+  }
+  .diary-first-question-field input[type="radio"] {
+    width: 4vw;
+  }
+  li#diary-first-category {
+    font-size: 1.5vw;
+  }
+  li#diary-second-category {
+    font-size: 1.5vw;
+  }
+  li#diary-third-category {
+    font-size: 1.5vw;
+  }
+  li#diary-fourth-category {
+    font-size: 1.5vw;
+  }
+  li#diary-fifth-category {
+    font-size: 1.5vw;
+  }
+  .diary-first-container .diary-first-label ul {
+    gap: 2.5vw;
   }
 }
 .diary-first-container a {
@@ -874,7 +930,13 @@ input[type="radio"] {
     font-size: 2vw;
   }
   .diary-second-container ::placeholder {
-    font-size: 2.7vw;
+    font-size: 2vw;
+  }
+  span#diary-second-arrow-previous {
+    padding: 0.6vw;
+  }
+  span#diary-second-arrow-finish {
+    padding: 0.6vw;
   }
   .diary-second-buttons {
     width: 79vw;
@@ -885,6 +947,9 @@ input[type="radio"] {
   }
 }
 @media only screen and (max-width: 600px) {
+  p.diary-title {
+    font-size: clamp(1.6rem, 1.2vw, 3rem);
+  }
   .diary-second-container .diary-second-description {
     font-size: 3vw;
   }
@@ -893,6 +958,12 @@ input[type="radio"] {
     height: 50vw;
     border-radius: 1.3vw;
     font-size: 2vw;
+  }
+  span#diary-second-arrow-previous {
+    padding: 0.65vw;
+  }
+  span#diary-second-arrow-finish {
+    padding: 0.65vw;
   }
   .diary-second-container ::placeholder {
     font-size: 3.1vw;
@@ -914,6 +985,12 @@ input[type="radio"] {
     height: 53vw;
     border-radius: 1.5vw;
     font-size: 4vw;
+  }
+  span#diary-second-arrow-previous {
+    padding: 0.8vw;
+  }
+  span#diary-second-arrow-finish {
+    padding: 0.8vw;
   }
   .diary-second-container ::placeholder {
     font-size: 3.5vw;
@@ -1003,7 +1080,7 @@ input[type="radio"] {
 /* Diary third page */
 @media only screen and (max-width: 768px) {
   .diary-third-container .diary-third-text {
-    font-size: 2.5vw;
+    font-size: 2vw;
   }
   .diary-third-container .diary-third-box {
     width: 85vw;
@@ -1029,18 +1106,27 @@ input[type="radio"] {
     width: 8vw;
     height: 8vw;
   }
+  span#diary-third-arrow-finish {
+    padding: 0.6vw;
+  }
+  span#diary-third-arrow-previous {
+    padding: 0.6vw;
+  }
   .diary-third-box .diary-third-smile-container p {
     font-size: 2.5vw;
     width: 12vw;
   }
 }
 @media only screen and (max-width: 600px) {
-  .diary-title {
-    font-size: clamp(1.6rem, 1.2rem, 3rem);
-  }
   .diary-third-container .diary-third-box {
     width: 85vw;
     height: 55vw;
+  }
+  span#diary-third-arrow-finish {
+    padding: 0.8vw;
+  }
+  span#diary-third-arrow-previous {
+    padding: 0.8vw;
   }
   .diary-third-box .diary-third-smile-container {
     width: 15vw;
@@ -1049,15 +1135,21 @@ input[type="radio"] {
     width: 83vw;
   }
   .diary-third-buttons .diary-third-quiz-button {
-    font-size: 3.5vw;
+    font-size: 3vw;
   }
   .diary-third-box .diary-third-smile-container img {
     width: 10vw;
     height: 10vw;
   }
   .diary-third-box .diary-third-smile-container p {
-    font-size: 2.5vw;
+    font-size: 5vw;
     width: 15vw;
+  }
+  span#diary-third-arrow-finish {
+    padding: 1vw;
+  }
+  span#diary-third-arrow-previous {
+    padding: 1vw;
   }
 }
 @media only screen and (max-width: 460px) {
@@ -1184,6 +1276,9 @@ input[type="radio"] {
     font-size: 3vw;
     width: 55vw;
   }
+  span.diary-fourth-button-arrow {
+    padding: 0.5vw;
+  }
   .diary-fourth-container .diary-fourth-box p {
     font-size: 3vw;
     width: 60vw;
@@ -1200,6 +1295,9 @@ input[type="radio"] {
   .diary-fourth-container .diary-fourth-box {
     width: 80vw;
     height: 48vw;
+  }
+  span.diary-fourth-button-arrow {
+    padding: 0.6vw;
   }
   .diary-fourth-container .diary-fourth-buttons {
     width: 79vw;
@@ -1532,253 +1630,4 @@ header .diary-fifth-current-date {
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-
-.diary-fifth-big-box{
-  display: flex;
-  flex-direction: row;
-}
-@media only screen and (max-width: 768px){
-  #diary-fifth-title{
-    padding-bottom: 2vw;
-  }
-  .diary-fifth-container{
-    flex-direction: column-reverse;
-    align-items: center;
-  }
-  .diary-fifth-calendar-container{
-    align-items: center;
-  }
-  .diary-fifth-big-box{
-    display: flex;
-    flex-direction: column;
-  }
-  #diary-fifth-graph-img{
-    width: 40vw;
-    height: 30vw; 
-    margin-top: 1vw;
-  }
-  .diary-fifth-image{
-    width: 4vw;
-    height: 4vw;
-  }
-    .diary-fifth-category-text{ 
-  font-size: 1.5vw;
-  }
-  .diary-fifth-calendar-wrapper header{
-   width: 200vw;
-  }
-#diary-fifth-filter{
-  width: 12vw;
-  font-size: 2vw;
-}
-.diary-fifth-main{
-  height: 75vw;
-}
-.diary-fifth-calendar-faces{
-  gap: 2vw;
-  margin-top: 1vw;
-}
-header .diary-fifth-current-date{
-  font-size: 2vw;
-}
-.diary-calendar-wrapper header {
-  width: 35vw;
-}
-.diary-calendar-wrapper header .diary-fifth-calendar-header{
-  width: 35vw;
-}
-.diary-fifth-weeks{
-  width: 35vw;
-}
-.diary-fifth-weeks li{
-  font-size: 2vw;
-}
-.diary-fifth-days{
-  width: 35vw;
-  margin-left: 1.5vw;
-}
-.diary-fifth-days li{
-  font-size: 2vw;
-  margin-left: 1vw;
-}
-.diary-fifth-calendar{
-  width: 35vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-.diary-calendar-wrapper{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-}
-
-@media only screen and (max-width: 600px){
-  #diary-fifth-title{
-    padding-top: 4vw;
-    padding-bottom: 4vw;
-  }
-  .diary-fifth-container{
-    flex-direction: column-reverse;
-    align-items: center;
-  }
-  .diary-fifth-calendar-container{
-    align-items: center;
-  }
-  .diary-fifth-big-box{
-    display: flex;
-    flex-direction: column;
-  }
-  #diary-fifth-graph-img{
-    width: 50vw;
-    height: 30vw; 
-    margin-top: 3vw;
-  }
-  .diary-fifth-image{
-    width: 5vw;
-    height: 5vw;
-  }
-    .diary-fifth-category-text{ 
-  font-size: 1.5vw;
-  }
-  .diary-fifth-calendar-wrapper header{
-   width: 200vw;
-  }
-#diary-fifth-filter{
-  width: 12vw;
-  font-size: 2vw;
-}
-.diary-fifth-main{
-  height: 90vw;
-}
-.diary-fifth-calendar-faces{
-  gap: 2vw;
-  margin-top: 2vw;
-}
-header .diary-fifth-current-date{
-  font-size: 2vw;
-}
-.diary-calendar-wrapper header {
-  width: 35vw;
-}
-.diary-calendar-wrapper header .diary-fifth-calendar-header{
-  width: 35vw;
-}
-.diary-fifth-weeks{
-  width: 35vw;
-}
-.diary-fifth-weeks li{
-  font-size: 2vw;
-}
-.diary-fifth-days{
-  width: 35vw;
-  margin-left: 1.5vw;
-}
-.diary-fifth-days li{
-  font-size: 2vw;
-  margin-left: 1vw;
-}
-.diary-fifth-calendar{
-  width: 35vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-.diary-calendar-wrapper{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-}
-
-@media only screen and (max-width: 460px){
-  #diary-fifth-title{
-    padding-top: 4vw;
-    font-size: 4vw;
-    padding-bottom: 4vw;
-  }
-  .diary-fifth-container{
-    flex-direction: column-reverse;
-    align-items: center;
-  }
-  .diary-fifth-calendar-container{
-    align-items: center;
-  }
-  .diary-fifth-big-box{
-    display: flex;
-    flex-direction: column;
-  }
-  #diary-fifth-graph-img{
-    width: 70vw;
-    height: 40vw; 
-    margin-top: 3vw;
-  }
-  .diary-fifth-image{
-    width: 7vw;
-    height: 7vw;
-  }
-    .diary-fifth-category-text{ 
-  font-size: 2vw;
-  }
-  .diary-fifth-calendar-wrapper header{
-   width: 200vw;
-  }
-#diary-fifth-filter{
-  width: 15vw;
-  font-size: 2vw;
-}
-.diary-fifth-main{
-  height: 90vw;
-}
-.diary-fifth-calendar-faces{
-  gap: 2vw;
-  margin-top: 3vw;
-}
-header .diary-fifth-current-date{
-  font-size: 2vw;
-}
-.diary-calendar-wrapper header {
-  width: 40vw;
-}
-.diary-calendar-wrapper header .diary-fifth-calendar-header{
-  width: 40vw;
-}
-.diary-fifth-weeks{
-  width: 40vw;
-  justify-content: center;
-}
-.diary-fifth-weeks li{
-  font-size: 2vw;
-  justify-content: center;
-}
-.diary-fifth-days{
-  width: 40vw;
-  margin-left: 1.5vw;
-}
-.diary-fifth-days li{
-  font-size: 2vw;
-  margin-left: 1vw;
-}
-.diary-fifth-calendar{
-  width: 40vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-.diary-calendar-wrapper{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
 }
