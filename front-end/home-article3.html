@@ -74,7 +74,39 @@
             on a beach for a few years – what does healing from burnout look like? The first cure is rest. And I mean
             true rest, not rest where you feel stressed and guilty for resting. That’s not rest.</p>
     </section>
+    <section id="continue-reading-carousel">
+        <h1>Continue Reading</h1>
+        <div class="carousel-button-container" id="carousel-back" onclick="changeSlide(false)">
+            <span class="articles-big-btn-arrow" id="articles-big-btn-arrow-reversed"></span>
+        </div>
+        <div id="continue-reading-carousel-content">
+            <div onclick="openArticle('article1')">
+                <img src="./Assets/Images/article1.svg">
+                <p>What Is Academic Burnout?</p>
+            </div>
+            <div onclick="openArticle('article2')">
+                <img src="./Assets/Images/article2.svg">
+                <p>Burnout During the Pandemic</p>
+            </div>
+            <div onclick="openArticle('article3')">
+                <img src="./Assets/Images/article3.svg">
+                <p>Burnout in medical students</p>
+            </div>
+            <div onclick="openArticle('article4')">
+                <img src="./Assets/Images/article4.svg">
+                <p>Is seeking therapy a weakness?</p>
+            </div>
+            <div onclick="openArticle('article5')">
+                <img src="./Assets/Images/article5.svg">
+                <p>Your Body Knows You’re Burned Out</p>
+            </div>
+        </div>
+        <div class="carousel-button-container" id="carousel-next" onclick="changeSlide(true)">
+            <span class="articles-big-btn-arrow"></span>
+        </div>
+    </section>
     <button onclick="topFunction()" class="button-scroll"><img src="./Assets/Images/scroll-to-top.png" alt=""></button>
+    <script src="./tips-and-articles.js"></script>
 </body>
 
 </html>

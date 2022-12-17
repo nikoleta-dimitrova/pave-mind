@@ -201,7 +201,9 @@ label {
   gap: 0.5vw;
 }
 
-/* ----- First section home  RESPONSIVE (test) ---- */
+/* ----- First section home (test) ---- */
+
+/* Home Main Responsive */
 @media only screen and (max-width: 768px) {
   section#home-main {
     height: 70vw;
@@ -233,6 +235,7 @@ label {
     border-width: 0vw 0.3vw 0.3vw 0vw;
   }
 
+  /* Home Articles Responsive*/
   section.home-articles {
     height: 130vw;
   }
@@ -249,7 +252,6 @@ label {
     width: 38vw;
     height: 47vw;
   }
-
   p.home-card-title {
     font-size: 2.2vw;
     white-space: nowrap;
@@ -286,6 +288,8 @@ label {
     padding: 0.5vw;
     border-width: 0vw 0.3vw 0.3vw 0vw;
   }
+
+  /* Home Our Mission Responsive */
   section#home-our-mission {
     height: 80vw;
   }
@@ -305,6 +309,8 @@ label {
     font-size: 2vw;
     margin-left: -3vw;
   }
+
+  /* Home Features Responsive */
   section.home-features {
     height: 105vw;
   }
@@ -332,6 +338,8 @@ label {
     display: grid;
     grid-template-columns: auto auto;
   }
+
+  /* Home Footer Responsive */
   h1.footer-title {
     font-size: 4vw;
   }
@@ -371,7 +379,9 @@ label {
     font-size: 3.5vw;
   }
 }
+
 @media only screen and (max-width: 600px) {
+  /* Home Main Responsive */
   div.home-container {
     gap: 4vw;
   }
@@ -387,12 +397,21 @@ label {
   #home-first-picture.home-img {
     width: 36vw;
   }
+
+  /* Home Articles Responsive */
   img#home-articles-card1-image {
     right: 4vw;
   }
   img.home-articles-vector-images {
     right: 2.4vw;
   }
+
+  /* Home Our Mission Responsive */
+  h1.home-mission-title {
+    padding-top: 8vw;
+  }
+
+  /* Home Footer Responsive */
   img#footer-picture {
     display: none;
   }
@@ -411,13 +430,13 @@ label {
   div.footer-container {
     display: flex;
     align-items: center;
-    justify-content: left;
-    gap: 5vw;
-    margin: 1vw 1vw 5vw 9vw;
+    justify-content: space-evenly;
+    margin: 2vw 0vw 5vw 0vw;
   }
 }
 
 @media only screen and (max-width: 460px) {
+  /* Home Main Responsive */
   section#home-main {
     height: 162vw;
   }
@@ -459,6 +478,8 @@ label {
     width: 60vw;
     margin-left: 0vw;
   }
+
+  /* Home Articles Responsive */
   section.home-articles {
     height: 310vw;
   }
@@ -526,6 +547,7 @@ label {
     padding: 5vw 1vw 8vw 1vw;
   }
 
+  /* Home Our Mission Responsive */
   div.home-mission-container {
     margin-top: 1vw;
     display: grid;
@@ -560,6 +582,7 @@ label {
     padding-top: 12vw;
   }
 
+  /* Home Features Responsive */
   section.home-features {
     height: 270vw;
   }
@@ -586,6 +609,7 @@ label {
     width: 35vw;
   }
 
+  /* Home Footer Responsive */
   h1.footer-title {
     font-size: 7vw;
   }
