@@ -270,7 +270,9 @@ label {
   div.home-mission-container {
     margin-top: 1vw;
   }
-
+  section.home-features {
+    height: 55vw;
+  }
   h1.home-features-title {
     font-size: 4vw;
   }
@@ -325,42 +327,79 @@ label {
 @media only screen and (max-width: 600px) {
   h1.home-title {
     font-size: clamp(1.6rem, 1.2vw, 3rem);
-    text-align: center;
   }
-  img#home-first-picture {
-    display: none;
+  section#home-main {
+    height: 130vw;
+  }
+  div.home-container {
+    display: grid;
+    grid-template-columns: auto;
+    height: 120vw;
+  }
+  div.home-data {
+    width: 70vw;
+    margin-left: 24vw;
+    margin-top: 10vw;
+    gap: 4vw;
+  }
+  img#home-first-picture.home-img {
+    width: 69vw;
+    margin-left: 13vw;
   }
   p.home-description {
     font-size: 2vw;
-    width: 70vw;
-    text-align: center;
-  }
-  div.home-data {
-    align-items: center;
+    width: 50vw;
   }
   h1.home-articles-title {
     font-size: clamp(1.6rem, 1.2vw, 3rem);
   }
   p.home-card-title {
-    font-size: 1.9vw;
+    font-size: clamp(1.6rem, 1.2vw, 3rem);
+  }
+  img.home-articles-lightbulb {
+    width: 7vw;
+  }
+  p.home-card-description {
+    font-size: 2vw;
+    width: 58vw;
   }
   img.home-articles-blob {
-    margin-bottom: 0.5vw;
+    width: 40vw;
+  }
+  div.home-articles-button-vector {
+    height: 34.3vw;
+  }
+  a.home-card-read-more-button {
+    margin-bottom: 2vw;
+    margin-left: 3vw;
+  }
+  div.home-card {
+    width: 64vw;
+    height: 60vw;
   }
   img#home-articles-card1-image {
-    transform: translateY(4.7vw);
+    transform: translate(-2vw, -0.5vw);
+    width: 19vw;
+    height: 39vw;
   }
   img#home-articles-card2-image {
-    transform: translateY(4.5vw);
+    transform: translate(-2vw, -1.1vw);
+    width: 19vw;
+    height: 39vw;
   }
-  img#home-articles-card3-image {
-    transform: translateY(4.5vw);
+  section.home-articles {
+    height: 170vw;
+  }
+  a.home-card-read-more-button {
+    font-size: 3.5vw;
+  }
+  span#home-articles-arrow {
+    padding: 0.8vw;
   }
   section#home-articles-cards {
     display: grid;
-    grid-template-columns: auto auto;
-    gap: 14vw;
-    margin-top: 1vw;
+    grid-template-columns: auto;
+    height: 160vw;
   }
   div#home-articles-third-card {
     display: none;
@@ -370,15 +409,22 @@ label {
   }
   p.home-mission-description {
     font-size: 2vw;
-    width: 75vw;
-    margin-top: 5vw;
-    text-align: center;
+    width: 70vw;
+    margin-top: 3vw;
+    transform: translateX(-10vw);
+  }
+  section#home-our-mission {
+    height: 140vw;
   }
   img.home-mission-img {
-    display: none;
+    width: 90vw;
+  }
+  div.home-mission-container {
+    display: grid;
+    grid-template-columns: auto;
   }
   section.home-features {
-    height: 160vw;
+    height: 185vw;
   }
   h1.home-features-title {
     font-size: clamp(1.6rem, 1.2vw, 3rem);
@@ -390,7 +436,7 @@ label {
     margin-top: 3vw;
   }
   img.home-features-images {
-    width: 15vw;
+    width: 20vw;
   }
   h10.home-features-headers {
     font-size: 3.5vw;
@@ -444,83 +490,126 @@ label {
   }
   p.home-description {
     font-size: 3.5vw;
+    width: 65vw;
+  }
+  div.home-data {
+    width: 70vw;
+    margin-left: 14vw;
+    margin-top: 10vw;
+    gap: 4vw;
+  }
+  img#home-first-picture.home-img {
     width: 80vw;
+    margin-left: 5vw;
   }
   a#home-big-button.primary-button {
     font-size: 2.8vw;
-    width: 21.5vw;
+    width: 22.5vw;
+    height: 5vw;
   }
   span.home-big-btn-arrow {
     padding: 0.5vw;
   }
+  section#home-main {
+    height: 160vw;
+  }
+  div.home-container {
+    height: 150vw;
+    width: 90vw;
+    margin-left: 5vw;
+    gap: 12vw;
+  }
+  section.home-articles {
+    height: 240vw;
+  }
+
+  section#home-articles-cards {
+    margin-top: 5vw;
+    gap: 5vw;
+    height: 203vw;
+    margin-bottom: 10vw;
+  }
   h1.home-articles-title {
     font-size: 5.5vw;
+    padding-top: 12vw;
   }
   p.home-card-title {
-    font-size: 3vw;
+    font-size: 4.5vw;
+    padding-top: 2vw;
   }
   p.home-card-description {
-    font-size: 2.5vw;
-    width: 40vw;
+    font-size: 3.5vw;
+    width: 68vw;
+    padding-top: 2vw;
   }
   img.home-articles-blob {
-    width: 25vw;
+    width: 40vw;
   }
   div.home-articles-button-vector {
-    height: 16.3vw;
+    height: 47.7vw;
   }
   a.home-card-read-more-button {
-    font-size: 3vw;
+    font-size: 3.5vw;
+    margin-bottom: 2vw;
+    margin-left: 4vw;
   }
   span#home-articles-arrow {
     padding: 0.6vw;
   }
   div.home-card {
-    width: 45vw;
-    height: 42vw;
+    width: 70vw;
+    height: 85vw;
   }
-  section.home-articles {
-    height: 60vw;
-  }
-  section#home-articles-cards {
-    gap: 2.4vw;
-    height: 48vw;
-  }
+
   img.home-articles-lightbulb {
     width: 5vw;
   }
-  h1.home-mission-title {
-    font-size: 5.5vw;
-  }
+
   img#home-articles-card1-image {
-    width: 9vw;
-    height: 18vw;
-    transform: translate(2vw, 1.5vw);
+    width: 20vw;
+    height: 40vw;
+    transform: translate(2vw, 11.5vw);
   }
   img#home-articles-card2-image {
-    width: 9vw;
-    height: 18vw;
-    transform: translate(2vw, 1.5vw);
+    width: 20vw;
+    height: 40vw;
+    transform: translate(2vw, 11.5vw);
+  }
+  h1.home-mission-title {
+    font-size: 5.5vw;
+    padding-top: 12vw;
   }
   p.home-mission-description {
     font-size: 3.5vw;
-    width: 90vw;
+    order: 1;
+    margin-left: 7vw;
+    width: 80vw;
   }
   section#home-our-mission {
-    height: 72vw;
+    height: 200vw;
+  }
+  div.home-mission-container {
+    display: grid;
+    grid-template-columns: auto;
+  }
+  img.home-mission-img {
+    width: 100vw;
+    order: 2;
   }
   section.home-features {
-    height: 250vw;
+    height: 270vw;
   }
   div.home-features-container {
     gap: 15vw;
+    margin-top: 5vw;
   }
   h1.home-features-title {
     font-size: 5.5vw;
+    padding-top: 12vw;
   }
   p.home-features-text {
-    font-size: 3.5vw;
     width: 40vw;
+    font-size: 3.5vw;
   }
   h10.home-features-headers {
     font-size: 5.5vw;
@@ -533,20 +622,11 @@ label {
   }
   h1.footer-title {
     font-size: 5.5vw;
-    text-align: center;
+    padding-top: 8vw;
   }
   p.footer-description {
     font-size: 3.5vw;
     width: 80vw;
-    text-align: center;
-  }
-  div.footer-btn-media {
-    display: flex;
-    justify-content: center;
-  }
-  ul.footer-list {
-    display: flex;
-    justify-content: center;
   }
   a#home-btnfacebook {
     background-size: 5vw;
