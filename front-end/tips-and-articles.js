@@ -357,6 +357,10 @@ function calculateVW(percent) {
 }
 
 // Scroll to top button
+window.onscroll = function () {
+  scrollFunction();
+};
+
 let scrollToTopButton = document.querySelector(".button-scroll");
 const scrollFunction = () => {
   if (
