@@ -1528,6 +1528,7 @@ header .diary-fifth-current-date {
 .diary-fifth-calendar {
   background-color: var(--white-color);
   width: 21vw;
+  height: 16vw;
 }
 .diary-fifth-calendar ul {
   display: flex;
@@ -1577,9 +1578,13 @@ header .diary-fifth-current-date {
 }
 .diary-fifth-days li.active::before {
   background-color: #fe1f20;
+  width: 2.2vw;
+  height: 2.2vw;
 }
 .diary-fifth-days li:not(.active):hover::before {
   background: #f2f2f2;
+  width: 2.2vw;
+  height: 2.2vw;
 }
 
 /* Diary fifth button properties */
@@ -1639,10 +1644,10 @@ header .diary-fifth-current-date {
   flex-direction: row;
   justify-content: center;
   text-align: center;
-  gap: 0.8vw;
+  gap: 1.5vw;
   font-size: 0.65vw;
   font-family: var(--text-font);
-  padding-top: 1vw;
+  margin-top: 1vw;
 }
 
 .diary-fifth-image {
@@ -1736,6 +1741,7 @@ header .diary-fifth-current-date {
     align-items: center;
     justify-content: center;
     text-align: center;
+    height: 23vw;
   }
   .diary-calendar-wrapper {
     display: flex;
@@ -1795,7 +1801,6 @@ header .diary-fifth-current-date {
   }
   .diary-fifth-calendar-faces {
     gap: 2vw;
-    margin-top: 2vw;
   }
   span#diary-fifth-calendar-previous {
     padding: 0.7vw;
@@ -1826,6 +1831,7 @@ header .diary-fifth-current-date {
   }
   .diary-fifth-calendar {
     width: 35vw;
+    height: 26vw;
   }
   .diary-fifth-days li.active::before {
     background-color: #fe1f20;
@@ -1913,6 +1919,7 @@ header .diary-fifth-current-date {
   }
   .diary-fifth-calendar {
     width: 60vw;
+    height: 27vw;
   }
   ul.diary-fifth-weeks {
     gap: 2vw;
