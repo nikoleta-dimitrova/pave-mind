@@ -2787,6 +2787,10 @@ select {
     padding: 1vw 1vw;
   }
 
+  .wave-footer-bottom-img {
+    margin-bottom: -1vh;
+  }
+
 }
 
 

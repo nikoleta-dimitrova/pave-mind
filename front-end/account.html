@@ -15,22 +15,21 @@
 <body>
   <nav class="navbar">
     <div class="navigation-menu">
-      <ul>
-        <li>
-          <a href="#"><img src="Assets/Images/logo.svg" /></a>
-        </li>
-        <li><a href="./articles.html">Articles</a></li>
-        <li><a href="./tips-and-tricks.html">Tips&Tricks</a></li>
-        <li><a href="#">Community</a></li>
-        <li><a href="#">Diary</a></li>
-      </ul>
+        <a href="./index.html" class="nav-logo"><img src="./Assets/Images/logo.svg" alt=""></a>
+        <ul class="nav-menu">
+            <li class="nav-item"><a href="./articles.html" class="nav-link">Articles</a></li>
+            <li class="nav-item"><a href="./tips-and-tricks.html" class="nav-link">Tips&Tricks</a></li>
+            <li class="nav-item"><a href="./community.html" class="nav-link">Community</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Diary</a></li>
+            <li id="nav-login" class="nav-item"><a href="#" class="nav-link">Log In</a></li>
+        </ul>
     </div>
-    <div class="navigation-login">
-      <ul>
-        <li><a href="#">Log In</a></li>
-      </ul>
+    <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
     </div>
-  </nav>
+</nav>
 
 
 
@@ -47,151 +46,189 @@
           <div class="account-popup-every-inputs">
 
             <div class="account-all-popup-inputs">
-                <h1 class="account-popup-data">Old password</h1>
-            <input type="password" class="account-popup-inputs" id="account-first-name" placeholder="••••••••••••••" required>
+              <h1 class="account-popup-data">Old password</h1>
+              <input type="password" class="account-popup-inputs" id="account-first-name" placeholder="••••••••••••••"
+                required>
             </div>
             <div class="account-all-popup-inputs">
-                <h1 class="account-popup-data">New password</h1>
-            <input type="password" class="account-popup-inputs" id="account-first-name" placeholder="••••••••••••••" required>
+              <h1 class="account-popup-data">New password</h1>
+              <input type="password" class="account-popup-inputs" id="account-first-name" placeholder="••••••••••••••"
+                required>
             </div>
             <div class="account-all-popup-inputs">
               <h1 class="account-popup-data">Repeat new password</h1>
-          <input type="password" class="account-popup-inputs" id="account-first-name" placeholder="••••••••••••••" required>
-          </div> 
+              <input type="password" class="account-popup-inputs" id="account-first-name" placeholder="••••••••••••••"
+                required>
             </div>
+          </div>
 
-            <img src="./Assets/Images/account-popup-wave.svg" class="account-popup-wave" />
-            <a href="account.html" class="account-popup-button" id="">Save changes</a>
+          <img src="./Assets/Images/account-popup-wave.svg" class="account-popup-wave" />
+          <a href="account.html" class="account-popup-button" id="">Save changes</a>
         </div>
       </div>
     </div>
   </div>
 
 
-  
-
-<section class="account-container">
-
-  <div class="account-options">
-    <h1 class="account-settings-title">
-      Settings
-    </h1>
-    <a href="" class="account-hrefs" id="account-href">Account</a>
-    <a href="" class="account-hrefs" >Notifications</a>
-    <a href="" class="account-hrefs">Privacy</a>
-
-  </div>
-
-<section class="account-whole-card">
-    <div class="account-card-content">
-<div class="account-card-first-part">
-  <h1 class="account-account-title">
-    Account
-  </h1>
-  <p class="account-avatar">Avatar</p>
-</div>
-
-<div class="account-card-second-part">
-  <img src="./Assets/Images/user-picture.png" id="account-profile-img">
-  <button class="account-first" id="account-first-btn">Upload</button>
-  <button class="account-second" id="account-second-btn">Remove</button>
-</div>
-<h1 class="account-avatar">
-    Personal information
-  </h1>
-  <div class="account-card-third-part-whole">
-<div class="account-card-third-part-inputs">
-
-<div class="account-all-inputs">
-    <h1 class="account-data">First name</h1>
-<input type="text" class="account-inputs" id="account-first-name" placeholder="Nadia" required>
-</div>
-<div class="account-all-inputs">
-    <h1 class="account-data">Surname</h1>
-<input type="text" class="account-inputs" id="account-first-name" placeholder="Reeds" required>
-</div>
 
 
-</div>
-<div class="account-all-inputs">
-    <h1 class="account-data">Date of birth</h1>
-<input type="text" class="account-inputs" id="account-first-name" placeholder="10/12/2002" required>
-</div>
+  <section class="account-container">
 
-</div>
+    <div class="account-options">
+      <h1 class="account-settings-title">
+        Settings
+      </h1>
+      <a href="" class="account-hrefs" id="account-href">Account</a>
+      <a href="" class="account-hrefs">Notifications</a>
+      <a href="" class="account-hrefs">Privacy</a>
 
+    </div>
 
+    <section class="account-whole-card">
+      <div class="account-card-content">
+        <div class="account-card-first-part">
+          <h1 class="account-account-title">
+            Account
+          </h1>
+          <p class="account-avatar">Avatar</p>
+        </div>
 
-
-<h1 class="account-avatar">
-  Account information
-</h1>
-<div class="account-card-third-part-whole">
-  <div class="account-card-third-part-inputs">
-  
-  <div class="account-all-inputs">
-      <h1 class="account-data">Email adress</h1>
-  <input type="email" class="account-inputs" id="account-first-name" placeholder="nadia.r@gmail.com" required>
-  </div>
-  <div class="account-all-inputs">
-      <h1 class="account-data">University name</h1>
-  <input type="text" class="account-inputs" id="account-first-name" placeholder="Sofia University" required>
-  </div>
-  
-  
-  </div>
-  <div class="account-all-inputs">
-      <h1 class="account-data">Password</h1>
-  <input type="password" class="account-inputs" id="account-first-name" placeholder="••••••••••••••" required>
-  <a onclick="togglePopup()" class="account-data" id="account-change-password"><p>Change password</p></a>
-  </div>
-  
-  </div>
-  
-    
-    <div class="account-card-fourth-part">
-      <div class="account-fourth-part-left">
-        <h1 class="account-avatar" id="account-delete-h1">
-          Delete account
+        <div class="account-card-second-part">
+          <img src="./Assets/Images/user-picture.png" id="account-profile-img">
+          <button class="account-first" id="account-first-btn">Upload</button>
+          <button class="account-second" id="account-second-btn">Remove</button>
+        </div>
+        <h1 class="account-avatar">
+          Personal information
         </h1>
-        <p class="account-delete-text">By deleting your account, you will lose all your data.</p>
-      </div>
-      
-      <div class="account-fourth-part-right">
-        <button class="account-second" id="account-third-btn">Delete account</button>
-      </div>
-      
-      
-</div>
-<div class="account-save-changes-button">
-<button class="account-first" id="account-fourth-btn">Save changes</button>
-</div>
+        <div class="account-card-third-part-whole">
+          <div class="account-card-third-part-inputs">
+
+            <div class="account-all-inputs">
+              <h1 class="account-data">First name</h1>
+              <input type="text" class="account-inputs" id="account-first-name" placeholder="Nadia" required>
+            </div>
+            <div class="account-all-inputs">
+              <h1 class="account-data">Surname</h1>
+              <input type="text" class="account-inputs" id="account-first-name" placeholder="Reeds" required>
+            </div>
+
+
+          </div>
+          <div class="account-all-inputs">
+            <h1 class="account-data">Date of birth</h1>
+            <input type="text" class="account-inputs" id="account-first-name" placeholder="10/12/2002" required>
+          </div>
+
+        </div>
 
 
 
 
-</section>
+        <h1 class="account-avatar">
+          Account information
+        </h1>
+        <div class="account-card-third-part-whole">
+          <div class="account-card-third-part-inputs">
+
+            <div class="account-all-inputs">
+              <h1 class="account-data">Email adress</h1>
+              <input type="email" class="account-inputs" id="account-first-name" placeholder="nadia.r@gmail.com"
+                required>
+            </div>
+            <div class="account-all-inputs">
+              <h1 class="account-data">University name</h1>
+              <input type="text" class="account-inputs" id="account-first-name" placeholder="Sofia University" required>
+            </div>
 
 
+          </div>
+          <div class="account-all-inputs">
+            <h1 class="account-data">Password</h1>
+            <input type="password" class="account-inputs" id="account-first-name" placeholder="••••••••••••••" required>
+            <a onclick="togglePopup()" class="account-data" id="account-change-password">
+              <p>Change password</p>
+            </a>
+          </div>
 
-</section>
-<script>
+        </div>
 
-let popup = document.getElementById("popup-blur");
-let popupTitle = document.getElementById("community-popup-title");
-let popUpVisible = false;
 
-const togglePopup = () => {
-    popUpVisible = !popUpVisible;
-    if (popUpVisible) {
+        <div class="account-card-fourth-part">
+          <div class="account-fourth-part-left">
+            <h1 class="account-avatar" id="account-delete-h1">
+              Delete account
+            </h1>
+            <p class="account-delete-text">By deleting your account, you will lose all your data.</p>
+          </div>
+
+          <div class="account-fourth-part-right">
+            <button class="account-second" id="account-third-btn">Delete account</button>
+          </div>
+
+
+        </div>
+        <div class="account-save-changes-button">
+          <button class="account-first" id="account-fourth-btn">Save changes</button>
+        </div>
+
+
+        <footer id="footer-blue">
+          <img src="./Assets/Images/wave-footer-top-blue.png" class="wave-footer-img" />
+          <section class="footer-pavemind">
+            <div class="footer-container">
+              <img id="footer-logo" src="./Assets/Images/logo.svg" />
+              <div class="footer-data">
+                <h1 class="footer-title">Contact us.</h1>
+                <p class="footer-description">
+                  If you have any question regarding Burnout
+                  and are looking for ways to cope with it feel free to
+                  contact us via email or on one of our social medias.
+                </p>
+                <div class="footer-btn-media">
+                  <a href="https://www.facebook.com" class="btnfooter-contact" id="home-btnfacebook"></a>
+                  <a href="https://www.instagram.com" class="btnfooter-contact" id="home-btninstagram"></a>
+                  <a href="https://mail.google.com" class="btnfooter-contact" id="home-btnemail"></a>
+                </div>
+                <ul class="footer-list">
+                  <h1>
+                    Navigation
+                  </h1>
+                  <li class="footer-navbar-text"><a href="./articles.html">Articles</a></li>
+                  <li class="footer-navbar-text"><a href="./tips-and-tricks.html">Tips&Tricks</a></li>
+                  <li class="footer-navbar-text"><a href="./community.html">Community</a></li>
+                  <li class="footer-navbar-text"><a href="./diary.html">Diary</a> </li>
+                </ul>
+              </div>
+              <img id="footer-picture" src="./Assets/Images/home-footer-woman-img.svg" />
+            </div>
+            <img src="./Assets/Images/wave-footer-bottom.svg" class="wave-footer-bottom-img">
+            <div class="footer-quote">
+              <h1 class="footer-quote-text"> A NEW BEGINNING AWAITS YOU. </h1>
+            </div>
+          </section>
+        </footer>
+    </section>
+  </section>
+
+  <script>
+
+    let popup = document.getElementById("popup-blur");
+    let popupTitle = document.getElementById("community-popup-title");
+    let popUpVisible = false;
+
+    const togglePopup = () => {
+      popUpVisible = !popUpVisible;
+      if (popUpVisible) {
         popup.style.display = "block";
         popupTitle.focus();
-    }
-    else {
+      }
+      else {
         popup.style.display = "none";
+      }
     }
-}
 
-</script>
+  </script>
 </body>
+
 </html>
