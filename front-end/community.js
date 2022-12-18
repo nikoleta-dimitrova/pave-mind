@@ -156,3 +156,7 @@ const topFunction = () => {
     document.body.scrollTop = 0; // this is for safari
     document.documentElement.scrollTop = 0; // this is for everything with chrome and firefox
 }
+
+window.onscroll = function() {
+    scrollFunction();
+}

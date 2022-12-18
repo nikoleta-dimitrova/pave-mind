@@ -1798,7 +1798,7 @@ select {
   justify-content: center;
   position: fixed;
   width: 49vw;
-  height: 60vh;
+  height: 30vw;
   left: 0;
   right: 0;
   top: 50%;
@@ -1934,7 +1934,7 @@ select {
   text-align: center;
   margin-top: 4vw;
   gap: 3vw;
-  height: 185vh;
+  padding-bottom: 8vw;
 }
 
 .tips-tricks-title {
@@ -2067,7 +2067,6 @@ select {
     border-width: 0 0.22vw 0.22vw 0;
     padding: 0.4vw;
   }
-
 }
 
 /* TIPS & TRICKS RESPONSIVE  - 460px*/
@@ -2759,7 +2758,7 @@ select {
   #community-popup,
   #result-popup {
     width: 65vw;
-    height: 50vh;
+    height: 60vw;
   }
 
   #home-popup-text {
@@ -2911,19 +2910,21 @@ select {
 
   /* ---- Popup home ---- */
   .home-popup-content {
-    gap: 3vw;
     margin-top: 3vw;
+    width: 90%;
+    margin-inline: auto;
   }
 
   #community-popup,
   #result-popup {
-    width: 70vw;
+    width: 85vw;
     min-height: 42vh;
   }
 
   #home-popup-text {
     font-size: 3vw;
-    width: 60vw;
+    width: 100%;
+    margin-top: 10%;
   }
 
   label {
@@ -2967,6 +2968,7 @@ select {
   display: flex;
   justify-content: center;
   margin-top: 10vw;
+  padding-bottom: 8vw;
   gap: 2vw;
 }
 

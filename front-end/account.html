@@ -15,21 +15,21 @@
 <body>
   <nav class="navbar">
     <div class="navigation-menu">
-        <a href="./index.html" class="nav-logo"><img src="./Assets/Images/logo.svg" alt=""></a>
-        <ul class="nav-menu">
-            <li class="nav-item"><a href="./articles.html" class="nav-link">Articles</a></li>
-            <li class="nav-item"><a href="./tips-and-tricks.html" class="nav-link">Tips&Tricks</a></li>
-            <li class="nav-item"><a href="./community.html" class="nav-link">Community</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Diary</a></li>
-            <li id="nav-login" class="nav-item"><a href="#" class="nav-link">Log In</a></li>
-        </ul>
+      <a href="./index.html" class="nav-logo"><img src="./Assets/Images/logo.svg" alt=""></a>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="./articles.html" class="nav-link">Articles</a></li>
+        <li class="nav-item"><a href="./tips-and-tricks.html" class="nav-link">Tips&Tricks</a></li>
+        <li class="nav-item"><a href="./community.html" class="nav-link">Community</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Diary</a></li>
+        <li id="nav-login" class="nav-item"><a href="#" class="nav-link">Log In</a></li>
+      </ul>
     </div>
     <div class="hamburger">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
     </div>
-</nav>
+  </nav>
 
 
 
@@ -171,64 +171,46 @@
         <div class="account-save-changes-button">
           <button class="account-first" id="account-fourth-btn">Save changes</button>
         </div>
-
-
-        <footer id="footer-blue">
-          <img src="./Assets/Images/wave-footer-top-blue.png" class="wave-footer-img" />
-          <section class="footer-pavemind">
-            <div class="footer-container">
-              <img id="footer-logo" src="./Assets/Images/logo.svg" />
-              <div class="footer-data">
-                <h1 class="footer-title">Contact us.</h1>
-                <p class="footer-description">
-                  If you have any question regarding Burnout
-                  and are looking for ways to cope with it feel free to
-                  contact us via email or on one of our social medias.
-                </p>
-                <div class="footer-btn-media">
-                  <a href="https://www.facebook.com" class="btnfooter-contact" id="home-btnfacebook"></a>
-                  <a href="https://www.instagram.com" class="btnfooter-contact" id="home-btninstagram"></a>
-                  <a href="https://mail.google.com" class="btnfooter-contact" id="home-btnemail"></a>
-                </div>
-                <ul class="footer-list">
-                  <h1>
-                    Navigation
-                  </h1>
-                  <li class="footer-navbar-text"><a href="./articles.html">Articles</a></li>
-                  <li class="footer-navbar-text"><a href="./tips-and-tricks.html">Tips&Tricks</a></li>
-                  <li class="footer-navbar-text"><a href="./community.html">Community</a></li>
-                  <li class="footer-navbar-text"><a href="./diary.html">Diary</a> </li>
-                </ul>
-              </div>
-              <img id="footer-picture" src="./Assets/Images/home-footer-woman-img.svg" />
-            </div>
-            <img src="./Assets/Images/wave-footer-bottom.svg" class="wave-footer-bottom-img">
-            <div class="footer-quote">
-              <h1 class="footer-quote-text"> A NEW BEGINNING AWAITS YOU. </h1>
-            </div>
-          </section>
-        </footer>
     </section>
   </section>
+  <footer id="footer-blue">
+    <img src="./Assets/Images/wave-footer-top-blue.png" class="wave-footer-img" />
+    <section class="footer-pavemind">
+      <div class="footer-container">
+        <img id="footer-logo" src="./Assets/Images/logo.svg" />
+        <div class="footer-data">
+          <h1 class="footer-title">Contact us.</h1>
+          <p class="footer-description">
+            If you have any question regarding Burnout
+            and are looking for ways to cope with it feel free to
+            contact us via email or on one of our social medias.
+          </p>
+          <div class="footer-btn-media">
+            <a href="https://www.facebook.com" class="btnfooter-contact" id="home-btnfacebook"></a>
+            <a href="https://www.instagram.com" class="btnfooter-contact" id="home-btninstagram"></a>
+            <a href="https://mail.google.com" class="btnfooter-contact" id="home-btnemail"></a>
+          </div>
+          <ul class="footer-list">
+            <h1>
+              Navigation
+            </h1>
+            <li class="footer-navbar-text"><a href="./articles.html">Articles</a></li>
+            <li class="footer-navbar-text"><a href="./tips-and-tricks.html">Tips&Tricks</a></li>
+            <li class="footer-navbar-text"><a href="./community.html">Community</a></li>
+            <li class="footer-navbar-text"><a href="./diary.html">Diary</a> </li>
+          </ul>
+        </div>
+        <img id="footer-picture" src="./Assets/Images/home-footer-woman-img.svg" />
+      </div>
+      <img src="./Assets/Images/wave-footer-bottom.svg" class="wave-footer-bottom-img">
+      <div class="footer-quote">
+        <h1 class="footer-quote-text"> A NEW BEGINNING AWAITS YOU. </h1>
+      </div>
+    </section>
+  </footer>
 
-  <script>
-
-    let popup = document.getElementById("popup-blur");
-    let popupTitle = document.getElementById("community-popup-title");
-    let popUpVisible = false;
-
-    const togglePopup = () => {
-      popUpVisible = !popUpVisible;
-      if (popUpVisible) {
-        popup.style.display = "block";
-        popupTitle.focus();
-      }
-      else {
-        popup.style.display = "none";
-      }
-    }
-
-  </script>
+  <script src="./community.js"> </script>
+  <script src="./responsive.js"></script>
 </body>
 
 </html>

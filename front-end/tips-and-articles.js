@@ -102,9 +102,6 @@ const loadJSONData = (callback, filePath) => {
 
 
 const init = (filePath, singleFile) => {
-    window.onscroll = function () {
-        scrollFunction();
-    };
     loadJSONData(function (response) {
         let responseData = JSON.parse(response);
         responseData.forEach(responseItem => {
@@ -313,9 +310,6 @@ const loadArticle = (articleArray) => {
             document.getElementById("article-information").innerHTML = article.info;
         }
     })
-    window.onscroll = function () {
-        scrollFunction();
-    };
 }
 
 const loadTip = (tipArr) => {
@@ -328,9 +322,6 @@ const loadTip = (tipArr) => {
             document.getElementById("article-information").innerHTML = tip.info;
         }
     })
-    window.onscroll = function () {
-        scrollFunction();
-    };
 }
 
 const openBigArticle = () => {
@@ -378,4 +369,6 @@ const topFunction = () => {
     document.documentElement.scrollTop = 0; // this is for everything with chrome and firefox
 }
 
-
+window.onscroll = function() {
+    scrollFunction();
+}
