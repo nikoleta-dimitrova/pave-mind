@@ -8,11 +8,11 @@
     <title>Log in</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="./popup.js" defer></script>
 </head>
 
 <body>
-    <section class="login-popup-container">
-        <button data-popup-target="#popup">Log In</button>
+    <section class="login-popup-container" id="login-popup-container">
         <div class="login-popup" id="popup">
 
             <div class="login-popup-form">
@@ -26,24 +26,23 @@
                     <span class="login-popup-icon"><i class="fa fa-lock"></i></span>
                     <input type="password" id="password" placeholder="Passoword" required>
                 </div>
-                <button>LOG IN</button>
+                <button  onclick="loginToPayment()" class="login-popup-form-btn">LOG IN</button>
                 <div class="login-popup-message">
-                    <P>Don't have an account?</P><a href="#">Sign up</a>
+                    <P>Don't have an account?</P> <button onclick="loginToSignup()" id="lognin-signup-btn" class="login-popup-signin-btn">Sign up</button>
                 </div>
             </div>
             <div class="login-popup-text">
-                <button data-popup-close class="login-popup-close-button"><img class="login-popup-close-button-img"
+                <button onclick="removeLogin()" class="login-popup-close-button"><img class="login-popup-close-button-img"
                         src="./Assets/Images/Group 10.svg"></button>
                 <h1>Welcome back!</h1>
                 <p>"Asking for help is the first step...You are<br>
                     more precious to this world than you'll<br>
                     ever know"</p>
             </div>
+            
         </div>
-
+        <div class="popup-overlay"></div>
     </section>
-    <div id="popup-overlay"></div>
-    <script src="./script.js"></script>
 </body>
 
 </html>

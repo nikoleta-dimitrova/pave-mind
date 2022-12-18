@@ -7,11 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pay</title>
     <link rel="stylesheet" href="./style.css">
+    <script src="./popup.js" defer></script>
 </head>
 
 <body>
 
-    <section class="payment-popup-container">
+    <section id="payment-popup-container" class="payment-popup-container">
 
         <div class="payment-popup">
             <div class="payment-popup-general">
@@ -32,9 +33,10 @@
             </div>
             <img class="payment-popup-first-wave-img" src="./Assets/Images/Mask_Group_4.svg">
             <img class="payment-popup-second-wave-img" src="./Assets/Images/Mask_Group_5.svg">
-            <button class="payment-popup-close-btn"><img class="payment-popup-first-close-img" src="./Assets/Images/Group 10.svg"></button>
+            <button onclick="removePayment()" class="payment-popup-close-btn"><img class="payment-popup-first-close-img" src="./Assets/Images/Group 10.svg"></button>
         </div>
-
+        
+        <div class="popup-overlay"></div>
     </section>
 
 </body>

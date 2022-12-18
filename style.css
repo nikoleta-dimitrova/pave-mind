@@ -28,12 +28,80 @@
     box-sizing: border-box;
   }
 
-  body{
-    background-color: bisque;
+  .navbar {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    background-color: var(--white-color);
+    font-size: var(--navigationtext-size);
+    font-family: var(--text-font);
+    font-weight: var(--bold-font);
+    overflow: hidden;
+    padding-block: .3vw;
   }
-
+  
+  .navbar.active {
+    background-color: var(--midblueopacity-color);
+  }
+  
+  .navigation-menu {
+    font-size: var(--navigationtext-size);
+    margin-left: 3vw;
+    display: flex;
+  }
+  
+  .navigation-menu ul {
+    display: flex;
+    align-items: center;
+    padding: 1vw;
+    width: 100vw;
+  }
+  
+  #nav-login {
+    margin-left: auto;
+    margin-right: 7vw;
+  }
+  
+  .navigation-menu li {
+    list-style: none;
+    transition: transform .5s ease;
+  }
+  
+  .navigation-menu li a {
+    display: block;
+    text-decoration: none;
+    color: var(--darkblue-color);
+    padding: 0 1vw;
+  }
+  
+  .navigation-menu img {
+    height: 3vw;
+  }
+  
+  nav ul li:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  
+  .hamburger {
+    display: none;
+    margin-right: 3.5vw;
+  }
+  
+  .bar {
+    display: block;
+    width: 20px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: var(--darkblue-color);
+    border-radius: 17px;
+  }
+  
+  
   .login-popup-container{
-    height: 90vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,8 +109,8 @@
 
   .login-popup{
     background-color: var(--white-color);
-    width: 50vw;
     position: absolute;
+    width: 50vw;
     height: 28.4vw;
     display: flex;
     justify-content: center;
@@ -51,16 +119,23 @@
     padding-bottom: 8vh;
     gap: 3vw;
     z-index: 1;
-    scale: 0;
-    transition: 200ms ease-in-out;
     background-image: url(./Assets/Images/Mask\ Group\ 3.svg);
     background-repeat: no-repeat;
     background-size: 53vw;
     background-position-y: -0.05vw;
   }
 
-  .login-popup.active{
-    scale: 1;
+  .login-popup-signin-btn{
+    border: none;
+    background: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1vw;
+    width: 4vw;
+    height: 1vw;
+    font-family: var(--text-font) ;
+    color: var(--darkblue-color);
+    font-weight: 700;
   }
 
   .login-popup-form{
@@ -74,8 +149,10 @@
   .login-popup-form h1{
     font-family: var(--headings-font);
     color: var(--darkblue-color);
+    font-size: 1.3vw;
     padding-bottom: 1vh;
-    font-size: 2vw;
+    font-size: 1.7vw;
+    font-weight: 400;
   }
 
   .login-popup-form p{
@@ -95,6 +172,24 @@
     border: 0.1vw solid rgb(255, 255, 255);
     border-radius: 1.62vw;
     margin-bottom: 1.95vw;
+  }
+
+  .login-popup-form-btn{
+    background-color: var(--lightblue-color);
+    display: block;
+    color: var(--darkblue-color);
+    font-family: var(--text-font);
+    font-weight: 600;
+    padding: 0.32vw 1.62vw;
+    border-radius:  0.97vw;
+    transition: 0.4s;
+    font-size: 1vw;
+    cursor: pointer;
+    border: none;
+    margin-left: 2.5vw;
+    margin-right: 2.5vw;
+    width: 8vw;
+    font-size: 1vw;
   }
 
   .login-popup-input-container{
@@ -121,7 +216,7 @@
     font-size: 1vw;
   }
 
-  .login-popup-form button{
+  .signup-popup-btn{
     background-color: var(--lightblue-color);
     display: block;
     color: var(--darkblue-color);
@@ -141,7 +236,7 @@
     font-size: 1vw;
   }
 
-  .login-popup-form button:hover{
+  .login-popup-form-btn:hover{
     background-color: var(--darkblue-color);
     color: white;
   }
@@ -160,10 +255,11 @@
   }
 
   .login-popup-text h1{
-    font-family: Patua One;
+    font-family: var(--headings-font);
     color: var(--darkblue-color);
     padding-bottom: 3vh;
-    font-size: 2vw;
+    font-size: 1.7vw;
+    font-weight: 400;
   }
 
   .login-popup-text p{
@@ -171,21 +267,14 @@
     font-size: 1vw;
   }
 
- #popup-overlay{
+ .popup-overlay{
   position: fixed;
-  opacity: 0;
   top: 0;
   right: 0;
   left: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, .5);
   pointer-events: none;
-  transition: 200ms ease-in-out;
- }
-
- #popup-overlay.active {
-  pointer-events: all;
-  opacity: 1;
  }
 
  .login-popup .login-popup-close-button{
@@ -220,6 +309,7 @@
     padding-top: 11vh;
     padding-bottom: 8vh;
     position: relative;
+    z-index: 1;
   }
 
   .payment-popup-general{
@@ -423,6 +513,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-right: 0.1vw solid var(--darkblue-color);
+    padding-right: 2.8vw;
+    height: 13vw;
   }
 
   .signin-popup-btn-section{
@@ -432,7 +525,7 @@
     align-items: center;
   }
 
-  .signin-popup-btn-section button{
+  .signup-popup-btn{
     background-color: var(--lightblue-color);
     display: block;
     color: var(--darkblue-color);
@@ -449,7 +542,7 @@
     font-size: 1vw;
   }
 
-  .signin-popup-btn-section button:hover{
+  .signup-popup-btn:hover{
     background-color: var(--darkblue-color);
     color: white;
   }
@@ -590,3 +683,15 @@
     z-index: 1;
   }
 
+.signin-popup-login-btn{
+  border: none;
+  background: none;
+  outline: none;
+  cursor: pointer;
+  font-family: var(--text-font) ;
+  color: var(--darkblue-color);
+  font-weight: 700;
+  width: 4vw;
+  height: 1vw;
+  font-size: 1vw;
+}
