@@ -1534,122 +1534,129 @@ select {
 }
 
 /* TIPS & TRICKS RESPONSIVE  - 768px*/
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 768px) {
 
   #tips-title {
     font-size: 4vw;
-}
+  }
 
-#tips-description {
-  font-size: 2vw;
-  width: 58vw;
-}
+  #tips-description {
+    font-size: 2vw;
+    width: 58vw;
+  }
 
-#tips-first-picture {
-  width: 45vw;
-}
+  #tips-first-picture {
+    width: 45vw;
+  }
 
-.tips-tricks-description {
-  font-size: 2vw;
-  font-family: var(--text-font);
-  width: 65vw;
-  text-align: left;
+  .tips-tricks-description {
+    font-size: 2vw;
+    font-family: var(--text-font);
+    width: 65vw;
+    text-align: left;
 
-}
-.tips-tricks-title {
-  font-family: var(--headings-font);
-  font-weight: var(--semibold-font);
-  text-align: left;
-  font-size: 3vw;
-  
-}
+  }
 
-.tips-read-more {
-  font-size: 2vw;
-}
-#tips-articles-arrow {
-  border-width: 0 0.22vw 0.22vw 0;
-  padding: 0.4vw;
-}
+  .tips-tricks-title {
+    font-family: var(--headings-font);
+    font-weight: var(--semibold-font);
+    text-align: left;
+    font-size: 3vw;
+
+  }
+
+  .tips-read-more {
+    font-size: 2vw;
+  }
+
+  #tips-articles-arrow {
+    border-width: 0 0.22vw 0.22vw 0;
+    padding: 0.4vw;
+  }
 
 }
 
 /* TIPS & TRICKS RESPONSIVE  - 600px*/
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 600px) {
 
   #tips-title {
-    font-size: clamp(1.6rem,1.2rem,3rem);
+    font-size: clamp(1.6rem, 1.2rem, 3rem);
+  }
+
+  #tips-description {
+    font-size: 2vw;
+    width: 58vw;
+  }
+
+  #tips-first-picture {
+    width: 45vw;
+  }
+
+  .tips-tricks-description {
+    font-size: 2vw;
+    font-family: var(--text-font);
+    width: 66vw;
+    text-align: left;
+
+  }
+
+  .tips-tricks-title {
+    font-family: var(--headings-font);
+    font-weight: var(--semibold-font);
+    text-align: left;
+    font-size: 3vw;
+  }
+
+  .tips-read-more {
+    font-size: 2vw;
+  }
+
+  #tips-articles-arrow {
+    border-width: 0 0.22vw 0.22vw 0;
+    padding: 0.4vw;
+  }
+
 }
 
-#tips-description {
-  font-size: 2vw;
-    width: 58vw;    
-}
-
-#tips-first-picture {
-  width: 45vw;
-}
-
-.tips-tricks-description {
-  font-size: 2vw;
-  font-family: var(--text-font);
-  width: 66vw;
-  text-align: left;
-
-}
-.tips-tricks-title {
-  font-family: var(--headings-font);
-  font-weight: var(--semibold-font);
-  text-align: left;
-  font-size: 3vw;
-}
-
-.tips-read-more {
-  font-size: 2vw;
-}
-#tips-articles-arrow {
-  border-width: 0 0.22vw 0.22vw 0;
-  padding: 0.4vw;
-}
-
-}
 /* TIPS & TRICKS RESPONSIVE  - 460px*/
-@media only screen and (max-width: 460px){
+@media only screen and (max-width: 460px) {
 
   #tips-title {
     font-size: 5.5vw;
-}
+  }
 
-#tips-description {
-  font-size: 2.8vw;
+  #tips-description {
+    font-size: 2.8vw;
     width: 75vw;
-}
+  }
 
-#tips-first-picture {
-  width: 53vw;
-}
+  #tips-first-picture {
+    width: 53vw;
+  }
 
-.tips-tricks-description {
-  font-size: 2.4vw;
+  .tips-tricks-description {
+    font-size: 2.4vw;
     font-family: var(--text-font);
     width: 76vw;
     text-align: left;
 
-}
-.tips-tricks-title {
-  font-family: var(--headings-font);
-  font-weight: var(--semibold-font);
-  text-align: left;
-  font-size: 3.8vw;
-}
+  }
 
-.tips-read-more {
-  font-size: 2.3vw;
-}
-#tips-articles-arrow {
-  border-width: 0 0.3vw 0.3vw 0;
-  padding: 0.5vw;
-}
+  .tips-tricks-title {
+    font-family: var(--headings-font);
+    font-weight: var(--semibold-font);
+    text-align: left;
+    font-size: 3.8vw;
+  }
+
+  .tips-read-more {
+    font-size: 2.3vw;
+  }
+
+  #tips-articles-arrow {
+    border-width: 0 0.3vw 0.3vw 0;
+    padding: 0.5vw;
+  }
 
 }
 
@@ -2359,7 +2366,8 @@ select {
     font-size: 2.8vw;
   }
 
-  #article-title, #continue-reading-carousel h1{
+  #article-title,
+  #continue-reading-carousel h1 {
     font-size: 5.5vw;
   }
 
@@ -2492,5 +2500,546 @@ select {
   #community-popup,
   #result-popup {
     height: 18vh;
+  }
+}
+
+.whole-footer {
+  transform: translate(0vw, 10vw);
+}
+
+
+
+
+/*  ACCOUNT  */
+
+::placeholder {
+  /*All placeholders*/
+  color: #B5B5B5;
+  opacity: 1;
+}
+
+.account-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10vw;
+  gap: 2vw;
+}
+
+.account-options {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2vw;
+}
+
+.account-settings-title {
+  color: var(--darkblue-color);
+  font-family: var(--headings-font);
+  font-weight: var(--regular-font);
+  font-size: var(--title-size);
+  transform: translate(0.7vw, -3vw);
+}
+
+.account-hrefs {
+  color: var(--darkblue-color);
+  font-family: var(--text-font);
+  font-weight: var(--bold-font);
+  font-size: 1.3vw;
+  text-decoration: none;
+  width: 11vw;
+  height: auto;
+  padding: 0.4vw 1vw;
+}
+
+#account-href {
+  background-color: var(--lightblue-color);
+  padding: 0.4vw 1vw;
+  border-radius: 2vw;
+  font-weight: 100;
+  color: var(--darkblue-color);
+  font-family: var(--text-font);
+  font-weight: var(--bold-font);
+  border: none;
+  text-decoration: none;
+}
+
+.account-whole-card {
+  width: 54vw;
+  height: 72vw;
+  background-color: var(--white-color);
+  border-radius: 1.2vw;
+  border: 1px solid rgb(104, 125, 172, .30);
+  background-color: white;
+
+
+
+}
+
+
+.account-account-title {
+  color: var(--darkblue-color);
+  font-family: var(--headings-font);
+  font-weight: var(--regular-font);
+  font-size: 1.8vw;
+}
+
+.account-avatar {
+  font-weight: var(--bold-font);
+  font-size: 1.3vw;
+  font-family: var(--text-font);
+  margin-bottom: -1.3vw;
+}
+
+#account-profile-img {
+  width: 5vw;
+}
+
+.account-card-first-part {
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
+}
+
+.account-card-second-part {
+  display: flex;
+  gap: 1vw;
+  align-items: center;
+
+}
+
+
+.account-read-more {
+  width: 9.3vw;
+  height: 5vh;
+  font-size: 1.3vw;
+}
+
+#account-first-btn {
+  background-color: var(--lightblue-color);
+  border-radius: 2vw;
+  font-weight: 100;
+  color: var(--darkblue-color);
+  font-family: var(--text-font);
+  font-weight: var(--bold-font);
+  border: none;
+  text-decoration: none;
+  padding: 0.4vw 2.7vw;
+  font-size: 1.2vw;
+  width: 9.4vw;
+}
+
+
+#account-second-btn {
+  background-color: var(--white-color);
+  border-radius: 2vw;
+  color: var(--darkblue-color);
+  font-family: var(--text-font);
+  font-weight: var(--bold-font);
+  border: 0.1vw solid var(--darkblue-color);
+  text-decoration: none;
+  padding: 0.4vw 2.7vw;
+  font-size: 1.2vw;
+}
+
+#account-third-btn {
+  background-color: var(--white-color);
+  border-radius: 2vw;
+  color: var(--darkblue-color);
+  font-family: var(--text-font);
+  font-weight: var(--bold-font);
+  border: 0.1vw solid var(--darkblue-color);
+  text-decoration: none;
+  padding: 0.4vw 1.2vw;
+  font-size: 1.2vw;
+}
+
+
+
+.account-inputs {
+  display: flex;
+  width: 19.5vw;
+  padding: 0.7vw;
+  padding-left: 1vw;
+  outline: none;
+  border: 0.1vw solid var(--darkblue-color);
+  border-radius: 2vw;
+  font-size: 1vw;
+  font-family: var(--text-font);
+  font-weight: var(--bold-font);
+
+}
+
+.account-card-third-part-whole {
+  background-color: #E4EAF2;
+  border-radius: 1.2vw;
+  width: 47vw;
+  padding: 1vw 0vw 2vw 1.8vw;
+
+}
+
+.account-card-third-part-inputs {
+  display: flex;
+  gap: 4.2vw;
+}
+
+#account-delete-h1 {
+  margin-bottom: 1vw;
+}
+
+.account-data {
+  font-family: var(--text-font);
+  font-weight: var(--bold-font);
+  font-size: 1vw;
+  margin: 1vw 1vw 0.5vw 1vw;
+}
+
+.account-card-content {
+  transform: translate(3.45vw, 4vw);
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
+}
+
+#account-change-password {
+  font-family: var(--text-font);
+  font-weight: var(--bold-font);
+  color: #B5B5B5;
+  cursor: pointer;
+  font-size: 1vw;
+}
+
+.account-card-fourth-part {
+  display: flex;
+  align-items: flex-end;
+  gap: 7.2vw;
+  margin-top: 2vw;
+
+}
+
+.account-delete-text {
+  font-family: var(--text-font);
+  font-weight: var(--regular-font);
+  font-size: 1.2vw;
+  color: #B5B5B5;
+}
+
+#account-fourth-btn {
+  background-color: var(--lightblue-color);
+  border-radius: 2vw;
+  color: var(--darkblue-color);
+  font-family: var(--text-font);
+  font-weight: var(--bold-font);
+  border: 0.1vw solid var(--white-color);
+  text-decoration: none;
+  padding: 0.5vw 1.3vw;
+  font-size: 1.3vw;
+}
+
+
+/*  ACCOUNT POPUP   */
+
+#popup-blur {
+  display: none;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: #00000061;
+  transform: translateY(-50%);
+  top: 50%;
+  z-index: 5;
+  overflow: hidden;
+}
+
+#account-popup,
+#result-popup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  width: 54vw;
+  height: 34vw;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 2vw;
+  margin-inline: auto;
+  background-color: var(--white-color);
+}
+
+
+.account-popup-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  color: var(--darkblue-color);
+}
+
+.account-popup-heading {
+  padding-top: 2vw;
+  padding-bottom: 1vw;
+  text-align: center;
+  font-size: 1.5vw;
+  font-family: var(--headings-font);
+  width: 100%;
+  border-bottom: 0.1vw solid var(--darkblue-color);
+}
+
+#account-popup-close {
+  position: absolute;
+  top: 2vw;
+  right: 3vw;
+  width: 2vw;
+  cursor: pointer;
+}
+
+
+.account-popup-inputs {
+  display: flex;
+  width: 42vw;
+  padding: 0.7vw;
+  padding-left: 1vw;
+  outline: none;
+  border: 0.1vw solid var(--darkblue-color);
+  border-radius: 2vw;
+  font-size: 1vw;
+  font-family: var(--text-font);
+  font-weight: var(--bold-font);
+}
+
+
+
+
+.account-popup-data {
+  margin: 0vw 1vw 1vw;
+  font-family: var(--text-font);
+  color: var(--black-color);
+  font-size: 1.3vw;
+}
+
+.account-popup-wave {
+  width: 29vw;
+  height: auto;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.account-popup-button {
+  background-color: var(--lightblue-color);
+  padding: 0.4vw 1vw;
+  border-radius: 2vw;
+  font-weight: 100;
+  color: var(--darkblue-color);
+  font-family: var(--text-font);
+  font-weight: var(--bold-font);
+  border: none;
+  text-decoration: none;
+
+  font-size: 1.1vw;
+  width: 9.1vw;
+  height: auto;
+}
+
+.account-popup-content {
+  margin-top: 2.5vw;
+  display: flex;
+  flex-direction: column;
+  margin-left: 8vw;
+  width: 40vw;
+  gap: 3.2vw;
+  font-family: var(--text-font);
+  align-items: self-end;
+}
+
+.account-popup-every-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5vw;
+}
+
+.account-save-changes-button {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 46.7vw;
+}
+
+
+
+/*  ACCOUNT RESPONSIVE - 768px  */
+
+@media only screen and (max-width: 768px) {
+
+  .account-options {
+    display: none;
+
+  }
+
+  .account-whole-card {
+    height: 138vw;
+    width: 85vw;
+  }
+
+  .account-card-content {
+    transform: translate(13.5vw, 4vw);
+    width: 75vw;
+  }
+
+  .account-account-title {
+    font-size: 4vw;
+  }
+
+  .account-avatar {
+    font-size: 2.8vw;
+
+  }
+
+  .account-card-second-part {
+    gap: 2vw;
+  }
+
+  #account-profile-img {
+    width: 10vw;
+  }
+
+  #account-first-btn {
+    padding: 0.4vw 2.7vw;
+    font-size: 2.8vw;
+    width: 19vw;
+  }
+
+  #account-second-btn {
+    padding: 0.4vw 2.7vw;
+    font-size: 2.8vw;
+    width: 19vw;
+  }
+
+  .account-data {
+    font-size: 2.3vw;
+  }
+
+  .account-inputs {
+    width: 47.7vw;
+    font-size: 2.3vw;
+  }
+
+  #account-change-password {
+    font-size: 2vw;
+  }
+
+  #account-delete-h1 {
+    margin-bottom: 1vw;
+  }
+
+  .account-delete-text {
+    font-size: 2vw;
+  }
+
+  #account-third-btn {
+    padding: 1vw 1.3vw;
+    font-size: 2.4vw;
+    width: 23vw;
+    border-radius: 4vw;
+  }
+
+  #account-fourth-btn {
+    font-size: 2.8vw;
+    width: 23vw;
+    padding: 1vw 1.3vw;
+    border-radius: 4vw;
+  }
+
+  .account-card-third-part-whole {
+    width: 51.6vw;
+  }
+
+  .account-card-third-part-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 0vw;
+  }
+
+  .account-card-fourth-part {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2vw;
+    margin-top: 6vw;
+  }
+
+  .account-save-changes-button {
+    flex-direction: row;
+    width: 46.7vw;
+    margin-top: 4vw;
+  }
+}
+
+/*  ACCOUNT RESPONSIVE - 768px  */
+
+@media only screen and (max-width: 460px) {
+  .account-account-title {
+    font-size: 5.5vw;
+  }
+
+  .account-whole-card {
+    height: 160vw;
+    width: 85vw;
+  }
+
+  .account-avatar {
+    font-size: 3.5vw;
+  }
+
+  .account-data {
+    font-size: 2.8vw;
+  }
+
+  .account-inputs {
+    font-size: 2.8vw;
+  }
+
+  #account-first-btn {
+    padding: 0.4vw 3vw;
+    font-size: 3.5vw;
+    width: 21vw;
+    border-radius: 4vw;
+  }
+
+  #account-second-btn {
+    padding: 0.4vw 3vw;
+    font-size: 3.5vw;
+    width: 21vw;
+    border-radius: 4vw;
+  }
+
+  #account-third-btn {
+    padding: 0.4vw 3vw;
+    font-size: 3.5vw;
+    width: 19vw;
+    border-radius: 4vw;
+  }
+
+  #account-fourth-btn {
+    padding: 0.4vw 3vw;
+    font-size: 3.5vw;
+    width: 19vw;
+    border-radius: 4vw;
+  }
+
+  .account-delete-text {
+    font-size: 2.5vw;
+  }
+
+  #account-third-btn {
+    padding: 1vw 2vw;
+    font-size: 3vw;
+    width: 32vw;
+    border-radius: 4vw;
+  }
+
+  #account-fourth-btn {
+    padding: 1.4vw 2vw;
+    font-size: 3.3vw;
+    width: 33vw;
+    border-radius: 4vw;
   }
 }
