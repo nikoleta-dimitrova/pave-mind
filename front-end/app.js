@@ -77,17 +77,18 @@ export function createSubmitButton() {
         resultContainer.classList.add("submit-popup-text");
         buttonResult = document.createElement("button");
         buttonResult.classList.add("tips-read-more");
+        buttonResult.id = "test-button-result-navigation";
         // waveResult = document.createElement("img");
         // img["src"] = "./Assets/Images/wave-popup-blue.svg";
         if (questionService.resultArray[0].result > 17 && questionService.resultArray[2].result > 17 && questionService.resultArray[1].result < 22) {
-            resultContainer.innerText = "You may have burnout. We still advice you to contact a professional. Need help?";
+            resultContainer.innerText = "You may have burnout. This test is not a diagnosis. We still advice you to contact a professional. Need help?";
             resultsArrayContainer.appendChild(resultContainer);
             buttonResult.innerHTML = "Go to Tips&Tricks";
             resultsArrayContainer.appendChild(buttonResult);
             // waveResult.innerHTML;
             // resultsArrayContainer.appendChild(waveResult);
         } else {
-            resultContainer.innerText = "You may not have burnout. We still advice you to contact a professional. Still want to keep yourself informed?";
+            resultContainer.innerText = "You may not have burnout. This test is not a diagnosis. We still advice you to contact a professional. Still want to keep yourself informed?";
             resultsArrayContainer.appendChild(resultContainer);
             buttonResult.innerHTML = "Go to Articles";
             resultsArrayContainer.appendChild(buttonResult);
