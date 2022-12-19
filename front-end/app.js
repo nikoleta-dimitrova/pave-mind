@@ -68,21 +68,31 @@ export function createSubmitButton() {
         if (buttonResult) {
             buttonResult.remove()
         }
+        // let waveResult = document.querySelector('#resultContainer');
+        // if(waveResult) {
+        //     resultContainer.remove()
+        // }
         const resultsArrayContainer = document.createElement("div");
         resultContainer = document.createElement("p");
         resultContainer.classList.add("submit-popup-text");
         buttonResult = document.createElement("button");
         buttonResult.classList.add("tips-read-more");
+        // waveResult = document.createElement("img");
+        // img["src"] = "./Assets/Images/wave-popup-blue.svg";
         if (questionService.resultArray[0].result > 17 && questionService.resultArray[2].result > 17 && questionService.resultArray[1].result < 22) {
             resultContainer.innerText = "You may have burnout. We still advice you to contact a professional. Need help?";
             resultsArrayContainer.appendChild(resultContainer);
             buttonResult.innerHTML = "Go to Tips&Tricks";
             resultsArrayContainer.appendChild(buttonResult);
+            // waveResult.innerHTML;
+            // resultsArrayContainer.appendChild(waveResult);
         } else {
             resultContainer.innerText = "You may not have burnout. We still advice you to contact a professional. Still want to keep yourself informed?";
             resultsArrayContainer.appendChild(resultContainer);
             buttonResult.innerHTML = "Go to Articles";
             resultsArrayContainer.appendChild(buttonResult);
+            // waveResult.innerHTML;
+            // resultsArrayContainer.appendChild(waveResult);
         }
         togglePopup()
         popUpContent.innerHTML = resultsArrayContainer.innerHTML;
