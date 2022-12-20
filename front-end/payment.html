@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pay</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./popup.js" defer></script>
+</head>
+
+<body>
+
+    <section id="payment-popup-container" class="payment-popup-container">
+
+        <div class="payment-popup">
+            <div class="payment-popup-general">
+                <h1>General<br>Account</h1>
+                <h2>€10</h2>
+                <p>Tips&Tricks</p>
+                <p>Community</p>
+                <p>Diary</p>
+                <button>GET STARTED</button>
+            </div>
+
+            <div class="payment-popup-student">
+                <h1>Student<br>Account</h1>
+                <h2>Free</h2>
+                <p>Enter your key here:</p>
+                <input type="text" id="payment-popup-student-code">
+                <button>GET STARTED</button>
+            </div>
+            <img class="payment-popup-first-wave-img" src="./Assets/Images/Mask_Group_4.svg">
+            <img class="payment-popup-second-wave-img" src="./Assets/Images/Mask_Group_5.svg">
+            <button onclick="removePayment()" class="payment-popup-close-btn"><img class="payment-popup-first-close-img" src="./Assets/Images/Group 10.svg"></button>
+        </div>
+        
+        <div class="popup-overlay"></div>
+    </section>
+
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="./popup.js" defer></script>
+</head>
+
+<body>
+    <section id="signin-popup-container"class="signin-popup-container">
+        <div class="signin-popup" id="popup">
+            <div class="title">
+                <h1>Welcome!</h1>
+                <p>Create your account</p>
+            </div>
+            <div class="signin-popup-content">
+                <div class="signin-popup-account">
+                    <h1>Account Information</h1>
+                    <div class="signin-popup-input-container">
+                        <span class="signin-popup-icon"><i class="fa fa-envelope"></i></span>
+                        <input type="text" id="email" required>
+                    </div>
+                    <div class="signin-popup-input-container">
+                        <span class="signin-popup-icon"><i class="fa fa-lock"></i></span>
+                        <input type="password" id="password" require>
+                    </div>
+                    <div class="signin-popup-input-container">
+                        <span class="signin-popup-icon"><i class="fa fa-lock"></i></span>
+                        <input type="password" id="re-password" required>
+                    </div>
+                </div>
+                <div class="signin-popup-personal">
+                    <h1>Personal Information</h1>
+                    <div class="signin-popup-input-container">
+                        <span class="signin-popup-icon"><i class="fa fa-envelope"></i></span>
+                        <input type="text" id="1" required>
+                    </div>
+                    <div class="signin-popup-input-container">
+                        <span class="signin-popup-icon"><i class="fa fa-lock"></i></span>
+                        <input type="text" id="2" required>
+                    </div>
+                    <div class="signin-popup-input-container">
+                        <span class="signin-popup-icon"><i class="fa fa-lock"></i></span>
+                        <input type="text" id="3" required>
+                    </div>
+                </div>
+            </div>
+            <div class="signin-popup-btn-section">
+                <button class="signup-popup-btn">SIGN UP</button>
+                <div class="signin-popup-btn-section-text">
+                    <p>Already have an account?</p> <button  onclick="signupToLogo()" id="signin-popup-login-btn"  class="signin-popup-login-btn" >Log in</button>
+                </div>
+            </div>
+            <button  onclick="removeSignin()" class="signin-popup-btn"><img class="signin-popup-btn-img" src="./Assets/Images/Group 10.svg"></button>
+            <img class="signin-popup-wave1" src="./Assets/Images/Mask_Group_4.svg">
+            <img class="signin-popup-wave2" src="./Assets/Images/Mask_Group_5.svg">
+        </div>
+        <div class="popup-overlay"></div>
+    </section>
+</body>
+
+</html>
