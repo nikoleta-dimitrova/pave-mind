@@ -307,6 +307,13 @@ input[type=radio] {
   cursor: pointer;
 }
 
+.home-popup-button-checkbox button:hover {
+  background-color: var(--darkblue-color);
+  color: var(--white-color);
+}
+
+
+
 #home-popup-text {
   font-size: 1.2vw;
   color: var(--black-color);
@@ -1132,6 +1139,7 @@ select {
   background-color: transparent;
   border: none;
   cursor: pointer;
+  margin-right: .5vw;
 }
 
 .tips-big-btn-arrow {
@@ -1575,8 +1583,9 @@ select {
 
 .submit-popup-text {
   color: var(--black-color);
-  width: 20vw;
+  width: 31vw;
   font-size: 1.2vw;
+  margin-bottom: 2vw;
 }
 
 #test-popup-result-container {
@@ -1584,14 +1593,14 @@ select {
   justify-content: center;
 }
 
-#test-button-result-navigation {
+/* #test-button-result-navigation {
   transition: transform .5s ease;
 }
 
 #test-button-result-navigation:hover {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
-}
+} */
 
 
 /* Footer */

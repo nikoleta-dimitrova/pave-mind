@@ -6,6 +6,7 @@ const popup = document.getElementById("popup-blur");
 const closePopup = document.getElementById("community-popup-close");
 const popUpContent = document.querySelector(".home-popup-content");
 
+
 export function createQuestionsForm() {
     const questionsContainer = createQuestion();
     const submitButton = createSubmitButton();
@@ -53,6 +54,16 @@ export function createQuestion() {
     return questionsContainer
 }
 
+export const togglePopup = () => {
+    popUpVisible = !popUpVisible;
+    if (popUpVisible) {
+        popup.style.display = "block";
+    }
+    else {
+        popup.style.display = "none";
+    }
+}
+
 export function createSubmitButton() {
     const submitButton = document.createElement("button");
     submitButton.classList.add("primary-button");
@@ -68,50 +79,47 @@ export function createSubmitButton() {
         if (buttonResult) {
             buttonResult.remove()
         }
-        // let waveResult = document.querySelector('#resultContainer');
-        // if(waveResult) {
-        //     resultContainer.remove()
-        // }
+
         const resultsArrayContainer = document.createElement("div");
         resultContainer = document.createElement("p");
         resultContainer.classList.add("submit-popup-text");
-        buttonResult = document.createElement("button");
+        buttonResult = document.createElement("a");
         buttonResult.classList.add("tips-read-more");
         buttonResult.id = "test-button-result-navigation";
-        // waveResult = document.createElement("img");
-        // img["src"] = "./Assets/Images/wave-popup-blue.svg";
-        if (questionService.resultArray[0].result > 17 && questionService.resultArray[2].result > 17 && questionService.resultArray[1].result < 22) {
-            resultContainer.innerText = "You may have burnout. This test is not a diagnosis. We still advice you to contact a professional. Need help?";
+        const forwardArrow = document.createElement("span");
+        forwardArrow.classList.add('home-big-btn-arrow');
+        forwardArrow.setAttribute('id', 'home-articles-arrow');
+
+        const popupImg = document.createElement('img');
+        popupImg.src = "./Assets/Images/wave-popup-blue.svg";
+        popupImg.classList.add("home-popup-wave");
+
+        if (questionService.resultArray[0].result > 17 || questionService.resultArray[2].result > 17 || questionService.resultArray[1].result < 22) {
+            resultContainer.innerText = "You may have burnout. If you feel that stress is affecting your life or you suspect you may be undergoing burnout, do not delay speaking to a health-care professional. Only a psychologist or therapist can make a reliable diagnosis of burnout. Need more help?";
             resultsArrayContainer.appendChild(resultContainer);
             buttonResult.innerHTML = "Go to Tips&Tricks";
+            buttonResult.href = "./tips-and-tricks.html"
             resultsArrayContainer.appendChild(buttonResult);
-            // waveResult.innerHTML;
-            // resultsArrayContainer.appendChild(waveResult);
         } else {
-            resultContainer.innerText = "You may not have burnout. This test is not a diagnosis. We still advice you to contact a professional. Still want to keep yourself informed?";
+            resultContainer.innerText = "You may not have burnout. If you feel that stress is affecting your life or you suspect you may be undergoing burnout, do not delay speaking to a health-care professional. Only a psychologist or therapist can make a reliable diagnosis of burnout. Still want to keep yourself informed?";
             resultsArrayContainer.appendChild(resultContainer);
             buttonResult.innerHTML = "Go to Articles";
+            buttonResult.href = "./articles.html"
             resultsArrayContainer.appendChild(buttonResult);
-            // waveResult.innerHTML;
-            // resultsArrayContainer.appendChild(waveResult);
         }
         togglePopup()
-        popUpContent.innerHTML = resultsArrayContainer.innerHTML;
+        resultsArrayContainer.appendChild(forwardArrow)
+        popUpContent.innerHTML = "";
+        popUpContent.append(popupImg, resultsArrayContainer);
+
+        questionService.resultArray[0].result = 0;
+        questionService.resultArray[1].result = 0;
+        questionService.resultArray[2].result = 0;
     }
 
     submitButton.innerText = "Submit";
 
     return submitButton;
-}
-
-export const togglePopup = () => {
-    popUpVisible = !popUpVisible;
-    if (popUpVisible) {
-        popup.style.display = "block";
-    }
-    else {
-        popup.style.display = "none";
-    }
 }
 
 createQuestionsForm();
