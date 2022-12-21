@@ -33,14 +33,14 @@ function signupToLogo(){
     signTOlog()
 }
 
-function loginToPayment(){
-    async function logTOpay(){ 
+function signinToPayment(){
+    async function sigTOpay(){ 
         let response=await fetch("payment.html")
         console.log(response)
         let html_response=await response.text()
         document.querySelector("div#popup").innerHTML=html_response
     }
-    logTOpay()
+    sigTOpay()
 }
 
 function removeLogin(){
