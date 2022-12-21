@@ -3599,7 +3599,7 @@ select {
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 20vw;
   gap: 1vw;
 }
 
@@ -4309,6 +4309,137 @@ select {
 
   .signin-popup-wave2 {
     width: 29vw;
+    display: none;
+  }
+}
+/* Login popup responsive*/
+@media only screen and (max-width: 768px) {
+  .login-popup {
+    width: 60vw;
+    height: 50vh;
+  }
+  .login-popup-form h1 {
+    font-size: 3vw;
+  }
+  .login-popup-form p {
+    font-size: 1.7vw;
+    white-space: nowrap;
+    margin-bottom: 1vw;
+  }
+  .login-popup-signin-btn {
+    font-size: 1.7vw;
+    white-space: nowrap;
+  }
+  .login-popup-message-inner {
+    gap: 0.5vw;
+  }
+  .login-popup-form .login-popup-message {
+    gap: 2vw;
+  }
+  .login-popup-form input {
+    width: 23vw;
+    font-size: 1.7vw;
+    transform: translateX(-1vw);
+  }
+  .login-popup-form-btn {
+    border-radius: 4vw;
+    margin-top: 0.5vw;
+    font-size: 2vw;
+    width: 18vw;
+    padding: 1vw 1vw;
+  }
+  .login-popup-text h1 {
+    font-size: 3vw;
+  }
+  .login-popup-text p {
+    font-size: 2vw;
+    width: 20vw;
+  }
+  .login-popup-wave1 {
+    width: 45vw;
+  }
+  .login-popup-wave2 {
+    width: 45vw;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .login-popup {
+    width: 65vw;
+    height: 60vw;
+    gap: 8vw;
+  }
+  .login-popup-form {
+    margin-left: 4vw;
+  }
+  .login-popup-form h1 {
+    font-size: 3.5vw;
+  }
+  .login-popup-form p {
+    font-size: 2.5vw;
+    white-space: nowrap;
+    margin-bottom: 1vw;
+  }
+  .login-popup-signin-btn {
+    font-size: 2.5vw;
+    white-space: nowrap;
+  }
+  .login-popup-message-inner {
+    gap: 0.5vw;
+  }
+  .login-popup-form .login-popup-message {
+    gap: 2vw;
+  }
+  .login-popup-form input {
+    width: 25.5vw;
+    font-size: 2.2vw;
+    transform: translateX(-3vw);
+  }
+  .login-popup-text h1 {
+    font-size: 3.5vw;
+  }
+  .login-popup-text p {
+    font-size: 2.5vw;
+    width: 25vw;
+  }
+}
+@media only screen and (max-width: 460px) {
+  .login-popup {
+    width: 85vw;
+    height: 60vw;
+  }
+  .login-popup-form {
+    margin-left: 4vw;
+    gap: 0.6vw;
+  }
+  .login-popup-form h1 {
+    font-size: 4vw;
+  }
+  .login-popup-form p {
+    font-size: 3vw;
+    white-space: nowrap;
+  }
+  .login-popup-form-btn {
+    font-size: 3vw;
+    width: 18vw;
+    padding: 1vw 1vw;
+  }
+  .login-popup-signin-btn {
+    font-size: 3vw;
+    white-space: nowrap;
+  }
+  .login-popup-message-inner {
+    gap: 0.5vw;
+    transform: translateX(-3vw);
+  }
+  .login-popup-form .login-popup-message {
+    gap: 2.5vw;
+  }
+  .login-popup-form input {
+    width: 40.5vw;
+    font-size: 2.7vw;
+    transform: translateX(-10vw);
+  }
+  .login-popup-text {
     display: none;
   }
 }
