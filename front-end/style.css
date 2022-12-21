@@ -4165,6 +4165,197 @@ font-size: 1vw;
 }
 
 
+/* Responsive popup login */
+
+@media only screen and (max-width: 768px) {
+.signin-popup{
+  width: 60vw;
+    height: 50vh;
+}
+ 
+.title h1{
+  font-size: 3vw;
+}
+
+.title p{
+  font-size: 2vw;
+}
+.signin-popup-personal h1 {
+  font-size: 2vw;
+
+}
+
+.account-popup-data {
+  width: 20.2vw;
+  font-size: 1.7vw;
+}
+
+.signin-popup-personal input {
+  width: 23vw;
+  font-size: 1.7vw;
+}
+
+.signup-popup-btn {
+  background-color: var(--lightblue-color);
+  color: var(--darkblue-color);
+  font-family: var(--text-font);
+  font-weight: 600;
+  border-radius: 4vw;
+  border: none;
+  margin-top: 1vw;
+  font-size: 2vw;
+  width: 18vw;
+  padding: 1vw 1vw;
+}
+
+.signin-popup-line {
+  height: 18vw;
+  margin-top: 4.5vw;
+}
+
+.signin-popup-btn-section p {
+  font-family: var(--text-font);
+  font-size: 1.7vw;
+}
+
+.signin-popup-login-btn {
+  width: 5vw;
+  font-size: 1.7vw;
+}
+.signin-popup-wave1 {
+  width: 31vw;
+}
+
+.signin-popup-wave2 {
+  width: 27vw;
+}
+}
 
 
+@media only screen and (max-width: 600px) {
+  .signin-popup{
+    width: 65vw;
+      height: 60vw;
+  }
+   
+  .title h1{
+    font-size: 3.5vw;
+  }
+  
+  .title p{
+    font-size: 2.5vw;
+  }
+  .signin-popup-personal h1 {
+    font-size: 2.5vw;
+  
+  }
+  
+  .account-popup-data {
+    width: 20.2vw;
+    font-size: 2.2vw;
+  }
+  
+  .signin-popup-personal input {
+    width: 25.5vw;
+    font-size: 2.2vw;
+  }
+  
+  
 
+  .signin-popup-line {
+    height: 21vw;
+    margin-top: 4.1vw;
+  }
+  
+  .signin-popup-btn-section p {
+    font-family: var(--text-font);
+    font-size: 2.2vw;
+  }
+  
+  .signin-popup-login-btn {
+    width: 7vw;
+    font-size: 2.2vw;
+  }
+  .signin-popup-wave1 {
+    width: 35vw;
+  }
+  
+  .signin-popup-wave2 {
+    width: 29vw;
+  }
+  }
+
+  @media only screen and (max-width: 460px) {
+   
+  .signin-popup{
+    width: 85vw;
+    min-height: 105vw;
+  }
+  .title h1 {
+    font-size: 4vw;
+}
+.title p {
+  font-size: 3vw;
+}
+
+.signin-popup-personal h1 {
+  font-size: 3.2vw;
+}
+
+.account-popup-data {
+  width: 47vw;
+  font-size: 2.7vw;
+}
+
+.signin-popup-personal input {
+  width: 50vw;
+  font-size: 2.7vw;
+}
+
+.signin-popup-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 4vw;
+  flex-direction: column;
+}
+
+.signup-popup-btn {
+  
+  margin-top: 2vw;
+  font-size: 3vw;
+  width: 20vw;
+  padding: 1vw 1vw;
+}
+
+.signin-popup-btn-section p {
+  font-family: var(--text-font);
+  font-size: 2.7vw;
+}
+
+.signin-popup-login-btn {
+  width: 8vw;
+  font-size: 2.7vw;
+}
+
+.signin-popup-line {
+  height: 21vw;
+  margin-top: 4.1vw;
+  display:none;
+}
+
+.signin-popup-wave1 {
+  width: 35vw;
+  display:none;
+}
+
+.signin-popup-wave2 {
+  width: 29vw;
+  display:none;
+}
+  }
+  
+ 
+
+ 
