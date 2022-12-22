@@ -15,25 +15,43 @@
     <section id="payment-popup-container" class="payment-popup-container">
 
         <div class="payment-popup">
-            <div class="payment-popup-general">
-                <h1>General<br>Account</h1>
-                <h2>€10</h2>
-                <p>Tips&Tricks</p>
-                <p>Community</p>
-                <p>Diary</p>
-                <button>GET STARTED</button>
+           <div class="payment-main-content">
+
+
+            <div class="payment-left-square">
+            <div class="payment-left-square-content">
+            <p class="payment-headers">GENERAL<br> ACCOUNT</p>
             </div>
 
-            <div class="payment-popup-student">
-                <h1>Student<br>Account</h1>
-                <h2>Free</h2>
-                <p>Enter your key here:</p>
-                <input type="text" id="payment-popup-student-code">
-                <button>GET STARTED</button>
+            <p class="payment-amount"> 10 </p>
+
+            <div class="payment-left-features">
+            <p>Tips&Tricks</p>
+            <p>Community</p>
+            <p>Diary</p>
             </div>
-            <img class="payment-popup-first-wave-img" src="./Assets/Images/Mask_Group_4.svg">
-            <img class="payment-popup-second-wave-img" src="./Assets/Images/Mask_Group_5.svg">
-            <button onclick="removePayment()" class="payment-popup-close-btn"><img class="payment-popup-first-close-img" src="./Assets/Images/Group 10.svg"></button>
+
+            </div>
+
+
+
+            <div class="payment-right-square">
+                <div class="payment-right-square-content">
+                    <p class="payment-headers">STUDENT<br> ACCOUNT</p>
+                    </div>
+
+             <p class="payment-amount"> FREE </p>   
+             </div>
+
+
+
+
+
+           </div>
+           <button onclick="removeSignin()" class="signin-popup-btn"><img class="signin-popup-btn-img"
+            src="./Assets/Images/Group 10.svg"></button>
+           <img class="payment-popup-wave1" src="./Assets/Images/signup-popup-wave.svg">
+           <img class="payment-popup-wave2" src="./Assets/Images/signup-popup-wave-sand.svg">
         </div>
         
         <div class="popup-overlay"></div>
