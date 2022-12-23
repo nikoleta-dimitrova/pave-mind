@@ -2120,6 +2120,7 @@ select {
 
   #articles-small-button {
     font-size: clamp(.6rem, 1.2vw, 3rem);
+    width: 16vw;
   }
 
   #articles-big-button {
