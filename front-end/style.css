@@ -17,17 +17,17 @@ body {
   /* Color variables */
   --black-color: #000000;
   --white-color: #fbfbfb;
-  --darkblue-color: #687DAC;
-  --lightblue-color: #D2E0EE;
-  --midblue-color: #9EB0CE;
-  --midblueopacity-color: #E4EAF2;
-  --darkblue-color: #687DAC;
-  --sand-color: #F0D7BA;
+  --darkblue-color: #687dac;
+  --lightblue-color: #d2e0ee;
+  --midblue-color: #9eb0ce;
+  --midblueopacity-color: #e4eaf2;
+  --darkblue-color: #687dac;
+  --sand-color: #f0d7ba;
   --grey-color: #757575;
 
   /* Font variables */
-  --headings-font: 'Patua One', cursive;
-  --text-font: 'Maven Pro', sans-serif;
+  --headings-font: "Patua One", cursive;
+  --text-font: "Maven Pro", sans-serif;
 
   /* Size variables */
   --navigationtext-size: 1.1vw;
@@ -46,7 +46,7 @@ body {
   font-family: var(--text-font);
   font-weight: var(--bold-font);
   overflow: hidden;
-  padding-block: .3vw;
+  padding-block: 0.3vw;
 }
 
 .navbar.active {
@@ -73,7 +73,7 @@ body {
 
 .navigation-menu li {
   list-style: none;
-  transition: transform .5s ease;
+  transition: transform 0.5s ease;
 }
 
 .navigation-menu li a {
@@ -219,8 +219,6 @@ nav ul li:hover {
   }
 }
 
-
-
 /* BUTTON PROPERTIES - Primary and secondary */
 .primary-button {
   background-color: var(--lightblue-color);
@@ -269,7 +267,7 @@ nav ul li:hover {
   background-color: var(--color-white);
 }
 
-input[type=radio] {
+input[type="radio"] {
   border: none;
   width: 100%;
   height: 1.1vw;
@@ -311,8 +309,6 @@ input[type=radio] {
   background-color: var(--darkblue-color);
   color: var(--white-color);
 }
-
-
 
 #home-popup-text {
   font-size: 1.2vw;
@@ -386,6 +382,7 @@ label {
   font-size: 1.3vw;
   cursor: pointer;
   position: relative;
+  transition: 0.4s;
   z-index: 2;
 }
 
@@ -619,7 +616,7 @@ label {
 #search-input {
   width: 100%;
   padding-left: 1vw;
-  border: .1vw solid var(--darkblue-color);
+  border: 0.1vw solid var(--darkblue-color);
   border-radius: 17px 0 0 17px;
   border-right: none;
   outline: none;
@@ -634,12 +631,12 @@ label {
   outline: none;
   cursor: pointer;
   padding-block: 0.5rem;
-  border: .1vw solid var(--darkblue-color);
+  border: 0.1vw solid var(--darkblue-color);
   border-radius: 0 17px 17px 0;
   border-left: none;
   background: none;
   font-size: 1vw;
-  border-left: .1vw solid var(--darkblue-color);
+  border-left: 0.1vw solid var(--darkblue-color);
   color: var(--darkblue-color);
 }
 
@@ -656,7 +653,7 @@ label {
   border: 0.1vw solid var(--darkblue-color);
   font-size: 1vw;
   padding-block: 0.3rem;
-  padding-left: .5vw;
+  padding-left: 0.5vw;
 }
 
 .articles-filter-item {
@@ -685,7 +682,6 @@ select {
 #articles-filter input:focus {
   outline: none;
 }
-
 
 /*---- Big article properties ----*/
 .articles-big {
@@ -732,6 +728,7 @@ select {
 #articles-big-button {
   width: 8.7vw;
   font-size: 1.1vw;
+  transition: 0.4s;
 }
 
 #articles-big-button:hover .articles-big-btn-arrow {
@@ -796,7 +793,7 @@ select {
   height: 100%;
   background-color: var(--midblueopacity-color);
   border-radius: 17px;
-  transition: transform .5s ease;
+  transition: transform 0.5s ease;
 }
 
 .article-save-button {
@@ -809,7 +806,7 @@ select {
   z-index: 100;
   stroke-width: 0.11vw;
   fill: transparent;
-  transition: transform .5s ease;
+  transition: transform 0.5s ease;
   z-index: 5;
 }
 
@@ -826,14 +823,15 @@ select {
   align-items: center;
   background-color: var(--darkblue-color);
   border-radius: 20px;
-  -webkit-animation: scale-up-hor-right 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-  animation: scale-up-hor-right 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  -webkit-animation: scale-up-hor-right 2s cubic-bezier(0.39, 0.575, 0.565, 1)
+    both;
+  animation: scale-up-hor-right 2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
 .articles-saved-text p {
   color: var(--white-color);
   font-family: var(--text-font);
-  font-size: 1vw
+  font-size: 1vw;
 }
 
 @-webkit-keyframes scale-up-hor-right {
@@ -868,15 +866,15 @@ select {
 
 .articles-information {
   padding-top: 1.2vw;
-  padding-left: .6vw;
+  padding-left: 0.6vw;
   padding-bottom: 1vw;
   border-bottom-left-radius: 17px;
   border-bottom-right-radius: 17px;
-  transition: transform .5s ease;
+  transition: transform 0.5s ease;
 }
 
 .articles-date {
-  color: #B5B5B5;
+  color: #b5b5b5;
   font-size: 1vw;
   font-family: var(--text-font);
 }
@@ -884,19 +882,20 @@ select {
 .articles-headline {
   font-size: 1.3vw;
   font-family: var(--headings-font);
-  margin-top: .5vw;
+  margin-top: 0.5vw;
 }
 
 .articles-preview {
   font-size: 1vw;
   font-family: var(--text-font);
-  margin-top: .8vw;
+  margin-top: 0.8vw;
   margin-bottom: 1.2vw;
 }
 
 #articles-small-button {
   width: 7.3vw;
   font-size: 0.9vw;
+  transition: 0.4s;
 }
 
 #articles-small-button:hover .articles-small-btn-arrow {
@@ -908,7 +907,7 @@ select {
   border-width: 0 0.14vw 0.14vw 0;
   display: inline-block;
   padding: 0.15vw;
-  margin-left: .2vw;
+  margin-left: 0.2vw;
   transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
 }
@@ -1010,7 +1009,7 @@ select {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-inline: .5vw;
+  padding-inline: 0.5vw;
   padding-bottom: 2vw;
   width: 100%;
   height: 30vh;
@@ -1041,7 +1040,6 @@ select {
   font-family: var(--text-font);
   font-weight: var(--bold-font);
   font-size: 1vw;
-
 }
 
 .carousel-button-container {
@@ -1125,7 +1123,6 @@ select {
   font-family: var(--text-font);
   width: 49vw;
   text-align: left;
-
 }
 
 .tips-read-more {
@@ -1139,7 +1136,7 @@ select {
   background-color: transparent;
   border: none;
   cursor: pointer;
-  margin-right: .5vw;
+  margin-right: 0.5vw;
 }
 
 .tips-big-btn-arrow {
@@ -1225,7 +1222,6 @@ select {
   flex-direction: column;
 }
 
-
 /*---- Community post designs ----*/
 .community-create-post {
   margin-top: 5vw;
@@ -1240,7 +1236,6 @@ select {
 .community-create-post img {
   width: 2.9vw;
   margin-left: 1.5vw;
-
 }
 
 .community-create-post input {
@@ -1579,6 +1574,7 @@ select {
   font-size: 1.3vw;
   align-self: flex-start;
   margin-bottom: 7vw;
+  transition: 0.4s;
 }
 
 .submit-popup-text {
@@ -1601,7 +1597,6 @@ select {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
 } */
-
 
 /* Footer */
 .footer-container {
@@ -1724,7 +1719,6 @@ select {
   background-color: var(--midblueopacity-color);
 }
 
-
 /* -----------RESPONSIVE------------- */
 @media only screen and (max-width: 768px) {
   /* ---- Navigation menu ----*/
@@ -1732,7 +1726,7 @@ select {
     display: none !important;
     position: absolute;
     flex-direction: column;
-    background-color: #E4EAF2;
+    background-color: #e4eaf2;
     z-index: 1000;
     width: 0;
     text-align: center;
@@ -1759,7 +1753,7 @@ select {
 
   .nav-item {
     margin: 3vw 0;
-    font-size: clamp(.9rem, 1.2vw, 3rem);
+    font-size: clamp(0.9rem, 1.2vw, 3rem);
   }
 
   .hamburger {
@@ -2020,7 +2014,6 @@ select {
     font-family: var(--text-font);
     width: 65vw;
     text-align: left;
-
   }
 
   .tips-tricks-title {
@@ -2028,7 +2021,6 @@ select {
     font-weight: var(--semibold-font);
     text-align: left;
     font-size: 3vw;
-
   }
 
   .tips-read-more {
@@ -2062,7 +2054,7 @@ select {
   }
 
   .articles-saved-text p {
-    font-size: clamp(.7rem, 1.2vw, 3rem);
+    font-size: clamp(0.7rem, 1.2vw, 3rem);
   }
 
   .search-box {
@@ -2070,12 +2062,12 @@ select {
   }
 
   #search-input {
-    font-size: clamp(.4rem, 1.2vw, 3rem);
+    font-size: clamp(0.4rem, 1.2vw, 3rem);
   }
 
   #articles-filter {
     width: 12vw;
-    font-size: clamp(.4rem, 1.5vw, 3rem);
+    font-size: clamp(0.4rem, 1.5vw, 3rem);
   }
 
   select {
@@ -2115,17 +2107,17 @@ select {
   .articles-preview,
   .articles-big-info h4,
   #articles-big-text {
-    font-size: clamp(.7rem, 1.2vw, 3rem);
+    font-size: clamp(0.7rem, 1.2vw, 3rem);
   }
 
   #articles-small-button {
-    font-size: clamp(.6rem, 1.2vw, 3rem);
+    font-size: clamp(0.6rem, 1.2vw, 3rem);
     width: 16vw;
   }
 
   #articles-big-button {
     width: 5.5rem;
-    font-size: clamp(.7rem, 1.5vw, 3rem);
+    font-size: clamp(0.7rem, 1.5vw, 3rem);
   }
 
   .articles-small-btn-arrow,
@@ -2136,7 +2128,7 @@ select {
   }
 
   .articles-headline {
-    font-size: clamp(.9rem, 1.2vw, 3rem);
+    font-size: clamp(0.9rem, 1.2vw, 3rem);
   }
 
   .articles-big-info h1 {
@@ -2247,21 +2239,21 @@ select {
     border: 6px;
   }
 
-  input[type=radio] {
+  input[type="radio"] {
     border: none;
     width: 100%;
     height: 1.5vw;
   }
 
-    /* ---- Popup test ---- */
-    .submit-popup-text {
-      font-size: 2vw;
-      width: 50vw;
-    }
-  
-    #test-button-result-navigation {
-      font-size: 2vw;
-    }
+  /* ---- Popup test ---- */
+  .submit-popup-text {
+    font-size: 2vw;
+    width: 50vw;
+  }
+
+  #test-button-result-navigation {
+    font-size: 2vw;
+  }
 
   /* ---- Popup home ---- */
   .home-popup-content {
@@ -2378,7 +2370,6 @@ select {
     font-family: var(--text-font);
     width: 66vw;
     text-align: left;
-
   }
 
   .tips-tricks-title {
@@ -2431,13 +2422,13 @@ select {
   .article-save-button {
     height: 4vh;
     width: 3vw;
-    stroke-width: .3vw;
+    stroke-width: 0.3vw;
     right: 2vw;
   }
 
   #articles-filter {
     width: 15vw;
-    font-size: clamp(.6rem, 1.2vw, 3rem);
+    font-size: clamp(0.6rem, 1.2vw, 3rem);
   }
 
   select {
@@ -2452,7 +2443,7 @@ select {
   }
 
   #search-input {
-    font-size: clamp(.6rem, 1.2vw, 3rem);
+    font-size: clamp(0.6rem, 1.2vw, 3rem);
   }
 
   .search-button {
@@ -2501,21 +2492,21 @@ select {
     margin-left: -9vw;
   }
 
-  input[type=radio] {
+  input[type="radio"] {
     border: none;
     width: 100%;
     height: 2vw;
   }
 
-    /* ---- Popup test ---- */
-    .submit-popup-text {
-      font-size: 2.5vw;
-      width: 55vw;
-    }
-  
-    #test-button-result-navigation {
-      font-size: 2.5vw;
-    }
+  /* ---- Popup test ---- */
+  .submit-popup-text {
+    font-size: 2.5vw;
+    width: 55vw;
+  }
+
+  #test-button-result-navigation {
+    font-size: 2.5vw;
+  }
 
   /* ---- Popup home ---- */
   .home-popup-content {
@@ -2557,9 +2548,7 @@ select {
   .wave-footer-bottom-img {
     margin-bottom: -1vh;
   }
-
 }
-
 
 @media only screen and (max-width: 460px) {
   /* Home Main Responsive */
@@ -2811,7 +2800,6 @@ select {
     font-family: var(--text-font);
     width: 76vw;
     text-align: left;
-
   }
 
   .tips-tricks-title {
@@ -2896,7 +2884,7 @@ select {
 
   .article-save-button {
     width: 4.2vw;
-    stroke-width: .3vw;
+    stroke-width: 0.3vw;
   }
 
   .articles-saved-text {
@@ -2939,7 +2927,7 @@ select {
     margin-left: -8vw;
   }
 
-  input[type=radio] {
+  input[type="radio"] {
     border: none;
     width: 100%;
     height: 2.5vw;
@@ -2996,7 +2984,6 @@ select {
 }
 
 @media only screen and (max-width: 350px) {
-
   #community-popup,
   #result-popup {
     height: 18vh;
@@ -3007,7 +2994,7 @@ select {
 
 ::placeholder {
   /*All placeholders*/
-  color: #B5B5B5;
+  color: #b5b5b5;
   opacity: 1;
 }
 
@@ -3061,13 +3048,9 @@ select {
   height: 72vw;
   background-color: var(--white-color);
   border-radius: 1.2vw;
-  border: 1px solid rgb(104, 125, 172, .30);
+  border: 1px solid rgb(104, 125, 172, 0.3);
   background-color: white;
-
-
-
 }
-
 
 .account-account-title {
   color: var(--darkblue-color);
@@ -3097,9 +3080,7 @@ select {
   display: flex;
   gap: 1vw;
   align-items: center;
-
 }
-
 
 .account-read-more {
   width: 9.3vw;
@@ -3120,7 +3101,6 @@ select {
   font-size: 1.2vw;
   width: 9.4vw;
 }
-
 
 #account-second-btn {
   background-color: var(--white-color);
@@ -3146,8 +3126,6 @@ select {
   font-size: 1.2vw;
 }
 
-
-
 .account-inputs {
   display: flex;
   width: 19.5vw;
@@ -3159,15 +3137,13 @@ select {
   font-size: 1vw;
   font-family: var(--text-font);
   font-weight: var(--bold-font);
-
 }
 
 .account-card-third-part-whole {
-  background-color: #E4EAF2;
+  background-color: #e4eaf2;
   border-radius: 1.2vw;
   width: 47vw;
   padding: 1vw 0vw 2vw 1.8vw;
-
 }
 
 .account-card-third-part-inputs {
@@ -3196,7 +3172,7 @@ select {
 #account-change-password {
   font-family: var(--text-font);
   font-weight: var(--bold-font);
-  color: #B5B5B5;
+  color: #b5b5b5;
   cursor: pointer;
   font-size: 1vw;
 }
@@ -3206,14 +3182,13 @@ select {
   align-items: flex-end;
   gap: 7.2vw;
   margin-top: 2vw;
-
 }
 
 .account-delete-text {
   font-family: var(--text-font);
   font-weight: var(--regular-font);
   font-size: 1.2vw;
-  color: #B5B5B5;
+  color: #b5b5b5;
 }
 
 #account-fourth-btn {
@@ -3227,7 +3202,6 @@ select {
   padding: 0.5vw 1.3vw;
   font-size: 1.3vw;
 }
-
 
 /*  ACCOUNT POPUP   */
 
@@ -3260,7 +3234,6 @@ select {
   background-color: var(--white-color);
 }
 
-
 .account-popup-container {
   display: flex;
   flex-direction: column;
@@ -3287,7 +3260,6 @@ select {
   cursor: pointer;
 }
 
-
 .account-popup-inputs {
   display: flex;
   width: 42vw;
@@ -3300,9 +3272,6 @@ select {
   font-family: var(--text-font);
   font-weight: var(--bold-font);
 }
-
-
-
 
 .account-popup-data {
   margin: 0vw 1vw 1vw;
@@ -3358,15 +3327,11 @@ select {
   width: 46.7vw;
 }
 
-
-
 /*  ACCOUNT RESPONSIVE - 768px  */
 
 @media only screen and (max-width: 768px) {
-
   .account-options {
     display: none;
-
   }
 
   .account-whole-card {
@@ -3385,7 +3350,6 @@ select {
 
   .account-avatar {
     font-size: 2.8vw;
-
   }
 
   .account-card-second-part {
