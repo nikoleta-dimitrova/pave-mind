@@ -1446,6 +1446,7 @@ input[type="radio"] {
   height: 2vw;
   font-size: 0.9vw;
   display: flex;
+  transition: 0.4s;
   justify-content: center;
   align-items: center;
   gap: 0.3vw;
