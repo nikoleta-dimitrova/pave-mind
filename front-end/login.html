@@ -18,12 +18,14 @@
             <div class="login-popup-form">
                 <h1>Hello!</h1>
                 <p>Log in to your account</p>
-                <div class="login-popup-input-container">
-                    <input type="text" id="email" placeholder="Email" required>
-                    <input type="password" id="password" placeholder="Password" required>
-                </div>
+                <form action="index.html" class="login-popup-input-container">
+                    <h2 class="login-popup-text-details">Email</h2>
+                    <input type="text" id="email" placeholder="example@email.com" required>
+                    <h2 class="login-popup-text-details">Password</h2>
+                    <input type="password" id="password" placeholder="••••••••••••••" required>
+                    <button class="login-popup-form-btn">Log in</button>
+                </form>
                 <div class="login-popup-message">
-                    <button onclick="loginToPayment()" class="login-popup-form-btn">LOG IN</button>
                     <div class="login-popup-message-inner">
                         <P>Don't have an account?</P> <button onclick="loginToSignup()" id="lognin-signup-btn"
                             class="login-popup-signin-btn">Sign up</button>

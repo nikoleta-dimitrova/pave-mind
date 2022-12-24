@@ -3540,7 +3540,14 @@ select {
   position: relative;
   z-index: 1;
 }
-
+.login-popup-text-details {
+  display: flex;
+  justify-content: left;
+  width: 18vw;
+  font-size: 1vw;
+  font-family: var(--text-font);
+  color: var(--black-color);
+}
 .login-popup-form {
   display: flex;
   flex-direction: column;
@@ -3596,8 +3603,8 @@ select {
 }
 
 .login-popup-input-container {
-  position: relative;
   display: flex;
+  align-items: center;
   flex-direction: column;
   width: 20vw;
   gap: 1vw;
@@ -3618,8 +3625,6 @@ select {
   font-weight: 600;
   font-size: 1vw;
 }
-
-
 
 .login-popup-form-btn:hover {
   background-color: var(--darkblue-color);
@@ -3682,14 +3687,14 @@ select {
   width: 1.5vw;
   height: 1.5vw;
 }
-#payment-popup-container{
+#payment-popup-container {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.payment-popup{
+.payment-popup {
   background-color: var(--white-color);
   width: 54vw;
   height: 34vw;
@@ -3697,17 +3702,15 @@ select {
   position: relative;
   z-index: 1;
 }
-.payment-main-content{
+.payment-main-content {
   display: flex;
   justify-content: center;
   height: 34vw;
   align-items: center;
   gap: 5vw;
-
-
 }
 
-.payment-left-square{
+.payment-left-square {
   width: 17vw;
   height: 21vw;
   border-radius: 1vw;
@@ -3715,7 +3718,7 @@ select {
   background-color: white;
 }
 
-.payment-right-square{
+.payment-right-square {
   width: 17vw;
   height: 21vw;
   border-radius: 1vw;
@@ -3757,40 +3760,40 @@ select {
   position: relative;
 }
 
-.payment-headers{
-  font-family:var(--headings-font);
+.payment-headers {
+  font-family: var(--headings-font);
   color: var(--darkblue-color);
   font-weight: 400;
-  font-size:1.2vw;
+  font-size: 1.2vw;
   display: flex;
-    justify-content: center;
-    margin-top:1.2vw;
+  justify-content: center;
+  margin-top: 1.2vw;
 }
 
-.payment-amount{
-  font-family:var(--headings-font);
+.payment-amount {
+  font-family: var(--headings-font);
   color: var(--black-color);
   font-weight: 400;
-  font-size:1.5vw;
+  font-size: 1.5vw;
   display: flex;
-    justify-content: center;
+  justify-content: center;
 }
 
-.payment-left-square{
-  display:flex;
-  flex-direction: column;
-  gap:1.5vw;
-}
-
-.payment-right-square{
-  display:flex;
-  flex-direction: column;
-  gap:1.5vw;
-}
-.payment-left-features{
+.payment-left-square {
   display: flex;
   flex-direction: column;
-gap:0.5vw;
+  gap: 1.5vw;
+}
+
+.payment-right-square {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5vw;
+}
+.payment-left-features {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5vw;
   align-items: center;
   font-family: var(--text-font);
 }
@@ -4074,6 +4077,10 @@ gap:0.5vw;
   .signin-popup-personal h1 {
     font-size: 2vw;
   }
+  .login-popup-text-details {
+    font-size: 1.7vw;
+    width: 22vw;
+  }
 
   .account-popup-data {
     width: 20.2vw;
@@ -4137,7 +4144,6 @@ gap:0.5vw;
   .signin-popup-personal h1 {
     font-size: 2.5vw;
   }
-
   .account-popup-data {
     width: 22vw;
     font-size: 2.2vw;
@@ -4186,7 +4192,10 @@ gap:0.5vw;
   .signin-popup-personal h1 {
     font-size: 3.2vw;
   }
-
+  .login-popup-text-details {
+    font-size: 2.7vw;
+    width: 35vw;
+  }
   .account-popup-data {
     width: 47vw;
     font-size: 2.7vw;
@@ -4268,6 +4277,7 @@ gap:0.5vw;
     font-size: 1.7vw;
     transform: translateX(-1vw);
   }
+
   .login-popup-form-btn {
     border-radius: 4vw;
     margin-top: 0.5vw;
@@ -4306,6 +4316,10 @@ gap:0.5vw;
     white-space: nowrap;
     margin-bottom: 1vw;
   }
+  .login-popup-text-details {
+    font-size: 2.2vw;
+    width: 25vw;
+  }
   .login-popup-signin-btn {
     font-size: 2.5vw;
     white-space: nowrap;
@@ -4319,7 +4333,6 @@ gap:0.5vw;
   .login-popup-form input {
     width: 25.5vw;
     font-size: 2.2vw;
-    transform: translateX(-3vw);
   }
   .login-popup-text h1 {
     font-size: 3.5vw;
@@ -4334,12 +4347,25 @@ gap:0.5vw;
     width: 85vw;
     height: 60vw;
   }
+  .login-popup-input-container {
+    gap: 2vw;
+  }
+  .login-popup-wave1 {
+    display: none;
+  }
+  .login-popup-wave2 {
+    display: none;
+  }
   .login-popup-form {
     margin-left: 4vw;
     gap: 0.6vw;
   }
   .login-popup-form h1 {
     font-size: 4vw;
+  }
+  .login-popup-text-details {
+    font-size: 2.7vw;
+    width: 38vw;
   }
   .login-popup-form p {
     font-size: 3vw;
@@ -4364,7 +4390,6 @@ gap:0.5vw;
   .login-popup-form input {
     width: 40.5vw;
     font-size: 2.7vw;
-    transform: translateX(-10vw);
   }
   .login-popup-text {
     display: none;
