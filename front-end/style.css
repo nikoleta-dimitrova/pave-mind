@@ -716,7 +716,7 @@ select {
     margin-left: 1vw;
   }
   .diary-first-question-field input[type="radio"] {
-    width: 2.6vw;
+    width: 1.5vw;
   }
   .diary-first-container .diary-first-buttons {
     width: 83vw;
@@ -776,7 +776,8 @@ select {
     white-space: normal;
   }
   .diary-first-question-field input[type="radio"] {
-    width: 3.5vw;
+    width: 2vw;
+    transform: translateX(-1.3vw);
   }
   .diary-first-container .diary-first-buttons {
     width: 83vw;
@@ -816,7 +817,7 @@ select {
     padding: 0.9vw;
   }
   .diary-first-question-field input[type="radio"] {
-    width: 4.5vw;
+    width: 2vw;
   }
   li#diary-first-category {
     font-size: 1.5vw;
@@ -857,7 +858,7 @@ select {
 }
 input[type="radio"] {
   border: none;
-  width: 1.7vw;
+  width: 1.1vw;
 }
 .diary-first-radiobuttons {
   display: flex;
@@ -1192,13 +1193,12 @@ input[type="radio"] {
   }
 }
 .diary-third-container {
-  height: 68vh;
+  height: 72vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin-top: 1.05vw;
 }
 
 .diary-third-header {
@@ -1468,7 +1468,7 @@ input[type="radio"] {
 .diary-fourth-buttons {
   width: 35vw;
   display: flex;
-  justify-content: right;
+  gap: 16vw;
   padding-top: 1.2vw;
 }
 
