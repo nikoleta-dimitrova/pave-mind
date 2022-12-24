@@ -23,32 +23,47 @@
             <p class="payment-headers">GENERAL<br> ACCOUNT</p>
             </div>
 
-            <p class="payment-amount"> 10 </p>
+            <p class="payment-amount"> 10€</p>
 
             <div class="payment-left-features">
             <p>Tips&Tricks</p>
             <p>Community</p>
             <p>Diary</p>
+            
+            </div>
+            <button class="payment-getstarted-btn" >Get started</button>
             </div>
 
-            </div>
 
-
-
+<form action="index.html">
             <div class="payment-right-square">
                 <div class="payment-right-square-content">
                     <p class="payment-headers">STUDENT<br> ACCOUNT</p>
                     </div>
 
              <p class="payment-amount"> FREE </p>   
-             </div>
 
+             <div class="payment-right-features">
+
+<div class="payment-key-section">
+                <p class="payment-key-text">Enter your key here:</p>
+                <div class="payment-tooltip"><img src="./Assets/Images/tooltip.svg" id="payment-tooltip-img"><span class="payment-tooltiptext">Key provided by university</span>
+                  </div>
+                </div>
+
+                
+
+                </div>
+                <input id="payment-key-field" type="text" placeholder="" minlength="12"   required />
+                <button class="payment-getstarted-btn" id="payment-right-getstarted-btn" >Get started</button>
+             </div>
+            </form>
 
 
 
 
            </div>
-           <button onclick="removeSignin()" class="signin-popup-btn"><img class="signin-popup-btn-img"
+           <button onclick="removeSignin()" class="payment-popup-btn"><img class="payment-popup-btn-img"
             src="./Assets/Images/Group 10.svg"></button>
            <img class="payment-popup-wave1" src="./Assets/Images/signup-popup-wave.svg">
            <img class="payment-popup-wave2" src="./Assets/Images/signup-popup-wave-sand.svg">

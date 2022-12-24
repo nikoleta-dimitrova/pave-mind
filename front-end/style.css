@@ -3687,6 +3687,9 @@ select {
   width: 1.5vw;
   height: 1.5vw;
 }
+
+/* Payment popup */
+
 #payment-popup-container {
   height: 100vh;
   display: flex;
@@ -3714,16 +3717,18 @@ select {
   width: 17vw;
   height: 21vw;
   border-radius: 1vw;
-  border: 1px solid var(--darkblue-color);
+  border: 0.1vw solid var(--darkblue-color);
   background-color: white;
+  align-items: center;
 }
 
 .payment-right-square {
   width: 17vw;
   height: 21vw;
   border-radius: 1vw;
-  border: 1px solid var(--darkblue-color);
+  border: 0.1vw solid var(--darkblue-color);
   background-color: white;
+  align-items: center;
 }
 
 .payment-popup-wave1 {
@@ -3792,11 +3797,357 @@ select {
 }
 .payment-left-features {
   display: flex;
-  flex-direction: column;
-  gap: 0.5vw;
+    flex-direction: column;
+    gap: 1vw;
+    align-items: center;
+    font-family: var(--text-font);
+    font-size: 1.3vw;
+}
+.payment-getstarted-btn{
+  background-color: var(--lightblue-color);
+  color: var(--darkblue-color);
+  font-family: var(--text-font);
+  font-weight: 600;
+  padding: 0.32vw 1.62vw;
+  border-radius: 1vw;
+  cursor: pointer;
+  border: none;
+  font-size: 1vw;
+}
+
+
+.payment-tooltip {
+  position: relative;
+  display: inline-block;
+  width: 2vw;
+  height: 2vw;
+  z-index: 1;
+}
+
+.payment-key-section{
+  display: flex;
+  flex-direction: row;
+  gap: 0.6vw;
   align-items: center;
+  justify-content: center;
+}
+
+.payment-tooltip .payment-tooltiptext {
+  
+
+  margin-left: 2vw;
+    position: absolute;
+    z-index: 1;
+    font-family: var(--text-font);
+    font-size: 1vw;
+    visibility: hidden;
+    width: 14vw;
+    background-color: #687dac;
+    color: #fff;
+    text-align: center;
+    border-radius: 2vw;
+    padding: 0.5vw
+}
+
+.payment-tooltip:hover .payment-tooltiptext {
+  visibility: visible;
+}
+#payment-tooltip-img{
+  margin-top: 0.3vw;
+  width: 1.6vw;
+  position: absolute;
+  height: 1.6vw;
+}
+#payment-key-field{
+  border-radius: 2vw;
+  border: 0.1vw solid var(--darkblue-color);
+  width: 15vw;
+  outline: 0;
+  height: 1.5vw;
+
+}
+
+.payment-key-text{
+  font-size: 1.3vw;
   font-family: var(--text-font);
 }
+
+#payment-right-getstarted-btn{
+  margin-top: 1.36vw;
+}
+
+.payment-popup-btn-img {
+  width: 1.5vw;
+    height: 1.5vw;
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.payment-popup-btn {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  top: 1.5vw;
+  right: 2vw;
+  position: absolute;
+  z-index: 1;
+  width: 1.5vw;
+  height: 1.5vw;
+}
+
+/* Payment responsive 768px */
+
+@media only screen and (max-width: 768px) {
+
+  .payment-popup {
+    width: 60vw;
+    height: 50vh;
+}
+
+.payment-headers {
+  font-size: 3vw;
+}
+
+.payment-amount {
+  font-size: 3.3vw;
+}
+.payment-left-features {
+  font-size: 2vw;
+}
+
+.payment-getstarted-btn {
+  border-radius: 4vw;
+  font-size: 2vw;
+}
+.payment-key-text {
+  font-size: 2vw;
+  width: 19vw;
+
+}
+
+.payment-right-square {
+  width: 25vw;
+  height: 32vw;
+
+}
+.payment-left-square {
+  width: 25vw;
+  height: 32vw;
+}
+
+.payment-main-content {
+  height: 47vw;
+  gap: 4vw;
+}
+
+#payment-key-field {
+  width: 22vw;
+  height: 2.7vw;
+}
+#payment-tooltip-img {
+  width: 2.2vw;
+  height: 2.2vw;
+}
+.payment-tooltip {
+
+  width: 2.8vw;
+  height: 2.8vw;
+}
+
+.payment-right-getstarted-btn {
+  margin-top: 1.78vw;
+}
+
+.payment-key-section {
+  gap: 0.3vw;
+}
+
+.payment-popup-wave1 {
+  width: 32vw;
+}
+
+.payment-popup-wave2 {
+  width: 30vw;
+}
+
+.payment-popup-btn-img {
+  width: 3vw;
+  height: 3vw;
+
+}
+
+.payment-tooltip .payment-tooltiptext {
+  margin-left: 3vw;
+  font-size: 1.5vw;
+  width: 21vw;
+}
+
+}
+
+@media only screen and (max-width: 600px){
+
+  .payment-popup {
+    width: 65vw;
+    height: 60vw;
+}
+.payment-left-square {
+  width: 30vw;
+  height: 36vw;
+}
+.payment-main-content {
+  height: 60vw;
+  gap: 2vw;
+}
+.payment-headers {
+  font-size: 3.5vw;
+}
+.payment-amount {
+  font-size: 3.8vw;
+}
+.payment-left-features {
+  font-size: 2.5vw;
+}
+.payment-getstarted-btn {
+  border-radius: 4vw;
+  font-size: 2.5vw;
+}
+
+.payment-key-text {
+  font-size: 2.5vw;
+  width: 24vw;
+}
+#payment-tooltip-img {
+  width: 3vw;
+  height: 3vw;
+}
+.payment-tooltip {
+  width: 3vw;
+  height: 3vw;
+}
+#payment-key-field {
+  width: 26vw;
+  height: 2.7vw;
+}
+.signin-popup-btn-img {
+  width: 3vw;
+  height: 3vw;
+ 
+}
+#payment-right-getstarted-btn {
+  margin-top: 3.3vw;
+}
+.payment-right-square {
+  width: 30vw;
+  height: 36vw;
+}
+.payment-popup-wave2 {
+  width: 35vw;
+}
+.payment-popup-wave1 {
+  width: 38vw;
+}
+
+.payment-popup-btn-img {
+  width: 3vw;
+  height: 3vw;
+
+}
+
+.payment-tooltip .payment-tooltiptext {
+  margin-left: 3.5vw;
+  font-size: 1.5vw;
+  width: 19vw;
+}
+}
+
+
+@media only screen and (max-width: 460px){
+
+  .payment-popup {
+    width: 85vw;
+    min-height: 105vw;
+}
+
+.payment-main-content {
+  height: 106vw;
+  gap: 2vw;
+  flex-direction: column;
+}
+.payment-left-square {
+  width: 37vw;
+  height: 44vw;
+}
+.payment-headers {
+  font-size: 4vw;
+}
+.payment-amount {
+  font-size: 4.3vw;
+}
+.payment-left-features {
+  font-size: 3vw;
+}
+.payment-getstarted-btn {
+  border-radius: 4vw;
+  font-size: 3vw;
+  margin-top: 1vw;
+}
+
+.payment-key-text {
+  font-size: 3vw;
+  width: 28vw;
+}
+
+#payment-tooltip-img {
+  width: 3.5vw;
+  height: 3.5vw;
+}
+.payment-tooltip {
+  width: 3.5vw;
+  height: 3.5vw;
+}
+#payment-key-field {
+  width: 34vw;
+  height: 3.7vw;
+}
+#payment-right-getstarted-btn {
+  margin-top: 4.5vw;
+}
+.payment-popup-wave2 {
+  width: 40vw;
+}
+.payment-popup-wave1 {
+  width: 47vw;
+}
+
+.payment-popup-btn-img {
+  width: 4vw;
+  height: 4vw;
+}
+.payment-right-square {
+  width: 37vw;
+  height: 44vw;
+}
+.payment-tooltip .payment-tooltiptext {
+  margin-left: 4vw;
+  margin-top: 0.5vw;
+  font-size: 1.7vw;
+  width: 23vw;
+}
+}
+
+
+
+
+
+
+
+
+
+/* Signin popup */
+
 
 .signin-popup-container {
   height: 100vh;
@@ -3847,6 +4198,14 @@ select {
   align-items: center;
   position: relative;
   z-index: 1;
+}
+.signin-popup-data {
+  font-family: var(--text-font);
+  color: var(--black-color);
+  width: 17.4vw;
+  margin-bottom: 0.5vw;
+  font-size: 1vw;
+  border-radius: 2vw;
 }
 
 .signin-popup-account {
@@ -3944,6 +4303,8 @@ select {
   border: 0.1vw solid var(--darkblue-color);
   width: 20vw;
   font-size: 1vw;
+  border-radius: 2vw;
+  margin-bottom: 1vw;
 }
 
 .signin-popup-personal h1 {
@@ -4015,9 +4376,11 @@ select {
 
 .signin-popup-btn-img {
   width: 1.5vw;
-  height: 1.5vw;
-  z-index: 2;
-  position: relative;
+    height: 1.5vw;
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
 .signin-popup-login-btn {
@@ -4059,7 +4422,7 @@ select {
   margin-top: 2.1vw;
 }
 
-/* Responsive popup login */
+/* Responsive popup signin */
 
 @media only screen and (max-width: 768px) {
   .signin-popup {
@@ -4082,7 +4445,7 @@ select {
     width: 22vw;
   }
 
-  .account-popup-data {
+  .signin-popup-data {
     width: 20.2vw;
     font-size: 1.7vw;
   }
@@ -4101,8 +4464,8 @@ select {
     border: none;
     margin-top: 1vw;
     font-size: 2vw;
-    width: 18vw;
-    padding: 1vw 1vw;
+    width: 14vw;
+    padding: 1vw 1vw 1vw 3vw;
   }
 
   .signin-popup-line {
@@ -4126,6 +4489,10 @@ select {
   .signin-popup-wave2 {
     width: 27vw;
   }
+  .signin-popup-btn-img {
+    width: 3vw;
+    height: 3vw;
+}
 }
 
 @media only screen and (max-width: 600px) {
@@ -4144,7 +4511,7 @@ select {
   .signin-popup-personal h1 {
     font-size: 2.5vw;
   }
-  .account-popup-data {
+  .signin-popup-data {
     width: 22vw;
     font-size: 2.2vw;
   }
@@ -4158,6 +4525,10 @@ select {
     height: 21vw;
     margin-top: 4.1vw;
   }
+  .signup-popup-btn{
+    margin: 1vw 1vw 1vw 25.5vw;
+  }
+  
 
   .signin-popup-btn-section p {
     font-family: var(--text-font);
@@ -4175,6 +4546,10 @@ select {
   .signin-popup-wave2 {
     width: 29vw;
   }
+  .signin-popup-btn-img {
+    width: 3vw;
+    height: 3vw;
+}
 }
 
 @media only screen and (max-width: 460px) {
@@ -4196,7 +4571,7 @@ select {
     font-size: 2.7vw;
     width: 35vw;
   }
-  .account-popup-data {
+  .signin-popup-data {
     width: 47vw;
     font-size: 2.7vw;
   }
@@ -4219,7 +4594,8 @@ select {
     margin-top: 2vw;
     font-size: 3vw;
     width: 20vw;
-    padding: 1vw 1vw;
+    padding: 1vw 1vw 1vw 4vw;
+    margin: 1vw 1vw 1vw 32vw;
   }
 
   .signin-popup-btn-section p {
@@ -4239,14 +4615,20 @@ select {
   }
 
   .signin-popup-wave1 {
-    width: 35vw;
-    display: none;
+    width: 45vw;
+
   }
 
   .signin-popup-wave2 {
-    width: 29vw;
-    display: none;
+    width: 40vw;
+
   }
+  .signin-popup-btn-img {
+    width: 5vw;
+    height: 5vw;
+}
+
+
 }
 /* Login popup responsive*/
 @media only screen and (max-width: 768px) {
@@ -4395,3 +4777,5 @@ select {
     display: none;
   }
 }
+
+
