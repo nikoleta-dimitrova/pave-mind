@@ -3619,22 +3619,7 @@ select {
   font-size: 1vw;
 }
 
-.signup-popup-btn {
-  background-color: var(--lightblue-color);
-  color: var(--darkblue-color);
-  font-family: var(--text-font);
-  font-weight: var(--bold-font);
-  padding-top: 0.3vw;
-  padding-bottom: 0.3vw;
-  border-radius: 0.97vw;
-  transition: 0.4s;
-  cursor: pointer;
-  border: none;
-  margin-bottom: 1vh;
-  width: 8vw;
-  white-space: nowrap;
-  font-size: 1vw;
-}
+
 
 .login-popup-form-btn:hover {
   background-color: var(--darkblue-color);
@@ -3882,18 +3867,15 @@ gap:0.5vw;
 
 .signup-popup-btn {
   background-color: var(--lightblue-color);
-  display: block;
+  display: flex;
   color: var(--darkblue-color);
   font-family: var(--text-font);
   font-weight: 600;
   padding: 0.32vw 1.62vw;
   border-radius: 0.97vw;
-  transition: 0.4s;
   cursor: pointer;
   border: none;
-  margin-left: 2.5vw;
-  margin-right: 2.5vw;
-  width: 8vw;
+  margin: 0vw 1vw 1vw 23.6vw;
   font-size: 1vw;
 }
 
