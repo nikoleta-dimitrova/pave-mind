@@ -5,73 +5,53 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pay</title>
-    <link rel="stylesheet" href="./style.css">
+    <title>Payment</title>
     <script src="./popup.js" defer></script>
 </head>
 
 <body>
-
-    <section id="payment-popup-container" class="payment-popup-container">
-
+    <section class="payment-popup-container" id="payment-popup-container">
         <div class="payment-popup">
-           <div class="payment-main-content">
-
-
-            <div class="payment-left-square">
-            <div class="payment-left-square-content">
-            <p class="payment-headers">GENERAL<br> ACCOUNT</p>
-            </div>
-
-            <p class="payment-amount"> 10€</p>
-
-            <div class="payment-left-features">
-            <p>Tips&Tricks</p>
-            <p>Community</p>
-            <p>Diary</p>
-            
-            </div>
-            <button class="payment-getstarted-btn" >Get started</button>
-            </div>
-
-
-<form action="index.html">
-            <div class="payment-right-square">
-                <div class="payment-right-square-content">
-                    <p class="payment-headers">STUDENT<br> ACCOUNT</p>
+            <div class="payment-main-content">
+                <div class="payment-left-square">
+                    <div class="payment-left-square-content">
+                        <p class="payment-headers">GENERAL ACCOUNT</p>
                     </div>
-
-             <p class="payment-amount"> FREE </p>   
-
-             <div class="payment-right-features">
-
-<div class="payment-key-section">
-                <p class="payment-key-text">Enter your key here:</p>
-                <div class="payment-tooltip"><img src="./Assets/Images/tooltip.svg" id="payment-tooltip-img"><span class="payment-tooltiptext">Key provided by university</span>
-                  </div>
+                    <p class="payment-amount">10€</p>
+                    <p class="payment-time">*one time payment</p>
+                    <div class="payment-left-features">
+                        <p>Community</p>
+                        <p>Diary</p>
+                    </div>
+                    <button class="payment-getstarted-btn">Get started</button>
                 </div>
-
-                
-
-                </div>
-                <input id="payment-key-field" type="text" placeholder="" minlength="12"   required />
-                <button class="payment-getstarted-btn" id="payment-right-getstarted-btn" >Get started</button>
-             </div>
-            </form>
-
-
-
-
-           </div>
-           <button onclick="removeSignin()" class="payment-popup-btn"><img class="payment-popup-btn-img"
-            src="./Assets/Images/Group 10.svg"></button>
-           <img class="payment-popup-wave1" src="./Assets/Images/signup-popup-wave.svg">
-           <img class="payment-popup-wave2" src="./Assets/Images/signup-popup-wave-sand.svg">
+                <form action="index.html">
+                    <div class="payment-right-square">
+                        <div class="payment-right-square-content">
+                            <p class="payment-headers">PREMIUM ACCOUNT</p>
+                        </div>
+                        <p class="payment-amount">FREE</p>
+                        <div class="payment-right-features">
+                            <div class="payment-key-section">
+                                <p class="payment-key-text">Enter your key here:</p>
+                                <div class="payment-tooltip"><img src="./Assets/Images/tooltip.svg"
+                                        id="payment-tooltip-img"><span class="payment-tooltiptext">Key provided by
+                                        university</span>
+                                </div>
+                            </div>
+                        </div>
+                        <input id="payment-key-field" type="text" placeholder="12hnskq453kWA" minlength="12" required />
+                        <button class="payment-getstarted-btn" id="payment-right-getstarted-btn">Get started</button>
+                    </div>
+                </form>
+            </div>
+            <button onclick="closePaymentPopup()" class="payment-popup-btn"><img class="payment-popup-btn-img"
+                    src="./Assets/Images/close_white.svg"></button>
+            <img class="payment-popup-wave1" src="./Assets/Images/signup-popup-wave.svg">
+            <img class="payment-popup-wave2" src="./Assets/Images/signup-popup-wave-sand.svg">
         </div>
-        
         <div class="popup-overlay"></div>
     </section>
-
 </body>
 
 </html>

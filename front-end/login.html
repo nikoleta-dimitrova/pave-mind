@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Log in</title>
-    <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="./popup.js" defer></script>
 </head>
@@ -14,34 +13,31 @@
 <body>
     <section class="login-popup-container" id="login-popup-container">
         <div class="login-popup" id="popup">
-
             <div class="login-popup-form">
                 <h1>Hello!</h1>
                 <p>Log in to your account</p>
                 <form action="index.html" class="login-popup-input-container">
                     <h2 class="login-popup-text-details">Email</h2>
-                    <input type="text" id="email" placeholder="example@email.com" required>
+                    <input type="email" id="email" placeholder="example@email.com" required>
                     <h2 class="login-popup-text-details">Password</h2>
                     <input type="password" id="password" placeholder="••••••••••••••" required>
                     <button class="login-popup-form-btn">Log in</button>
                 </form>
                 <div class="login-popup-message">
                     <div class="login-popup-message-inner">
-                        <P>Don't have an account?</P> <button onclick="location.href = 'signin.html' "
+                        <p>Don't have an account?</p> <button onclick="loadPopupContent('signin.html')"
                             id="lognin-signup-btn" class="login-popup-signin-btn">Sign up</button>
                     </div>
                 </div>
             </div>
             <div class="login-popup-text">
-                <button onclick="removeLogin()" class="login-popup-close-button"><img
-                        class="login-popup-close-button-img" src="./Assets/Images/Group 10.svg"></button>
                 <h1>Welcome back!</h1>
                 <p>"Asking for help is the first step...You are<br>
                     more precious to this world than you'll<br>
-                    ever know"</p>
+                    ever know" <br /><br /><span> - Lili Reinhart</span></p>
             </div>
-            <button onclick="removeSignin()" class="payment-popup-btn"><img class="payment-popup-btn-img"
-                    src="./Assets/Images/Group 10.svg"></button>
+            <button onclick="closeLoginPopup()" class="payment-popup-btn"><img class="payment-popup-btn-img"
+                    src="./Assets/Images/close_white.svg"></button>
             <img class="login-popup-wave1" src="./Assets/Images/login-popup-wave-blue.svg">
             <img class="login-popup-wave2" src="./Assets/Images/login-popup-wave-sand.svg">
         </div>

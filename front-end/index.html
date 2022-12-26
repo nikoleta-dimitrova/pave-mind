@@ -10,8 +10,6 @@
     href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700;800;900&family=Patua+One&display=swap"
     rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <script src="./popup.js" defer></script>
-  
 </head>
 
 <body>
@@ -23,7 +21,8 @@
         <li class="nav-item"><a href="./tips-and-tricks.html" class="nav-link">Tips&Tricks</a></li>
         <li class="nav-item"><a href="./community.html" class="nav-link">Community</a></li>
         <li class="nav-item"><a href="#" class="nav-link">Diary</a></li>
-        <li id="open-popup" class="nav-item"><a href="#" class="nav-link">Log In</a></li>
+        <li id="open-popup" class="nav-item" onclick="loadPopupContent('login.html')"><a href="#" class="nav-link">Log
+            In</a></li>
       </ul>
     </div>
     <div class="hamburger">
@@ -32,9 +31,9 @@
       <span class="bar"></span>
     </div>
   </nav>
-<div id="popup">
-  
-</div>
+  <div id="popup">
+
+  </div>
   <!-- Home Section -->
 
   <section class="home-main" id="home-main">
@@ -278,14 +277,11 @@
 
   <script src="./community.js"> </script>
   <script src="./responsive.js"></script>
+  <script src="./popup.js"></script>
   <script src="./tips-and-articles.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script> AOS.init(); </script>
 
-
-
-
-  
 </body>
 
 </html>
