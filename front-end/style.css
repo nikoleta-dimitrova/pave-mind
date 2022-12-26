@@ -4733,10 +4733,10 @@ select {
     gap: 2vw;
   }
   .login-popup-wave1 {
-    display: none;
+    width: 45vw;
   }
   .login-popup-wave2 {
-    display: none;
+    width:40vw;
   }
   .login-popup-form {
     margin-left: 4vw;
