@@ -17,20 +17,26 @@
 
     <nav class="navbar">
         <div class="navigation-menu">
-            <ul>
-                <li><a href="./index.html"><img src="./Assets/Images/logo.svg"></a></li>
-                <li><a href="./articles.html">Articles</a></li>
-                <li><a href="./tips-and-tricks.html">Tips&Tricks</a></li>
-                <li><a href="./community.html">Community</a></li>
-                <li><a href="./diary-first.html">Diary</a></li>
+            <a href="./index.html" class="nav-logo"><img src="./Assets/Images/logo.svg" alt=""></a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="./articles.html" class="nav-link">Articles</a></li>
+                <li class="nav-item"><a href="./tips-and-tricks.html" class="nav-link">Tips&Tricks</a></li>
+                <li class="nav-item"><a href="./community.html" class="nav-link">Community</a></li>
+                <li class="nav-item"><a href="./diary-first.html" class="nav-link">Diary</a></li>
+                <li id="open-popup" class="nav-item" onclick="loadPopupContent('login.html')"><a href="#"
+                        class="nav-link">Log
+                        In</a></li>
             </ul>
         </div>
-        <div class="navigation-login">
-            <ul>
-                <li><a href="#">Log In</a></li>
-            </ul>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
         </div>
     </nav>
+    <div id="popup">
+
+    </div>
     <div class="diary-fifth-main">
         <p class="diary-title" id="diary-fifth-title">Diary</p>
         <div class="diary-fifth-container">
@@ -95,6 +101,7 @@
         </div>
     </div>
     <img class="diary-fifth-wave" src="./Assets/Images/diary-bottom-wave-fifth.svg" />
+    <script src="./popup.js"></script>
 </body>
 
 </html>
