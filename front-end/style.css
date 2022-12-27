@@ -264,7 +264,7 @@ nav ul li:hover {
 }
 
 .button-scroll img:hover {
-  background-color: var(--color-white);
+  background-color: var(--white-color);
 }
 
 input[type="radio"] {
@@ -2197,7 +2197,7 @@ input[type="radio"] {
   width: 35vw;
   height: 20vw;
   border-radius: 0.5vw;
-  background-color: var(--color-white);
+  background-color: var(--white-color);
   font-size: 1.3vw;
 }
 
@@ -2281,7 +2281,7 @@ input[type="radio"] {
   justify-content: space-between;
   padding-left: 2vw;
   padding-right: 2vw;
-  background-color: var(--color-white);
+  background-color: var(--white-color);
 }
 
 .diary-third-image {
@@ -2358,7 +2358,7 @@ input[type="radio"] {
 .diary-fourth-box {
   margin-top: 6.2vh;
   border: 0.1vw solid var(--darkblue-color);
-  background-color: var(--color-white);
+  background-color: var(--white-color);
   border-radius: 0.5vw;
   padding: 3vw 2.5vw 4vw 2.5vw;
   width: 35vw;
@@ -2796,7 +2796,7 @@ header .diary-fifth-current-date {
 
 .login-popup-form-btn:hover {
   background-color: var(--darkblue-color);
-  color: var(--color-white);
+  color: var(--white-color);
 }
 
 .login-popup-form .login-popup-message {
