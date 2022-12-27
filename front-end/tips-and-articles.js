@@ -81,6 +81,7 @@ let dataList = [];
 let savedArticles = [];
 let articlesSorted = false;
 let viewingSavedArticles = false;
+let loader = document.querySelector(".lds-roller");
 let articlesGrid = document.getElementById("articles-grid");
 let filters = document.getElementById("articles-filter");
 let bigArticleSection = document.querySelector(".articles-big");
@@ -100,7 +101,7 @@ const loadJSONData = (callback, filePath) => {
 }
 
 
-const init = (filePath) => {
+const init = (filePath, singleFile) => {
     loadJSONData(function (response) {
         let responseData = JSON.parse(response);
         responseData.forEach(responseItem => {
@@ -108,15 +109,16 @@ const init = (filePath) => {
             dataList.push(newArticle);
         })
         if (filePath === "articles.json") {
-            createArticlesContainer(dataList);
+            if (singleFile) { loadArticle(dataList); }
+            else { createArticlesContainer(dataList); }
         }
-        else if(filePath === "tips.json") {
+        else if (filePath === "tips.json" && singleFile) {
             loadTip(dataList);
         }
     }, filePath)
 }
 
-const renderSvg = (articleImageContainer, article) => {
+const renderSvg = (articleImageContainer, article, articlesSavedText) => {
     const iconSvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
     const iconPath = document.createElementNS(
         'http://www.w3.org/2000/svg',
@@ -135,6 +137,10 @@ const renderSvg = (articleImageContainer, article) => {
         article.saved = !article.saved;
         if (article.saved) {
             savedArticles.push(article);
+            articlesSavedText.style.display = "flex";
+            setTimeout(() => {
+                articlesSavedText.style.display = "none";
+            }, 2000);
         }
         else {
             let articleIndex = savedArticles.indexOf(article)
@@ -157,9 +163,13 @@ const createArticlesContainer = (articleArray) => {
         let articleImage = document.createElement('img');
         articleImage.className = "article-image";
         articleImage.src = article.image;
-        articleContainer.appendChild(articleImage);
-        articleImageContainer.appendChild(articleImage);
-        renderSvg(articleImageContainer, article);
+        let articlesSavedText = document.createElement('div');
+        articlesSavedText.classList.add('articles-saved-text');
+        let articlesSavedTextParagraph = document.createElement('p');
+        articlesSavedTextParagraph.innerText = "Saved!";
+        articlesSavedText.appendChild(articlesSavedTextParagraph);
+        articleImageContainer.append(articleImage, articlesSavedText);
+        renderSvg(articleImageContainer, article, articlesSavedText);
 
         let articleInformation = document.createElement('div')
         articleInformation.className = "articles-information";
@@ -180,48 +190,62 @@ const createArticlesContainer = (articleArray) => {
         articleArrow.className = "articles-small-btn-arrow";
         articleButton.appendChild(articleArrow);
 
-        articleButton.addEventListener('click', function () {
-            localStorage.setItem('articleId', article.id);
-            localStorage.setItem('articledate', article.date.toLocaleDateString('en-us', { year: "numeric", month: "long", day: "numeric" }));
-            localStorage.setItem('articleboldinfo', article.boldInfo);
-            localStorage.setItem('articleinfo', article.info);
-            localStorage.setItem('articletitle', article.title);
-            localStorage.setItem('articleimage', article.image);
-            window.location.replace("article.html")
-        })
-
         articleInformation.append(articleDate, articleHeadline, articlePreview, articleButton)
         articleContainer.appendChild(articleImageContainer)
         articleContainer.appendChild(articleInformation);
         articlesGrid.appendChild(articleContainer);
+
+        articleInformation.addEventListener('click', function () {
+            openArticle(article.id);
+        })
+        articleImage.addEventListener('click', function () {
+            openArticle(article.id);
+        })
     })
 }
 
+const displayLoadingAnimation = () => {
+    articlesGrid.style.display = "none";
+    loader.style.display = "inline-block";
+    setTimeout(() => {
+        loader.style.display = "none";
+        articlesGrid.style.display = "grid";
+    }, 800);
+}
+
 const checkBigArticle = () => {
-    if (articlesSorted || articleSearchBar.value.length > 2 || viewingSavedArticles) {
+    if (articlesSorted || viewingSavedArticles || articleSearchBar.value.length > 2 || window.innerWidth <= 600) {
+        articlesGrid.removeAttribute('data-aos')
         bigArticleSection.style.display = "none";
         articlesGrid.style.marginTop = "2rem";
         return;
     }
-    bigArticleSection.style.display = "flex";
-    articlesGrid.style.marginTop = "0";
+    else {
+        loader.style.display = "none"
+        articlesGrid.setAttribute('data-aos', 'fade-up')
+        bigArticleSection.style.display = "flex";
+        articlesGrid.style.marginTop = "0";
+    }
 }
 
 const filterArticles = () => {
+    articlesGrid.innerHTML = "";
+    let listToFilter = dataList;
+    if(viewingSavedArticles) { listToFilter = savedArticles }
     if (filters.value === "Most viewed") {
-        dataList.sort((a, b) => {
+        listToFilter.sort((a, b) => {
             return b.views - a.views;
         });
         articlesSorted = true;
     }
     else if (filters.value === "Oldest") {
-        dataList.sort((a, b) => {
+        listToFilter.sort((a, b) => {
             return a.date - b.date;
         });
         articlesSorted = true;
     }
     else if (filters.value === "Newest") {
-        dataList.sort((a, b) => {
+        listToFilter.sort((a, b) => {
             return b.date - a.date;
         });
         articlesSorted = true;
@@ -229,33 +253,40 @@ const filterArticles = () => {
     else {
         articlesSorted = false;
     }
-    createArticlesContainer(dataList);
+    displayLoadingAnimation();
+    createArticlesContainer(listToFilter);
     checkBigArticle();
-    viewingSavedArticles = false;
+    searchArticles();
 }
 
 const showSavedArticles = () => {
+    let viewSavedArticlesButton = document.getElementById('articles-save');
     viewingSavedArticles = !viewingSavedArticles;
     articleSearchBar.value = "";
     filters.value = "All articles";
+    displayLoadingAnimation();
     if (viewingSavedArticles) {
+        articlesSorted = false;
+        viewSavedArticlesButton.src = "./Assets/Images/bookmark-filled.svg";
         createArticlesContainer(savedArticles);
-        checkBigArticle();
     }
     else {
+        articlesSorted = false;
+        viewSavedArticlesButton.src = "./Assets/Images/bookmark.svg";
         createArticlesContainer(dataList);
-        checkBigArticle();
     }
+    checkBigArticle();
 }
 
 const searchArticles = () => {
     let articles = articlesGrid.childNodes;
-    if (articleSearchBar.value.length === 0) {
+    if (articleSearchBar.value.length <= 2) {
         articles.forEach(article => {
             article.style.display = "block";
         })
     }
     if (articleSearchBar.value.length > 2) {
+        displayLoadingAnimation();
         articles.forEach(article => {
             if (!article.childNodes[1].childNodes[1].textContent.toLowerCase().includes(articleSearchBar.value.toLowerCase())) {
                 article.style.display = "none";
@@ -266,16 +297,19 @@ const searchArticles = () => {
         })
     }
     checkBigArticle();
-    viewingSavedArticles = false;
 }
 
-const loadArticle = () => {
-    document.title = localStorage.getItem('articletitle');
-    document.getElementById("article-date").innerHTML = localStorage.getItem('articledate');
-    document.getElementById("article-boldInfo").innerHTML = localStorage.getItem('articleboldinfo');
-    document.getElementById("article-image").src = localStorage.getItem('articleimage');
-    document.getElementById("article-title").innerHTML = localStorage.getItem('articletitle');
-    document.getElementById("article-information").innerHTML = localStorage.getItem('articleinfo');
+const loadArticle = (articleArray) => {
+    articleArray.forEach(article => {
+        if (article.id === localStorage.getItem('articleId')) {
+            document.title = article.title;
+            document.getElementById("article-date").innerHTML = article.date.toLocaleDateString('en-us', { year: "numeric", month: "long", day: "numeric" });
+            document.getElementById("article-boldInfo").innerHTML = article.boldInfo;
+            document.getElementById("article-image").src = article.image;
+            document.getElementById("article-title").innerHTML = article.title;
+            document.getElementById("article-information").innerHTML = article.info;
+        }
+    })
 }
 
 const loadTip = (tipArr) => {
@@ -290,7 +324,51 @@ const loadTip = (tipArr) => {
     })
 }
 
+const openBigArticle = () => {
+    window.onscroll = function () {
+        scrollFunction();
+    };
+}
+
+const openArticle = (articleId) => {
+    localStorage.setItem('articleId', articleId);
+    window.location.replace("article.html")
+}
+
 const openTip = (tipId) => {
     localStorage.setItem('tipId', tipId);
     window.location.replace("tip.html")
-} 
+}
+
+const changeSlide = (next) => {
+    let carousel = document.getElementById("continue-reading-carousel-content");
+    if (next) carousel.scrollLeft += calculateVW(36);
+    else carousel.scrollLeft -= calculateVW(36);
+}
+
+function calculateVW(percent) {
+    var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+    return (percent * w) / 100;
+}
+
+// Scroll to top button
+let scrollToTopButton = document.querySelector(".button-scroll");
+const scrollFunction = () => {
+    if (
+        document.body.scrollTop > 300 ||
+        document.documentElement.scrollTop > 300
+    ) {
+        scrollToTopButton.style.display = "block";
+        scrollToTopButton.style.bottom = "1.5rem";
+    } else {
+        scrollToTopButton.style.display = "none";
+    }
+}
+const topFunction = () => {
+    document.body.scrollTop = 0; // this is for safari
+    document.documentElement.scrollTop = 0; // this is for everything with chrome and firefox
+}
+
+window.onscroll = function() {
+    scrollFunction();
+}

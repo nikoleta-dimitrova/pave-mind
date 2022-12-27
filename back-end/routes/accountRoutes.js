@@ -34,6 +34,10 @@ router.get('/login', async (req, res) => {
     }
 })
 
+router.get('/:id', getAccount, (req, res) => {
+    res.send(res.account);
+})
+
 router.post('/', async (req, res) => {
     const account = new Account({
         email: req.body.email,

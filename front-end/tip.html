@@ -10,36 +10,119 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700;800;900&family=Patua+One&display=swap"
         rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
-<body onload="init('tips.json')">
-    <nav class="navbar">
-        <div class="navigation-menu">
-            <ul>
-                <li><a href="#"><img src="Assets/Images/logo.svg"></a></li>
-                <li><a href="./articles.html">Articles</a></li>
-                <li><a href="./tips-and-tricks.html">Tips&Tricks</a></li>
-                <li><a href="#">Community</a></li>
-                <li><a href="#">Diary</a></li>
-            </ul>
-        </div>
-        <div class="navigation-login">
-            <ul>
-                <li><a href="#">Log In</a></li>
-            </ul>
-        </div>
-    </nav>
+<body onload="init('tips.json', true)">
+  <nav class="navbar">
+    <div class="navigation-menu">
+        <a href="./index.html" class="nav-logo"><img src="./Assets/Images/logo.svg" alt=""></a>
+        <ul class="nav-menu">
+            <li class="nav-item"><a href="./articles.html" class="nav-link">Articles</a></li>
+            <li class="nav-item"><a href="./tips-and-tricks.html" class="nav-link">Tips&Tricks</a></li>
+            <li class="nav-item"><a href="./community.html" class="nav-link">Community</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Diary</a></li>
+            <li id="nav-login" class="nav-item"><a href="#" class="nav-link">Log In</a></li>
+        </ul>
+    </div>
+    <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+</nav>
 
-    <section id="article-body">
+    <section id="article-body" class="fade-in-animation">
         <a href="./tips-and-tricks.html" class="secondary-button" id="article-button-back"><span
                 class="articles-arrow-back"></span>Back to Tips
         </a>
         <h1 id="article-title"></h1>
         <img id="article-image" src="" alt="">
-        <p id="article-boldInfo"></p>
-        <p id="article-information"></p>
+        <p id="article-boldInfo" data-aos="fade-up" data-aos-offset="-200" data-aos-delay="0" data-aos-duration="800"
+            data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false"
+            data-aos-anchor-placement="top-center"></p>
+        <p id="article-information" data-aos="fade-up" data-aos-offset="-100" data-aos-delay="0" data-aos-duration="800"
+            data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false"
+            data-aos-anchor-placement="top-center"></p>
     </section>
+    <section id="continue-reading-carousel">
+        <h1>Continue Reading</h1>
+        <div class="carousel-button-container" id="carousel-back" onclick="changeSlide(false)">
+            <span class="articles-big-btn-arrow" id="articles-big-btn-arrow-reversed"></span>
+        </div>
+        <div id="continue-reading-carousel-content">
+            <div onclick="openTip('tip1')">
+                <img src="./Assets/Images/tip1.svg">
+                <p>Meditation</p>
+            </div>
+            <div onclick="openTip('tip2')">
+                <img src="./Assets/Images/tip2.svg">
+                <p>Stay active</p>
+            </div>
+            <div onclick="openTip('tip3')">
+                <img src="./Assets/Images/tip3.svg">
+                <p>Maintain a healthy lifestyle</p>
+            </div>
+            <div onclick="openTip('tip4')">
+                <img src="./Assets/Images/tip4.svg">
+                <p>Restful sleep</p>
+            </div>
+            <div onclick="openTip('tip5')">
+                <img src="./Assets/Images/tip5.svg">
+                <p>Spend time with loved ones</p>
+            </div>
+            <div onclick="openTip('tip6')">
+                <img src="./Assets/Images/tip6.svg">
+                <p>Track your stress levels</p>
+            </div>
+        </div>
+        <div class="carousel-button-container" id="carousel-next" onclick="changeSlide(true)">
+            <span class="articles-big-btn-arrow"></span>
+        </div>
+    </section>
+
+    <footer id="footer-blue">
+      <img src="./Assets/Images/wave-footer-top-blue.png" class="wave-footer-img" />
+      <section class="footer-pavemind">
+          <div class="footer-container">
+              <img id="footer-logo" src="./Assets/Images/logo.svg" />
+              <div class="footer-data">
+                  <h1 class="footer-title">Contact us.</h1>
+                  <p class="footer-description">
+                      If you have any question regarding Burnout
+                      and are looking for ways to cope with it feel free to
+                      contact us via email or on one of our social medias.
+                  </p>
+                  <div class="footer-btn-media">
+                      <a href="https://www.facebook.com" class="btnfooter-contact" id="home-btnfacebook"></a>
+                      <a href="https://www.instagram.com" class="btnfooter-contact" id="home-btninstagram"></a>
+                      <a href="https://mail.google.com" class="btnfooter-contact" id="home-btnemail"></a>
+                  </div>
+                  <ul class="footer-list">
+                      <h1>
+                          Navigation
+                      </h1>
+                      <li class="footer-navbar-text"><a href="./articles.html">Articles</a></li>
+                      <li class="footer-navbar-text"><a href="./tips-and-tricks.html">Tips&Tricks</a></li>
+                      <li class="footer-navbar-text"><a href="./community.html">Community</a></li>
+                      <li class="footer-navbar-text"><a href="./diary.html">Diary</a> </li>
+                  </ul>
+              </div>
+              <img id="footer-picture" src="./Assets/Images/home-footer-woman-img.svg" />
+          </div>
+          <img src="./Assets/Images/wave-footer-bottom.svg" class="wave-footer-bottom-img">
+          <div class="footer-quote">
+              <h1 class="footer-quote-text"> A NEW BEGINNING AWAITS YOU. </h1>
+          </div>
+      </section>
+  </footer>
+
+
+    <button onclick="topFunction()" class="button-scroll"><img src="./Assets/Images/scroll-to-top.png" alt=""></button>
     <script src="./tips-and-articles.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script> AOS.init(); </script>
+    <script src="./responsive.js"></script>
 </body>
 
 </html>

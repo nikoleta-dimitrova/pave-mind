@@ -21,8 +21,7 @@ const postSchema = new mongoose.Schema({
     }],
     postTime: {
         type: Date,
-        required: false,
-        default: Date.now()
+        required: false
     },
     accountId: {
         type: String,

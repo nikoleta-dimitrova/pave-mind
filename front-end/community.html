@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community</title>
+    <link rel="stylesheet" href="./style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700;800;900&family=Patua+One&display=swap"
+        rel="stylesheet">
+</head>
+
+<body onload="loadPosts()">
+    <nav class="navbar">
+        <div class="navigation-menu">
+            <a href="./index.html" class="nav-logo"><img src="./Assets/Images/logo.svg" alt=""></a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="./articles.html" class="nav-link">Articles</a></li>
+                <li class="nav-item"><a href="./tips-and-tricks.html" class="nav-link">Tips&Tricks</a></li>
+                <li class="nav-item"><a href="./community.html" class="nav-link">Community</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Diary</a></li>
+                <li id="nav-login" class="nav-item"><a href="#" class="nav-link">Log In</a></li>
+            </ul>
+        </div>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+
+    <section class="community-heading">
+        <p id="community-title">Welcome to the community!</p>
+        <p id="community-description">Here you can share about your experience and find others
+            who have been through the same things as you. </p>
+        <p id="community-members-count">313</p>
+        <p id="community-members">members</p>
+        <img src="./Assets/Images/wave-community-heading.svg" class="community-wave-heading-img">
+    </section>
+
+    <section id="community">
+        <div class="community-create-post">
+            <img class="community-post-image" src="./Assets/Images/user-picture.png">
+            <input type="text" id="community-create-post-input" placeholder="What's on your mind, "
+                onfocus="togglePopup()">
+        </div>
+        <div id="popup-blur">
+            <div id="community-popup">
+                <div class="community-popup-container">
+                    <img id="community-popup-close" src="./Assets/Images/close.svg" onclick="togglePopup()">
+                    <div class="community-popup-heading">
+                        <p id="community-popup-create">Create a post</p>
+                    </div>
+
+                    <div class="community-popup-info">
+                        <img id="community-popup-image" src="./Assets/Images/user-picture.png">
+                        <span id="community-popup-name">Nadia Reeds</span>
+                    </div>
+                    <form class="community-popup-content">
+                        <input required type="text" name="" id="community-popup-title" placeholder="Title">
+                        <textarea required type="text" name="" id="community-popup-description"
+                            placeholder="What's on your mind?"></textarea>
+                        <button class="popup-post-button">Post</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <button onclick="topFunction()" class="button-scroll"><img src="./Assets/Images/scroll-to-top.png" alt=""></button>
+    <script src="./community.js"></script>
+    <script src="./responsive.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,98 @@
+<DOCTYPE html>
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title class="textNoSelect">Test</title>
+    <link rel="stylesheet" href="./style.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700;800;900&family=Patua+One&display=swap"
+      rel="stylesheet">
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <div class="navigation-menu">
+        <a href="./index.html" class="nav-logo"><img src="./Assets/Images/logo.svg" alt=""></a>
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="./articles.html" class="nav-link">Articles</a></li>
+          <li class="nav-item"><a href="./tips-and-tricks.html" class="nav-link">Tips&Tricks</a></li>
+          <li class="nav-item"><a href="./community.html" class="nav-link">Community</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Diary</a></li>
+          <li id="nav-login" class="nav-item"><a href="#" class="nav-link">Log In</a></li>
+        </ul>
+      </div>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </nav>
+
+    <p id="test-title">Test</p>
+    <div class="test-button-rating-text">
+      <ul>
+        <li>Never</li>
+        <li>A few times a year or less</li>
+        <li>Once a month or less</li>
+        <li>A few times a month</li>
+        <li>Once a week</li>
+        <li>A few times a week</li>
+        <li>Every day</li>
+      </ul>
+    </div>
+    <div class="test-question-container" id="questionContainer"></div>
+    <div id="popup-blur">
+      <div id="community-popup">
+        <div class="community-popup-container">
+          <img id="community-popup-close" src="./Assets/Images/close.svg" onclick="togglePopup()">
+          <div class="community-popup-heading">
+            <p id="community-popup-create">Test Results</p>
+          </div>
+          <div class="home-popup-content" id="test-popup-result-container"></div>
+        </div>
+      </div>
+    </div>
+
+    <footer id="footer-blue">
+      <img src="./Assets/Images/wave-footer-top-blue.png" class="wave-footer-img" />
+      <section class="footer-pavemind">
+        <div class="footer-container">
+          <img id="footer-logo" src="./Assets/Images/logo.svg" />
+          <div class="footer-data">
+            <h1 class="footer-title">Contact us.</h1>
+            <p class="footer-description">
+              If you have any question regarding Burnout
+              and are looking for ways to cope with it feel free to
+              contact us via email or on one of our social medias.
+            </p>
+            <div class="footer-btn-media">
+              <a href="https://www.facebook.com" class="btnfooter-contact" id="home-btnfacebook"></a>
+              <a href="https://www.instagram.com" class="btnfooter-contact" id="home-btninstagram"></a>
+              <a href="https://mail.google.com" class="btnfooter-contact" id="home-btnemail"></a>
+            </div>
+            <ul class="footer-list">
+              <h1>
+                Navigation
+              </h1>
+              <li class="footer-navbar-text"><a href="./articles.html">Articles</a></li>
+              <li class="footer-navbar-text"><a href="./tips-and-tricks.html">Tips&Tricks</a></li>
+              <li class="footer-navbar-text"><a href="./community.html">Community</a></li>
+              <li class="footer-navbar-text"><a href="./diary.html">Diary</a> </li>
+            </ul>
+          </div>
+          <img id="footer-picture" src="./Assets/Images/home-footer-woman-img.svg" />
+        </div>
+        <img src="./Assets/Images/wave-footer-bottom.svg" class="wave-footer-bottom-img">
+        <div class="footer-quote">
+          <h1 class="footer-quote-text"> A NEW BEGINNING AWAITS YOU. </h1>
+        </div>
+      </section>
+    </footer>
+
+    <script type="module" src="./app.js"></script>
+    <script src="./responsive.js"></script>
+  </body>
+
+  </html>

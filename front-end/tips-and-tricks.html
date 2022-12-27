@@ -10,27 +10,27 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700;800;900&family=Patua+One&display=swap"
     rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body onload="init('tips.json')">
   <nav class="navbar">
     <div class="navigation-menu">
-      <ul>
-        <li>
-          <a href="#"><img src="Assets/Images/logo.svg" /></a>
-        </li>
-        <li><a href="./articles.html">Articles</a></li>
-        <li><a href="./tips-and-tricks.html">Tips&Tricks</a></li>
-        <li><a href="#">Community</a></li>
-        <li><a href="#">Diary</a></li>
-      </ul>
+        <a href="./index.html" class="nav-logo"><img src="./Assets/Images/logo.svg" alt=""></a>
+        <ul class="nav-menu">
+            <li class="nav-item"><a href="./articles.html" class="nav-link">Articles</a></li>
+            <li class="nav-item"><a href="./tips-and-tricks.html" class="nav-link">Tips&Tricks</a></li>
+            <li class="nav-item"><a href="./community.html" class="nav-link">Community</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Diary</a></li>
+            <li id="nav-login" class="nav-item"><a href="#" class="nav-link">Log In</a></li>
+        </ul>
     </div>
-    <div class="navigation-login">
-      <ul>
-        <li><a href="#">Log In</a></li>
-      </ul>
+    <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
     </div>
-  </nav>
+</nav>
 
   <section class="tips-main">
     <p id="tips-title"> Tips & Tricks </p>
@@ -43,7 +43,7 @@
   </section>
 
   <section class="tips-tricks-container">
-    <div class="tips-all-trick">
+    <div class="tips-all-trick"  data-aos="fade-up" data-aos-offset="-70" data-aos-delay="-30" data-aos-duration="800" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-center">
       <h1 class="tips-tricks-title">
         Meditation
       </h1>
@@ -60,7 +60,7 @@
       </button>
     </div>
 
-    <div class="tips-all-trick">
+    <div class="tips-all-trick" data-aos="fade-up" data-aos-offset="-70" data-aos-delay="-30" data-aos-duration="800" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-center">
       <h1 class="tips-tricks-title">
         Stay active
       </h1>
@@ -75,7 +75,7 @@
       </button>
     </div>
 
-    <div class="tips-all-trick">
+    <div class="tips-all-trick" data-aos="fade-up" data-aos-offset="-70" data-aos-delay="-30" data-aos-duration="800" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-center">
       <h1 class="tips-tricks-title">
         Maintain a healthy lifestyle
       </h1>
@@ -90,7 +90,7 @@
       </button>
     </div>
 
-    <div class="tips-all-trick">
+    <div class="tips-all-trick" data-aos="fade-up" data-aos-offset="-70" data-aos-delay="-30" data-aos-duration="800" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-center">
       <h1 class="tips-tricks-title">
         Restful sleep
       </h1>
@@ -106,7 +106,7 @@
       </button>
     </div>
 
-    <div class="tips-all-trick">
+    <div class="tips-all-trick" data-aos="fade-up" data-aos-offset="-70" data-aos-delay="0" data-aos-duration="800" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-center">
       <h1 class="tips-tricks-title">
         Spend time with loved ones
       </h1>
@@ -120,7 +120,7 @@
         <span class="tips-big-btn-arrow" id="tips-articles-arrow"></span>
       </button>
     </div>
-    <div class="tips-all-trick">
+    <div class="tips-all-trick"  data-aos="fade-up" data-aos-offset="-70" data-aos-delay="0" data-aos-duration="800" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-center">
       <h1 class="tips-tricks-title">
         Track your stress levels
       </h1>
@@ -136,66 +136,50 @@
     </div>
   </section>
 
-  <footer>
-    <section class="whole-footer">
-      <img src="./Assets/images/wave4.png" class="home-wave-footer-img" />
-      <section class="home-footer-pavemind">
-        <div class="container">
-          <div class="home-footer-container">
-
-            <div class="home-footer-logo">
-              <img id="home-footer-logo" src="./Assets/images/logo.svg" class="home-footer-img" />
-            </div>
-
-            <div class="home-footer-data">
-              <h1 class="home-footer-title">
-                Contact us.
-              </h1>
-              <p class="home-footer-description">
-                If you have any question regarding Burnout
-                and are looking for ways to cope with it feel free to
-                contact us via email or on one of our social medias.
-              </p>
-              <div class="home-footer-btn-media">
-                <a href="https://www.facebook.com" class="home-btnfooter-contact" id="home-btnfacebook"></a>
-                <a href="https://www.instagram.com" class="home-btnfooter-contact" id="home-btninstagram"></a>
-                <a href="https://mail.google.com" class="home-btnfooter-contact" id="home-btnemail"></a>
-              </div>
-              <div class="home-footer-navigation-main">
-                <div class="home-footer-container">
-                  <ul class="home-footer-list">
-                    <h1>
-                      Navigation
-                    </h1>
-                    <ul class="home-footer-navbar-text"><a href="#">
-                        Articles
-                      </a>
-                    </ul>
-                    <ul class="home-footer-navbar-text"><a href="#">
-                        Tips&Tricks
-                      </a>
-                    </ul>
-                    <ul class="home-footer-navbar-text"><a href="#">
-                        Community
-                      </a>
-                    </ul>
-                    <ul class="home-footer-navbar-text"><a href="#">
-                        Diary
-                      </a>
-                    </ul>
-                  </ul>
+  <footer id="footer-blue">
+    <img src="./Assets/Images/wave-footer-top-blue.png" class="wave-footer-img" />
+    <section class="footer-pavemind">
+        <div class="footer-container">
+            <img id="footer-logo" src="./Assets/Images/logo.svg" />
+            <div class="footer-data">
+                <h1 class="footer-title">Contact us.</h1>
+                <p class="footer-description">
+                    If you have any question regarding Burnout
+                    and are looking for ways to cope with it feel free to
+                    contact us via email or on one of our social medias.
+                </p>
+                <div class="footer-btn-media">
+                    <a href="https://www.facebook.com" class="btnfooter-contact" id="home-btnfacebook"></a>
+                    <a href="https://www.instagram.com" class="btnfooter-contact" id="home-btninstagram"></a>
+                    <a href="https://mail.google.com" class="btnfooter-contact" id="home-btnemail"></a>
                 </div>
-              </div>
+                <ul class="footer-list">
+                    <h1>
+                        Navigation
+                    </h1>
+                    <li class="footer-navbar-text"><a href="./articles.html">Articles</a></li>
+                    <li class="footer-navbar-text"><a href="./tips-and-tricks.html">Tips&Tricks</a></li>
+                    <li class="footer-navbar-text"><a href="./community.html">Community</a></li>
+                    <li class="footer-navbar-text"><a href="./diary.html">Diary</a> </li>
+                </ul>
             </div>
-            <img id="home-footer-picture" src="./Assets/images/Girlwithblue.svg" class="home-footer-img" />
+            <img id="footer-picture" src="./Assets/Images/home-footer-woman-img.svg" />
+        </div>
+        <img src="./Assets/Images/wave-footer-bottom.svg" class="wave-footer-bottom-img">
+        <div class="footer-quote">
+            <h1 class="footer-quote-text"> A NEW BEGINNING AWAITS YOU. </h1>
+        </div>
+    </section>
+</footer>
 
-          </div>
-          <div class="home-footer-quote">
-            <h1 class="home-footer-quote-text"> A NEW BEGINNING AWAITS YOU. </h1>
-          </div>
-      </section>
-  </footer>
+  <button onclick="topFunction()" class="button-scroll"><img src="./Assets/Images/scroll-to-top.png" alt=""></button>
   <script src="./tips-and-articles.js"></script>
+  <script src="./responsive.js"></script>
+ <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <script> AOS.init(); </script>
+
+  
 </body>
 
 </html>

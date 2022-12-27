@@ -6,27 +6,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Articles</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700;800;900&family=Patua+One&display=swap"
         rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
-<body onload="init('articles.json')" id="articles-body">
+<body onload="init('articles.json', false)" id="articles-body">
     <nav class="navbar">
         <div class="navigation-menu">
-            <ul>
-                <li><a href="#"><img src="Assets/Images/logo.svg"></a></li>
-                <li><a href="./articles.html">Articles</a></li>
-                <li><a href="./tips-and-tricks.html">Tips&Tricks</a></li>
-                <li><a href="#">Community</a></li>
-                <li><a href="#">Diary</a></li>
+            <a href="./index.html" class="nav-logo"><img src="./Assets/Images/logo.svg" alt=""></a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="./articles.html" class="nav-link">Articles</a></li>
+                <li class="nav-item"><a href="./tips-and-tricks.html" class="nav-link">Tips&Tricks</a></li>
+                <li class="nav-item"><a href="./community.html" class="nav-link">Community</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Diary</a></li>
+                <li id="nav-login" class="nav-item"><a href="#" class="nav-link">Log In</a></li>
             </ul>
         </div>
-        <div class="navigation-login">
-            <ul>
-                <li><a href="#">Log In</a></li>
-            </ul>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
         </div>
     </nav>
 
@@ -51,12 +53,13 @@
                 </select>
             </div>
 
-            <img onclick="showSavedArticles()" id="articles-save" src="./Assets/Images/bookmark-filled.svg" alt="">
+            <img onclick="showSavedArticles()" id="articles-save" src="./Assets/Images/bookmark.svg" alt="">
         </div>
 
-
-        <section class="articles-big">
-            <div class="articles-big-photo"><img src="Assets/Images/big-article-picture.svg"></div>
+        <section class="articles-big" data-aos="fade-up" data-aos-offset="20" data-aos-delay="0" data-aos-duration="800"
+            data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false"
+            data-aos-anchor-placement="top-center">
+            <div class="articles-big-photo"><img src="./Assets/Images/big-article-picture.svg"></div>
             <div class="articles-big-info">
                 <h4>October 16, 2022</h4>
                 <h1>What is burnout and how can it affect your everyday life?</h1>
@@ -68,12 +71,65 @@
                 </a>
             </div>
         </section>
-
-        <section id="articles-grid"></section>
-
+        <section id="articles-grid" data-aos="fade-up" data-aos-offset="-100" data-aos-delay="0" data-aos-duration="800"
+            data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false"
+            data-aos-anchor-placement="top-center">
+        </section>
+        <div class="lds-roller">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
     </section>
+
+    <footer id="footer-blue">
+        <img src="./Assets/Images/wave-footer-top-blue.png" class="wave-footer-img" />
+        <section class="footer-pavemind">
+            <div class="footer-container">
+                <img id="footer-logo" src="./Assets/Images/logo.svg" />
+                <div class="footer-data">
+                    <h1 class="footer-title">Contact us.</h1>
+                    <p class="footer-description">
+                        If you have any question regarding Burnout
+                        and are looking for ways to cope with it feel free to
+                        contact us via email or on one of our social medias.
+                    </p>
+                    <div class="footer-btn-media">
+                        <a href="https://www.facebook.com" class="btnfooter-contact" id="home-btnfacebook"></a>
+                        <a href="https://www.instagram.com" class="btnfooter-contact" id="home-btninstagram"></a>
+                        <a href="https://mail.google.com" class="btnfooter-contact" id="home-btnemail"></a>
+                    </div>
+                    <ul class="footer-list">
+                        <h1>
+                            Navigation
+                        </h1>
+                        <li class="footer-navbar-text"><a href="./articles.html">Articles</a></li>
+                        <li class="footer-navbar-text"><a href="./tips-and-tricks.html">Tips&Tricks</a></li>
+                        <li class="footer-navbar-text"><a href="./community.html">Community</a></li>
+                        <li class="footer-navbar-text"><a href="./diary.html">Diary</a> </li>
+                    </ul>
+                </div>
+                <img id="footer-picture" src="./Assets/Images/home-footer-woman-img.svg" />
+            </div>
+            <img src="./Assets/Images/wave-footer-bottom.svg" class="wave-footer-bottom-img">
+            <div class="footer-quote">
+                <h1 class="footer-quote-text"> A NEW BEGINNING AWAITS YOU. </h1>
+            </div>
+        </section>
+    </footer>
+
+
+    <button onclick="topFunction()" class="button-scroll"><img src="./Assets/Images/scroll-to-top.png" alt=""></button>
     <script src="./tips-and-articles.js"></script>
     <script src="https://kit.fontawesome.com/43dcc20e7a.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ disable: window.innerWidth < 601 });</script>
+    <script src="./responsive.js"></script>
 </body>
 
 </html>

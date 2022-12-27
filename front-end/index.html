@@ -1,0 +1,283 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PaveMind</title>
+  <link rel="stylesheet" href="./style.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700;800;900&family=Patua+One&display=swap"
+    rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="navigation-menu">
+      <a href="./index.html" class="nav-logo"><img src="./Assets/Images/logo.svg" alt=""></a>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="./articles.html" class="nav-link">Articles</a></li>
+        <li class="nav-item"><a href="./tips-and-tricks.html" class="nav-link">Tips&Tricks</a></li>
+        <li class="nav-item"><a href="./community.html" class="nav-link">Community</a></li>
+        <li class="nav-item"><a href="./diary-first.html" class="nav-link">Diary</a></li>
+        <li id="nav-login" class="nav-item"><a href="#" class="nav-link">Log In</a></li>
+      </ul>
+    </div>
+    <div class="hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+  </nav>
+
+  <!-- Home Section -->
+
+  <section class="home-main" id="home-main">
+
+    <div id="popup-blur">
+      <div id="community-popup">
+        <div class="community-popup-container">
+          <img id="community-popup-close" src="./Assets/Images/close.svg" onclick="togglePopup()">
+          <div class="community-popup-heading">
+            <p id="community-popup-create">Disclaimer and data policy</p>
+          </div>
+          <div class="home-popup-content">
+            <p id="home-popup-text">This test is not diagnostic and cannot replace a professional assessment. Only a
+              psychologist or therapist can make a reliable diagnosis. If you feel that stress is affecting your life or
+              you suspect you may be undergoing a burnout do not delay speaking to a health-care professional. The
+              following questionnaire is meant for educational purposes only. Your data will be
+              recorded
+              in anonymous form, and there will not be any way of tracing them back to you.</p>
+            <form class="home-popup-button-checkbox" action="app.html"><label><input id="home-popup-content-checkbutton"
+                  type="checkbox" name="agree" required />I agree to the terms and conditions</label>
+              <button id="articles-small-button" class="primary-button">Continue <span
+                  class="articles-small-btn-arrow"></span></button>
+            </form>
+            <img src="./Assets/Images/wave-popup-blue.svg" class="home-popup-wave">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="home-container">
+      <div class="home-data">
+        <h1 class="home-title">
+          What is burnout?
+        </h1>
+        <p class="home-description">
+          Burnout is a state of physical and emotional exhaustion. It can
+          occur when you experience long-term stress in your job, or when
+          you have worked in a physically or emotionally draining role for a
+          long time.
+        </p>
+        <a onclick="togglePopup()" class="primary-button" id="home-big-button">Take the test
+          <span class="home-big-btn-arrow"></span>
+        </a>
+      </div>
+      <img id="home-first-picture" src="./Assets/Images/home-main-image.png" class="home-img" />
+    </div>
+    <img src="./Assets/Images/home-main-bottom-wave.svg" class="home-wave-img" />
+  </section>
+
+
+
+  <!-- Articles -->
+
+  <section class="home-articles">
+    <h1 class="home-articles-title" data-aos="fade-up" data-aos-offset="-300" data-aos-delay="0" data-aos-duration="800"
+      data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-center">
+      Articles to start with
+    </h1>
+
+    <section class="home-articles-cards" id="home-articles-cards">
+      <div class="home-card" data-aos="fade-up" data-aos-offset="-300" data-aos-delay="400" data-aos-duration="800"
+        data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false"
+        data-aos-anchor-placement="top-center">
+        <img class="home-articles-lightbulb" src="./Assets/Images/home-lightbulb.svg">
+        <p class="home-card-title">What Is Academic Burnout?</p>
+        <p class="home-card-description">
+          Academic burnout symptoms are manifested in much more than just tiredness and feeling like you can't attend
+          another class.
+        </p>
+        <div class="home-articles-button-vector">
+        </div>
+        <img class="home-articles-blob" src="./Assets/Images/home-articles-blob.svg">
+        <a class="home-card-read-more-button" href="./home-article1.html">Read more <span class="home-big-btn-arrow"
+            id="home-articles-arrow"></span></a>
+        <img class="home-articles-vector-images" id="home-articles-card1-image"
+          src="./Assets/Images/home-articles-card1.png">
+      </div>
+
+      <div class="home-card" data-aos="fade-up" data-aos-offset="-300" data-aos-delay="600" data-aos-duration="800"
+        data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false"
+        data-aos-anchor-placement="top-center">
+        <img class="home-articles-lightbulb" src="./Assets/Images/home-lightbulb.svg">
+        <p class="home-card-title">Is seeking therapy a weakness?
+        </p>
+        <p class="home-card-description">
+          It's common knowledge that 2020 was one of the most difficult years on record for most Americans as well as
+          the citizens of the world.
+        </p>
+        <img class="home-articles-blob" src="./Assets/Images/home-articles-blob.svg">
+        <a class="home-card-read-more-button" href="./home-article2.html">Read more <span class="home-big-btn-arrow"
+            id="home-articles-arrow"></span></a>
+        <img class="home-articles-vector-images" id="home-articles-card2-image"
+          src="./Assets/Images/home-articles-card2.png">
+      </div>
+
+      <div class="home-card" id="home-articles-third-card" data-aos="fade-up" data-aos-offset="-300"
+        data-aos-delay="800" data-aos-duration="800" data-aos-easing="ease-in-out" data-aos-mirror="true"
+        data-aos-once="false" data-aos-anchor-placement="top-center">
+        <img class="home-articles-lightbulb" src="./Assets/Images/home-lightbulb.svg">
+        <p class="home-card-title">Do you feel burnt out?</p>
+        <p class="home-card-description">
+          Our culture doesn't understand burnout - including the fact that we can get burnt out on a perfectly 'normal'
+          40-hour work week.
+        </p>
+        <img class="home-articles-blob" src="./Assets/Images/home-articles-blob.svg">
+        <a class="home-card-read-more-button" href="./home-article3.html">Read more <span class="home-big-btn-arrow"
+            id="home-articles-arrow"></span></a>
+        <img class="home-articles-vector-images" id="home-articles-card3-image"
+          src="./Assets/Images/home-articles-card3.png">
+      </div>
+    </section>
+    <img class="home-wave-mission-img" src="./Assets/Images/home-articles-bottom-wave.svg" />
+
+  </section>
+
+
+  <!-- Our Mission -->
+
+  <section class="home-our-mission" id="home-our-mission">
+
+    <h1 class="home-mission-title" data-aos="fade-up" data-aos-offset="-300" data-aos-delay="0" data-aos-duration="800"
+      data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-center">
+      Our Mission
+    </h1>
+
+
+    <div class="home-mission-container">
+      <div class="home-mission-container" data-aos="fade-up" data-aos-offset="-300" data-aos-delay="600"
+        data-aos-duration="800" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false"
+        data-aos-anchor-placement="top-center">
+
+        <img class="home-mission-img" src="./Assets/Images/home-mission-image.svg" />
+
+        <div class="home-mission-data">
+          <p class="home-mission-description">
+            We are PaveMind, a team of six motivated students whose biggest
+            motivation is to help others with their everyday life by raising awareness on the topic of burnout.
+            <br><br>
+            We created a safe space for everyone who wants to share their experience, read more on how to cope, find
+            valuable resources and track their progress.
+            Our team finds this topic extremely relevant and wants to help others with their journey, educate them
+            more on the topic and create a meaningful product that will be beneficial.
+          </p>
+          <p class="home-mission-description">
+          </p>
+        </div>
+      </div>
+
+  </section>
+
+  <img src="./Assets/Images/home-mission-bottom-wave.svg" class="home-second-wave-mission-img" />
+
+
+
+  <!-- Features -->
+
+  <section class="home-features">
+    <h1 class="home-features-title" data-aos="fade-up" data-aos-offset="-300" data-aos-delay="0" data-aos-duration="800"
+      data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-center">
+      Features
+    </h1>
+
+
+    <div class="home-features-container">
+      <div class="home-feature" data-aos="fade-up" data-aos-offset="-300" data-aos-delay="400" data-aos-duration="800"
+        data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false"
+        data-aos-anchor-placement="top-center">
+        <img class="home-features-images" src="./Assets/Images/home-features-tips.svg" />
+        <div class="home-features-description">
+          <h10 class="home-features-headers">Tips & Tricks</h10>
+          <p class="home-features-text">We have a wide variety of different tips and tricks, which will help you
+            learn how to cope with burnout the quickest.</p>
+        </div>
+      </div>
+
+
+
+      <div class="home-feature" data-aos="fade-up" data-aos-offset="-300" data-aos-delay="600" data-aos-duration="800"
+        data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false"
+        data-aos-anchor-placement="top-center">
+        <img class="home-features-images" src="./Assets/Images/home-features-community.svg" />
+        <div class="home-features-description">
+          <h10 class="home-features-headers">Community</h10>
+          <p class="home-features-text">In our community section you are able to express your
+            feelings and problems, or ask for help in any way without the fear of being judged.</p>
+        </div>
+      </div>
+
+
+
+      <div class="home-feature" data-aos="fade-up" data-aos-offset="-300" data-aos-delay="800" data-aos-duration="800"
+        data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false"
+        data-aos-anchor-placement="top-center">
+        <img class="home-features-images" id="home-feature-image3" src="./Assets/Images/home-features-diary.svg" />
+        <div class="home-features-description3">
+          <h10 class="home-features-headers">Diary</h10>
+          <p class="home-features-text">Keep track of your journey with
+            a chart and calendar, see what uplifted your moods. Write down your feelings in your own
+            safe space. </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <button onclick="topFunction()" class="button-scroll"><img src="./Assets/Images/scroll-to-top.png" alt=""></button>
+
+  <footer>
+    <img src="./Assets/Images/wave-footer-top.svg" class="wave-footer-img" />
+    <section class="footer-pavemind">
+      <div class="footer-container">
+        <img id="footer-logo" src="./Assets/Images/logo.svg" />
+        <div class="footer-data">
+          <h1 class="footer-title">Contact us.</h1>
+          <p class="footer-description">
+            If you have any question regarding Burnout
+            and are looking for ways to cope with it feel free to
+            contact us via email or on one of our social medias.
+          </p>
+          <div class="footer-btn-media">
+            <a href="https://www.facebook.com" class="btnfooter-contact" id="home-btnfacebook"></a>
+            <a href="https://www.instagram.com" class="btnfooter-contact" id="home-btninstagram"></a>
+            <a href="https://mail.google.com" class="btnfooter-contact" id="home-btnemail"></a>
+          </div>
+          <ul class="footer-list">
+            <h1>
+              Navigation
+            </h1>
+            <li class="footer-navbar-text"><a href="./articles.html">Articles</a></li>
+            <li class="footer-navbar-text"><a href="./tips-and-tricks.html">Tips&Tricks</a></li>
+            <li class="footer-navbar-text"><a href="./community.html">Community</a></li>
+            <li class="footer-navbar-text"><a href="./diary.html">Diary</a> </li>
+          </ul>
+        </div>
+        <img id="footer-picture" src="./Assets/Images/home-footer-woman-img.svg" />
+      </div>
+      <img src="./Assets/Images/wave-footer-bottom.svg" class="wave-footer-bottom-img">
+      <div class="footer-quote">
+        <h1 class="footer-quote-text"> A NEW BEGINNING AWAITS YOU. </h1>
+      </div>
+    </section>
+  </footer>
+
+  <script src="./community.js"> </script>
+  <script src="./responsive.js"></script>
+  <script src="./tips-and-articles.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script> AOS.init(); </script>
+</body>
+
+</html>
