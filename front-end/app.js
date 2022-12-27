@@ -117,7 +117,15 @@ export function createSubmitButton() {
         questionService.resultArray[2].result = 0;
     }
 
+    const arrow = document.createElement('span');
+    arrow.classList.add("articles-big-btn-arrow");
+
     submitButton.innerText = "Submit";
+    submitButton.appendChild(arrow);
+    arrow.style.marginLeft= ".5vw";
+    arrow.style.transition = "0.4s";
+    submitButton.onmouseover = () => arrow.style.borderColor = "#FBFBFB";
+    submitButton.onmouseleave = () => arrow.style.borderColor = "#687DAC";
 
     return submitButton;
 }
