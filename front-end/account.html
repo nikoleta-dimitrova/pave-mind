@@ -21,8 +21,7 @@
         <li class="nav-item"><a href="./tips-and-tricks.html" class="nav-link">Tips&Tricks</a></li>
         <li class="nav-item"><a href="./community.html" class="nav-link">Community</a></li>
         <li class="nav-item"><a href="./diary-first.html" class="nav-link">Diary</a></li>
-        <li id="open-popup" class="nav-item" onclick="loadPopupContent('login.html')"><a href="#" class="nav-link">Log
-            In</a></li>
+        <li id="open-popup" class="nav-item" onclick="loadPopupContent('login.html')"><a href="#" class="nav-link"></a></li>
       </ul>
     </div>
     <div class="hamburger">
@@ -44,9 +43,10 @@
         <div class="account-popup-heading">
           <p id="account-popup-change-password">Change password</p>
         </div>
+       
         <div class="account-popup-content">
 
-
+        
           <div class="account-popup-every-inputs">
 
             <div class="account-all-popup-inputs">
@@ -65,10 +65,12 @@
                 required>
             </div>
           </div>
+        
 
           <img src="./Assets/Images/account-popup-wave.svg" class="account-popup-wave" />
           <a href="account.html" class="account-popup-button" id="">Save changes</a>
         </div>
+     
       </div>
     </div>
   </div>
@@ -159,21 +161,8 @@
 
 
         <div class="account-card-fourth-part">
-          <div class="account-fourth-part-left">
-            <h1 class="account-avatar" id="account-delete-h1">
-              Delete account
-            </h1>
-            <p class="account-delete-text">By deleting your account, you will lose all your data.</p>
-          </div>
-
-          <div class="account-fourth-part-right">
-            <button class="account-second" id="account-third-btn">Delete account</button>
-          </div>
-
-
-        </div>
-        <div class="account-save-changes-button">
-          <button class="account-first" id="account-fourth-btn">Save changes</button>
+            <button class="account-button" id="account-fourth-btn">Save changes</button>
+            <button class="account-button" id="account-third-btn" onclick="logOut()">Log Out</button>
         </div>
     </section>
   </section>

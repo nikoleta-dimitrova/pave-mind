@@ -21,11 +21,7 @@ const accountSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    university: {
-        type: String,
-        required: false
-    },
-    studentAccount: {
+    premiumAccount: {
         type: Boolean,
         required: true,
         default: false

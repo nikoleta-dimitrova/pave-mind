@@ -13,7 +13,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
-<body onload="init('articles.json', true)">
+<body>
     <nav class="navbar">
         <div class="navigation-menu">
             <a href="./index.html" class="nav-logo"><img src="./Assets/Images/logo.svg" alt=""></a>
@@ -23,8 +23,7 @@
                 <li class="nav-item"><a href="./community.html" class="nav-link">Community</a></li>
                 <li class="nav-item"><a href="./diary-first.html" class="nav-link">Diary</a></li>
                 <li id="open-popup" class="nav-item" onclick="loadPopupContent('login.html')"><a href="#"
-                        class="nav-link">Log
-                        In</a></li>
+                        class="nav-link"></a></li>
             </ul>
         </div>
         <div class="hamburger">
@@ -121,7 +120,7 @@
 
 
     <button onclick="topFunction()" class="button-scroll"><img src="./Assets/Images/scroll-to-top.png" alt=""></button>
-    <script src="./tips-and-articles.js"></script>
+    <script src="./tips-and-articles.js" onload="init('articles.json', true)"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./popup.js"></script>
     <script> AOS.init(); </script>

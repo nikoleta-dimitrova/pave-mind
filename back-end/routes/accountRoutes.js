@@ -25,7 +25,7 @@ router.get('/', async (req, res) => {
     }
 })
 
-router.get('/login', async (req, res) => {
+router.post('/login', async (req, res) => {
     try {
         const account = await Account.findOne({email: req.body.email, password: req.body.password});
         res.send(account)
@@ -45,8 +45,7 @@ router.post('/', async (req, res) => {
         firstName: req.body.firstName,
         lastName: req.body.lastName,
         dateOfBirth: req.body.dateOfBirth,
-        university: req.body.university,
-        studentAccount: req.body.studentAccount
+        premiumAccount: req.body.premiumAccount
     })
     try {
         const newAccount = await account.save();

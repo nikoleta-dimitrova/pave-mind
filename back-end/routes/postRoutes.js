@@ -48,13 +48,13 @@ router.get('/:id', getPost, (req, res) => {
 router.put('/:id/comment', getPost, (req, res) => {
     const post = res.post;
     const newComment = {
-        accountId: req.body.accId,
+        name: req.body.name,
         comment: req.body.comment
     }
     post.comments.push(newComment);
     try {
-        const newPost = post.save();
-        res.status(200).json(newPost);
+        const updatedPost = post.save();
+        res.status(200).json(updatedPost)
     } catch(err) {
         res.status(400).json({message: err})
     }

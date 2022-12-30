@@ -273,6 +273,16 @@ input[type="radio"] {
   height: 1.1vw;
 }
 
+.locked-content {
+  display: none;
+  top: 7vw;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 5;
+  backdrop-filter: saturate(150%) blur(8px);
+}
+
 /* HOME PAGE */
 /* ----- Pop up test ---- */
 .home-popup-content {
@@ -826,7 +836,8 @@ select {
   align-items: center;
   background-color: var(--darkblue-color);
   border-radius: 20px;
-  -webkit-animation: scale-up-hor-right 2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  -webkit-animation: scale-up-hor-right 2s cubic-bezier(0.39, 0.575, 0.565, 1)
+    both;
   animation: scale-up-hor-right 2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
@@ -1222,6 +1233,7 @@ select {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  padding-bottom: 5vh;
 }
 
 /*---- Community post designs ----*/
@@ -1237,6 +1249,7 @@ select {
 
 .community-create-post img {
   width: 2.9vw;
+  height: auto;
   margin-left: 1.5vw;
 }
 
@@ -1276,7 +1289,7 @@ select {
 
 .community-post-image {
   width: 2.9vw;
-  height: 6.17vh;
+  height: 2.9vw;
 }
 
 .community-post-info {
@@ -1353,7 +1366,7 @@ select {
 .community-post-comment {
   display: flex;
   flex-direction: row;
-  padding: 1.5vw;
+  padding: 1vw;
 }
 
 .community-comment-content {
@@ -1381,8 +1394,7 @@ select {
   width: 100vw;
   height: 100vh;
   background-color: #00000061;
-  transform: translateY(-50%);
-  top: 50%;
+  top: 0;
   z-index: 5;
   overflow: hidden;
 }
@@ -1724,6 +1736,7 @@ select {
 }
 
 #account-third-btn {
+  width: 13vw;
   background-color: var(--white-color);
   border-radius: 2vw;
   color: var(--darkblue-color);
@@ -1788,9 +1801,11 @@ select {
 
 .account-card-fourth-part {
   display: flex;
+  flex-direction: column;
   align-items: flex-end;
-  gap: 7.2vw;
+  gap: 2vw;
   margin-top: 2vw;
+  width: 47vw;
 }
 
 .account-delete-text {
@@ -1810,6 +1825,7 @@ select {
   text-decoration: none;
   padding: 0.5vw 1.3vw;
   font-size: 1.3vw;
+  width: 13vw;
 }
 
 /*  ACCOUNT POPUP   */
@@ -1867,6 +1883,8 @@ select {
   font-size: 1vw;
   font-family: var(--text-font);
   font-weight: var(--bold-font);
+  position: relative;
+  z-index: 1;
 }
 
 .account-popup-data {
@@ -1882,6 +1900,7 @@ select {
   position: absolute;
   bottom: 0;
   left: 0;
+  z-index: 0;
 }
 
 .account-popup-button {
@@ -2054,7 +2073,6 @@ select {
   align-items: center;
 }
 
-
 /* Diary first page */
 .diary-first-container {
   height: 83.4vh;
@@ -2073,11 +2091,13 @@ select {
   height: 8vh;
   justify-content: space-between;
   padding-right: 2.2vw;
+  align-items: center;
 }
 
 #diary-first-blue-field {
   background-color: var(--lightblue-color);
   border-radius: 17px;
+  align-items: center;
 }
 
 .diary-first-text-field {
@@ -2288,7 +2308,6 @@ input[type="radio"] {
   width: 3.2vw;
   height: 3.2vw;
 }
-
 .diary-third-category-text {
   font-family: var(--text-font);
   font-size: 1vw;
@@ -2435,7 +2454,15 @@ input[type="radio"] {
   gap: 16vw;
   padding-top: 1.2vw;
 }
-
+.diary-fourth-quiz-button {
+  text-decoration: none;
+  font-family: var(--text-font);
+  color: var(--darkblue-color);
+  font-weight: var(--bold-font);
+  font-size: 1.2vw;
+  position: relative;
+  z-index: 2;
+}
 /* Diary fifth page */
 .diary-fifth-main {
   display: flex;
@@ -3000,7 +3027,7 @@ header .diary-fifth-current-date {
   color: var(--white-color);
   text-align: center;
   border-radius: 17px;
-  padding: 0.5vw
+  padding: 0.5vw;
 }
 
 .payment-tooltip:hover .payment-tooltiptext {
@@ -3081,7 +3108,7 @@ header .diary-fifth-current-date {
 }
 
 #signup-btn {
-  margin-block: .5vw;
+  margin-block: 0.5vw;
 }
 
 .signin-popup-personal {
@@ -3100,7 +3127,6 @@ header .diary-fifth-current-date {
   align-self: flex-start;
   margin-left: 1vw;
 }
-
 
 .signin-popup-content {
   display: flex;
@@ -3201,18 +3227,6 @@ header .diary-fifth-current-date {
   font-size: 1vw;
 }
 
-.account-popup-inputs {
-  display: block;
-  width: 100%;
-  padding: 0.5vw 0.5vw 0.5vw 2.3vw;
-  outline: none;
-  border: 0.065vw solid rgb(255, 255, 255);
-  border-radius: 1.62vw;
-  margin-bottom: 1.5vw;
-  width: 17vw;
-  font-size: 1vw;
-}
-
 .signin-popup-line {
   border-right: 0.1vw solid var(--darkblue-color);
   display: flex;
@@ -3228,10 +3242,8 @@ header .diary-fifth-current-date {
   margin-top: 2.1vw;
 }
 
-
 /* -----------RESPONSIVE------------- */
 @media only screen and (max-width: 768px) {
-
   /* ---- Navigation menu ----*/
   .nav-menu {
     display: none !important;
@@ -3910,7 +3922,6 @@ header .diary-fifth-current-date {
 
   .diary-second-buttons .diary-quiz-button {
     font-size: 2.5vw;
-
   }
 
   /*--------- Diary third page responsive--------- */
@@ -3974,6 +3985,8 @@ header .diary-fifth-current-date {
   .diary-fourth-container .diary-fourth-buttons {
     width: 84vw;
     justify-content: right;
+    gap: 43vw;
+    align-items: center;
   }
 
   .diary-fourth-box #diary-fourth-conclusion {
@@ -3994,13 +4007,16 @@ header .diary-fifth-current-date {
     font-size: 2vw;
     width: 47vw;
   }
-
   .diary-fourth-container #diary-big-button {
-    width: 14vw;
+    width: 17vw;
     height: 5vw;
-    font-size: 2.2vw;
+    font-size: 2.5vw;
     border-radius: 5vw;
     margin-top: 2vw;
+  }
+  .diary-fourth-quiz-button {
+    font-size: 2.5vw;
+    white-space: nowrap;
   }
 
   /* ---------Diary fifth page responsive ----------*/
@@ -4207,6 +4223,50 @@ header .diary-fifth-current-date {
     width: 46.7vw;
     margin-top: 4vw;
   }
+  /* ------- Account popup Responsive ------- */
+  .account-popup-heading {
+    font-size: 3vw;
+  }
+
+  .account-popup-data {
+    font-size: 2vw;
+  }
+
+  .account-popup-inputs {
+    width: 48vw;
+    padding: 1.5vw 1vw 1.5vw 2vw;
+    outline: none;
+    border-radius: 4vw;
+    font-size: 2vw;
+    position: relative;
+    z-index: 1;
+  }
+
+  .account-popup-content {
+    width: 46vw;
+  }
+
+  .account-popup-button {
+    padding: 1vw 1vw 1vw 1.5vw;
+    border-radius: 4vw;
+
+    font-size: 2vw;
+    width: 16vw;
+  }
+
+  #account-popup-close {
+    top: 2vw;
+  }
+
+  .account-popup-wave {
+    width: 35vw;
+  }
+
+  #account-popup,
+  #result-popup {
+    width: 60vw;
+    height: 50vw;
+  }
 
   /* Responsive popup signin */
   .signin-popup {
@@ -4369,13 +4429,11 @@ header .diary-fifth-current-date {
   .payment-key-text {
     font-size: 2vw;
     width: 19vw;
-
   }
 
   .payment-right-square {
     width: 25vw;
     height: 32vw;
-
   }
 
   .payment-left-square {
@@ -4399,7 +4457,6 @@ header .diary-fifth-current-date {
   }
 
   .payment-tooltip {
-
     width: 2.8vw;
     height: 2.8vw;
   }
@@ -4423,7 +4480,6 @@ header .diary-fifth-current-date {
   .payment-popup-btn-img {
     width: 3vw;
     height: 3vw;
-
   }
 
   .payment-tooltip .payment-tooltiptext {
@@ -4431,11 +4487,9 @@ header .diary-fifth-current-date {
     font-size: 1.5vw;
     width: 21vw;
   }
-
 }
 
 @media only screen and (max-width: 600px) {
-
   /* Home Main Responsive */
   div.home-container {
     gap: 4vw;
@@ -4827,7 +4881,7 @@ header .diary-fifth-current-date {
   }
 
   span.diary-fourth-button-arrow {
-    padding: 0.5vw;
+    padding: 0.7vw;
   }
 
   img.diary-fourth-greenface-image {
@@ -4836,6 +4890,7 @@ header .diary-fifth-current-date {
 
   .diary-fourth-container .diary-fourth-buttons {
     width: 79vw;
+    gap: 24vw;
   }
 
   .diary-fourth-box #diary-fourth-conclusion {
@@ -4850,13 +4905,15 @@ header .diary-fifth-current-date {
 
   .diary-fourth-container #diary-big-button {
     margin-top: 2vw;
-    width: 15vw;
+    width: 22vw;
     height: 5vw;
-    font-size: 2.6vw;
+    font-size: 3.5vw;
     border-radius: 5.5vw;
   }
+  .diary-fourth-quiz-button {
+    font-size: 3.5vw;
+  }
 
-  /* Diary fifth page responsive */
   /* Diary fifth page responsive */
   #diary-fifth-title {
     padding-top: 4vw;
@@ -4965,6 +5022,44 @@ header .diary-fifth-current-date {
     height: 3vw;
   }
 
+  .account-popup-heading {
+    font-size: 3.5vw;
+  }
+
+  #account-popup-close {
+    position: absolute;
+    width: 3.5vw;
+  }
+
+  .account-popup-data {
+    font-size: 2.5vw;
+  }
+
+  .account-popup-inputs {
+    border-radius: 4vw;
+    font-size: 2.5vw;
+  }
+
+  .account-popup-content {
+    width: 46vw;
+  }
+
+  .account-popup-wave {
+    width: 40vw;
+  }
+
+  #account-popup,
+  #result-popup {
+    width: 65vw;
+    height: 60vw;
+  }
+
+  .account-popup-content {
+    width: 46vw;
+    margin-top: 5vw;
+    margin-left: 10vw;
+  }
+
   .payment-popup {
     width: 65vw;
     height: 60vw;
@@ -5020,7 +5115,6 @@ header .diary-fifth-current-date {
   .signin-popup-btn-img {
     width: 3vw;
     height: 3vw;
-
   }
 
   #payment-right-getstarted-btn {
@@ -5043,7 +5137,6 @@ header .diary-fifth-current-date {
   .payment-popup-btn-img {
     width: 3vw;
     height: 3vw;
-
   }
 
   .payment-tooltip .payment-tooltiptext {
@@ -5087,7 +5180,6 @@ header .diary-fifth-current-date {
   .signup-popup-btn {
     margin: 1vw 1vw 1vw 25.5vw;
   }
-
 
   .signin-popup-btn-section p {
     font-family: var(--text-font);
@@ -5170,7 +5262,6 @@ header .diary-fifth-current-date {
 }
 
 @media only screen and (max-width: 460px) {
-
   /* Home Main Responsive */
   section#home-main {
     height: 162vw;
@@ -5802,6 +5893,7 @@ header .diary-fifth-current-date {
 
   .diary-fourth-container .diary-fourth-buttons {
     width: 80vw;
+    gap: 15vw;
   }
 
   .diary-fourth-box #diary-fourth-conclusion {
@@ -5820,9 +5912,12 @@ header .diary-fifth-current-date {
 
   .diary-fourth-container #diary-big-button {
     margin-top: 2.5vw;
-    width: 18vw;
+    width: 23vw;
     height: 8vw;
-    font-size: 3.3vw;
+    font-size: 4.5vw;
+  }
+  .diary-fourth-quiz-button {
+    font-size: 4.5vw;
   }
 
   /* Diary fifth page responsive */
@@ -5937,6 +6032,48 @@ header .diary-fifth-current-date {
     width: 5vw;
     height: 5.3vw;
     margin-left: 0.6vw;
+  }
+
+  .account-popup-heading {
+    font-size: 4vw;
+  }
+  #account-popup-close {
+    width: 4vw;
+  }
+
+  .account-popup-data {
+    font-size: 3vw;
+  }
+
+  .account-popup-inputs {
+    font-size: 3vw;
+    width: 69vw;
+  }
+
+  .account-popup-every-inputs {
+    gap: 3vw;
+  }
+
+  .account-popup-content {
+    width: 67vw;
+    margin-top: 8vw;
+    margin-left: 10vw;
+  }
+
+  .account-popup-button {
+    padding: 1vw 1vw 1vw 1.5vw;
+    border-radius: 4vw;
+    font-size: 3vw;
+    width: 22vw;
+  }
+
+  .account-popup-wave {
+    width: 55vw;
+  }
+  #account-popup,
+  #result-popup {
+    width: 85vw;
+    height: 80vw;
   }
 
   /*---- Popup login responsinve -------*/
@@ -6091,12 +6228,10 @@ header .diary-fifth-current-date {
 
   .signin-popup-wave1 {
     width: 45vw;
-
   }
 
   .signin-popup-wave2 {
     width: 40vw;
-
   }
 
   .signin-popup-btn-img {
@@ -6168,12 +6303,9 @@ header .diary-fifth-current-date {
   .login-popup-text {
     display: none;
   }
-
-
 }
 
 @media only screen and (max-width: 350px) {
-
   #community-popup,
   #result-popup {
     height: 18vh;

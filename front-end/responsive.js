@@ -8,27 +8,20 @@ hamburger.addEventListener("click", mobileMenu);
 function mobileMenu() {
     hamburger.classList.toggle("active");
     navMenu.classList.toggle("active");
-    // navLinks.forEach(link => {
-    //     link.classList.toggle("fade")
-    // });
     navBar.classList.toggle("active");
 }
 
-// navLinks.forEach((link, index)=>{
-//     if(link.style.animation){
-//       link.style.animation = ''
-//     }else{
-//           link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.5}s`;
 
-//     }
-//   });
+const checkLogIn = () => {
+    const loginButton = document.getElementById("open-popup");
+    if (localStorage.getItem("userId")) {
+        loginButton.onclick = null;
+        loginButton.childNodes[0].innerText = "Account";
+        loginButton.childNodes[0].href = "./account.html";
+    }
+    else {
+        loginButton.childNodes[0].innerText = "Log In";
+    }
+}
 
-// hamburger.addEventListener('click', ()=>{
-//     //Animate Links
-//     navMenu.classList.toggle("open");
-//     navLinks.forEach(link => {
-//       link.classList.toggle("fade");
-//     });
-//     //Hamburger Animation
-//     hamburger.classList.toggle("toggle");
-//   });
+window.onload = checkLogIn();

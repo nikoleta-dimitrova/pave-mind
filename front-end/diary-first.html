@@ -16,23 +16,21 @@
 
     <nav class="navbar">
         <div class="navigation-menu">
-            <a href="./index.html" class="nav-logo"><img src="./Assets/Images/logo.svg" alt=""></a>
-            <ul class="nav-menu">
-                <li class="nav-item"><a href="./articles.html" class="nav-link">Articles</a></li>
-                <li class="nav-item"><a href="./tips-and-tricks.html" class="nav-link">Tips&Tricks</a></li>
-                <li class="nav-item"><a href="./community.html" class="nav-link">Community</a></li>
-                <li class="nav-item"><a href="./diary-first.html" class="nav-link">Diary</a></li>
-                <li id="open-popup" class="nav-item" onclick="loadPopupContent('login.html')"><a href="#"
-                        class="nav-link">Log
-                        In</a></li>
-            </ul>
+          <a href="./index.html" class="nav-logo"><img src="./Assets/Images/logo.svg" alt=""></a>
+          <ul class="nav-menu">
+            <li class="nav-item"><a href="./articles.html" class="nav-link">Articles</a></li>
+            <li class="nav-item"><a href="./tips-and-tricks.html" class="nav-link">Tips&Tricks</a></li>
+            <li class="nav-item"><a href="./community.html" class="nav-link">Community</a></li>
+            <li class="nav-item"><a href="./diary-first.html" class="nav-link">Diary</a></li>
+            <li id="open-popup" class="nav-item" onclick="loadPopupContent('login.html')"><a href="#" class="nav-link"></a></li>
+          </ul>
         </div>
         <div class="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
         </div>
-    </nav>
+      </nav>
     <div id="popup">
 
     </div>
@@ -108,8 +106,11 @@
             <a class="diary-next-question-button" href="diary-second.html">Next question <span
                     class="diary-next-question-arrow " id="diary-button-arrow"></span></a>
         </div>
+        <div class="locked-content"></div>
     </section>
     <script src="./popup.js"></script>
+    <script src="./community.js" async defer onload="loadPosts()"></script>
+    <script src="./responsive.js" ></script>
 </body>
 
 </html>

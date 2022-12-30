@@ -5,11 +5,17 @@ let popUpVisible = false;
 const communityPosts = document.getElementById('community');
 
 const loadPosts = async () => {
+    if (localStorage.getItem("userId") === null) {
+        const blockFilter = document.getElementsByClassName("locked-content")[0];
+        blockFilter.style.display = "inline";
+    }
     const response = await fetch("http://localhost:3000/posts/");
     const data = await response.json();
     const reversedData = data.reverse()
+    const userName = localStorage.getItem("userName");
+    const input = document.getElementById("community-popup-name")
+    input.textContent = `${userName}`;
     for (const post of reversedData) {
-        console.log(post)
         const newPost = document.createElement('div');
         newPost.classList.add('community-post');
         const postContainer = document.createElement('div')
@@ -25,7 +31,7 @@ const loadPosts = async () => {
         postName.innerText = user;
         const postDate = document.createElement('p');
         postDate.classList.add('community-post-time');
-        postDate.innerText = timeSince( new Date(post.postTime));
+        postDate.innerText = timeSince(new Date(post.postTime));
         const postImage = document.createElement('img');
         postImage.classList.add('community-post-image');
         postImage.src = "./Assets/Images/user-picture.png";
@@ -59,6 +65,11 @@ const loadPosts = async () => {
         const postInputField = document.createElement('input');
         postInputField.type = "text";
         postInputField.placeholder = "Write a comment...";
+        postInputField.addEventListener('keyup', (e) => {
+            if (e && e.keyCode == 13) {
+                createComment(postInputField, post._id);
+            }
+        })
 
         postInput.append(postInputImage, postInputField);
         postComments.appendChild(postInput);
@@ -74,7 +85,7 @@ const loadPosts = async () => {
             postCommentContent.classList.add('community-comment-content');
             const postCommentName = document.createElement('p');
             postCommentName.classList.add('community-comment-name');
-            postCommentName.innerText = await getUser(comment.accountId);
+            postCommentName.innerText = comment.name;
             const postCommemntText = document.createElement('p');
             postCommemntText.classList.add('community-comment-text');
             postCommemntText.innerText = comment.comment;
@@ -110,7 +121,6 @@ const togglePopup = () => {
 
 function timeSince(date) {
     var seconds = Math.abs((new Date() - date) / 1000);
-    console.log(seconds)
     var interval = seconds / 31536000;
 
     if (interval > 1) {
@@ -135,10 +145,6 @@ function timeSince(date) {
     return Math.floor(seconds) + " seconds ago";
 }
 
-window.onload = async () => {
-    await loadPosts();
-}
-
 // Scroll to top button
 let scrollToTopButton = document.querySelector(".button-scroll");
 const scrollFunction = () => {
@@ -157,6 +163,24 @@ const topFunction = () => {
     document.documentElement.scrollTop = 0; // this is for everything with chrome and firefox
 }
 
-window.onscroll = function() {
+window.onscroll = function () {
     scrollFunction();
+}
+
+const createComment = (postInputField, postId) => {
+    const newPost = {
+        name: localStorage.getItem("userName"),
+        comment: postInputField.value
+    }
+    fetch(`http://localhost:3000/posts/${postId}/comment`, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(newPost)
+    }).then(res => {
+        if (res.status === 200) {
+            return true;
+        }
+    }).then(() => {
+        window.location.reload();
+    })
 }

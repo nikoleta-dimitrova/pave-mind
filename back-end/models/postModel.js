@@ -10,11 +10,11 @@ const postSchema = new mongoose.Schema({
         required: true
     },
     comments: [{
-        comment: {
-            type: Object,
+        name: {
+            type: String,
             required: true
         },
-        accountId: {
+        comment: {
             type: String,
             required: true
         }
