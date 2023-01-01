@@ -25,7 +25,7 @@
                     </div>
                     <button class="payment-getstarted-btn" onclick="createAccount(false)">Get started</button>
                 </div>
-                <form onsubmit="createAccount(true)">
+                <form onsubmit="event.preventDefault(); createAccount(true)">
                     <div class="payment-right-square">
                         <div class="payment-right-square-content">
                             <p class="payment-headers">PREMIUM ACCOUNT</p>

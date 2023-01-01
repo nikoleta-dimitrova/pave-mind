@@ -51,17 +51,17 @@
 
             <div class="account-all-popup-inputs">
               <h1 class="account-popup-data">Old password</h1>
-              <input type="password" class="account-popup-inputs" id="account-first-name" placeholder="••••••••••••••"
+              <input type="password" class="account-popup-inputs" id="account-old-pass" placeholder="••••••••••••••"
                 required>
             </div>
             <div class="account-all-popup-inputs">
               <h1 class="account-popup-data">New password</h1>
-              <input type="password" class="account-popup-inputs" id="account-first-name" placeholder="••••••••••••••"
+              <input type="password" class="account-popup-inputs" id="account-new-pass" placeholder="••••••••••••••"
                 required>
             </div>
             <div class="account-all-popup-inputs">
               <h1 class="account-popup-data">Repeat new password</h1>
-              <input type="password" class="account-popup-inputs" id="account-first-name" placeholder="••••••••••••••"
+              <input type="password" class="account-popup-inputs" id="account-new-pass-repeat" placeholder="••••••••••••••"
                 required>
             </div>
           </div>
@@ -116,14 +116,14 @@
             </div>
             <div class="account-all-inputs">
               <h1 class="account-data">Surname</h1>
-              <input type="text" class="account-inputs" id="account-first-name" placeholder="Reeds" required>
+              <input type="text" class="account-inputs" id="account-last-name" placeholder="Reeds" required>
             </div>
 
 
           </div>
           <div class="account-all-inputs">
             <h1 class="account-data">Date of birth</h1>
-            <input type="text" class="account-inputs" id="account-first-name" placeholder="10/12/2002" required>
+            <input type="text" class="account-inputs" id="account-date" placeholder="10/12/2002" required>
           </div>
 
         </div>
@@ -139,19 +139,19 @@
 
             <div class="account-all-inputs">
               <h1 class="account-data">Email adress</h1>
-              <input type="email" class="account-inputs" id="account-first-name" placeholder="nadia.r@gmail.com"
+              <input type="email" class="account-inputs" id="account-email" placeholder="nadia.r@gmail.com"
                 required>
             </div>
             <div class="account-all-inputs">
               <h1 class="account-data">University name</h1>
-              <input type="text" class="account-inputs" id="account-first-name" placeholder="Sofia University" required>
+              <input type="text" class="account-inputs" id="account-uni" placeholder="Sofia University" required>
             </div>
 
 
           </div>
           <div class="account-all-inputs">
             <h1 class="account-data">Password</h1>
-            <input type="password" class="account-inputs" id="account-first-name" placeholder="••••••••••••••" required>
+            <input type="password" class="account-inputs" id="account-pass" placeholder="••••••••••••••" required>
             <a onclick="togglePopup()" class="account-data" id="account-change-password">
               <p>Change password</p>
             </a>
@@ -205,6 +205,7 @@
   <script src="./community.js"> </script>
   <script src="./responsive.js"></script>
   <script src="./popup.js"></script>
+  <script src="./account.js" onload="loadAccount()"></script>
 </body>
 
 </html>
