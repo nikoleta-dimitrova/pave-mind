@@ -285,7 +285,7 @@ input[type="radio"] {
 }
 
 .locked-content nav {
-  height: 60vh;
+  height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
