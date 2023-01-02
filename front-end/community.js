@@ -34,7 +34,7 @@ const loadPosts = async () => {
         postDate.innerText = timeSince(new Date(post.postTime));
         const postImage = document.createElement('img');
         postImage.classList.add('community-post-image');
-        postImage.src = "./Assets/Images/user-picture.png";
+        postImage.src = "./Assets/Images/user-profile.png";
 
         const postTitle = document.createElement('p')
         postTitle.classList.add('community-post-title');
@@ -61,7 +61,7 @@ const loadPosts = async () => {
 
         const postInputImage = document.createElement('img');
         postInputImage.classList.add('community-post-image');
-        postInputImage.src = "./Assets/Images/user-picture.png";
+        postInputImage.src = "./Assets/Images/user-profile.png";
         const postInputField = document.createElement('input');
         postInputField.type = "text";
         postInputField.placeholder = "Write a comment...";
@@ -79,7 +79,7 @@ const loadPosts = async () => {
             postComment.classList.add('community-post-comment');
             const postCommentImage = document.createElement('img');
             postCommentImage.classList.add('community-post-image');
-            postCommentImage.src = "./Assets/Images/user-picture.png";
+            postCommentImage.src = "./Assets/Images/user-profile.png";
 
             const postCommentContent = document.createElement('div');
             postCommentContent.classList.add('community-comment-content');

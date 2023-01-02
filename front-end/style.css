@@ -1406,7 +1406,7 @@ select {
 .community-post-comment {
   display: flex;
   flex-direction: row;
-  padding: 1vw;
+  padding: 1.5vw;
 }
 
 .community-comment-content {
@@ -1499,7 +1499,7 @@ select {
   font-family: var(--text-font);
   font-weight: var(--bold-font);
   font-size: 1.2vw;
-  color: var(--black-color);
+  color: var(--darkblue-color);
 }
 
 .community-popup-content {
