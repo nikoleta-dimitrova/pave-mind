@@ -876,8 +876,7 @@ select {
   align-items: center;
   background-color: var(--darkblue-color);
   border-radius: 20px;
-  -webkit-animation: scale-up-hor-right 2s cubic-bezier(0.39, 0.575, 0.565, 1)
-    both;
+  -webkit-animation: scale-up-hor-right 2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   animation: scale-up-hor-right 2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
@@ -1415,7 +1414,7 @@ select {
   display: flex;
   flex-direction: column;
   gap: 1vw;
-  background-color: white;
+  background-color: var(--white-color);
   padding: 1.5vw;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1vw;
@@ -2348,6 +2347,7 @@ input[type="radio"] {
   width: 3.2vw;
   height: 3.2vw;
 }
+
 .diary-third-category-text {
   font-family: var(--text-font);
   font-size: 1vw;
@@ -2494,6 +2494,7 @@ input[type="radio"] {
   gap: 16vw;
   padding-top: 1.2vw;
 }
+
 .diary-fourth-quiz-button {
   text-decoration: none;
   font-family: var(--text-font);
@@ -2503,6 +2504,7 @@ input[type="radio"] {
   position: relative;
   z-index: 2;
 }
+
 /* Diary fifth page */
 .diary-fifth-main {
   display: flex;
@@ -3284,6 +3286,7 @@ header .diary-fifth-current-date {
 
 /* -----------RESPONSIVE------------- */
 @media only screen and (max-width: 768px) {
+
   /* ---- Navigation menu ----*/
   .nav-menu {
     display: none !important;
@@ -4047,6 +4050,7 @@ header .diary-fifth-current-date {
     font-size: 2vw;
     width: 47vw;
   }
+
   .diary-fourth-container #diary-big-button {
     width: 17vw;
     height: 5vw;
@@ -4054,6 +4058,7 @@ header .diary-fifth-current-date {
     border-radius: 5vw;
     margin-top: 2vw;
   }
+
   .diary-fourth-quiz-button {
     font-size: 2.5vw;
     white-space: nowrap;
@@ -4263,6 +4268,7 @@ header .diary-fifth-current-date {
     width: 46.7vw;
     margin-top: 4vw;
   }
+
   /* ------- Account popup Responsive ------- */
   .account-popup-heading {
     font-size: 3vw;
@@ -4527,9 +4533,94 @@ header .diary-fifth-current-date {
     font-size: 1.5vw;
     width: 21vw;
   }
+
+  /* ---- Community responsive---- */
+  #community-title,
+  #community-members-count {
+    font-size: 4vw;
+  }
+
+  #community-description,
+  #community-members,
+  .community-post-name {
+    font-size: 2vw;
+  }
+
+  .community-create-post {
+    width: 90vw;
+    height: 9vh;
+  }
+
+  .community-create-post img,
+  .community-post-image {
+    width: 5vw;
+    height: 5vw;
+  }
+
+  .community-create-post input {
+    width: 81.5vw;
+    font-size: 2vw;
+  }
+
+  .community-post {
+    width: 90vw;
+  }
+
+  .community-post-time,
+  .community-post-title,
+  .community-post-body,
+  .community-comments-button,
+  .community-comment-content {
+    font-size: 1.7vw;
+  }
+
+  .community-comments-button img {
+    width: 1.7vw;
+    height: auto;
+  }
+
+  .community-post-input {
+    width: 90vw;
+  }
+
+  .community-post-input input {
+    width: 81.5vw;
+    font-size: 1.7vw;
+  }
+
+  .community-post-content {
+    margin-left: 4.5vw;
+  }
+  /* ---- Community popup responsive---- */
+  .community-popup-info img {
+    width: 6vw;
+    height: 6vw;
+  }
+
+  #community-popup-name {
+    font-size: 2.5vw;
+  }
+
+  .community-popup-content input {
+    width: 53.5vw;
+    font-size: 2vw;
+  }
+
+  .community-popup-content textarea {
+    width: 53.5vw;
+    height: 16vh;
+    font-size: 2vw;
+  }
+
+  .community-popup-content button {
+    font-size: 2vw;
+    height: 3vh;
+    width: 11vw;
+  }
 }
 
 @media only screen and (max-width: 600px) {
+
   /* Home Main Responsive */
   div.home-container {
     gap: 4vw;
@@ -4950,6 +5041,7 @@ header .diary-fifth-current-date {
     font-size: 3.5vw;
     border-radius: 5.5vw;
   }
+
   .diary-fourth-quiz-button {
     font-size: 3.5vw;
   }
@@ -5299,9 +5391,14 @@ header .diary-fifth-current-date {
   .wave-footer-bottom-img {
     margin-bottom: -1vh;
   }
+  /* ---- Community popup responsive---- */
+  .community-popup-content textarea {
+    height: 14vh;
+  }
 }
 
 @media only screen and (max-width: 460px) {
+
   /* Home Main Responsive */
   section#home-main {
     height: 162vw;
@@ -5956,6 +6053,7 @@ header .diary-fifth-current-date {
     height: 8vw;
     font-size: 4.5vw;
   }
+
   .diary-fourth-quiz-button {
     font-size: 4.5vw;
   }
@@ -6077,6 +6175,7 @@ header .diary-fifth-current-date {
   .account-popup-heading {
     font-size: 4vw;
   }
+
   #account-popup-close {
     width: 4vw;
   }
@@ -6110,6 +6209,7 @@ header .diary-fifth-current-date {
   .account-popup-wave {
     width: 55vw;
   }
+
   #account-popup,
   #result-popup {
     width: 85vw;
@@ -6343,11 +6443,110 @@ header .diary-fifth-current-date {
   .login-popup-text {
     display: none;
   }
+
+  /* ---- Community responsive---- */
+  #community-title,
+  #community-members-count {
+    font-size: 5.5vw;
+  }
+
+  #community-description,
+  #community-members,
+  .community-post-name {
+    font-size: 3vw;
+  }
+
+  #community-description {
+    width: 60vw;
+  }
+
+  .community-create-post {
+    width: 90vw;
+    height: 9vh;
+  }
+
+  .community-create-post img,
+  .community-post-image {
+    width: 8vw;
+    height: 8vw;
+  }
+
+  .community-create-post input {
+    width: 78.5vw;
+    font-size: 3vw;
+    padding-left: 2vw;
+  }
+
+  .community-post {
+    width: 90vw;
+  }
+
+  .community-post-time,
+  .community-post-title,
+  .community-post-body,
+  .community-comments-button,
+  .community-comment-content {
+    font-size: 2.7vw;
+  }
+
+  .community-comments-button img {
+    width: 2.7vw;
+    height: auto;
+  }
+
+  .community-post-input {
+    width: 90vw;
+  }
+
+  .community-post-input input {
+    width: 78.5vw;
+    font-size: 2.7vw;
+    padding-left: 2vw;
+  }
+
+  .community-post-content {
+    margin-left: 7vw;
+  }
+  /* ---- Community popup responsive---- */
+  .community-popup-info img {
+    width: 9vw;
+    height: 9vw;
+  }
+
+  #community-popup-name {
+    font-size: 3.5vw;
+  }
+
+  .community-popup-content input {
+    width: 78vw;
+    font-size: 3vw;
+    padding: 2vw;
+  }
+
+  .community-popup-content textarea {
+    width: 78vw;
+    height: 16vh;
+    font-size: 3vw;
+    padding: 2vw;
+  }
+
+  .community-popup-content button {
+    font-size: 3vw;
+    height: 3vh;
+    width: 16vw;
+  }
 }
 
 @media only screen and (max-width: 350px) {
+
   #community-popup,
   #result-popup {
     height: 18vh;
+  }
+}
+
+@media only screen and (max-width: 1020px) {
+  .community-popup-content textarea {
+    height: 13vh;
   }
 }
