@@ -57,6 +57,7 @@ body {
   font-size: var(--navigationtext-size);
   margin-left: 3vw;
   display: flex;
+  z-index: 1000;
 }
 
 .navigation-menu ul {
@@ -275,7 +276,7 @@ input[type="radio"] {
 
 .locked-content {
   display: none;
-  top: 7vw;
+  top: 0vw;
   width: 100vw;
   height: 100vh;
   position: fixed;
@@ -858,11 +859,9 @@ select {
   top: 1vw;
   right: 1vw;
   background-color: transparent;
-  z-index: 100;
   stroke-width: 0.11vw;
   fill: transparent;
   transition: transform 0.5s ease;
-  z-index: 5;
 }
 
 .articles-saved-text {
@@ -873,7 +872,6 @@ select {
   right: 1vw;
   display: none;
   justify-content: start;
-  z-index: 101;
   padding-left: 1vw;
   align-items: center;
   background-color: var(--darkblue-color);
@@ -1104,7 +1102,6 @@ select {
   align-items: center;
   justify-content: center;
   top: 30%;
-  z-index: 10;
   border-radius: 50%;
   width: 1.5vw;
   height: 1.5vw;
@@ -1438,7 +1435,7 @@ select {
   height: 100vh;
   background-color: #00000061;
   top: 0;
-  z-index: 5;
+  z-index: 10002;
   overflow: hidden;
 }
 
@@ -1940,7 +1937,6 @@ select {
   font-family: var(--text-font);
   font-weight: var(--bold-font);
   position: relative;
-  z-index: 1;
 }
 
 .account-popup-data {
@@ -1956,7 +1952,6 @@ select {
   position: absolute;
   bottom: 0;
   left: 0;
-  z-index: 0;
 }
 
 .account-popup-button {
