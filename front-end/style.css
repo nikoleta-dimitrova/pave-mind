@@ -4617,6 +4617,19 @@ header .diary-fifth-current-date {
     height: 3vh;
     width: 11vw;
   }
+  /*---- Locked content responsive ----*/
+  .locked-content nav img {
+    width: 5vw;
+    height: auto;
+  }
+  
+  #locked-content-premium-text {
+    font-size: 3vw;
+  }
+  
+  .locked-content-button {
+    font-size: 1.7vw;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -6534,6 +6547,19 @@ header .diary-fifth-current-date {
     font-size: 3vw;
     height: 3vh;
     width: 16vw;
+  }
+   /*---- Locked content responsive ----*/
+   .locked-content nav img {
+    width: 7vw;
+    height: auto;
+  }
+  
+  #locked-content-premium-text {
+    font-size: 5.5vw;
+  }
+  
+  .locked-content-button {
+    font-size: 3vw;
   }
 }
 
