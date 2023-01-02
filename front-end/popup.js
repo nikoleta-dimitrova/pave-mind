@@ -93,6 +93,7 @@ const logInUser = () => {
 const logOut = () => {
     localStorage.removeItem("userId");
     localStorage.removeItem("userName");
+    alert("You've logged out successfully!");
     window.location.pathname = "front-end/index.html";
     window.location.reload();
 }
