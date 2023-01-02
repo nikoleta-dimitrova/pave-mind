@@ -283,6 +283,46 @@ input[type="radio"] {
   backdrop-filter: saturate(150%) blur(8px);
 }
 
+.locked-content nav {
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--headings-font);
+  color: var(--darkblue-color);
+}
+
+.locked-content nav img {
+  width: 3vw;
+  height: auto;
+}
+
+#locked-content-premium-text {
+  font-size: 1.3vw;
+}
+
+.locked-content-button {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5vw;
+  font-size: 1vw;
+  cursor: pointer;
+}
+
+.locked-content-button p:nth-of-type(1) {
+  color: var(--black-color);
+}
+
+.locked-content-button p:nth-of-type(2) {
+  transition: transform 0.5s ease;
+}
+
+.locked-content-button p:nth-of-type(2):hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
 /* HOME PAGE */
 /* ----- Pop up test ---- */
 .home-popup-content {
