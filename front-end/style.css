@@ -417,9 +417,6 @@ label {
 
 #home-first-picture {
   width: 29vw;
-  background-image: url(./Assets/Images/home-blob.png);
-  background-size: 27vw;
-  background-repeat: no-repeat;
 }
 
 .home-wave-img {
@@ -5477,7 +5474,6 @@ header .diary-fifth-current-date {
   img#home-first-picture.home-img {
     width: 60vw;
     margin-left: 0vw;
-    background-size: 57vw;
   }
 
   /* Home Articles Responsive */
