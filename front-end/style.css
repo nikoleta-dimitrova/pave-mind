@@ -479,17 +479,31 @@ label {
 }
 
 .home-card {
+  display: inline;
   width: 25vw;
   height: 28vw;
   border-radius: 1vw;
   background-color: var(--white-color);
   position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.home-card:hover .home-articles-lightbulb,
+.home-card:hover .home-card-title,
+.home-card:hover .home-card-description,
+.home-card:hover .home-articles-vector-images,
+.home-card:hover .home-articles-blob,
+.home-card:hover .home-card-read-more-button {
+  webkit-transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .home-articles-lightbulb {
   width: 3vw;
   margin-left: 1vw;
   margin-top: 1vw;
+  transition: transform 0.5s ease;
 }
 
 .home-card-title {
@@ -498,6 +512,7 @@ label {
   width: 20vw;
   margin-top: 1.2vw;
   margin-left: 2vw;
+  transition: transform 0.5s ease;
 }
 
 .home-card-description {
@@ -506,6 +521,7 @@ label {
   font-family: var(--text-font);
   margin-top: 1vw;
   margin-left: 2vw;
+  transition: transform 0.5s ease;
 }
 
 .home-card-read-more-button {
@@ -518,6 +534,7 @@ label {
   position: absolute;
   bottom: 2.2vw;
   left: 1.5vw;
+  transition: transform 0.5s ease;
 }
 
 #home-articles-arrow {
@@ -530,6 +547,7 @@ label {
   position: absolute;
   bottom: 0;
   left: 0;
+  transition: transform 0.5s ease;
 }
 
 .home-articles-vector-images {
@@ -538,6 +556,7 @@ label {
   position: absolute;
   bottom: 0;
   right: 1vw;
+  transition: transform 0.5s ease;
 }
 
 /*----- Third section home (mission) -----*/
@@ -1876,7 +1895,10 @@ select {
   transition: 0.4s ease;
 }
 
-#account-fourth-btn:hover,#account-third-btn:hover, #account-second-btn:hover, #account-first-btn:hover {
+#account-fourth-btn:hover,
+#account-third-btn:hover,
+#account-second-btn:hover,
+#account-first-btn:hover {
   background-color: var(--darkblue-color);
   color: var(--white-color);
 }
@@ -4604,6 +4626,7 @@ header .diary-fifth-current-date {
   .community-post-content {
     margin-left: 4.5vw;
   }
+
   /* ---- Community popup responsive---- */
   .community-popup-info img {
     width: 6vw;
@@ -4630,16 +4653,17 @@ header .diary-fifth-current-date {
     height: 3vh;
     width: 11vw;
   }
+
   /*---- Locked content responsive ----*/
   .locked-content nav img {
     width: 5vw;
     height: auto;
   }
-  
+
   #locked-content-premium-text {
     font-size: 3vw;
   }
-  
+
   .locked-content-button {
     font-size: 1.7vw;
   }
@@ -5417,6 +5441,7 @@ header .diary-fifth-current-date {
   .wave-footer-bottom-img {
     margin-bottom: -1vh;
   }
+
   /* ---- Community popup responsive---- */
   .community-popup-content textarea {
     height: 14vh;
@@ -6533,6 +6558,7 @@ header .diary-fifth-current-date {
   .community-post-content {
     margin-left: 7vw;
   }
+
   /* ---- Community popup responsive---- */
   .community-popup-info img {
     width: 9vw;
@@ -6561,16 +6587,17 @@ header .diary-fifth-current-date {
     height: 3vh;
     width: 16vw;
   }
-   /*---- Locked content responsive ----*/
-   .locked-content nav img {
+
+  /*---- Locked content responsive ----*/
+  .locked-content nav img {
     width: 7vw;
     height: auto;
   }
-  
+
   #locked-content-premium-text {
     font-size: 5.5vw;
   }
-  
+
   .locked-content-button {
     font-size: 3vw;
   }
