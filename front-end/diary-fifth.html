@@ -17,88 +17,128 @@
 
     <nav class="navbar">
         <div class="navigation-menu">
-          <a href="./index.html" class="nav-logo"><img src="./Assets/Images/logo.svg" alt=""></a>
-          <ul class="nav-menu">
-            <li class="nav-item"><a href="./articles.html" class="nav-link">Articles</a></li>
-            <li class="nav-item"><a href="./tips-and-tricks.html" class="nav-link">Tips&Tricks</a></li>
-            <li class="nav-item"><a href="./community.html" class="nav-link">Community</a></li>
-            <li class="nav-item"><a href="./diary-first.html" class="nav-link">Diary</a></li>
-            <li id="open-popup" class="nav-item" onclick="loadPopupContent('login.html')"><a href="#" class="nav-link"></a></li>
-          </ul>
+            <a href="./index.html" class="nav-logo"><img src="./Assets/Images/logo.svg" alt=""></a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="./articles.html" class="nav-link">Articles</a></li>
+                <li class="nav-item"><a href="./tips-and-tricks.html" class="nav-link">Tips&Tricks</a></li>
+                <li class="nav-item"><a href="./community.html" class="nav-link">Community</a></li>
+                <li class="nav-item"><a href="./diary-first.html" class="nav-link">Diary</a></li>
+                <li id="open-popup" class="nav-item" onclick="loadPopupContent('login.html')"><a href="#"
+                        class="nav-link"></a></li>
+            </ul>
         </div>
         <div class="hamburger">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
         </div>
-      </nav>
+    </nav>
     <div id="popup">
-
     </div>
-    <div class="diary-fifth-main">
-        <p class="diary-title" id="diary-fifth-title">Diary</p>
-        <div class="diary-fifth-container">
-            <div class="diary-fifth-calendar-container">
-                <div class="diary-calendar-wrapper">
-                    <header>
-                        <div class="diary-fifth-calendar-header">
-                            <span id="diary-fifth-calendar-previous" class="diary-fifth-calendar-arrow"></span>
-                            <p class="diary-fifth-current-date"></p>
-                            <span id="diary-fifth-calendar-next" class="diary-fifth-calendar-arrow"></span>
+    <section id="diary-fifth-body">
+        <div class="diary-fifth-main">
+            <p class="diary-title" id="diary-fifth-title">Diary</p>
+            <div class="diary-fifth-container">
+                <div class="diary-fifth-calendar-container">
+                    <div class="diary-calendar-wrapper">
+                        <header>
+                            <div class="diary-fifth-calendar-header">
+                                <span id="diary-fifth-calendar-previous" class="diary-fifth-calendar-arrow"></span>
+                                <p class="diary-fifth-current-date"></p>
+                                <span id="diary-fifth-calendar-next" class="diary-fifth-calendar-arrow"></span>
+                            </div>
+                        </header>
+                        <div class="diary-fifth-calendar">
+                            <ul class="diary-fifth-weeks">
+                                <li>Sun</li>
+                                <li>Mon</li>
+                                <li>Tue</li>
+                                <li>Wed</li>
+                                <li>Thu</li>
+                                <li>Fri</li>
+                                <li>Sat</li>
+                            </ul>
+                            <ul class="diary-fifth-days"></ul>
                         </div>
-                    </header>
-                    <div class="diary-fifth-calendar">
-                        <ul class="diary-fifth-weeks">
-                            <li>Sun</li>
-                            <li>Mon</li>
-                            <li>Tue</li>
-                            <li>Wed</li>
-                            <li>Thu</li>
-                            <li>Fri</li>
-                            <li>Sat</li>
-                        </ul>
-                        <ul class="diary-fifth-days"></ul>
+                    </div>
+                    <div class="diary-fifth-calendar-faces">
+                        <div class="diary-fifth-smile-container">
+                            <img class="diary-fifth-image" src="./Assets/Images/diary-red-face.svg">
+                            <p class="diary-fifth-category-text">Very bad<br>day</p>
+                        </div>
+
+                        <div class="diary-fifth-smile-container">
+                            <img class="diary-fifth-image" src="./Assets/Images/diary-orange-face.svg">
+                            <p class="diary-fifth-category-text">Bad<br>Day</p>
+                        </div>
+
+                        <div class="diary-fifth-smile-container">
+                            <img class="diary-fifth-image" src="./Assets/Images/diary-yellow-face.svg">
+                            <p class="diary-fifth-category-text">Neutural<br>day</p>
+                        </div>
+
+                        <div class="diary-fifth-smile-container">
+                            <img class="diary-fifth-image" src="./Assets/Images/diary-lightgreen-face.svg">
+                            <p class="diary-fifth-category-text">Good<br>day</p>
+                        </div>
+
+                        <div class="diary-fifth-smile-container">
+                            <img class="diary-fifth-image" src="./Assets/Images/diary-green-face.svg">
+                            <p class="diary-fifth-category-text">Very good<br>day</p>
+                        </div>
                     </div>
                 </div>
-                <div class="diary-fifth-calendar-faces">
-                    <div class="diary-fifth-smile-container">
-                        <img class="diary-fifth-image" src="./Assets/Images/diary-red-face.svg">
-                        <p class="diary-fifth-category-text">Very bad<br>day</p>
-                    </div>
-
-                    <div class="diary-fifth-smile-container">
-                        <img class="diary-fifth-image" src="./Assets/Images/diary-orange-face.svg">
-                        <p class="diary-fifth-category-text">Bad<br>Day</p>
-                    </div>
-
-                    <div class="diary-fifth-smile-container">
-                        <img class="diary-fifth-image" src="./Assets/Images/diary-yellow-face.svg">
-                        <p class="diary-fifth-category-text">Neutural<br>day</p>
-                    </div>
-
-                    <div class="diary-fifth-smile-container">
-                        <img class="diary-fifth-image" src="./Assets/Images/diary-lightgreen-face.svg">
-                        <p class="diary-fifth-category-text">Good<br>day</p>
-                    </div>
-
-                    <div class="diary-fifth-smile-container">
-                        <img class="diary-fifth-image" src="./Assets/Images/diary-green-face.svg">
-                        <p class="diary-fifth-category-text">Very good<br>day</p>
-                    </div>
+                <div class="diary-fifth-graph">
+                    <img id="diary-fifth-graph-img" src="./Assets/Images/diary-fifth-graph.svg">
                 </div>
+                <select id="diary-fifth-filter">
+                    <option>All data</option>
+                    <option>Last week</option>
+                    <option>Last month</option>
+                    <option>Last year</option>
+                </select>
             </div>
-            <div class="diary-fifth-graph">
-                <img id="diary-fifth-graph-img" src="./Assets/Images/diary-fifth-graph.svg">
-            </div>
-            <select id="diary-fifth-filter">
-                <option>All data</option>
-                <option>Last week</option>
-                <option>Last month</option>
-                <option>Last year</option>
-            </select>
         </div>
-    </div>
-    <img class="diary-fifth-wave" src="./Assets/Images/diary-bottom-wave-fifth.svg" />
+    </section>
+    <footer id="footer-blue">
+        <img src="./Assets/Images/wave-footer-top-blue.svg" class="wave-footer-img" />
+        <section class="footer-pavemind">
+            <div class="footer-container">
+                <img id="footer-logo" src="./Assets/Images/logo.svg" />
+                <div class="footer-data">
+                    <h1 class="footer-title">Contact us.</h1>
+                    <p class="footer-description">
+                        If you have any question regarding Burnout
+                        and are looking for ways to cope with it feel free to
+                        contact us via email or on one of our social medias.
+                    </p>
+                    <div class="footer-btn-media">
+                        <a href="https://www.instagram.com/pavemind/" target="_blank" class="btnfooter-contact"
+                            id="home-btninstagram"></a>
+                        <a href="https://mail.google.com" target="_blank" class="btnfooter-contact"
+                            id="home-btnemail"></a>
+                        <a href="https://www.facebook.com" target="_blank" class="btnfooter-contact"
+                            id="home-btnfacebook"></a>
+                    </div>
+                    <ul class="footer-list">
+                        <h1>
+                            Navigation
+                        </h1>
+                        <li class="footer-navbar-text"><a href="./index.html">Home</a></li>
+                        <li class="footer-navbar-text"><a href="./articles.html">Articles</a></li>
+                        <li class="footer-navbar-text"><a href="./tips-and-tricks.html">Tips&Tricks</a></li>
+                        <li class="footer-navbar-text"><a href="./community.html">Community</a></li>
+                        <li class="footer-navbar-text"><a href="./diary-first.html">Diary</a> </li>
+                    </ul>
+                </div>
+                <img id="footer-picture" src="./Assets/Images/home-footer-woman-img.svg" />
+            </div>
+            <img src="./Assets/Images/wave-footer-bottom.svg" class="wave-footer-bottom-img">
+            <div class="footer-quote">
+                <h1 class="footer-quote-text"> A NEW BEGINNING AWAITS YOU. </h1>
+            </div>
+        </section>
+    </footer>
     <script src="./popup.js"></script>
     <script src="./responsive.js"></script>
 </body>

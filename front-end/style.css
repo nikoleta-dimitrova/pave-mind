@@ -366,6 +366,10 @@ input[type="radio"] {
   color: var(--black-color);
 }
 
+#home-popup-content-checkbutton {
+  cursor: pointer;
+}
+
 #home-popup-content-checkbutton input {
   padding: 1vw;
 }
@@ -375,6 +379,7 @@ label {
   font-size: 1vw;
   font-family: var(--text-font);
   gap: 0.5vw;
+  cursor: pointer;
 }
 
 .home-popup-wave {
@@ -486,7 +491,6 @@ label {
   background-color: var(--white-color);
   position: relative;
   overflow: hidden;
-  cursor: pointer;
 }
 
 .home-card:hover .home-articles-lightbulb,
@@ -1566,6 +1570,12 @@ select {
   font-family: var(--text-font);
   font-weight: var(--bold-font);
   cursor: pointer;
+  transition: 0.4s ease;
+}
+
+.community-popup-content button:hover {
+  background-color: var(--darkblue-color);
+  color: var(--white-color);
 }
 
 /* TEST */
@@ -1647,6 +1657,7 @@ select {
   font-size: 1.3vw;
   align-self: flex-start;
   margin-bottom: 7vw;
+  cursor: pointer;
   transition: 0.4s ease;
 }
 
@@ -1864,6 +1875,10 @@ select {
   font-size: 1vw;
 }
 
+#account-change-password p {
+  margin-left: 1vw;
+}
+
 .account-card-fourth-part {
   display: flex;
   flex-direction: column;
@@ -1974,6 +1989,7 @@ select {
   position: absolute;
   bottom: 0;
   left: 0;
+  z-index: 0;
 }
 
 .account-popup-button {
@@ -1986,10 +2002,15 @@ select {
   font-weight: var(--bold-font);
   border: none;
   text-decoration: none;
-
   font-size: 1.1vw;
   width: 9.1vw;
   height: auto;
+  transition: 0.4s ease;
+}
+
+.account-popup-button:hover {
+  background-color: var(--darkblue-color);
+  color: var(--white-color);
 }
 
 .account-popup-content {
@@ -2007,6 +2028,7 @@ select {
   display: flex;
   flex-direction: column;
   gap: 1.5vw;
+  z-index: 1;
 }
 
 .account-save-changes-button {
@@ -2184,7 +2206,7 @@ select {
   font-family: var(--headings-font);
   font-size: var(--title-size);
   color: var(--darkblue-color);
-  margin-top: 10vh;
+  margin-top: 5vh;
   padding-bottom: 4vh;
 }
 
@@ -2205,6 +2227,7 @@ select {
 input[type="radio"] {
   border: none;
   width: 1.1vw;
+  cursor: pointer;
 }
 
 .diary-first-radiobuttons {
@@ -2541,12 +2564,17 @@ input[type="radio"] {
 }
 
 /* Diary fifth page */
+#diary-fifth-body {
+  padding-bottom: 8vw;
+}
+
 .diary-fifth-main {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 68vh;
+  
 }
 
 #diary-fifth-title {
