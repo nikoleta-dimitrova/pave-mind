@@ -1,5 +1,5 @@
-// let fetchUrl = `http://localhost:3000/`; // Uncomment locally
-let fetchUrl = `https://pave-mind.herokuapp.com/` // Uncomment when deployed
+// Locally : http://localhost:3000
+// Deployed on Heroku: https://pave-mind.herokuapp.com/
 
 async function loadPopupContent(popup) {
     const response = await fetch(popup);
@@ -51,7 +51,7 @@ const submitSignIn = () => {
 
 const createAccount = (premium) => {
     userAccount["premiumAccount"] = premium;
-    fetch(`${fetchUrl}accounts/`, {
+    fetch(`https://pave-mind.herokuapp.com/accounts/`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(userAccount)
@@ -71,7 +71,7 @@ const createAccount = (premium) => {
 const logInUser = () => {
     const email = document.getElementById("email");
     const password = document.getElementById("password");
-    fetch(`${fetchUrl}accounts/login`, {
+    fetch(`https://pave-mind.herokuapp.com/accounts/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -114,7 +114,7 @@ const createPost = () => {
         content: content.value,
         accountId: localStorage.getItem("userId")
     }
-    fetch(`${fetchUrl}posts/`, {
+    fetch(`https://pave-mind.herokuapp.com/posts/`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(newPost)

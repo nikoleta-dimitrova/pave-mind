@@ -1,5 +1,5 @@
-// let fetchUrl = `http://localhost:3000/`; // Uncomment locally
-let fetchUrl = `https://pave-mind.herokuapp.com/` // Uncomment when deployed
+// Locally : http://localhost:3000
+// Deployed on Heroku: https://pave-mind.herokuapp.com/
 
 let popup = document.getElementById("popup-blur");
 let popupTitle = document.getElementById("community-popup-title");
@@ -12,7 +12,7 @@ const loadPosts = async () => {
         const blockFilter = document.getElementsByClassName("locked-content")[0];
         blockFilter.style.display = "inline";
     }
-    const response = await fetch(`${fetchUrl}posts/`);
+    const response = await fetch("https://pave-mind.herokuapp.com/posts/");
     const data = await response.json();
     const reversedData = data.reverse()
     const userName = localStorage.getItem("userName");
@@ -105,7 +105,7 @@ const loadPosts = async () => {
 }
 
 const getUser = async (id) => {
-    const response = await fetch(`${fetchUrl}accounts/${id}`);
+    const response = await fetch(`https://pave-mind.herokuapp.com/accounts/${id}`);
     const data = await response.json();
     return `${data.firstName} ${data.lastName}`;
 
@@ -175,7 +175,7 @@ const createComment = (postInputField, postId) => {
         name: localStorage.getItem("userName"),
         comment: postInputField.value
     }
-    fetch(`${fetchUrl}posts/${postId}/comment`, {
+    fetch(`https://pave-mind.herokuapp.com/posts/${postId}/comment`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(newPost)

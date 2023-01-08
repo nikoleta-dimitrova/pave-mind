@@ -1,8 +1,8 @@
-// let fetchUrl = `http://localhost:3000/`; // Uncomment locally
-let fetchUrl = `https://pave-mind.herokuapp.com/` // Uncomment when deployed
+// Locally : http://localhost:3000
+// Deployed on Heroku: https://pave-mind.herokuapp.com/
 
 const loadAccount = () => {
-    fetch(`${fetchUrl}accounts/${localStorage.getItem("userId")}`, {
+    fetch(`https://pave-mind.herokuapp.com/accounts/${localStorage.getItem("userId")}`, {
         method: "GET",
         headers: { "Content-Type": "application/json" }
     }).then(res => {

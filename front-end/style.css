@@ -2687,7 +2687,7 @@ header .diary-fifth-current-date {
 }
 
 .diary-fifth-days li.active::before {
-  background-color: #fe1f20;
+  background-color: #ff7d25;
   width: 2.2vw;
   height: 2.2vw;
 }
