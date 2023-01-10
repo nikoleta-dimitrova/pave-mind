@@ -1,4 +1,4 @@
-![cover](https://git.fhict.nl/I477363/pave-mind/-/raw/a4629f437c437e0b0fc1acd60ffee9298428b94c/front-end/Assets/Images/cover.png)
+![cover](https://git.fhict.nl/I477363/pave-mind/-/raw/20d63d3c8c136dec914935e270839de26f111bb0/front-end/Assets/Images/cover.png)
 # PaveMind
 PaveMind is an educational website for students where they can not only help each other with burnout and mental health, but also find tips and tricks on how to cope with it, become more aware of the problem and learn new things about the topic.
 
@@ -9,17 +9,17 @@ If you want to preview the website, use this link <a href="http://i477363.hera.f
 * Filtering the articles (all, most viewed, newest, oldest)
 * Search engine with key words
 * Save button - option to save favourite articles
-* Adding carousel further reading so that the users can contunue reading without having to exit the page
+* Adding carousel for further reading so that the users can continue reading without having to exit the page
 ###### Tips & Tricks
 * 6 tips and tricks
 * Article for each tip
 ###### Community
 * The posts consist of: persons name, time posted, title in bold, description, comments
 * Option to write a post
-* Option to comment of posts
+* Option to comment on posts
 * Uploading pictures will not be allowed
 ###### Diary
-* This page isn't made functional yet
+* This page is not made functional yet
 * 6 questions with radio buttons
 * A textbox where students can describe their day and thoughts
 * Option to rate your day
@@ -32,7 +32,7 @@ If you want to preview the website, use this link <a href="http://i477363.hera.f
 ###### Log In/Sign Up
 * Adding the payment options. The students will be able to buy themselves an account or use a verification code from their university to log in
 ### Used technologies
-When compiling the application we used HTML5, CSS, Vanilla JavaScript. We used Node.js to create the back-end of our application and the between the client and the server is established via REST API made with Express. We created the database using MongoDB. To establish connection with the database server, we used the object oriented library Mongoose. We have merged this into main in our git repository. The backend is uploaded in Heroku and the fronend in Hera.
+When compiling the application we used HTML5, CSS, Vanilla JavaScript. We used Node.js to create the back-end of our application and the connection between the client and the server is established via REST API made with Express. We created the database using MongoDB. To establish connection with the database server, we used the object oriented library Mongoose. We have merged this into main in our git repository. The backend is uploaded in Heroku and the fronend in Hera.
 # Installation
 Clone the project in your repository
 ```
