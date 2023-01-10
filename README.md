@@ -1,3 +1,4 @@
+![cover](https://git.fhict.nl/I477363/pave-mind/-/raw/a4629f437c437e0b0fc1acd60ffee9298428b94c/front-end/Assets/Images/cover.png)
 # PaveMind
 PaveMind is an educational website for students where they can not only help each other with burnout and mental health, but also find tips and tricks on how to cope with it, become more aware of the problem and learn new things about the topic.
 
