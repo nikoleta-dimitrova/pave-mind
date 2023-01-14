@@ -51,7 +51,7 @@ Run the backend
 $ node index.js
 ```
 # Usage of Project
-[Advisory report](uploads/00f31f01be8ee784b10df66be959eb1b/Advisory_report.pdf) 
+- [Advisory report](https://www.canva.com/design/DAFVkd73-G4/mUImBjNQlqNcKKLwfMgpnA/view?utm_content=DAFVkd73-G4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton) 
 
 The aim of this document is to further extend the connection with our stakeholders by introducing  the steps we took in order to reach the current point of development alongside insights of our work and in what direction they should continue from here.
 # Support
@@ -71,4 +71,4 @@ If you have any questions, feel free to contact us by sending an e-mail to pavem
 Thanks to Fontys University of Applied Sciences for making this possible. <br>
 Thanks to LiveWall for letting us participate in the challenge, and helping us come up with great ideas.
 # License 
-[License ](https://git.fhict.nl/I477363/pave-mind/-/blob/main/LICENSE) 
+- [License ](https://git.fhict.nl/I477363/pave-mind/-/blob/main/LICENSE) 
