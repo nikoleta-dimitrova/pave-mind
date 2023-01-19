@@ -89,7 +89,8 @@ a{
 }
 
 .navigation-menu img {
-  height: 3vw;
+  height: 2.5vw;
+  margin-top: 0.3vw;
 }
 
 nav ul li:hover {
