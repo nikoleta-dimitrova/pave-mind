@@ -36,6 +36,10 @@ body {
   --regular-font: 100;
 }
 
+a{
+  text-decoration: none;
+  cursor: pointer;
+}
 /* NAVIGATION BAR - All pages */
 .navbar {
   width: 100vw;
