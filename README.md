@@ -2,7 +2,7 @@
 # PaveMind
 PaveMind is an educational website for students where they can not only help each other with burnout and mental health, but also find tips and tricks on how to cope with it, become more aware of the problem and learn new things about the topic.
 
-If you want to preview the website, use this link <a href="http://i477363.hera.fhict.nl/pave-mind/">PaveMind</a>.
+If you want to preview the website, use this link <a href="http://i476234.hera.fhict.nl/pavemind">PaveMind</a>.
 # Description
 ### Features
 ###### Articles
