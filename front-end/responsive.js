@@ -16,7 +16,7 @@ const checkLogIn = () => {
     const loginButton = document.getElementById("open-popup");
     if (localStorage.getItem("userId")) {
         loginButton.onclick = null;
-        loginButton.childNodes[0].innerText = "Account";
+        loginButton.childNodes[0].innerText = "My Account";
         loginButton.childNodes[0].href = "./account.html";
     }
     else {
