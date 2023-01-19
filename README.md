@@ -51,7 +51,7 @@ Run the backend
 $ node index.js
 ```
 # Usage of Project
-- [Advisory report](https://www.canva.com/design/DAFVkd73-G4/mUImBjNQlqNcKKLwfMgpnA/view?utm_content=DAFVkd73-G4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton) 
+- [Advisory report](https://www.canva.com/design/DAFYGdLpB-I/rOqJB4R_praXLy_07fth_A/view?utm_content=DAFYGdLpB-I&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink) 
 
 The aim of this document is to further extend the connection with our stakeholders by introducing  the steps we took in order to reach the current point of development alongside insights of our work and in what direction they should continue from here.
 # Support
